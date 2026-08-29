@@ -13951,32 +13951,6 @@
     "rank": 499
   },
   {
-    "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23442500",
-    "price_eur": 187900.0,
-    "size_sqm": 54.0,
-    "room_count": 2,
-    "floor": "4/8",
-    "property_type": "kerrostalo",
-    "year_built": 2022,
-    "address": "Asolanväylä 14 A, Koivukylä, Vantaa",
-    "district": "Koivukylä",
-    "city": "vantaa",
-    "pipe_renovation_done": false,
-    "is_rented_out": false,
-    "lat": 60.331511,
-    "lon": 25.063997,
-    "nearest_hub": "Tikkurila",
-    "hub_distance_m": 4829,
-    "nearest_mall": "Jumbo",
-    "mall_distance_m": 7082,
-    "helsinki_central_km": 19.27,
-    "tram_badge": null,
-    "_search_pass": "new_house_2000plus",
-    "monthly_cost_eur": 798.38,
-    "score": 39,
-    "rank": 500
-  },
-  {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23442499",
     "price_eur": 159900.0,
     "size_sqm": 42.0,
@@ -13999,6 +13973,32 @@
     "tram_badge": null,
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 656.81,
+    "score": 39,
+    "rank": 500
+  },
+  {
+    "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23442500",
+    "price_eur": 187900.0,
+    "size_sqm": 54.0,
+    "room_count": 2,
+    "floor": "4/8",
+    "property_type": "kerrostalo",
+    "year_built": 2022,
+    "address": "Asolanväylä 14 A, Koivukylä, Vantaa",
+    "district": "Koivukylä",
+    "city": "vantaa",
+    "pipe_renovation_done": false,
+    "is_rented_out": false,
+    "lat": 60.331511,
+    "lon": 25.063997,
+    "nearest_hub": "Tikkurila",
+    "hub_distance_m": 4829,
+    "nearest_mall": "Jumbo",
+    "mall_distance_m": 7082,
+    "helsinki_central_km": 19.27,
+    "tram_badge": null,
+    "_search_pass": "new_house_2000plus",
+    "monthly_cost_eur": 798.38,
     "score": 39,
     "rank": 501
   },
@@ -31853,30 +31853,6 @@
     "rank": 1136
   },
   {
-    "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24530388",
-    "price_eur": 69000.0,
-    "size_sqm": 48.0,
-    "room_count": 2,
-    "floor": "1/3",
-    "property_type": "kerrostalo",
-    "year_built": 1979,
-    "address": "Pallastunturinkuja 1 G, Länsimäki, Vantaa",
-    "district": "Länsimäki",
-    "city": "vantaa",
-    "debt_free_price_eur": 69000.0,
-    "pipe_renovation_done": false,
-    "hoitovastike_eur_month": 240.0,
-    "is_rented_out": false,
-    "lat": 60.246425,
-    "lon": 25.118305,
-    "nearest_stop": "Länsimäki",
-    "distance_m": 485,
-    "_search_pass": "candidate_check_pipe_reno",
-    "monthly_cost_eur": 437.19,
-    "score": 21,
-    "rank": 1137
-  },
-  {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24519516",
     "price_eur": 87177.14,
     "size_sqm": 37.5,
@@ -31903,7 +31879,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 512.07,
     "score": 21,
-    "rank": 1138
+    "rank": 1137
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24513590",
@@ -31932,7 +31908,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 1000.88,
     "score": 21,
-    "rank": 1139
+    "rank": 1138
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24504164",
@@ -31961,7 +31937,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 755.47,
     "score": 21,
-    "rank": 1140
+    "rank": 1139
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24460142",
@@ -31991,7 +31967,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 417.54,
     "score": 21,
-    "rank": 1141
+    "rank": 1140
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24459428",
@@ -32020,7 +31996,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 697.51,
     "score": 21,
-    "rank": 1142
+    "rank": 1141
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24434462",
@@ -32051,7 +32027,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 631.32,
     "score": 21,
-    "rank": 1143
+    "rank": 1142
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24433533",
@@ -32082,7 +32058,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 708.45,
     "score": 21,
-    "rank": 1144
+    "rank": 1143
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/22687318",
@@ -32108,7 +32084,7 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 1073.92,
     "score": 21,
-    "rank": 1145
+    "rank": 1144
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24007962",
@@ -32138,7 +32114,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 1058.74,
     "score": 21,
-    "rank": 1146
+    "rank": 1145
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24265358",
@@ -32166,7 +32142,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 1139.45,
     "score": 21,
-    "rank": 1147
+    "rank": 1146
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24199348",
@@ -32195,7 +32171,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 730.91,
     "score": 21,
-    "rank": 1148
+    "rank": 1147
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23558200",
@@ -32221,7 +32197,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 642.14,
     "score": 21,
-    "rank": 1149
+    "rank": 1148
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23417590",
@@ -32247,7 +32223,7 @@
     "_search_pass": "pipe_reno_done",
     "monthly_cost_eur": 791.81,
     "score": 21,
-    "rank": 1150
+    "rank": 1149
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24627777",
@@ -32273,7 +32249,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 803.94,
     "score": 20,
-    "rank": 1151
+    "rank": 1150
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24561263",
@@ -32299,7 +32275,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 803.94,
     "score": 20,
-    "rank": 1152
+    "rank": 1151
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24661923",
@@ -32324,7 +32300,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 854.69,
     "score": 20,
-    "rank": 1153
+    "rank": 1152
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24653143",
@@ -32353,7 +32329,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 781.81,
     "score": 20,
-    "rank": 1154
+    "rank": 1153
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24529807",
@@ -32379,7 +32355,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 798.89,
     "score": 20,
-    "rank": 1155
+    "rank": 1154
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24642843",
@@ -32408,7 +32384,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 621.66,
     "score": 20,
-    "rank": 1156
+    "rank": 1155
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24638893",
@@ -32437,7 +32413,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 544.83,
     "score": 20,
-    "rank": 1157
+    "rank": 1156
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24636182",
@@ -32466,7 +32442,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 1341.6,
     "score": 20,
-    "rank": 1158
+    "rank": 1157
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24636122",
@@ -32495,7 +32471,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 1341.6,
     "score": 20,
-    "rank": 1159
+    "rank": 1158
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24635872",
@@ -32521,7 +32497,7 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 785.29,
     "score": 20,
-    "rank": 1160
+    "rank": 1159
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24632925",
@@ -32547,7 +32523,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 343.83,
     "score": 20,
-    "rank": 1161
+    "rank": 1160
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24626290",
@@ -32573,7 +32549,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 470.23,
     "score": 20,
-    "rank": 1162
+    "rank": 1161
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24610205",
@@ -32599,7 +32575,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 824.17,
     "score": 20,
-    "rank": 1163
+    "rank": 1162
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24586534",
@@ -32625,7 +32601,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 601.69,
     "score": 20,
-    "rank": 1164
+    "rank": 1163
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24565282",
@@ -32653,7 +32629,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 1234.45,
     "score": 20,
-    "rank": 1165
+    "rank": 1164
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24332702",
@@ -32679,7 +32655,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 505.63,
     "score": 20,
-    "rank": 1166
+    "rank": 1165
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24551102",
@@ -32702,7 +32678,7 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 364.3,
     "score": 20,
-    "rank": 1167
+    "rank": 1166
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24545263",
@@ -32731,7 +32707,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 1124.45,
     "score": 20,
-    "rank": 1168
+    "rank": 1167
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24520629",
@@ -32759,7 +32735,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 749.64,
     "score": 20,
-    "rank": 1169
+    "rank": 1168
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24359138",
@@ -32788,7 +32764,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 801.95,
     "score": 20,
-    "rank": 1170
+    "rank": 1169
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24468380",
@@ -32816,7 +32792,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 934.59,
     "score": 20,
-    "rank": 1171
+    "rank": 1170
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24447802",
@@ -32846,7 +32822,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 971.46,
     "score": 20,
-    "rank": 1172
+    "rank": 1171
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24431779",
@@ -32874,7 +32850,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 1029.65,
     "score": 20,
-    "rank": 1173
+    "rank": 1172
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24399620",
@@ -32903,7 +32879,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 759.64,
     "score": 20,
-    "rank": 1174
+    "rank": 1173
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24396193",
@@ -32932,7 +32908,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 360.7,
     "score": 20,
-    "rank": 1175
+    "rank": 1174
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23714810",
@@ -32961,7 +32937,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 823.38,
     "score": 20,
-    "rank": 1176
+    "rank": 1175
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23549780",
@@ -32987,7 +32963,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 802.34,
     "score": 20,
-    "rank": 1177
+    "rank": 1176
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23407179",
@@ -33012,7 +32988,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 470.2,
     "score": 20,
-    "rank": 1178
+    "rank": 1177
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23160289",
@@ -33038,7 +33014,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 247.76,
     "score": 20,
-    "rank": 1179
+    "rank": 1178
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/16953238",
@@ -33063,7 +33039,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 403.96,
     "score": 20,
-    "rank": 1180
+    "rank": 1179
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24619380",
@@ -33089,7 +33065,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 854.51,
     "score": 19,
-    "rank": 1181
+    "rank": 1180
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24501685",
@@ -33113,7 +33089,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 492.19,
     "score": 19,
-    "rank": 1182
+    "rank": 1181
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24655184",
@@ -33142,7 +33118,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 497.38,
     "score": 19,
-    "rank": 1183
+    "rank": 1182
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24326749",
@@ -33171,7 +33147,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 740.42,
     "score": 19,
-    "rank": 1184
+    "rank": 1183
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24471419",
@@ -33200,7 +33176,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 973.16,
     "score": 19,
-    "rank": 1185
+    "rank": 1184
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24643705",
@@ -33229,7 +33205,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 708.2,
     "score": 19,
-    "rank": 1186
+    "rank": 1185
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24635119",
@@ -33255,7 +33231,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 803.94,
     "score": 19,
-    "rank": 1187
+    "rank": 1186
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24634284",
@@ -33281,7 +33257,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 444.95,
     "score": 19,
-    "rank": 1188
+    "rank": 1187
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23691327",
@@ -33307,7 +33283,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 601.69,
     "score": 19,
-    "rank": 1189
+    "rank": 1188
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24533589",
@@ -33333,7 +33309,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 450.01,
     "score": 19,
-    "rank": 1190
+    "rank": 1189
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24519215",
@@ -33359,7 +33335,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 652.26,
     "score": 19,
-    "rank": 1191
+    "rank": 1190
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24630546",
@@ -33385,7 +33361,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 753.38,
     "score": 19,
-    "rank": 1192
+    "rank": 1191
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23763889",
@@ -33411,7 +33387,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 480.34,
     "score": 19,
-    "rank": 1193
+    "rank": 1192
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24462711",
@@ -33437,7 +33413,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 576.41,
     "score": 19,
-    "rank": 1194
+    "rank": 1193
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24589516",
@@ -33463,7 +33439,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 551.13,
     "score": 19,
-    "rank": 1195
+    "rank": 1194
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24600855",
@@ -33489,7 +33465,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 424.73,
     "score": 19,
-    "rank": 1196
+    "rank": 1195
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24600085",
@@ -33515,7 +33491,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 702.82,
     "score": 19,
-    "rank": 1197
+    "rank": 1196
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24598393",
@@ -33541,7 +33517,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 465.18,
     "score": 19,
-    "rank": 1198
+    "rank": 1197
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24597609",
@@ -33567,7 +33543,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 303.38,
     "score": 19,
-    "rank": 1199
+    "rank": 1198
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24579954",
@@ -33593,7 +33569,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 302.87,
     "score": 19,
-    "rank": 1200
+    "rank": 1199
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24579470",
@@ -33623,7 +33599,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 1016.45,
     "score": 19,
-    "rank": 1201
+    "rank": 1200
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24574472",
@@ -33649,7 +33625,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 419.67,
     "score": 19,
-    "rank": 1202
+    "rank": 1201
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24560574",
@@ -33675,7 +33651,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 450.01,
     "score": 19,
-    "rank": 1203
+    "rank": 1202
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24406982",
@@ -33701,7 +33677,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 500.57,
     "score": 19,
-    "rank": 1204
+    "rank": 1203
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24554647",
@@ -33727,7 +33703,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 227.53,
     "score": 19,
-    "rank": 1205
+    "rank": 1204
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24552960",
@@ -33755,7 +33731,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 1072.19,
     "score": 19,
-    "rank": 1206
+    "rank": 1205
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24550238",
@@ -33784,7 +33760,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 951.74,
     "score": 19,
-    "rank": 1207
+    "rank": 1206
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24549362",
@@ -33813,7 +33789,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 844.7,
     "score": 19,
-    "rank": 1208
+    "rank": 1207
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24542921",
@@ -33843,7 +33819,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 629.57,
     "score": 19,
-    "rank": 1209
+    "rank": 1208
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24539512",
@@ -33872,7 +33848,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 609.44,
     "score": 19,
-    "rank": 1210
+    "rank": 1209
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24537542",
@@ -33901,7 +33877,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 733.77,
     "score": 19,
-    "rank": 1211
+    "rank": 1210
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24531024",
@@ -33930,7 +33906,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 1043.93,
     "score": 19,
-    "rank": 1212
+    "rank": 1211
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24511630",
@@ -33958,7 +33934,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 1105.05,
     "score": 19,
-    "rank": 1213
+    "rank": 1212
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24334662",
@@ -33988,7 +33964,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 1001.1,
     "score": 19,
-    "rank": 1214
+    "rank": 1213
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24494542",
@@ -34014,7 +33990,7 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 751.78,
     "score": 19,
-    "rank": 1215
+    "rank": 1214
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24306306",
@@ -34042,7 +34018,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 531.46,
     "score": 19,
-    "rank": 1216
+    "rank": 1215
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24487207",
@@ -34071,7 +34047,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 1003.59,
     "score": 19,
-    "rank": 1217
+    "rank": 1216
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24472035",
@@ -34100,7 +34076,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 786.85,
     "score": 19,
-    "rank": 1218
+    "rank": 1217
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24467609",
@@ -34129,7 +34105,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 550.82,
     "score": 19,
-    "rank": 1219
+    "rank": 1218
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24466649",
@@ -34159,7 +34135,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 457.92,
     "score": 19,
-    "rank": 1220
+    "rank": 1219
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24459818",
@@ -34187,7 +34163,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 638.36,
     "score": 19,
-    "rank": 1221
+    "rank": 1220
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24419269",
@@ -34212,7 +34188,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 390.29,
     "score": 19,
-    "rank": 1222
+    "rank": 1221
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24407504",
@@ -34241,7 +34217,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 533.55,
     "score": 19,
-    "rank": 1223
+    "rank": 1222
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24403944",
@@ -34270,7 +34246,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 1244.12,
     "score": 19,
-    "rank": 1224
+    "rank": 1223
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24373426",
@@ -34299,7 +34275,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 472.03,
     "score": 19,
-    "rank": 1225
+    "rank": 1224
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24366090",
@@ -34328,7 +34304,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 843.41,
     "score": 19,
-    "rank": 1226
+    "rank": 1225
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24357503",
@@ -34356,7 +34332,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 636.66,
     "score": 19,
-    "rank": 1227
+    "rank": 1226
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24331494",
@@ -34385,7 +34361,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 782.36,
     "score": 19,
-    "rank": 1228
+    "rank": 1227
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24306165",
@@ -34414,7 +34390,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 730.6,
     "score": 19,
-    "rank": 1229
+    "rank": 1228
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24021458",
@@ -34439,7 +34415,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 467.7,
     "score": 19,
-    "rank": 1230
+    "rank": 1229
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23705527",
@@ -34465,7 +34441,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 647.2,
     "score": 19,
-    "rank": 1231
+    "rank": 1230
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23568375",
@@ -34491,7 +34467,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 553.66,
     "score": 19,
-    "rank": 1232
+    "rank": 1231
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23634198",
@@ -34517,7 +34493,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 399.44,
     "score": 19,
-    "rank": 1233
+    "rank": 1232
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23550481",
@@ -34542,7 +34518,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 581.47,
     "score": 19,
-    "rank": 1234
+    "rank": 1233
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23244276",
@@ -34568,7 +34544,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 723.04,
     "score": 19,
-    "rank": 1235
+    "rank": 1234
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/17215353",
@@ -34594,7 +34570,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 369.11,
     "score": 19,
-    "rank": 1236
+    "rank": 1235
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23215463",
@@ -34620,7 +34596,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 452.53,
     "score": 19,
-    "rank": 1237
+    "rank": 1236
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/22910957",
@@ -34646,7 +34622,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 543.55,
     "score": 19,
-    "rank": 1238
+    "rank": 1237
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/22718650",
@@ -34672,7 +34648,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 308.43,
     "score": 19,
-    "rank": 1239
+    "rank": 1238
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/22699443",
@@ -34698,7 +34674,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 500.57,
     "score": 19,
-    "rank": 1240
+    "rank": 1239
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/21888451",
@@ -34724,7 +34700,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 543.55,
     "score": 19,
-    "rank": 1241
+    "rank": 1240
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/21231683",
@@ -34748,7 +34724,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 462.07,
     "score": 19,
-    "rank": 1242
+    "rank": 1241
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/21119500",
@@ -34772,7 +34748,7 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 723.04,
     "score": 19,
-    "rank": 1243
+    "rank": 1242
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/20855411",
@@ -34798,7 +34774,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 247.76,
     "score": 19,
-    "rank": 1244
+    "rank": 1243
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/17848867",
@@ -34824,7 +34800,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 556.19,
     "score": 19,
-    "rank": 1245
+    "rank": 1244
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24375743",
@@ -34853,7 +34829,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 599.92,
     "score": 18,
-    "rank": 1246
+    "rank": 1245
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24447689",
@@ -34882,7 +34858,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 1096.86,
     "score": 18,
-    "rank": 1247
+    "rank": 1246
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24642357",
@@ -34904,7 +34880,7 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 511.19,
     "score": 18,
-    "rank": 1248
+    "rank": 1247
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24639776",
@@ -34929,7 +34905,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 644.5,
     "score": 18,
-    "rank": 1249
+    "rank": 1248
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24631165",
@@ -34955,7 +34931,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 763.49,
     "score": 18,
-    "rank": 1250
+    "rank": 1249
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24630065",
@@ -34979,7 +34955,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 574.92,
     "score": 18,
-    "rank": 1251
+    "rank": 1250
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24630003",
@@ -35005,7 +34981,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 201.24,
     "score": 18,
-    "rank": 1252
+    "rank": 1251
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24613214",
@@ -35031,7 +35007,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 748.33,
     "score": 18,
-    "rank": 1253
+    "rank": 1252
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24601445",
@@ -35057,7 +35033,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 298.32,
     "score": 18,
-    "rank": 1254
+    "rank": 1253
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24610870",
@@ -35083,7 +35059,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 176.97,
     "score": 18,
-    "rank": 1255
+    "rank": 1254
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24609433",
@@ -35109,7 +35085,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 581.47,
     "score": 18,
-    "rank": 1256
+    "rank": 1255
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24609158",
@@ -35133,7 +35109,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 497.61,
     "score": 18,
-    "rank": 1257
+    "rank": 1256
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24599786",
@@ -35159,7 +35135,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 652.26,
     "score": 18,
-    "rank": 1258
+    "rank": 1257
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24598183",
@@ -35185,7 +35161,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 288.21,
     "score": 18,
-    "rank": 1259
+    "rank": 1258
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24597971",
@@ -35211,7 +35187,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 348.88,
     "score": 18,
-    "rank": 1260
+    "rank": 1259
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24594468",
@@ -35237,7 +35213,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 242.19,
     "score": 18,
-    "rank": 1261
+    "rank": 1260
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24591754",
@@ -35263,7 +35239,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 247.76,
     "score": 18,
-    "rank": 1262
+    "rank": 1261
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24584762",
@@ -35289,7 +35265,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 652.26,
     "score": 18,
-    "rank": 1263
+    "rank": 1262
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24580856",
@@ -35313,7 +35289,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 524.67,
     "score": 18,
-    "rank": 1264
+    "rank": 1263
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24580661",
@@ -35339,7 +35315,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 632.03,
     "score": 18,
-    "rank": 1265
+    "rank": 1264
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24579883",
@@ -35365,7 +35341,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 60.68,
     "score": 18,
-    "rank": 1266
+    "rank": 1265
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24575814",
@@ -35391,7 +35367,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 399.44,
     "score": 18,
-    "rank": 1267
+    "rank": 1266
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24566274",
@@ -35417,7 +35393,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 227.53,
     "score": 18,
-    "rank": 1268
+    "rank": 1267
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24557307",
@@ -35443,7 +35419,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 298.32,
     "score": 18,
-    "rank": 1269
+    "rank": 1268
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24550801",
@@ -35471,7 +35447,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 705.78,
     "score": 18,
-    "rank": 1270
+    "rank": 1269
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24550244",
@@ -35499,7 +35475,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 949.76,
     "score": 18,
-    "rank": 1271
+    "rank": 1270
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24530599",
@@ -35528,7 +35504,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 1090.95,
     "score": 18,
-    "rank": 1272
+    "rank": 1271
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24519577",
@@ -35557,7 +35533,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 747.59,
     "score": 18,
-    "rank": 1273
+    "rank": 1272
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24518732",
@@ -35586,7 +35562,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 507.34,
     "score": 18,
-    "rank": 1274
+    "rank": 1273
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24513478",
@@ -35616,7 +35592,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 786.58,
     "score": 18,
-    "rank": 1275
+    "rank": 1274
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24394973",
@@ -35645,7 +35621,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 441.24,
     "score": 18,
-    "rank": 1276
+    "rank": 1275
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24449513",
@@ -35674,7 +35650,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 863.76,
     "score": 18,
-    "rank": 1277
+    "rank": 1276
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24487197",
@@ -35700,7 +35676,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 425.68,
     "score": 18,
-    "rank": 1278
+    "rank": 1277
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23568492",
@@ -35730,7 +35706,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 572.19,
     "score": 18,
-    "rank": 1279
+    "rank": 1278
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24442113",
@@ -35759,7 +35735,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 888.24,
     "score": 18,
-    "rank": 1280
+    "rank": 1279
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24432227",
@@ -35788,7 +35764,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 408.56,
     "score": 18,
-    "rank": 1281
+    "rank": 1280
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24423237",
@@ -35817,7 +35793,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 957.56,
     "score": 18,
-    "rank": 1282
+    "rank": 1281
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24413388",
@@ -35842,7 +35818,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 544.89,
     "score": 18,
-    "rank": 1283
+    "rank": 1282
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24407946",
@@ -35872,7 +35848,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 436.63,
     "score": 18,
-    "rank": 1284
+    "rank": 1283
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24407845",
@@ -35901,7 +35877,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 613.07,
     "score": 18,
-    "rank": 1285
+    "rank": 1284
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24397435",
@@ -35930,7 +35906,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 754.54,
     "score": 18,
-    "rank": 1286
+    "rank": 1285
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24377279",
@@ -35959,7 +35935,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 647.3,
     "score": 18,
-    "rank": 1287
+    "rank": 1286
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24348986",
@@ -35990,7 +35966,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 1146.28,
     "score": 18,
-    "rank": 1288
+    "rank": 1287
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24346946",
@@ -36021,7 +35997,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 500.16,
     "score": 18,
-    "rank": 1289
+    "rank": 1288
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24289758",
@@ -36051,7 +36027,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 827.31,
     "score": 18,
-    "rank": 1290
+    "rank": 1289
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24078146",
@@ -36080,7 +36056,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 604.74,
     "score": 18,
-    "rank": 1291
+    "rank": 1290
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23993501",
@@ -36107,7 +36083,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 578.32,
     "score": 18,
-    "rank": 1292
+    "rank": 1291
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/23900450",
@@ -36136,7 +36112,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 616.53,
     "score": 18,
-    "rank": 1293
+    "rank": 1292
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/23900066",
@@ -36165,7 +36141,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 613.25,
     "score": 18,
-    "rank": 1294
+    "rank": 1293
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/23789890",
@@ -36193,7 +36169,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 766.9,
     "score": 18,
-    "rank": 1295
+    "rank": 1294
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23714608",
@@ -36218,7 +36194,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 567.79,
     "score": 18,
-    "rank": 1296
+    "rank": 1295
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23646148",
@@ -36244,7 +36220,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 551.13,
     "score": 18,
-    "rank": 1297
+    "rank": 1296
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23632432",
@@ -36270,7 +36246,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 348.88,
     "score": 18,
-    "rank": 1298
+    "rank": 1297
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23259517",
@@ -36296,7 +36272,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 348.88,
     "score": 18,
-    "rank": 1299
+    "rank": 1298
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/22951648",
@@ -36322,7 +36298,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 343.83,
     "score": 18,
-    "rank": 1300
+    "rank": 1299
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/22914818",
@@ -36348,7 +36324,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 75.84,
     "score": 18,
-    "rank": 1301
+    "rank": 1300
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/22070559",
@@ -36372,7 +36348,7 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 782.71,
     "score": 18,
-    "rank": 1302
+    "rank": 1301
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/22178851",
@@ -36398,7 +36374,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 298.32,
     "score": 18,
-    "rank": 1303
+    "rank": 1302
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/21644025",
@@ -36424,7 +36400,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 252.81,
     "score": 18,
-    "rank": 1304
+    "rank": 1303
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/21613086",
@@ -36450,7 +36426,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 197.19,
     "score": 18,
-    "rank": 1305
+    "rank": 1304
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/17773495",
@@ -36476,7 +36452,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 529.08,
     "score": 18,
-    "rank": 1306
+    "rank": 1305
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/16966155",
@@ -36502,7 +36478,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 379.22,
     "score": 18,
-    "rank": 1307
+    "rank": 1306
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24657085",
@@ -36527,7 +36503,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 578.29,
     "score": 17,
-    "rank": 1308
+    "rank": 1307
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24653928",
@@ -36556,7 +36532,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 658.21,
     "score": 17,
-    "rank": 1309
+    "rank": 1308
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24646355",
@@ -36585,7 +36561,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 552.75,
     "score": 17,
-    "rank": 1310
+    "rank": 1309
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24644987",
@@ -36616,7 +36592,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 635.92,
     "score": 17,
-    "rank": 1311
+    "rank": 1310
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24635193",
@@ -36645,7 +36621,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 935.59,
     "score": 17,
-    "rank": 1312
+    "rank": 1311
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24634890",
@@ -36671,7 +36647,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 541.02,
     "score": 17,
-    "rank": 1313
+    "rank": 1312
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24634022",
@@ -36697,7 +36673,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 854.51,
     "score": 17,
-    "rank": 1314
+    "rank": 1313
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24625399",
@@ -36723,7 +36699,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 844.39,
     "score": 17,
-    "rank": 1315
+    "rank": 1314
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24405988",
@@ -36748,7 +36724,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 851.13,
     "score": 17,
-    "rank": 1316
+    "rank": 1315
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24623390",
@@ -36774,7 +36750,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 803.94,
     "score": 17,
-    "rank": 1317
+    "rank": 1316
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24617220",
@@ -36800,7 +36776,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 404.5,
     "score": 17,
-    "rank": 1318
+    "rank": 1317
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24610778",
@@ -36826,7 +36802,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 556.19,
     "score": 17,
-    "rank": 1319
+    "rank": 1318
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24609316",
@@ -36852,7 +36828,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 854.51,
     "score": 17,
-    "rank": 1320
+    "rank": 1319
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24601839",
@@ -36878,7 +36854,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 490.46,
     "score": 17,
-    "rank": 1321
+    "rank": 1320
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24599056",
@@ -36904,7 +36880,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 758.44,
     "score": 17,
-    "rank": 1322
+    "rank": 1321
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24591429",
@@ -36930,7 +36906,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 601.69,
     "score": 17,
-    "rank": 1323
+    "rank": 1322
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24568635",
@@ -36956,7 +36932,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 626.98,
     "score": 17,
-    "rank": 1324
+    "rank": 1323
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24561908",
@@ -36982,7 +36958,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 581.47,
     "score": 17,
-    "rank": 1325
+    "rank": 1324
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24560644",
@@ -37006,7 +36982,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 516.76,
     "score": 17,
-    "rank": 1326
+    "rank": 1325
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24559255",
@@ -37032,7 +37008,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 854.51,
     "score": 17,
-    "rank": 1327
+    "rank": 1326
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24550283",
@@ -37062,7 +37038,7 @@
     "_search_pass": "pipe_reno_done",
     "monthly_cost_eur": 1151.14,
     "score": 17,
-    "rank": 1328
+    "rank": 1327
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24549797",
@@ -37090,7 +37066,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 678.77,
     "score": 17,
-    "rank": 1329
+    "rank": 1328
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24547467",
@@ -37119,7 +37095,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 724.97,
     "score": 17,
-    "rank": 1330
+    "rank": 1329
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24522983",
@@ -37142,7 +37118,7 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 562.86,
     "score": 17,
-    "rank": 1331
+    "rank": 1330
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24519705",
@@ -37170,7 +37146,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 1253.2,
     "score": 17,
-    "rank": 1332
+    "rank": 1331
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24512850",
@@ -37201,7 +37177,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 548.19,
     "score": 17,
-    "rank": 1333
+    "rank": 1332
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24507080",
@@ -37230,7 +37206,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 719.37,
     "score": 17,
-    "rank": 1334
+    "rank": 1333
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24437912",
@@ -37255,7 +37231,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 737.45,
     "score": 17,
-    "rank": 1335
+    "rank": 1334
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24488992",
@@ -37286,7 +37262,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 542.53,
     "score": 17,
-    "rank": 1336
+    "rank": 1335
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24463536",
@@ -37313,7 +37289,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 448.51,
     "score": 17,
-    "rank": 1337
+    "rank": 1336
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/23732982",
@@ -37343,7 +37319,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 724.67,
     "score": 17,
-    "rank": 1338
+    "rank": 1337
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24431162",
@@ -37371,7 +37347,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 1156.31,
     "score": 17,
-    "rank": 1339
+    "rank": 1338
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24413509",
@@ -37400,7 +37376,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 619.78,
     "score": 17,
-    "rank": 1340
+    "rank": 1339
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24408830",
@@ -37427,7 +37403,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 755.82,
     "score": 17,
-    "rank": 1341
+    "rank": 1340
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24400211",
@@ -37457,7 +37433,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 878.65,
     "score": 17,
-    "rank": 1342
+    "rank": 1341
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24392546",
@@ -37486,7 +37462,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 744.08,
     "score": 17,
-    "rank": 1343
+    "rank": 1342
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24237502",
@@ -37517,7 +37493,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 873.38,
     "score": 17,
-    "rank": 1344
+    "rank": 1343
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24345711",
@@ -37547,7 +37523,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 510.5,
     "score": 17,
-    "rank": 1345
+    "rank": 1344
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24341028",
@@ -37574,7 +37550,7 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 552.88,
     "score": 17,
-    "rank": 1346
+    "rank": 1345
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24338163",
@@ -37597,7 +37573,7 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 465.43,
     "score": 17,
-    "rank": 1347
+    "rank": 1346
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23668264",
@@ -37622,7 +37598,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 490.71,
     "score": 17,
-    "rank": 1348
+    "rank": 1347
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/22829803",
@@ -37646,7 +37622,7 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 727.59,
     "score": 17,
-    "rank": 1349
+    "rank": 1348
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24660833",
@@ -37676,7 +37652,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 775.52,
     "score": 16,
-    "rank": 1350
+    "rank": 1349
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24654590",
@@ -37705,7 +37681,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 697.11,
     "score": 16,
-    "rank": 1351
+    "rank": 1350
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24591765",
@@ -37731,7 +37707,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 798.89,
     "score": 16,
-    "rank": 1352
+    "rank": 1351
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24422619",
@@ -37761,7 +37737,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 814.11,
     "score": 16,
-    "rank": 1353
+    "rank": 1352
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24638295",
@@ -37790,7 +37766,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 670.93,
     "score": 16,
-    "rank": 1354
+    "rank": 1353
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24295513",
@@ -37816,7 +37792,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 581.47,
     "score": 16,
-    "rank": 1355
+    "rank": 1354
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24337107",
@@ -37842,7 +37818,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 783.72,
     "score": 16,
-    "rank": 1356
+    "rank": 1355
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24629642",
@@ -37868,7 +37844,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 653.27,
     "score": 16,
-    "rank": 1357
+    "rank": 1356
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24629514",
@@ -37894,7 +37870,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 278.09,
     "score": 16,
-    "rank": 1358
+    "rank": 1357
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24627369",
@@ -37920,7 +37896,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 783.72,
     "score": 16,
-    "rank": 1359
+    "rank": 1358
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24626338",
@@ -37946,7 +37922,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 515.74,
     "score": 16,
-    "rank": 1360
+    "rank": 1359
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24624832",
@@ -37971,7 +37947,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 723.04,
     "score": 16,
-    "rank": 1361
+    "rank": 1360
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24580924",
@@ -37997,7 +37973,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 753.38,
     "score": 16,
-    "rank": 1362
+    "rank": 1361
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24611060",
@@ -38023,7 +37999,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 556.19,
     "score": 16,
-    "rank": 1363
+    "rank": 1362
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24602797",
@@ -38049,7 +38025,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 788.78,
     "score": 16,
-    "rank": 1364
+    "rank": 1363
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24600057",
@@ -38075,7 +38051,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 293.26,
     "score": 16,
-    "rank": 1365
+    "rank": 1364
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24332772",
@@ -38101,7 +38077,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 753.38,
     "score": 16,
-    "rank": 1366
+    "rank": 1365
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24596270",
@@ -38127,7 +38103,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 571.36,
     "score": 16,
-    "rank": 1367
+    "rank": 1366
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24574313",
@@ -38153,7 +38129,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 278.09,
     "score": 16,
-    "rank": 1368
+    "rank": 1367
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24565882",
@@ -38179,7 +38155,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 632.03,
     "score": 16,
-    "rank": 1369
+    "rank": 1368
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24459355",
@@ -38203,7 +38179,7 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 814.06,
     "score": 16,
-    "rank": 1370
+    "rank": 1369
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24561383",
@@ -38229,7 +38205,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 556.19,
     "score": 16,
-    "rank": 1371
+    "rank": 1370
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24553033",
@@ -38257,7 +38233,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 757.37,
     "score": 16,
-    "rank": 1372
+    "rank": 1371
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24542471",
@@ -38286,7 +38262,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 964.26,
     "score": 16,
-    "rank": 1373
+    "rank": 1372
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24542183",
@@ -38316,7 +38292,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 597.38,
     "score": 16,
-    "rank": 1374
+    "rank": 1373
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24540631",
@@ -38347,7 +38323,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 602.53,
     "score": 16,
-    "rank": 1375
+    "rank": 1374
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24346784",
@@ -38376,7 +38352,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 905.03,
     "score": 16,
-    "rank": 1376
+    "rank": 1375
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24488607",
@@ -38408,7 +38384,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 610.23,
     "score": 16,
-    "rank": 1377
+    "rank": 1376
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24441682",
@@ -38435,7 +38411,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 474.65,
     "score": 16,
-    "rank": 1378
+    "rank": 1377
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24371313",
@@ -38464,7 +38440,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 1187.81,
     "score": 16,
-    "rank": 1379
+    "rank": 1378
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24353320",
@@ -38493,7 +38469,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 492.96,
     "score": 16,
-    "rank": 1380
+    "rank": 1379
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23757429",
@@ -38519,7 +38495,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 423.66,
     "score": 16,
-    "rank": 1381
+    "rank": 1380
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23714634",
@@ -38546,7 +38522,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 843.62,
     "score": 16,
-    "rank": 1382
+    "rank": 1381
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24327945",
@@ -38574,7 +38550,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 698.84,
     "score": 16,
-    "rank": 1383
+    "rank": 1382
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24316272",
@@ -38603,7 +38579,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 1035.6,
     "score": 16,
-    "rank": 1384
+    "rank": 1383
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23715023",
@@ -38633,7 +38609,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 825.48,
     "score": 16,
-    "rank": 1385
+    "rank": 1384
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23714582",
@@ -38659,7 +38635,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 682.59,
     "score": 16,
-    "rank": 1386
+    "rank": 1385
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23699211",
@@ -38685,7 +38661,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 553.66,
     "score": 16,
-    "rank": 1387
+    "rank": 1386
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23650284",
@@ -38711,7 +38687,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 702.82,
     "score": 16,
-    "rank": 1388
+    "rank": 1387
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23456911",
@@ -38737,7 +38713,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 495.51,
     "score": 16,
-    "rank": 1389
+    "rank": 1388
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/23455863",
@@ -38763,7 +38739,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 733.16,
     "score": 16,
-    "rank": 1390
+    "rank": 1389
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23445861",
@@ -38789,7 +38765,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 757.93,
     "score": 16,
-    "rank": 1391
+    "rank": 1390
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23374067",
@@ -38815,7 +38791,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 500.57,
     "score": 16,
-    "rank": 1392
+    "rank": 1391
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23371627",
@@ -38841,7 +38817,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 530.91,
     "score": 16,
-    "rank": 1393
+    "rank": 1392
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23310686",
@@ -38867,7 +38843,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 834.28,
     "score": 16,
-    "rank": 1394
+    "rank": 1393
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23331534",
@@ -38893,7 +38869,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 680.07,
     "score": 16,
-    "rank": 1395
+    "rank": 1394
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23309443",
@@ -38919,7 +38895,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 298.32,
     "score": 16,
-    "rank": 1396
+    "rank": 1395
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23307108",
@@ -38945,7 +38921,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 530.91,
     "score": 16,
-    "rank": 1397
+    "rank": 1396
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/22985616",
@@ -38971,7 +38947,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 849.45,
     "score": 16,
-    "rank": 1398
+    "rank": 1397
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/22893912",
@@ -38997,7 +38973,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 854.51,
     "score": 16,
-    "rank": 1399
+    "rank": 1398
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/16894779",
@@ -39023,7 +38999,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 571.36,
     "score": 16,
-    "rank": 1400
+    "rank": 1399
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/16964372",
@@ -39049,7 +39025,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 556.19,
     "score": 16,
-    "rank": 1401
+    "rank": 1400
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24534253",
@@ -39075,7 +39051,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 757.93,
     "score": 15,
-    "rank": 1402
+    "rank": 1401
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24423692",
@@ -39101,7 +39077,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 450.01,
     "score": 15,
-    "rank": 1403
+    "rank": 1402
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24570449",
@@ -39127,7 +39103,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 450.01,
     "score": 15,
-    "rank": 1404
+    "rank": 1403
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24483113",
@@ -39158,7 +39134,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 992.16,
     "score": 15,
-    "rank": 1405
+    "rank": 1404
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24643311",
@@ -39187,7 +39163,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 1139.45,
     "score": 15,
-    "rank": 1406
+    "rank": 1405
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24638299",
@@ -39216,7 +39192,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 842.93,
     "score": 15,
-    "rank": 1407
+    "rank": 1406
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24632548",
@@ -39242,7 +39218,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 278.09,
     "score": 15,
-    "rank": 1408
+    "rank": 1407
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24631267",
@@ -39268,7 +39244,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 530.91,
     "score": 15,
-    "rank": 1409
+    "rank": 1408
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24629880",
@@ -39294,7 +39270,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 601.69,
     "score": 15,
-    "rank": 1410
+    "rank": 1409
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24629760",
@@ -39320,7 +39296,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 273.04,
     "score": 15,
-    "rank": 1411
+    "rank": 1410
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24628894",
@@ -39346,7 +39322,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 313.49,
     "score": 15,
-    "rank": 1412
+    "rank": 1411
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24628347",
@@ -39372,7 +39348,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 530.91,
     "score": 15,
-    "rank": 1413
+    "rank": 1412
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24615842",
@@ -39398,7 +39374,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 535.96,
     "score": 15,
-    "rank": 1414
+    "rank": 1413
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24611328",
@@ -39424,7 +39400,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 399.44,
     "score": 15,
-    "rank": 1415
+    "rank": 1414
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24608943",
@@ -39450,7 +39426,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 378.71,
     "score": 15,
-    "rank": 1416
+    "rank": 1415
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/22750552",
@@ -39476,7 +39452,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 551.13,
     "score": 15,
-    "rank": 1417
+    "rank": 1416
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24602280",
@@ -39502,7 +39478,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 495.51,
     "score": 15,
-    "rank": 1418
+    "rank": 1417
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24597446",
@@ -39528,7 +39504,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 298.32,
     "score": 15,
-    "rank": 1419
+    "rank": 1418
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24594802",
@@ -39554,7 +39530,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 247.76,
     "score": 15,
-    "rank": 1420
+    "rank": 1419
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24587813",
@@ -39580,7 +39556,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 429.78,
     "score": 15,
-    "rank": 1421
+    "rank": 1420
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24423899",
@@ -39606,7 +39582,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 551.13,
     "score": 15,
-    "rank": 1422
+    "rank": 1421
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24579361",
@@ -39632,7 +39608,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 480.34,
     "score": 15,
-    "rank": 1423
+    "rank": 1422
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24573075",
@@ -39658,7 +39634,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 404.5,
     "score": 15,
-    "rank": 1424
+    "rank": 1423
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24572202",
@@ -39684,7 +39660,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 454.05,
     "score": 15,
-    "rank": 1425
+    "rank": 1424
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24568542",
@@ -39710,7 +39686,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 450.01,
     "score": 15,
-    "rank": 1426
+    "rank": 1425
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24568394",
@@ -39736,7 +39712,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 546.08,
     "score": 15,
-    "rank": 1427
+    "rank": 1426
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24566306",
@@ -39762,7 +39738,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 702.82,
     "score": 15,
-    "rank": 1428
+    "rank": 1427
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24564653",
@@ -39788,7 +39764,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 500.57,
     "score": 15,
-    "rank": 1429
+    "rank": 1428
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24563650",
@@ -39814,7 +39790,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 328.66,
     "score": 15,
-    "rank": 1430
+    "rank": 1429
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24559552",
@@ -39840,7 +39816,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 530.91,
     "score": 15,
-    "rank": 1431
+    "rank": 1430
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/23453509",
@@ -39865,7 +39841,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 601.69,
     "score": 15,
-    "rank": 1432
+    "rank": 1431
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24558295",
@@ -39891,7 +39867,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 450.01,
     "score": 15,
-    "rank": 1433
+    "rank": 1432
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24557235",
@@ -39915,7 +39891,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 922.47,
     "score": 15,
-    "rank": 1434
+    "rank": 1433
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24453267",
@@ -39944,7 +39920,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 686.58,
     "score": 15,
-    "rank": 1435
+    "rank": 1434
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24529486",
@@ -39973,7 +39949,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 551.73,
     "score": 15,
-    "rank": 1436
+    "rank": 1435
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24528984",
@@ -40002,7 +39978,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 677.5,
     "score": 15,
-    "rank": 1437
+    "rank": 1436
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24527074",
@@ -40032,7 +40008,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 925.24,
     "score": 15,
-    "rank": 1438
+    "rank": 1437
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24516725",
@@ -40056,7 +40032,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 805.82,
     "score": 15,
-    "rank": 1439
+    "rank": 1438
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24515585",
@@ -40086,7 +40062,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 741.87,
     "score": 15,
-    "rank": 1440
+    "rank": 1439
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24433742",
@@ -40115,7 +40091,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 671.67,
     "score": 15,
-    "rank": 1441
+    "rank": 1440
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23903781",
@@ -40142,7 +40118,7 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 1137.65,
     "score": 15,
-    "rank": 1442
+    "rank": 1441
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/22724960",
@@ -40172,7 +40148,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 719.86,
     "score": 15,
-    "rank": 1443
+    "rank": 1442
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/23662365",
@@ -40198,7 +40174,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 652.26,
     "score": 15,
-    "rank": 1444
+    "rank": 1443
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23657754",
@@ -40224,7 +40200,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 475.29,
     "score": 15,
-    "rank": 1445
+    "rank": 1444
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23637604",
@@ -40250,7 +40226,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 652.26,
     "score": 15,
-    "rank": 1446
+    "rank": 1445
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23153705",
@@ -40276,7 +40252,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 546.08,
     "score": 15,
-    "rank": 1447
+    "rank": 1446
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/22959425",
@@ -40302,7 +40278,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 475.29,
     "score": 15,
-    "rank": 1448
+    "rank": 1447
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/22650461",
@@ -40328,7 +40304,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 657.31,
     "score": 15,
-    "rank": 1449
+    "rank": 1448
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/22213471",
@@ -40354,7 +40330,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 247.76,
     "score": 15,
-    "rank": 1450
+    "rank": 1449
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/17412426",
@@ -40380,7 +40356,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 161.29,
     "score": 15,
-    "rank": 1451
+    "rank": 1450
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/17005485",
@@ -40406,7 +40382,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 692.71,
     "score": 15,
-    "rank": 1452
+    "rank": 1451
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/16549549",
@@ -40432,7 +40408,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 601.69,
     "score": 15,
-    "rank": 1453
+    "rank": 1452
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24651497",
@@ -40461,7 +40437,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 958.66,
     "score": 14,
-    "rank": 1454
+    "rank": 1453
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24395836",
@@ -40490,7 +40466,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 892.26,
     "score": 14,
-    "rank": 1455
+    "rank": 1454
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23895123",
@@ -40519,7 +40495,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 892.17,
     "score": 14,
-    "rank": 1456
+    "rank": 1455
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/17414459",
@@ -40544,7 +40520,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 828.13,
     "score": 14,
-    "rank": 1457
+    "rank": 1456
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24581770",
@@ -40575,7 +40551,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 1032.37,
     "score": 13,
-    "rank": 1458
+    "rank": 1457
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23244579",
@@ -40601,7 +40577,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 702.82,
     "score": 13,
-    "rank": 1459
+    "rank": 1458
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24627688",
@@ -40627,7 +40603,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 419.67,
     "score": 13,
-    "rank": 1460
+    "rank": 1459
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24626232",
@@ -40653,7 +40629,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 834.28,
     "score": 13,
-    "rank": 1461
+    "rank": 1460
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24625589",
@@ -40679,7 +40655,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 803.94,
     "score": 13,
-    "rank": 1462
+    "rank": 1461
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24562158",
@@ -40705,7 +40681,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 429.78,
     "score": 13,
-    "rank": 1463
+    "rank": 1462
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24518331",
@@ -40733,7 +40709,7 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 1100.94,
     "score": 13,
-    "rank": 1464
+    "rank": 1463
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/17024712",
@@ -40755,7 +40731,7 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 867.91,
     "score": 13,
-    "rank": 1465
+    "rank": 1464
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24650526?src=listing_of_the_week_search",
@@ -40784,7 +40760,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 1072.12,
     "score": 12,
-    "rank": 1466
+    "rank": 1465
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24650526",
@@ -40813,7 +40789,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 1072.12,
     "score": 12,
-    "rank": 1467
+    "rank": 1466
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24609320",
@@ -40842,7 +40818,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 1078.38,
     "score": 12,
-    "rank": 1468
+    "rank": 1467
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24632348",
@@ -40865,7 +40841,7 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 682.59,
     "score": 12,
-    "rank": 1469
+    "rank": 1468
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24617870",
@@ -40889,7 +40865,7 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 728.1,
     "score": 12,
-    "rank": 1470
+    "rank": 1469
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24537920",
@@ -40915,7 +40891,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 682.59,
     "score": 12,
-    "rank": 1471
+    "rank": 1470
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24599067",
@@ -40941,7 +40917,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 803.94,
     "score": 12,
-    "rank": 1472
+    "rank": 1471
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24592873",
@@ -40967,7 +40943,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 601.69,
     "score": 12,
-    "rank": 1473
+    "rank": 1472
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24512375",
@@ -40993,7 +40969,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 353.94,
     "score": 12,
-    "rank": 1474
+    "rank": 1473
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24591799",
@@ -41019,7 +40995,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 657.31,
     "score": 12,
-    "rank": 1475
+    "rank": 1474
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24581807",
@@ -41045,7 +41021,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 702.82,
     "score": 12,
-    "rank": 1476
+    "rank": 1475
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24568851",
@@ -41071,7 +41047,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 682.59,
     "score": 12,
-    "rank": 1477
+    "rank": 1476
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24560903",
@@ -41097,7 +41073,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 733.16,
     "score": 12,
-    "rank": 1478
+    "rank": 1477
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24527625",
@@ -41128,7 +41104,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 1032.11,
     "score": 12,
-    "rank": 1479
+    "rank": 1478
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23300372",
@@ -41152,7 +41128,7 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 652.26,
     "score": 12,
-    "rank": 1480
+    "rank": 1479
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/22943203",
@@ -41178,7 +41154,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 859.56,
     "score": 12,
-    "rank": 1481
+    "rank": 1480
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/22692672",
@@ -41202,7 +41178,7 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 312.48,
     "score": 12,
-    "rank": 1482
+    "rank": 1481
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24551197",
@@ -41233,7 +41209,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 733.67,
     "score": 11,
-    "rank": 1483
+    "rank": 1482
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24358497",
@@ -41262,7 +41238,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 838.54,
     "score": 11,
-    "rank": 1484
+    "rank": 1483
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23774001",
@@ -41293,7 +41269,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 928.16,
     "score": 11,
-    "rank": 1485
+    "rank": 1484
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/22143919",
@@ -41319,7 +41295,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 439.89,
     "score": 9,
-    "rank": 1486
+    "rank": 1485
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/21123383",
@@ -41342,7 +41318,7 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 530.91,
     "score": 9,
-    "rank": 1487
+    "rank": 1486
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/16907943",
@@ -41366,7 +41342,7 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 783.72,
     "score": 9,
-    "rank": 1488
+    "rank": 1487
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23300336",
@@ -41390,7 +41366,7 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 418.66,
     "score": 8,
-    "rank": 1489
+    "rank": 1488
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23300386",
@@ -41414,7 +41390,7 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 854.25,
     "score": 8,
-    "rank": 1490
+    "rank": 1489
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/21228498",
@@ -41437,7 +41413,7 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 530.91,
     "score": 8,
-    "rank": 1491
+    "rank": 1490
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/16966862",
@@ -41461,6 +41437,6 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 626.98,
     "score": 8,
-    "rank": 1492
+    "rank": 1491
   }
 ]
