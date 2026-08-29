@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oikotie — asuntoanalyysi</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+       background: #f4f5f7; color: #1a1a2e; padding: 2rem 1rem; }
+header { max-width: 1100px; margin: 0 auto 1.5rem; }
+header h1 { font-size: 1.5rem; font-weight: 700; margin-bottom: .25rem; }
+header p { color: #555; font-size: .85rem; }
+.criteria { max-width: 1100px; margin: 0 auto 1.5rem;
+  background: #e8f4fd; border-left: 4px solid #2196f3;
+  padding: .75rem 1rem; border-radius: 0 6px 6px 0;
+  font-size: .82rem; color: #333; line-height: 1.7; }
+.tabs { max-width: 1100px; margin: 0 auto 1rem; display: flex; gap: .5rem; }
+.tab-btn { padding: .45rem 1.1rem; border: 1px solid #ccc; background: #fff;
+  border-radius: 6px; cursor: pointer; font-size: .85rem; font-weight: 500; }
+.tab-btn.active { background: #1565c0; color: #fff; border-color: #1565c0; }
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem; max-width: 1100px; margin: 0 auto; }
+/* ── Card ── */
+.card { background: #fff; border-radius: 12px; padding: 18px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.07); display: flex; flex-direction: column; gap: .35rem; }
+.card-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: .1rem; }
+.card-rank { font-size: .73rem; font-weight: 700; color: #999; letter-spacing: .02em; text-transform: uppercase; }
+.card-view-link { font-size: .78rem; color: #1565c0; text-decoration: none; font-weight: 600; flex-shrink: 0; }
+.card-view-link:hover { text-decoration: underline; }
+.card-price { font-size: 1.55rem; font-weight: 700; letter-spacing: -.5px; color: #1a1a2e; line-height: 1.1; }
+.card-price-sub { font-size: .82rem; font-weight: 400; color: #999; margin-left: 3px; }
+.card-monthly { font-size: 1.0rem; font-weight: 600; color: #1565c0; }
+.card-loan { font-size: .78rem; color: #777; }
+.card-meta { font-size: .8rem; color: #666; margin-top: .05rem; }
+.card-address { font-size: .84rem; color: #444; }
+.card-address a { color: #1a1a2e; text-decoration: none; font-weight: 500; }
+.card-address a:hover { color: #1565c0; }
+.card-hub { font-size: .78rem; color: #555; }
+.card-divider { border: none; border-top: 1px solid #eee; margin: .2rem 0; }
+.card-badges { display: flex; gap: .3rem; flex-wrap: wrap; }
+.badge { font-size: .7rem; font-weight: 600; padding: 2px 8px;
+  border-radius: 99px; white-space: nowrap; }
+.badge.new  { background: #d4f4e0; color: #1a6b3a; }
+.badge.reno { background: #fde8d4; color: #7a3a0a; }
+.badge.cand { background: #fff3cd; color: #7a5a00; }
+.badge.rent { background: #e8d4f4; color: #4a1a6b; }
+.badge.tram { background: #e3f2fd; color: #0d47a1; }
+.stop-note { font-size: .75rem; color: #2a6496; background: #eef5fb;
+  border-left: 3px solid #2a6496; padding: .2rem .5rem; border-radius: 0 3px 3px 0; }
+.stop-link { font-size: .68rem; color: #2a6496; border: 1px solid #2a6496;
+  padding: 0 .35rem; border-radius: 3px; text-decoration: none; margin-left: .3rem; white-space: nowrap; }
+.stop-link:hover { background: #2a6496; color: #fff; }
+.risk-flags { list-style: none; margin: .1rem 0; padding: 0; display: flex; flex-direction: column; gap: .2rem; }
+.risk-flags li { font-size: .72rem; background: #fff5f5; border-left: 3px solid #c0392b;
+  padding: .2rem .5rem; border-radius: 0 3px 3px 0;
+  display: flex; justify-content: space-between; align-items: baseline; gap: .4rem; }
+.rf-text { color: #7a1010; flex: 1; }
+.rf-link { font-size: .66rem; color: #c0392b; border: 1px solid #c0392b;
+  padding: 0 .3rem; border-radius: 3px; text-decoration: none; white-space: nowrap; flex-shrink: 0; }
+.rf-link:hover { background: #c0392b; color: #fff; }
+.reno-note { font-size: .72rem; color: #888; border-top: 1px solid #eee;
+  padding-top: .3rem; line-height: 1.4; }
+/* ── Table ── */
+.tbl-wrap { max-width: 1100px; margin: 0 auto; overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: .82rem; }
+th { background: #1565c0; color: #fff; padding: .5rem .75rem;
+  text-align: left; cursor: pointer; white-space: nowrap; user-select: none; }
+th:hover { background: #1976d2; }
+td { padding: .45rem .75rem; border-bottom: 1px solid #e8e8e8; vertical-align: top; }
+td a { color: #1565c0; text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.num { text-align: right; white-space: nowrap; }
+tr.row-confirmed:hover { background: #f0f8ff; }
+tr.row-cand { background: #fffdf0; }
+tr.row-cand:hover { background: #fff8dc; }
+.sort-asc::after { content: " ▲"; }
+.sort-desc::after { content: " ▼"; }
+/* ── Sections ── */
+.sec { margin-top: 2rem; }
+.sec-title { font-size: 1rem; font-weight: 700; margin: 0 auto .3rem; max-width: 1100px; }
+.sec-note  { font-size: .8rem; color: #888; margin: 0 auto .75rem; max-width: 1100px; }
+.sec-rented .sec-title { color: #4a1a6b; }
+.sec-new    .sec-title { color: #1a6b3a; }
+.sec-reno   .sec-title { color: #7a3a0a; }
+.sec-cand   .sec-title { color: #7a5a00; }
+.empty { text-align: center; color: #888; padding: 2rem; }
+/* ── Market risks ── */
+.market-risks { max-width: 1100px; margin: .75rem auto; background: #fffbf0;
+  border: 1px solid #e6c84a; border-radius: 8px; overflow: hidden; }
+.market-risks summary { padding: .6rem 1rem; cursor: pointer; font-size: .85rem;
+  font-weight: 600; color: #7a5a00; user-select: none; }
+.market-risks summary:hover { background: #fff3cd; }
+.mr-grid { display: flex; flex-direction: column; gap: .3rem; padding: .5rem 1rem .75rem; }
+.mr-item { display: flex; align-items: baseline; gap: .5rem; font-size: .78rem;
+  background: #fff; border-radius: 4px; padding: .3rem .5rem; }
+.mr-sev { font-size: .66rem; font-weight: 700; padding: 1px 5px; border-radius: 3px;
+  white-space: nowrap; flex-shrink: 0; }
+.mr-opp  .mr-sev { background: #d4f4e0; color: #1a6b3a; }
+.mr-high .mr-sev { background: #ffe0e0; color: #8b0000; }
+.mr-med  .mr-sev { background: #fff3cd; color: #7a5a00; }
+.mr-text { flex: 1; color: #444; line-height: 1.4; }
+.mr-item a { font-size: .68rem; color: #7a5a00; border: 1px solid #c8a800;
+  padding: 0 .3rem; border-radius: 3px; text-decoration: none; white-space: nowrap; flex-shrink: 0; }
+.mr-item a:hover { background: #c8a800; color: #fff; }
+/* ── Mode nav ── */
+.mode-nav { max-width: 1100px; margin: 0 auto 1.5rem; display: flex; gap: .5rem;
+  border-bottom: 2px solid #d0d0d8; padding-bottom: .6rem; }
+.mode-btn { padding: .55rem 1.5rem; border: 2px solid transparent; background: #f0f0f4;
+  border-radius: 8px; cursor: pointer; font-size: .9rem; font-weight: 600; color: #555; }
+.mode-btn.active { background: #1565c0; color: #fff; border-color: #1565c0; }
+</style>
+</head>
+<body>
+<div class="mode-nav">
+  <button class="mode-btn active" onclick="showMode('tram', this)">🚋 Vantaan Ratikka</button>
+  <button class="mode-btn" onclick="showMode('uusimaa', this)">🏘 PKS Vuokratut</button>
+  <button class="mode-btn" onclick="showMode('newbuild', this)">🏗 PKS Uutuudet</button>
+</div>
+<!-- ═══════════════════════════════════════════════════════ TRAM VIEW -->
+<div id="mode-tram">
+<header>
+  <h1>Oikotie — asunnot lähellä Vantaan ratikkaa</h1>
+  <p>Generated 2026-08-29 11:17 &nbsp;·&nbsp;
+     0 rented out &nbsp;·&nbsp;
+     0 new builds &nbsp;·&nbsp;
+     0 pipe reno done &nbsp;·&nbsp;
+     0 candidates &nbsp;·&nbsp;
+     ranked by score</p>
+</header>
+<div class="criteria">
+  <strong>Filters:</strong>
+  Free-market (habitationType=1) · velaton hinta ≤ 200,000 € ·
+  loan ≤ 50% of debt-free price ·
+  Built ≥ 2000 <em>or</em> older with completed pipe renovation ·
+  1980–1995 builds without confirmed pipe reno excluded ·
+  ≤ 500 m from a tram stop
+</div>
+<details class="market-risks">
+  <summary>⚠️ Market &amp; project risk factors (click to expand)</summary>
+  <div class="mr-grid">
+    <div class="mr-item mr-high">
+      <span class="mr-sev">HIGH</span>
+      <span class="mr-text">Vantaa apartment prices have been the worst-performing major city 2024–2025 (–9.1% peak YoY, –5.2% May 2025)</span>
+      <a href="https://www.helsinkitimes.fi/finland/finland-news/domestic/27245-housing-prices-drop-again-in-may-with-vantaa-hit-hardest.html" target="_blank" rel="noopener">helsinkitimes</a>
+    </div>
+    <div class="mr-item mr-high">
+      <span class="mr-sev">HIGH</span>
+      <span class="mr-text">Rental vacancy in HMA tripled 2020–2024; Vantaa occupancy declined Q4 2025 while Helsinki/Espoo held steady</span>
+      <a href="https://innagroup.fi/en/news/market-reviews/residential-rental-market-q4-2025-seasonal-fluctuations-and-economic-conditions-reflected-in-q4-outlook-for-2026-cautiously-upward/" target="_blank" rel="noopener">INNA Q4 2025</a>
+    </div>
+    <div class="mr-item mr-high">
+      <span class="mr-sev">HIGH</span>
+      <span class="mr-text">Tram budget already overrun 16%+ (€647M → €750M) before construction started; Vantaa in €79.7M fiscal deficit with €544M tram commitment</span>
+      <a href="https://www.mtvuutiset.fi/artikkeli/vantaan-ratikan-hinta-noussut-750-miljoonaan-selvasti-muita-kaupunkeja-kalliimpi/9246426" target="_blank" rel="noopener">MTV Uutiset</a>
+    </div>
+    <div class="mr-item mr-high">
+      <span class="mr-sev">HIGH</span>
+      <span class="mr-text">New-build oversupply: YIT had 1,359 completed unsold units (full year inventory) in 2024; developers offering concessions, competing directly with private investors</span>
+      <a href="https://www.salkunrakentaja.fi/2024/05/yit-myymattomat-asunnot/" target="_blank" rel="noopener">salkunrakentaja</a>
+    </div>
+    <div class="mr-item mr-med">
+      <span class="mr-sev">MED</span>
+      <span class="mr-text">Tram opens at earliest 2029 — asking prices already reflect "tram premium" but buyers bear 3+ years of financing with no transit benefit</span>
+      <a href="https://ratikka.vantaa.fi/en/traffic-and-transport/vantaa-light-rail/information-about-vantaa-light-rail" target="_blank" rel="noopener">ratikka.vantaa.fi</a>
+    </div>
+    <div class="mr-item mr-med">
+      <span class="mr-sev">MED</span>
+      <span class="mr-text">Finnish construction sector: 381 bankruptcies in Jan 2025 alone — risk of developer insolvency on pre-completion new builds</span>
+      <a href="https://www.rakennuslehti.fi/2025/02/konkurssiin-haettiin-tammikuussa-kymmenia-rakennusalan-yrityksia/" target="_blank" rel="noopener">rakennuslehti</a>
+    </div>
+  </div>
+</details>
+<div class="tabs">
+  <button class="tab-btn active" onclick="showTab('tram-cards','mode-tram',this)">Cards</button>
+  <button class="tab-btn" onclick="showTab('tram-table','mode-tram',this)">Table / Analysis</button>
+</div>
+<div id="tab-tram-cards" class="tab-panel active">
+  
+</div>
+<div id="tab-tram-table" class="tab-panel">
+  <div class="tbl-wrap">
+    <table id="tram-table">
+      <thead><tr>
+        <th onclick="sortTable('tram-table',0)">Address</th>
+        <th onclick="sortTable('tram-table',1)">District</th>
+        <th onclick="sortTable('tram-table',2)">City</th>
+        <th onclick="sortTable('tram-table',3)">Price</th>
+        <th onclick="sortTable('tram-table',4)">Velaton</th>
+        <th onclick="sortTable('tram-table',5)">Loan</th>
+        <th onclick="sortTable('tram-table',6)">Rooms</th>
+        <th onclick="sortTable('tram-table',7)">m²</th>
+        <th onclick="sortTable('tram-table',8)">Year</th>
+        <th onclick="sortTable('tram-table',9)">Status</th>
+      </tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</div>
+</div><!-- /mode-tram -->
+
+<!-- ═══════════════════════════════════════════════════ UUSIMAA VIEW -->
+<div id="mode-uusimaa" style="display:none">
+<header>
+  <h1>Oikotie — sijoitusasunnot PKS (Helsinki · Espoo · Vantaa)</h1>
+  <p>Generated 2026-08-29 11:17 &nbsp;·&nbsp;
+     0 rented out (all shown) &nbsp;·&nbsp;
+     0 unrented watch list &nbsp;·&nbsp;
+     scored: hub · central · mall · quality</p>
+</header>
+<div class="criteria">
+  <strong>Filters:</strong>
+  Free-market · velaton hinta ≤ 200,000 € ·
+  loan ≤ 50% · Built ≥ 2000 <em>or</em> older with pipe reno ·
+  1980–1995 without confirmed reno excluded ·
+  Rented-out: all shown &nbsp;·&nbsp; Unrented: top 5 by score ·
+  🚋 tram badge if ≤ 500 m from Vantaan ratikka stop
+</div>
+<details class="market-risks">
+  <summary>📊 PKS market signals &amp; risks (click to expand)</summary>
+  <div class="mr-grid">
+    <div class="mr-item mr-opp">
+      <span class="mr-sev">OPP</span>
+      <span class="mr-text">Occupancy recovering — Helsinki metro rental occupancy 94% in Q3 2025, best since H1 2020; oversupply gradually melting away</span>
+      <a href="https://rettamanagement.fi/en/ajankohtaista/releases/finnish-residential-rental-market-q3-2025-strong-results-as-expected/" target="_blank" rel="noopener">Retta Q3 2025</a>
+    </div>
+    <div class="mr-item mr-opp">
+      <span class="mr-sev">OPP</span>
+      <span class="mr-text">Gross yields 5–7% in transit-connected PKS suburbs; HMA identified as clear growth area 2025–2026; new construction halted → supply constraint building</span>
+      <a href="https://investropa.com/blogs/news/helsinki-rental-yields" target="_blank" rel="noopener">Investropa 2026</a>
+    </div>
+    <div class="mr-item mr-opp">
+      <span class="mr-sev">OPP</span>
+      <span class="mr-text">Prices near historical lows — buyers market; sellers negotiating; current correction may prove excellent entry if bought below replacement cost</span>
+      <a href="https://kasvutalous.fi/%F0%9F%8F%A0-asuntomarkkinoiden-toipuminen-suomessa-mita-tapahtuu-vuonna-2026/" target="_blank" rel="noopener">kasvutalous.fi</a>
+    </div>
+    <div class="mr-item mr-med">
+      <span class="mr-sev">RISK</span>
+      <span class="mr-text">Rental supply still abundant — non-subsidized rents declined –1.3% recently; upward rent pressure will take more time to materialize</span>
+      <a href="https://rettamanagement.fi/en/ajankohtaista/releases/finnish-residential-rental-market-q3-2025-strong-results-as-expected/" target="_blank" rel="noopener">Retta Management</a>
+    </div>
+    <div class="mr-item mr-med">
+      <span class="mr-sev">RISK</span>
+      <span class="mr-text">Price uncertainty — realistic planning range for Helsinki next 12 months: –3% to +2%; small further dip in early 2026 remains plausible</span>
+      <a href="https://investropa.com/blogs/news/helsinki-good-time" target="_blank" rel="noopener">Investropa 2026</a>
+    </div>
+    <div class="mr-item mr-high">
+      <span class="mr-sev">RISK</span>
+      <span class="mr-text">Pipe renovation liability in 1975–1995 Helsinki/Espoo/Vantaa stock — major capital expenditure risk; confirm renovation status before any offer</span>
+      <a href="https://www.kiinteistoliitto.fi/" target="_blank" rel="noopener">kiinteistöliitto</a>
+    </div>
+    <div class="mr-item mr-med">
+      <span class="mr-sev">RISK</span>
+      <span class="mr-text">Interest rate sensitivity — Euribor 12M at 2.2–2.3%; any reversal upward directly compresses net yield on leveraged properties</span>
+      <a href="https://www.sijoittaja.fi/424295/asuntosijoittaminen-vuonna-2026/" target="_blank" rel="noopener">sijoittaja.fi</a>
+    </div>
+  </div>
+</details>
+<div class="tabs">
+  <button class="tab-btn active" onclick="showTab('uu-cards','mode-uusimaa',this)">Cards</button>
+  <button class="tab-btn" onclick="showTab('uu-table','mode-uusimaa',this)">Table / Analysis</button>
+</div>
+<div id="tab-uu-cards" class="tab-panel active">
+  
+</div>
+<div id="tab-uu-table" class="tab-panel">
+  <div class="tbl-wrap">
+    <table id="uu-table">
+      <thead><tr>
+        <th onclick="sortTable('uu-table',0)">Address</th>
+        <th onclick="sortTable('uu-table',1)">District</th>
+        <th onclick="sortTable('uu-table',2)">City</th>
+        <th onclick="sortTable('uu-table',3)">Price</th>
+        <th onclick="sortTable('uu-table',4)">Velaton</th>
+        <th onclick="sortTable('uu-table',5)">Loan</th>
+        <th onclick="sortTable('uu-table',6)">Rooms</th>
+        <th onclick="sortTable('uu-table',7)">m²</th>
+        <th onclick="sortTable('uu-table',8)">Year</th>
+        <th onclick="sortTable('uu-table',9)">Nearest Hub</th>
+        <th onclick="sortTable('uu-table',10)">Score</th>
+      </tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</div>
+</div><!-- /mode-uusimaa -->
+
+<!-- ════════════════════════════════════════════ NEW BUILD VIEW -->
+<div id="mode-newbuild" style="display:none">
+  <h1>Oikotie — Uudisasunnot PKS (Helsinki · Espoo · Vantaa)</h1>
+  <p style="margin:.5rem 0 1rem;color:#555">
+     0 listings &nbsp;·&nbsp;
+     velaton hinta ≤ 200,000 € · loan ≤ 50% ·
+     Sorted by hub-proximity score
+  </p>
+  <div class="tabs">
+    <button class="tab-btn active" onclick="showTab('nb-cards','mode-newbuild',this)">Cards</button>
+    <button class="tab-btn" onclick="showTab('nb-table','mode-newbuild',this)">Table / Analysis</button>
+  </div>
+  <div id="nb-cards" class="tab-panel active">
+    
+  </div>
+  <div id="nb-table" class="tab-panel" style="display:none">
+    <table id="nb-table-el" class="results-table">
+      <thead><tr>
+        <th onclick="sortTable('nb-table-el',0)">Rank</th>
+        <th onclick="sortTable('nb-table-el',1)">Address</th>
+        <th onclick="sortTable('nb-table-el',2)">Price €</th>
+        <th onclick="sortTable('nb-table-el',3)">m²</th>
+        <th onclick="sortTable('nb-table-el',4)">Year</th>
+        <th onclick="sortTable('nb-table-el',5)">Monthly €</th>
+        <th onclick="sortTable('nb-table-el',6)">Hub</th>
+        <th onclick="sortTable('nb-table-el',7)">Score</th>
+      </tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</div><!-- /mode-newbuild -->
+
+<script>
+function showMode(name, btn) {
+  document.querySelectorAll('[id^="mode-"]').forEach(v => v.style.display = 'none');
+  document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('mode-' + name).style.display = 'block';
+  btn.classList.add('active');
+}
+function showTab(tabId, modeId, btn) {
+  const mode = document.getElementById(modeId);
+  mode.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  mode.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + tabId).classList.add('active');
+  btn.classList.add('active');
+}
+const _sortState = {};
+function sortTable(tableId, col) {
+  const st = _sortState[tableId] || {c: -1, d: 1};
+  if (st.c === col) st.d *= -1; else { st.c = col; st.d = 1; }
+  _sortState[tableId] = st;
+  const tbl = document.getElementById(tableId);
+  const tb  = tbl.querySelector('tbody');
+  const rows = Array.from(tb.querySelectorAll('tr'));
+  tbl.querySelectorAll('th').forEach(h => h.classList.remove('sort-asc','sort-desc'));
+  tbl.querySelectorAll('th')[col].classList.add(st.d === 1 ? 'sort-asc' : 'sort-desc');
+  rows.sort((a, b) => {
+    const av = a.cells[col].innerText.replace(/[€ \s,%]/g,'');
+    const bv = b.cells[col].innerText.replace(/[€ \s,%]/g,'');
+    const an = parseFloat(av), bn = parseFloat(bv);
+    if (!isNaN(an) && !isNaN(bn)) return (an - bn) * st.d;
+    return av.localeCompare(bv, 'fi') * st.d;
+  });
+  rows.forEach(r => tb.appendChild(r));
+}
+</script>
+</body>
+</html>
