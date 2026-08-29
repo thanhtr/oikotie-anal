@@ -81651,5 +81651,35 @@
     "mall_distance_m": 3057,
     "helsinki_central_km": 9.0,
     "tram_badge": null
+  },
+  "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24606001": {
+    "debt_free_price_eur": 199000.0,
+    "price_eur": 197359.46,
+    "housing_company_loan_eur": 1640.54,
+    "pipe_renovation_done": false,
+    "pipe_renovation_info": null,
+    "pipe_renovation_year": null,
+    "hoitovastike_eur_month": 422.8,
+    "tonttivuokra_eur_month": null,
+    "is_rented_out": false,
+    "rented_out_info": null,
+    "rental_income_eur_month": null,
+    "lat": 60.238378,
+    "lon": 25.115296,
+    "nearest_stop": "Mellunmäki",
+    "distance_m": 354
+  },
+  "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24666025": {
+    "debt_free_price_eur": 139900.0,
+    "price_eur": 26028.98,
+    "housing_company_loan_eur": 113871.02,
+    "pipe_renovation_done": false,
+    "pipe_renovation_info": null,
+    "pipe_renovation_year": null,
+    "hoitovastike_eur_month": 196.9,
+    "tonttivuokra_eur_month": null,
+    "is_rented_out": true,
+    "rented_out_info": "ton hallinta siirtyy aikaisintaan, kun 1 kk:n vuokra ja vakuus on maksettu. Vakuus palautetaan vuokrasuhteen päätyttyä. Vuokralainen ottaa asuntoon laajan kotivakuutuksen vastuuosineen. Kotivakuutus on todistettava pyydettäessä. Jos vuokralainen ei ole",
+    "rental_income_eur_month": null
   }
 }

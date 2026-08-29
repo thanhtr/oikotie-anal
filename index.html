@@ -26,16 +26,17 @@ header p { color: #555; font-size: .85rem; }
 /* ── Card ── */
 .card { background: #fff; border-radius: 12px; padding: 18px;
   box-shadow: 0 1px 4px rgba(0,0,0,.07); display: flex; flex-direction: column; gap: .35rem; }
-.card-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: .1rem; }
+.card-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: .1rem; flex-wrap: wrap; gap: .2rem; }
 .card-rank { font-size: .73rem; font-weight: 700; color: #999; letter-spacing: .02em; text-transform: uppercase; }
 .card-view-link { font-size: .78rem; color: #1565c0; text-decoration: none; font-weight: 600; flex-shrink: 0; }
 .card-view-link:hover { text-decoration: underline; }
 .card-price { font-size: 1.55rem; font-weight: 700; letter-spacing: -.5px; color: #1a1a2e; line-height: 1.1; }
 .card-price-sub { font-size: .82rem; font-weight: 400; color: #999; margin-left: 3px; }
-.card-monthly { font-size: 1.0rem; font-weight: 600; color: #1565c0; }
-.card-loan { font-size: .78rem; color: #777; }
+.card-monthly { font-size: 1.0rem; font-weight: 600; color: #1565c0; white-space: nowrap; }
+.card-yield { font-size: .82rem; font-weight: 600; color: #2e7d32; }
+.card-loan { font-size: .78rem; color: #777; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .card-meta { font-size: .8rem; color: #666; margin-top: .05rem; }
-.card-address { font-size: .84rem; color: #444; }
+.card-address { font-size: .84rem; color: #444; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .card-address a { color: #1a1a2e; text-decoration: none; font-weight: 500; }
 .card-address a:hover { color: #1565c0; }
 .card-hub { font-size: .78rem; color: #555; }
@@ -47,7 +48,7 @@ header p { color: #555; font-size: .85rem; }
 .badge.reno { background: #fde8d4; color: #7a3a0a; }
 .badge.cand { background: #fff3cd; color: #7a5a00; }
 .badge.rent { background: #e8d4f4; color: #4a1a6b; }
-.badge.tram { background: #e3f2fd; color: #0d47a1; }
+.badge.tram { background: #e3f2fd; color: #0d47a1; max-width: 160px; overflow: hidden; text-overflow: ellipsis; }
 .stop-note { font-size: .75rem; color: #2a6496; background: #eef5fb;
   border-left: 3px solid #2a6496; padding: .2rem .5rem; border-radius: 0 3px 3px 0; }
 .stop-link { font-size: .68rem; color: #2a6496; border: 1px solid #2a6496;
@@ -107,10 +108,16 @@ tr.row-cand:hover { background: #fff8dc; }
 .mr-item a:hover { background: #c8a800; color: #fff; }
 /* ── Mode nav ── */
 .mode-nav { max-width: 1100px; margin: 0 auto 1.5rem; display: flex; gap: .5rem;
-  border-bottom: 2px solid #d0d0d8; padding-bottom: .6rem; }
+  border-bottom: 2px solid #d0d0d8; padding-bottom: .6rem;
+  position: sticky; top: 0; z-index: 10; background: #f4f5f7; padding-top: .5rem; }
 .mode-btn { padding: .55rem 1.5rem; border: 2px solid transparent; background: #f0f0f4;
   border-radius: 8px; cursor: pointer; font-size: .9rem; font-weight: 600; color: #555; }
 .mode-btn.active { background: #1565c0; color: #fff; border-color: #1565c0; }
+.sec-count { font-size: .8rem; font-weight: 400; color: #999; }
+@media (max-width: 480px) {
+  .grid { grid-template-columns: 1fr; }
+  body { padding: 1rem .5rem; }
+}
 </style>
 </head>
 <body>
@@ -123,7 +130,7 @@ tr.row-cand:hover { background: #fff8dc; }
 <div id="mode-tram">
 <header>
   <h1>Oikotie — asunnot lähellä Vantaan ratikkaa</h1>
-  <p>Generated 2026-08-29 12:31 &nbsp;·&nbsp;
+  <p>Generated 2026-08-29 13:53 &nbsp;·&nbsp;
      7 rented out &nbsp;·&nbsp;
      40 new builds &nbsp;·&nbsp;
      21 pipe reno done &nbsp;·&nbsp;
@@ -180,7 +187,7 @@ tr.row-cand:hover { background: #fff8dc; }
 <div id="tab-tram-cards" class="tab-panel active">
   
 <section class="sec sec-rented">
-  <h2 class="sec-title">Rented Out — immediate rental income</h2>
+  <h2 class="sec-title">Rented Out — immediate rental income <span class="sec-count">(7)</span></h2>
   <p class='sec-note'>Currently tenanted. Rental income offsets costs from day one.</p>
   <div class="grid">
 <article class="card">
@@ -190,6 +197,7 @@ tr.row-cand:hover { background: #fff8dc; }
   </div>
   <div class="card-price">134 990 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">632 €/mo est.</div>
+  
   <div class="card-loan">+64 402 € yhtiölaina (48%)</div>
   <div class="card-meta">1h · 26.0 m² · fl 3/8 · 2018</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23831363" target="_blank">Kaskelantie 7, Hakunila, Vantaa, Hakunila, vantaa</a></div>
@@ -206,6 +214,7 @@ tr.row-cand:hover { background: #fff8dc; }
   </div>
   <div class="card-price">187 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">999 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 45.5 m² · fl 4/6 · 2010</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24620266" target="_blank">Antaksentie 13 A, Pakkalanrinne, Vantaa, Pakkalanrinne, vantaa</a></div>
@@ -222,6 +231,7 @@ tr.row-cand:hover { background: #fff8dc; }
   </div>
   <div class="card-price">124 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">671 €/mo est.</div>
+  
   <div class="card-loan">+61 323 € yhtiölaina (49%)</div>
   <div class="card-meta">1h · 21.0 m² · fl 1/2 · 2016</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23307800" target="_blank">Rajakyläntie 2B A3, Rajakylä, Vantaa, Rajakylä, vantaa</a></div>
@@ -238,6 +248,7 @@ tr.row-cand:hover { background: #fff8dc; }
   </div>
   <div class="card-price">198 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 090 €/mo est.</div>
+  
   <div class="card-loan">+53 442 € yhtiölaina (27%)</div>
   <div class="card-meta">2h · 44.5 m² · fl 2/2 · 2020</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24537372" target="_blank">Kuunlilja 1 C, Tikkurila, Vantaa, Tikkurila, vantaa</a></div>
@@ -254,6 +265,7 @@ tr.row-cand:hover { background: #fff8dc; }
   </div>
   <div class="card-price">126 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">826 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 55.0 m² · fl 3/3 · 1968</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23669883" target="_blank">Uotinmäentie 11 D 33, Mellunkylä, Helsinki, Mellunkylä, helsinki</a></div>
@@ -270,6 +282,7 @@ tr.row-cand:hover { background: #fff8dc; }
   </div>
   <div class="card-price">110 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">645 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 48.0 m² · fl 2/4 · 1978</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24639776" target="_blank">Suunnistajankuja 10 B, Länsimäki, Vantaa, Länsimäki, vantaa</a></div>
@@ -286,6 +299,7 @@ tr.row-cand:hover { background: #fff8dc; }
   </div>
   <div class="card-price">182 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 156 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">3h · 74.5 m²</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23252040" target="_blank">Neilikkatie 14, Tikkurila, Vantaa, Tikkurila, vantaa</a></div>
@@ -297,7 +311,7 @@ tr.row-cand:hover { background: #fff8dc; }
 </article></div>
 </section>
 <section class="sec sec-new">
-  <h2 class="sec-title">New Builds (≥ 2000)</h2>
+  <h2 class="sec-title">New Builds (≥ 2000) <span class="sec-count">(40)</span></h2>
   <p class='sec-note'>Built 2000 or later — no pipe renovation concern.</p>
   <div class="grid">
 <article class="card">
@@ -307,6 +321,7 @@ tr.row-cand:hover { background: #fff8dc; }
   </div>
   <div class="card-price">159 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">793 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 35.0 m² · fl 4/7 · 2019</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/22985238" target="_blank">Kaskelantie 5, Kaskela, Vantaa, Kaskela, vantaa</a></div>
@@ -323,6 +338,7 @@ tr.row-cand:hover { background: #fff8dc; }
   </div>
   <div class="card-price">159 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">852 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">3h · 50.0 m² · fl 7/7 · 2019</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24517304" target="_blank">Kaskelantie 5, Kaskela, Vantaa, Kaskela, vantaa</a></div>
@@ -339,6 +355,7 @@ tr.row-cand:hover { background: #fff8dc; }
   </div>
   <div class="card-price">157 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">786 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 30.0 m² · fl 5/5 · 2017</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24592910" target="_blank">Orvokkitie 20 A, Tikkurila, Vantaa, Tikkurila, vantaa</a></div>
@@ -355,6 +372,7 @@ tr.row-cand:hover { background: #fff8dc; }
   </div>
   <div class="card-price">165 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">919 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 38.5 m² · fl 4/7 · 2022</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/22257758" target="_blank">Heporinne 2 a, Hakunila, Vantaa, Hakunila, vantaa</a></div>
@@ -371,6 +389,7 @@ tr.row-cand:hover { background: #fff8dc; }
   </div>
   <div class="card-price">116 900 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">564 €/mo est.</div>
+  
   <div class="card-loan">+46 652 € yhtiölaina (40%)</div>
   <div class="card-meta">1h · 23.5 m² · fl 3/4 · 2019</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23437301" target="_blank">Kukonharja 3 B, Koivuhaka, Vantaa, Koivuhaka, vantaa</a></div>
@@ -387,6 +406,7 @@ tr.row-cand:hover { background: #fff8dc; }
   </div>
   <div class="card-price">189 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">978 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 39.5 m² · fl 2/6 · 2013</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24585567" target="_blank">Horsmakuja 4 B, Tikkurila, Vantaa, Tikkurila, vantaa</a></div>
@@ -403,6 +423,7 @@ tr.row-cand:hover { background: #fff8dc; }
   </div>
   <div class="card-price">145 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">859 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 38.5 m² · fl 5/7 · 2022</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24399247" target="_blank">Heporinne 2, Hakunila, Vantaa, Hakunila, vantaa</a></div>
@@ -419,6 +440,7 @@ tr.row-cand:hover { background: #fff8dc; }
   </div>
   <div class="card-price">159 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">832 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 39.0 m² · fl 1/6 · 2000</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23547707" target="_blank">Orvokkikuja 6, Tikkurila, Vantaa, Tikkurila, vantaa</a></div>
@@ -435,6 +457,7 @@ tr.row-cand:hover { background: #fff8dc; }
   </div>
   <div class="card-price">199 500 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 011 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 39.5 m² · fl 4/5 · 2019</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23291062" target="_blank">Tikkurilantie 33 B, Tikkurila, Vantaa, Tikkurila, vantaa</a></div>
@@ -451,6 +474,7 @@ tr.row-cand:hover { background: #fff8dc; }
   </div>
   <div class="card-price">192 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 008 €/mo est.</div>
+  
   <div class="card-loan">+84 730 € yhtiölaina (44%)</div>
   <div class="card-meta">2h · 37.0 m² · fl 3/6 · 2015</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24522481" target="_blank">Ratakuja 4 A, Tikkurila, Vantaa, Tikkurila, vantaa</a></div>
@@ -467,6 +491,7 @@ tr.row-cand:hover { background: #fff8dc; }
   </div>
   <div class="card-price">179 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">964 €/mo est.</div>
+  
   <div class="card-loan">+44 340 € yhtiölaina (25%)</div>
   <div class="card-meta">2h · 42.5 m² · fl 5/7 · 2013</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23752425" target="_blank">Viertolankuja 6, Viertola, Vantaa, Viertola, vantaa</a></div>
@@ -483,6 +508,7 @@ tr.row-cand:hover { background: #fff8dc; }
   </div>
   <div class="card-price">156 900 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">918 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 32.5 m² · fl 2/4 · 2024</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24618605" target="_blank">Peltolantie 44, Koivuhaka, Vantaa, Koivuhaka, vantaa</a></div>
@@ -499,6 +525,7 @@ tr.row-cand:hover { background: #fff8dc; }
   </div>
   <div class="card-price">165 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">844 €/mo est.</div>
+  
   <div class="card-loan">+1 509 € yhtiölaina (1%)</div>
   <div class="card-meta">1h · 35.0 m² · fl 4/6 · 2000</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24626283" target="_blank">Orvokkikuja 6 A, Tikkurila, Vantaa, Tikkurila, vantaa</a></div>
@@ -515,6 +542,7 @@ tr.row-cand:hover { background: #fff8dc; }
   </div>
   <div class="card-price">198 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 250 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">4h · 55.5 m² · fl 6/7 · 2022</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24300130" target="_blank">Heporinne 2a C, Hakunila, Vantaa, Hakunila, vantaa</a></div>
@@ -531,6 +559,7 @@ tr.row-cand:hover { background: #fff8dc; }
   </div>
   <div class="card-price">178 900 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">999 €/mo est.</div>
+  
   <div class="card-loan">+84 539 € yhtiölaina (47%)</div>
   <div class="card-meta">2h · 44.0 m² · fl 3/4 · 2019</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23437318" target="_blank">Kukonharja 3 B, Koivuhaka, Vantaa, Koivuhaka, vantaa</a></div>
@@ -547,6 +576,7 @@ tr.row-cand:hover { background: #fff8dc; }
   </div>
   <div class="card-price">129 900 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">817 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 31.5 m² · fl 3/5 · 2020</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24380208" target="_blank">Jokiniemenkuja 5 A, Jokiniemi, Vantaa, Jokiniemi, vantaa</a></div>
@@ -563,6 +593,7 @@ tr.row-cand:hover { background: #fff8dc; }
   </div>
   <div class="card-price">164 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 024 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">3h · 58.0 m² · fl 4/8 · 2018</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/16978203" target="_blank">Kaskelantie 7 A, Hakunila, Vantaa, Hakunila, vantaa</a></div>
@@ -579,6 +610,7 @@ tr.row-cand:hover { background: #fff8dc; }
   </div>
   <div class="card-price">165 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">911 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 44.0 m² · fl 4/5 · 2007</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24650871" target="_blank">Osuustie 4, Pakkala, Vantaa, Pakkala, vantaa</a></div>
@@ -595,6 +627,7 @@ tr.row-cand:hover { background: #fff8dc; }
   </div>
   <div class="card-price">154 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">948 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 31.5 m² · fl 5/5 · 2020</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23309842" target="_blank">Jokiniemenkuja 5 A, Jokiniemi, Vantaa, Jokiniemi, vantaa</a></div>
@@ -611,6 +644,7 @@ tr.row-cand:hover { background: #fff8dc; }
   </div>
   <div class="card-price">169 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 060 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 35.0 m² · fl 2/5 · 2020</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23303762" target="_blank">Jokiniemenkuja 5 A 9, Jokiniemi, Vantaa, Jokiniemi, vantaa</a></div>
@@ -627,6 +661,7 @@ tr.row-cand:hover { background: #fff8dc; }
   </div>
   <div class="card-price">157 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">925 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 48.0 m² · fl 2/9 · 2014</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24428359" target="_blank">Satulakuja 2 A, Hakunila, Vantaa, Hakunila, vantaa</a></div>
@@ -643,6 +678,7 @@ tr.row-cand:hover { background: #fff8dc; }
   </div>
   <div class="card-price">169 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">896 €/mo est.</div>
+  
   <div class="card-loan">+26 513 € yhtiölaina (16%)</div>
   <div class="card-meta">2h · 43.0 m² · fl 3/4 · 2016</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24566019" target="_blank">Tankomäenkatu 5 A, Vartioharju/Mellunkylä, Helsinki, Vartioharju/Mellunkylä, helsinki</a></div>
@@ -659,6 +695,7 @@ tr.row-cand:hover { background: #fff8dc; }
   </div>
   <div class="card-price">199 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 151 €/mo est.</div>
+  
   <div class="card-loan">+3 084 € yhtiölaina (2%)</div>
   <div class="card-meta">2h · 64.5 m² · fl 2/6 · 2000</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24403039" target="_blank">Orvokkikuja 6, Tikkurila, Vantaa, Tikkurila, vantaa</a></div>
@@ -675,6 +712,7 @@ tr.row-cand:hover { background: #fff8dc; }
   </div>
   <div class="card-price">199 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 205 €/mo est.</div>
+  
   <div class="card-loan">+40 422 € yhtiölaina (20%)</div>
   <div class="card-meta">3h · 50.0 m² · fl 1/5 · 2023</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24465126" target="_blank">Puutarhatie 13 B, Koivuhaka, Vantaa, Koivuhaka, vantaa</a></div>
@@ -691,6 +729,7 @@ tr.row-cand:hover { background: #fff8dc; }
   </div>
   <div class="card-price">179 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">956 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">1h · 29.0 m² · fl 1/2 · 2020</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24632184" target="_blank">Ruokotie 7, Tikkurila, Vantaa, Tikkurila, vantaa</a></div>
@@ -707,6 +746,7 @@ tr.row-cand:hover { background: #fff8dc; }
   </div>
   <div class="card-price">199 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 076 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 54.0 m² · fl 2/4 · 2008</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24605695" target="_blank">Väinö Tannerin tie 17, Pakkalanrinne, Vantaa, Pakkalanrinne, vantaa</a></div>
@@ -723,6 +763,7 @@ tr.row-cand:hover { background: #fff8dc; }
   </div>
   <div class="card-price">191 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 029 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 52.5 m² · fl 1/4 · 2008</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24341914" target="_blank">Väinö Tannerin tie 17, Pakkala, Vantaa, Pakkala, vantaa</a></div>
@@ -739,6 +780,7 @@ tr.row-cand:hover { background: #fff8dc; }
   </div>
   <div class="card-price">199 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">855 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">4h · 150.0 m²</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24432353" target="_blank">Kukantie 10, Koivuhaka, Vantaa, Koivuhaka, vantaa</a></div>
@@ -772,6 +814,7 @@ Tehdyt remontit
   </div>
   <div class="card-price">189 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 007 €/mo est.</div>
+  
   <div class="card-loan">+338 € yhtiölaina (0%)</div>
   <div class="card-meta">2h · 49.5 m² · fl 1/4 · 2008</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24550427" target="_blank">Väinö Tannerin tie 17 C, Pakkala, Vantaa, Pakkala, vantaa</a></div>
@@ -788,6 +831,7 @@ Tehdyt remontit
   </div>
   <div class="card-price">129 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">822 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 31.5 m² · fl 1/6 · 2020</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23822944" target="_blank">Jokiniemenkuja 7, Jokiniemi, Vantaa, Jokiniemi, vantaa</a></div>
@@ -804,6 +848,7 @@ Tehdyt remontit
   </div>
   <div class="card-price">162 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">825 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">1h · 36.0 m² · fl 4/6 · 2003</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24541245" target="_blank">Tädyketie 6 D, Tikkurila, Vantaa, Tikkurila, vantaa</a></div>
@@ -820,6 +865,7 @@ Tehdyt remontit
   </div>
   <div class="card-price">189 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 065 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 47.5 m² · fl 2/4 · 2004</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24514833" target="_blank">Junkkarinkaari 3, Kartanonkoski, Vantaa, Kartanonkoski, vantaa</a></div>
@@ -836,6 +882,7 @@ Tehdyt remontit
   </div>
   <div class="card-price">184 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 034 €/mo est.</div>
+  
   <div class="card-loan">+68 203 € yhtiölaina (37%)</div>
   <div class="card-meta">2h · 46.5 m² · fl 1/4 · 2012</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24305457" target="_blank">Pehtoorintie 2, Pakkala, Vantaa, Pakkala, vantaa</a></div>
@@ -852,6 +899,7 @@ Tehdyt remontit
   </div>
   <div class="card-price">62 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">364 €/mo est.</div>
+  
   <div class="card-loan">+4 872 € yhtiölaina (8%)</div>
   <div class="card-meta">2h · 40.5 m² · fl 5/6</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24551102" target="_blank">Lähdepuistontie 5 A, Kuussilta, Vantaa, Kuussilta, vantaa</a></div>
@@ -868,6 +916,7 @@ Tehdyt remontit
   </div>
   <div class="card-price">145 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">581 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">1h · 28.5 m² · fl 4/5 · 2019</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/17739438" target="_blank">Jokiniemenkuja 3, Tikkurila, Vantaa, Tikkurila, vantaa</a></div>
@@ -884,6 +933,7 @@ Tehdyt remontit
   </div>
   <div class="card-price">82 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">465 €/mo est.</div>
+  
   <div class="card-loan">+224 € yhtiölaina (0%)</div>
   <div class="card-meta">2h · 40.5 m² · fl 6/6</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24338163" target="_blank">Lähdepuistontie 13 C, Vaarala, Vantaa, Vaarala, vantaa</a></div>
@@ -900,6 +950,7 @@ Tehdyt remontit
   </div>
   <div class="card-price">69 600 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">511 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 56.0 m² · fl 2/9</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24642357" target="_blank">Harmokuja 6, Hakunila, Vantaa, Hakunila, vantaa</a></div>
@@ -916,6 +967,7 @@ Tehdyt remontit
   </div>
   <div class="card-price">79 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">563 €/mo est.</div>
+  
   <div class="card-loan">+7 619 € yhtiölaina (10%)</div>
   <div class="card-meta">2h · 44.0 m² · fl 3/3</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24522983" target="_blank">Mellunmäenraitio 2 A, Mellunmäki, Helsinki, Mellunmäki, helsinki</a></div>
@@ -932,6 +984,7 @@ Tehdyt remontit
   </div>
   <div class="card-price">144 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">868 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 55.0 m² · fl 3/3</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/17024712" target="_blank">Uotinmäentie 11 D 31, Mellunkylä, Helsinki, Mellunkylä, helsinki</a></div>
@@ -948,6 +1001,7 @@ Tehdyt remontit
   </div>
   <div class="card-price">194 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 185 €/mo est.</div>
+  
   <div class="card-loan">+273 € yhtiölaina (0%)</div>
   <div class="card-meta">3h · 75.0 m² · fl 2/5</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24565190" target="_blank">Albert Petreliuksen katu 4b B, Jokiniemi, Vantaa, Jokiniemi, vantaa</a></div>
@@ -959,7 +1013,7 @@ Tehdyt remontit
 </article></div>
 </section>
 <section class="sec sec-reno">
-  <h2 class="sec-title">Older Builds — Pipe Renovation Done</h2>
+  <h2 class="sec-title">Older Builds — Pipe Renovation Done <span class="sec-count">(21)</span></h2>
   <p class='sec-note'>Pre-2000 buildings with confirmed completed pipe renovation.</p>
   <div class="grid">
 <article class="card">
@@ -969,6 +1023,7 @@ Tehdyt remontit
   </div>
   <div class="card-price">125 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">746 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 59.0 m² · fl 2/5 · 1971</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24593655" target="_blank">Kuulakuja 4 B, Länsimäki, Vantaa, Länsimäki, vantaa</a></div>
@@ -985,6 +1040,7 @@ Tehdyt remontit
   </div>
   <div class="card-price">93 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">461 €/mo est.</div>
+  
   <div class="card-loan">+15 674 € yhtiölaina (17%)</div>
   <div class="card-meta">1h · 31.0 m² · fl 3/7 · 1971</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24547833" target="_blank">Hepokuja 6 E, Hakunila, Vantaa, Hakunila, vantaa</a></div>
@@ -1006,6 +1062,7 @@ Tämä asunto sopii ostajalle,</p>
   </div>
   <div class="card-price">108 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">811 €/mo est.</div>
+  
   <div class="card-loan">+19 002 € yhtiölaina (18%)</div>
   <div class="card-meta">3h · 79.0 m² · fl 4/5 · 1971</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24427675" target="_blank">Hiirakkokuja 6 A, Hakunila, Vantaa, Hakunila, vantaa</a></div>
@@ -1026,6 +1083,7 @@ Putkiston linjasaneerauksen suunnitelmat</p>
   </div>
   <div class="card-price">87 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">471 €/mo est.</div>
+  
   <div class="card-loan">+32 501 € yhtiölaina (37%)</div>
   <div class="card-meta">1h · 30.5 m² · fl 4/6 · 1974</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24545552" target="_blank">Oritie 3 B, Hakunila, Vantaa, Hakunila, vantaa</a></div>
@@ -1050,6 +1108,7 @@ Tehdyt remontit
   </div>
   <div class="card-price">148 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">943 €/mo est.</div>
+  
   <div class="card-loan">+57 018 € yhtiölaina (39%)</div>
   <div class="card-meta">4h · 86.5 m² · fl 8/10 · 1973</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24356402" target="_blank">Hepokuja 7 A, Hakunila, Vantaa, Hakunila, vantaa</a></div>
@@ -1073,6 +1132,7 @@ Taloyhtiössä on pes</p>
   </div>
   <div class="card-price">112 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">661 €/mo est.</div>
+  
   <div class="card-loan">+41 420 € yhtiölaina (37%)</div>
   <div class="card-meta">2h · 54.0 m² · fl 2/9 · 1971</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23873740" target="_blank">Hiirakkotie 2 D, Hakunila, Vantaa, Hakunila, vantaa</a></div>
@@ -1089,6 +1149,7 @@ Taloyhtiössä on pes</p>
   </div>
   <div class="card-price">79 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">642 €/mo est.</div>
+  
   <div class="card-loan">+461 € yhtiölaina (1%)</div>
   <div class="card-meta">2h · 52.5 m² · fl 1/6 · 1975</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23637251" target="_blank">Oritie 4, Hakunila, Vantaa, Hakunila, vantaa</a></div>
@@ -1118,6 +1179,7 @@ Koko asunto remontoitu 8/2025. L</p>
   </div>
   <div class="card-price">65 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">534 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 55.0 m² · fl 3/7 · 1977</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24630066" target="_blank">Harmokuja 4, Hakunila, Vantaa, Hakunila, vantaa</a></div>
@@ -1146,6 +1208,7 @@ Tehdyt remontit
   </div>
   <div class="card-price">109 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">694 €/mo est.</div>
+  
   <div class="card-loan">+46 821 € yhtiölaina (43%)</div>
   <div class="card-meta">2h · 59.0 m² · fl 3/5 · 1972</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24335654" target="_blank">Kuulakuja 3 A, Länsimäki, Vantaa, Länsimäki, vantaa</a></div>
@@ -1164,6 +1227,7 @@ Asunnon pohjaratkaisu on toimiva ja tilat helposti kalustettavissa. Kodin kunto 
   </div>
   <div class="card-price">89 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">594 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 61.0 m² · fl 2/3 · 1973</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24653471" target="_blank">Hiirakkotie 10, Hakunila, Vantaa, Hakunila, vantaa</a></div>
@@ -1182,6 +1246,7 @@ Valoisa 2/3 kerroksen läpitalon huoneisto, jolla lasitettu eteläparveke. Hyvin
   </div>
   <div class="card-price">134 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">859 €/mo est.</div>
+  
   <div class="card-loan">+37 579 € yhtiölaina (28%)</div>
   <div class="card-meta">3h · 72.5 m² · fl 5/8 · 1976</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24305603" target="_blank">Raudikkokuja 6 B, Hakunila, Vantaa, Hakunila, vantaa</a></div>
@@ -1205,6 +1270,7 @@ Tervetuloa tutustumaan tähän vuonna 1976 valmistuneeseen, 72,5 m²:n kokoiseen
   </div>
   <div class="card-price">139 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">914 €/mo est.</div>
+  
   <div class="card-loan">+39 685 € yhtiölaina (29%)</div>
   <div class="card-meta">3h · 79.0 m² · fl 5/6 · 1971</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24563374" target="_blank">Hepokuja 6 C, Hakunila, Vantaa, Hakunila, vantaa</a></div>
@@ -1223,6 +1289,7 @@ Taloyhtiö sijaitsee omalla tontillaan ja sitä on hoidettu suunnitelmallisesti 
   </div>
   <div class="card-price">120 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">751 €/mo est.</div>
+  
   <div class="card-loan">+46 354 € yhtiölaina (39%)</div>
   <div class="card-meta">2h · 51.0 m² · fl 7/9 · 1971</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24320160" target="_blank">Rajakentänkuja 4 A, Länsimäki, Vantaa, Länsimäki, vantaa</a></div>
@@ -1241,6 +1308,7 @@ Asunnossa on käytännöllinen pohjaratkaisu, jossa keittiö ja olohuone muodost
   </div>
   <div class="card-price">149 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">925 €/mo est.</div>
+  
   <div class="card-loan">+57 588 € yhtiölaina (39%)</div>
   <div class="card-meta">3h · 79.5 m² · fl 1/3 · 1973</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24359151" target="_blank">Hiirakkotie 8 A, Hakunila, Vantaa, Hakunila, vantaa</a></div>
@@ -1264,6 +1332,7 @@ Asunnossa on käytännöllinen pohjaratkaisu, jossa keittiö ja olohuone muodost
   </div>
   <div class="card-price">98 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">344 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">3h · 58.5 m² · fl 2/10 · 1974</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23015854" target="_blank">Hepokuja 9, Hakunila, Vantaa, Hakunila, vantaa</a></div>
@@ -1288,6 +1357,7 @@ Sijainti on erinomainen: rauhallinen mutta keskeinen alue</p>
   </div>
   <div class="card-price">200 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 155 €/mo est.</div>
+  
   <div class="card-loan">+46 570 € yhtiölaina (23%)</div>
   <div class="card-meta">2h · 59.0 m² · fl 3/6 · 1970</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24467300" target="_blank">Neilikkatie 7 C, Tikkurila, Vantaa, Tikkurila, vantaa</a></div>
@@ -1304,6 +1374,7 @@ Sijainti on erinomainen: rauhallinen mutta keskeinen alue</p>
   </div>
   <div class="card-price">149 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">959 €/mo est.</div>
+  
   <div class="card-loan">+59 436 € yhtiölaina (40%)</div>
   <div class="card-meta">4h · 93.0 m² · fl 7/9 · 1971</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24602268" target="_blank">Hiirakkotie 2 D, Hakunila, Vantaa, Hakunila, vantaa</a></div>
@@ -1322,6 +1393,7 @@ Alue kehittyy j</p>
   </div>
   <div class="card-price">186 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 084 €/mo est.</div>
+  
   <div class="card-loan">+74 847 € yhtiölaina (40%)</div>
   <div class="card-meta">3h · 65.5 m² · fl 1/3 · 1969</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24645455" target="_blank">Hiekkaharjuntie 9 A, Hiekkaharju, Vantaa, Hiekkaharju, vantaa</a></div>
@@ -1346,6 +1418,7 @@ Tehdyt remontit
   </div>
   <div class="card-price">171 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 017 €/mo est.</div>
+  
   <div class="card-loan">+65 647 € yhtiölaina (38%)</div>
   <div class="card-meta">3h · 76.0 m² · fl 3/6 · 1976</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24593292" target="_blank">Suunnistajankuja 6 C, Länsimäki, Vantaa, Länsimäki, vantaa</a></div>
@@ -1364,6 +1437,7 @@ Taloyhtiössä on valmistunut mittava linjasaneeraus, jossa putkistot on uusittu
   </div>
   <div class="card-price">195 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 113 €/mo est.</div>
+  
   <div class="card-loan">+70 000 € yhtiölaina (36%)</div>
   <div class="card-meta">3h · 60.5 m² · fl 3/5 · 1974</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/17773543" target="_blank">Ounasvaarantie 1, Mellunkylä, Helsinki, Mellunkylä, helsinki</a></div>
@@ -1384,6 +1458,7 @@ Ounasvaarantie on väljästi rakennettua ja vehreää Mellunmäkeä. Hyvät ulko
   </div>
   <div class="card-price">139 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">875 €/mo est.</div>
+  
   <div class="card-loan">+51 222 € yhtiölaina (37%)</div>
   <div class="card-meta">2h · 45.0 m² · fl 3/3 · 1976</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24643215" target="_blank">Yllästunturintie 2 C, Mellunmäki, Helsinki, Mellunmäki, helsinki</a></div>
@@ -1403,7 +1478,7 @@ Autotallien ovien uusinta linjasaneerauksen yhteydessä 20</p>
 </article></div>
 </section>
 <section class="sec sec-cand">
-  <h2 class="sec-title">Candidates — Pipe Renovation Unverified</h2>
+  <h2 class="sec-title">Candidates — Pipe Renovation Unverified <span class="sec-count">(52)</span></h2>
   <p class='sec-note'>Older buildings where pipe renovation status could not be confirmed automatically. Verify manually before deciding.</p>
   <div class="grid">
 <article class="card">
@@ -1413,6 +1488,7 @@ Autotallien ovien uusinta linjasaneerauksen yhteydessä 20</p>
   </div>
   <div class="card-price">64 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">177 €/mo est.</div>
+  
   <div class="card-loan">+264 € yhtiölaina (0%)</div>
   <div class="card-meta">2h · 45.5 m² · fl 1/6 · 1972</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24490311" target="_blank">Lähdepuistontie 5 A, Vaarala, Vantaa, Vaarala, vantaa</a></div>
@@ -1429,6 +1505,7 @@ Autotallien ovien uusinta linjasaneerauksen yhteydessä 20</p>
   </div>
   <div class="card-price">64 900 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">404 €/mo est.</div>
+  
   <div class="card-loan">+1 700 € yhtiölaina (3%)</div>
   <div class="card-meta">2h · 45.5 m² · fl 6/6 · 1972</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/16953238" target="_blank">Lähdepuistontie 5, Vaarala, Vantaa, Vaarala, vantaa</a></div>
@@ -1445,6 +1522,7 @@ Autotallien ovien uusinta linjasaneerauksen yhteydessä 20</p>
   </div>
   <div class="card-price">104 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">517 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">1h · 31.0 m² · fl 6/7 · 1971</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24560644" target="_blank">Hepokuja 6 E, Hakunila, Vantaa, Hakunila, vantaa</a></div>
@@ -1461,6 +1539,7 @@ Autotallien ovien uusinta linjasaneerauksen yhteydessä 20</p>
   </div>
   <div class="card-price">69 990 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">468 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 59.0 m² · fl 4/5 · 1971</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24021458" target="_blank">Kuulakuja 4, Länsimäki, Vantaa, Länsimäki, vantaa</a></div>
@@ -1485,6 +1564,7 @@ Hieno kaksio metron lähellä. Neljännen kerroksen asunto länsimäestä. Linja
   </div>
   <div class="card-price">78 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">470 €/mo est.</div>
+  
   <div class="card-loan">+5 693 € yhtiölaina (7%)</div>
   <div class="card-meta">2h · 45.5 m² · fl 2/6 · 1972</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23407179" target="_blank">Lähdepuistontie 5, Vaarala, Vantaa, Vaarala, vantaa</a></div>
@@ -1501,6 +1581,7 @@ Hieno kaksio metron lähellä. Neljännen kerroksen asunto länsimäestä. Linja
   </div>
   <div class="card-price">87 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">491 €/mo est.</div>
+  
   <div class="card-loan">+1 419 € yhtiölaina (2%)</div>
   <div class="card-meta">2h · 40.5 m² · fl 3/6 · 1972</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23668264" target="_blank">Lähdepuistontie 5 A, Vaarala, Vantaa, Vaarala, vantaa</a></div>
@@ -1517,6 +1598,7 @@ Hieno kaksio metron lähellä. Neljännen kerroksen asunto länsimäestä. Linja
   </div>
   <div class="card-price">69 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">437 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 48.0 m² · fl 1/3 · 1979</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24530388" target="_blank">Pallastunturinkuja 1 G, Länsimäki, Vantaa, Länsimäki, vantaa</a></div>
@@ -1533,6 +1615,7 @@ Hieno kaksio metron lähellä. Neljännen kerroksen asunto länsimäestä. Linja
   </div>
   <div class="card-price">79 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">559 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">3h · 81.0 m² · fl 5/6 · 1975</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24661021" target="_blank">Taivaskero 4, Länsimäki, Vantaa, Länsimäki, vantaa</a></div>
@@ -1557,6 +1640,7 @@ Ei sovittuja esitt</p>
   </div>
   <div class="card-price">109 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">764 €/mo est.</div>
+  
   <div class="card-loan">+4 846 € yhtiölaina (4%)</div>
   <div class="card-meta">3h · 76.0 m² · fl 2/5 · 1972</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24400270" target="_blank">Maalinauhantie 1 B, Länsimäki, Vantaa, Länsimäki, vantaa</a></div>
@@ -1573,6 +1657,7 @@ Ei sovittuja esitt</p>
   </div>
   <div class="card-price">79 600 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">390 €/mo est.</div>
+  
   <div class="card-loan">+69 € yhtiölaina (0%)</div>
   <div class="card-meta">1h · 31.0 m² · fl 5/5 · 1978</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24419269" target="_blank">Ounasvaarankuja 3 C, Mellunmäki, Helsinki, Mellunmäki, helsinki</a></div>
@@ -1589,6 +1674,7 @@ Ei sovittuja esitt</p>
   </div>
   <div class="card-price">110 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">731 €/mo est.</div>
+  
   <div class="card-loan">+6 430 € yhtiölaina (6%)</div>
   <div class="card-meta">3h · 76.0 m² · fl 1/5 · 1972</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24441515" target="_blank">Keihästie 5 D, Länsimäki, Vantaa, Länsimäki, vantaa</a></div>
@@ -1605,6 +1691,7 @@ Ei sovittuja esitt</p>
   </div>
   <div class="card-price">89 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">462 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">1h · 35.0 m² · fl 4/9 · 1974</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/21231683" target="_blank">Lumikero 4 B, Länsimäki, Vantaa, Länsimäki, vantaa</a></div>
@@ -1621,6 +1708,7 @@ Ei sovittuja esitt</p>
   </div>
   <div class="card-price">79 999 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">424 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">1h · 33.5 m² · fl 1/3 · 1974</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23757429" target="_blank">Lumikero 6, Länsimäki, Vantaa, Länsimäki, vantaa</a></div>
@@ -1655,6 +1743,7 @@ Taloyhtiön putkiremontti on päätetty toteuttaa keväällä 2026. Tämän asun
   </div>
   <div class="card-price">59 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">426 €/mo est.</div>
+  
   <div class="card-loan">+735 € yhtiölaina (1%)</div>
   <div class="card-meta">2h · 59.5 m² · fl 4/9 · 1974</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24487197" target="_blank">Lumikero 4 A, Länsimäki, Vantaa, Länsimäki, vantaa</a></div>
@@ -1675,6 +1764,7 @@ Mellunmäen metroasemalle on noin 900 metrin matka, ja alueella on lisäksi hyv�
   </div>
   <div class="card-price">149 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 166 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">4h · 116.0 m² · 1969</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24656626" target="_blank">Lähdepuistontie 18 B, Vaarala, Vantaa, Vaarala, vantaa</a></div>
@@ -1699,6 +1789,7 @@ Tulevat remontit
   </div>
   <div class="card-price">73 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">668 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">3h · 79.0 m² · fl 3/3 · 1974</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24390111" target="_blank">Oritie 2 A, Hakunila, Vantaa, Hakunila, vantaa</a></div>
@@ -1715,6 +1806,7 @@ Tulevat remontit
   </div>
   <div class="card-price">78 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">575 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 56.0 m² · fl 9/9 · 1976</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24630065" target="_blank">Harmokuja 6, Hakunila, Vantaa, Hakunila, vantaa</a></div>
@@ -1731,6 +1823,7 @@ Tulevat remontit
   </div>
   <div class="card-price">55 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">498 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 64.0 m² · fl 2/3 · 1978</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24609158" target="_blank">Harmotie 4, Hakunila, Vantaa, Hakunila, vantaa</a></div>
@@ -1747,6 +1840,7 @@ Tulevat remontit
   </div>
   <div class="card-price">65 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">525 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 61.0 m² · fl 1/5 · 1974</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24580856" target="_blank">Oritie 2, Hakunila, Vantaa, Hakunila, vantaa</a></div>
@@ -1763,6 +1857,7 @@ Tulevat remontit
   </div>
   <div class="card-price">119 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">815 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">3h · 82.0 m² · fl 2/9 · 1975</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24545661" target="_blank">Pallaskero 4, Länsimäki, Vantaa, Länsimäki, vantaa</a></div>
@@ -1779,6 +1874,7 @@ Tulevat remontit
   </div>
   <div class="card-price">98 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">777 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">3h · 82.0 m² · fl 2/9 · 1975</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24519302" target="_blank">Pallaskero 4, Länsimäki, Vantaa, Länsimäki, vantaa</a></div>
@@ -1795,6 +1891,7 @@ Tulevat remontit
   </div>
   <div class="card-price">169 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 135 €/mo est.</div>
+  
   <div class="card-loan">+47 239 € yhtiölaina (28%)</div>
   <div class="card-meta">4h · 94.0 m² · fl 4/6 · 1971</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23678381" target="_blank">Hepokuja 6 C, Hakunila, Vantaa, Hakunila, vantaa</a></div>
@@ -1811,6 +1908,7 @@ Tulevat remontit
   </div>
   <div class="card-price">69 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">545 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 61.0 m² · fl 2/3 · 1974</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24413388" target="_blank">Oritie 2 B, Hakunila, Vantaa, Hakunila, vantaa</a></div>
@@ -1830,6 +1928,7 @@ Kunnossapitotarveselvityksessä mainitut kustannusarviot ovat alustavia arvioita
   </div>
   <div class="card-price">199 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">855 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">4h · 139.0 m² · 1951</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24347714" target="_blank">Estetie 19, Rajakylä, Vantaa, Rajakylä, vantaa</a></div>
@@ -1846,6 +1945,7 @@ Kunnossapitotarveselvityksessä mainitut kustannusarviot ovat alustavia arvioita
   </div>
   <div class="card-price">89 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">578 €/mo est.</div>
+  
   <div class="card-loan">+6 678 € yhtiölaina (8%)</div>
   <div class="card-meta">2h · 50.0 m² · fl 1/3 · 1978</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23993501" target="_blank">Linnoituskuja 1, Länsimäki, Vantaa, Länsimäki, vantaa</a></div>
@@ -1866,6 +1966,7 @@ Iso olohuone, josta pääset lasitetulle länsiparvekkeelle.  Keittokomero y</p>
   </div>
   <div class="card-price">89 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">756 €/mo est.</div>
+  
   <div class="card-loan">+2 459 € yhtiölaina (3%)</div>
   <div class="card-meta">2h · 61.0 m² · fl 3/4 · 1975</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24408830" target="_blank">Oritie 4 A, Hakunila, Vantaa, Hakunila, vantaa</a></div>
@@ -1889,6 +1990,7 @@ Ilmanvaihtokanavien nu</p>
   </div>
   <div class="card-price">85 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">912 €/mo est.</div>
+  
   <div class="card-loan">+852 € yhtiölaina (1%)</div>
   <div class="card-meta">4h · 97.5 m² · fl 4/6 · 1975</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/22092388" target="_blank">Oritie 4 D, Hakunila, Vantaa, Hakunila, vantaa</a></div>
@@ -1905,6 +2007,7 @@ Ilmanvaihtokanavien nu</p>
   </div>
   <div class="card-price">110 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">767 €/mo est.</div>
+  
   <div class="card-loan">+12 282 € yhtiölaina (11%)</div>
   <div class="card-meta">3h · 75.5 m² · fl 1/5 · 1979</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24654511" target="_blank">Satulakuja 4 B, Hakunila, Vantaa, Hakunila, vantaa</a></div>
@@ -1921,6 +2024,7 @@ Ilmanvaihtokanavien nu</p>
   </div>
   <div class="card-price">185 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 334 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">4h · 99.5 m² · 1969</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24596489" target="_blank">Lähdepuistontie 12 G, Vaarala, Vantaa, Vaarala, vantaa</a></div>
@@ -1937,6 +2041,7 @@ Ilmanvaihtokanavien nu</p>
   </div>
   <div class="card-price">124 900 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">857 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">3h · 78.5 m² · fl 2/6 · 1979</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24394248" target="_blank">Ratsumiehenpolku 2 A, Hakunila, Vantaa, Hakunila, vantaa</a></div>
@@ -1953,6 +2058,7 @@ Ilmanvaihtokanavien nu</p>
   </div>
   <div class="card-price">77 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">834 €/mo est.</div>
+  
   <div class="card-loan">+11 257 € yhtiölaina (15%)</div>
   <div class="card-meta">3h · 79.5 m² · fl 3/6 · 1975</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24534268" target="_blank">Oritie 4, Hakunila, Vantaa, Hakunila, vantaa</a></div>
@@ -1978,6 +2084,7 @@ Tehdyt remontit
   </div>
   <div class="card-price">48 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">449 €/mo est.</div>
+  
   <div class="card-loan">+4 104 € yhtiölaina (9%)</div>
   <div class="card-meta">2h · 55.0 m² · fl 5/7 · 1977</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24463536" target="_blank">Harmokuja 4, Hakunila, Vantaa, Hakunila, vantaa</a></div>
@@ -1998,6 +2105,7 @@ Tehdyt remontit
   </div>
   <div class="card-price">84 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">707 €/mo est.</div>
+  
   <div class="card-loan">+8 628 € yhtiölaina (10%)</div>
   <div class="card-meta">3h · 77.5 m² · fl 2/3 · 1978</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24334699" target="_blank">Linnoituskuja 1 E, Länsimäki, Vantaa, Länsimäki, vantaa</a></div>
@@ -2014,6 +2122,7 @@ Tehdyt remontit
   </div>
   <div class="card-price">199 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 243 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">3h · 110.0 m² · 1979</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23288681" target="_blank">Kurukuja 4 A, Länsimäki, Vantaa, Länsimäki, vantaa</a></div>
@@ -2030,6 +2139,7 @@ Tehdyt remontit
   </div>
   <div class="card-price">115 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">867 €/mo est.</div>
+  
   <div class="card-loan">+2 567 € yhtiölaina (2%)</div>
   <div class="card-meta">3h · 76.0 m² · fl 2/3 · 1974</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24660330" target="_blank">Lumikero 6 A, Länsimäki, Vantaa, Länsimäki, vantaa</a></div>
@@ -2057,6 +2167,7 @@ Tässä kodissa yhdistyvät toimiva pohjaratkaisu, väljät huoneet ja mahdollis
   </div>
   <div class="card-price">189 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 354 €/mo est.</div>
+  
   <div class="card-loan">+8 507 € yhtiölaina (5%)</div>
   <div class="card-meta">4h · 99.5 m² · 1969</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24579809" target="_blank">Lähdepuistontie 12 B, Vaarala, Vantaa, Vaarala, vantaa</a></div>
@@ -2073,6 +2184,7 @@ Tässä kodissa yhdistyvät toimiva pohjaratkaisu, väljät huoneet ja mahdollis
   </div>
   <div class="card-price">178 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 298 €/mo est.</div>
+  
   <div class="card-loan">+8 390 € yhtiölaina (5%)</div>
   <div class="card-meta">4h · 99.5 m² · 1969</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24641801" target="_blank">Lähdepuistontie 12 H, Vaarala, Vantaa, Vaarala, vantaa</a></div>
@@ -2089,6 +2201,7 @@ Tässä kodissa yhdistyvät toimiva pohjaratkaisu, väljät huoneet ja mahdollis
   </div>
   <div class="card-price">194 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 379 €/mo est.</div>
+  
   <div class="card-loan">+8 597 € yhtiölaina (4%)</div>
   <div class="card-meta">4h · 99.5 m² · 1969</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24531612" target="_blank">Lähdepuistontie 12, Vaarala, Vantaa, Vaarala, vantaa</a></div>
@@ -2105,6 +2218,7 @@ Tässä kodissa yhdistyvät toimiva pohjaratkaisu, väljät huoneet ja mahdollis
   </div>
   <div class="card-price">134 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">777 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 54.5 m² · fl 3/3 · 1976</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24424263" target="_blank">Peltolantie 21 A, Viertola, Vantaa, Viertola, vantaa</a></div>
@@ -2121,6 +2235,7 @@ Tässä kodissa yhdistyvät toimiva pohjaratkaisu, väljät huoneet ja mahdollis
   </div>
   <div class="card-price">70 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 080 €/mo est.</div>
+  
   <div class="card-loan">+13 622 € yhtiölaina (19%)</div>
   <div class="card-meta">4h · 784.0 m² · fl 6/6 · 1975</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24609440" target="_blank">Oritie 4 D 57, Hakunila, Vantaa, Hakunila, vantaa</a></div>
@@ -2137,6 +2252,7 @@ Tässä kodissa yhdistyvät toimiva pohjaratkaisu, väljät huoneet ja mahdollis
   </div>
   <div class="card-price">46 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">475 €/mo est.</div>
+  
   <div class="card-loan">+7 481 € yhtiölaina (16%)</div>
   <div class="card-meta">2h · 52.5 m² · fl 1/6 · 1975</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24441682" target="_blank">Oritie 4, Hakunila, Vantaa, Hakunila, vantaa</a></div>
@@ -2163,6 +2279,7 @@ Viimeisimmät ja merkittävimmät toimenpiteet
   </div>
   <div class="card-price">180 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">758 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 97.0 m² · fl 86/97 · 1909</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24546063" target="_blank">Relanderinpiha 5, Jokiniemi, Vantaa, Jokiniemi, vantaa</a></div>
@@ -2179,6 +2296,7 @@ Viimeisimmät ja merkittävimmät toimenpiteet
   </div>
   <div class="card-price">138 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">856 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 62.0 m² · 1977</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24533299" target="_blank">Jousitie 20 A, Rajakylä, Vantaa, Rajakylä, vantaa</a></div>
@@ -2195,6 +2313,7 @@ Viimeisimmät ja merkittävimmät toimenpiteet
   </div>
   <div class="card-price">119 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">827 €/mo est.</div>
+  
   <div class="card-loan">+25 533 € yhtiölaina (21%)</div>
   <div class="card-meta">3h · 78.5 m² · fl 3/6 · 1979</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24619918" target="_blank">Ratsumiehenpolku 2 A, Hakunila, Vantaa, Hakunila, vantaa</a></div>
@@ -2211,6 +2330,7 @@ Viimeisimmät ja merkittävimmät toimenpiteet
   </div>
   <div class="card-price">183 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 162 €/mo est.</div>
+  
   <div class="card-loan">+861 € yhtiölaina (0%)</div>
   <div class="card-meta">3h · 80.0 m² · 1979</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23830560" target="_blank">Kurukuja 4 E, Länsimäki, Vantaa, Länsimäki, vantaa</a></div>
@@ -2227,6 +2347,7 @@ Viimeisimmät ja merkittävimmät toimenpiteet
   </div>
   <div class="card-price">149 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">874 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 55.0 m² · fl 3/3 · 1974</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23570196" target="_blank">Orvokkitie 4 B, Tikkurila, Vantaa, Tikkurila, vantaa</a></div>
@@ -2243,6 +2364,7 @@ Viimeisimmät ja merkittävimmät toimenpiteet
   </div>
   <div class="card-price">149 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">855 €/mo est.</div>
+  
   <div class="card-loan">+6 967 € yhtiölaina (5%)</div>
   <div class="card-meta">2h · 55.0 m² · fl 1/3 · 1976</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24661923" target="_blank">Peltolantie 21 B, Viertola, Vantaa, Viertola, vantaa</a></div>
@@ -2259,6 +2381,7 @@ Viimeisimmät ja merkittävimmät toimenpiteet
   </div>
   <div class="card-price">158 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">900 €/mo est.</div>
+  
   <div class="card-loan">+7 533 € yhtiölaina (5%)</div>
   <div class="card-meta">2h · 55.0 m² · fl 3/3 · 1976</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24237812" target="_blank">Peltolantie 21 A, Viertola, Vantaa, Viertola, vantaa</a></div>
@@ -2275,6 +2398,7 @@ Viimeisimmät ja merkittävimmät toimenpiteet
   </div>
   <div class="card-price">130 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">828 €/mo est.</div>
+  
   <div class="card-loan">+19 000 € yhtiölaina (15%)</div>
   <div class="card-meta">2h · 64.5 m² · fl 2/2 · 1978</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/17414459" target="_blank">Harmotie 6, Hakunila, Vantaa, Hakunila, vantaa</a></div>
@@ -2291,6 +2415,7 @@ Viimeisimmät ja merkittävimmät toimenpiteet
   </div>
   <div class="card-price">165 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">949 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 58.0 m² · fl 1/3 · 1976</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24586822" target="_blank">Peltolantie 21 A, Tikkurila, Vantaa, Tikkurila, vantaa</a></div>
@@ -2307,6 +2432,7 @@ Viimeisimmät ja merkittävimmät toimenpiteet
   </div>
   <div class="card-price">149 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 054 €/mo est.</div>
+  
   <div class="card-loan">+11 764 € yhtiölaina (8%)</div>
   <div class="card-meta">3h · 73.0 m² · fl 2/3 · 1968</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24346304" target="_blank">Uotinmäentie 11 H, Mellunmäki, Helsinki, Mellunmäki, helsinki</a></div>
@@ -2323,6 +2449,7 @@ Viimeisimmät ja merkittävimmät toimenpiteet
   </div>
   <div class="card-price">174 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 157 €/mo est.</div>
+  
   <div class="card-loan">+34 926 € yhtiölaina (20%)</div>
   <div class="card-meta">3h · 79.5 m² · 1979</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24083443" target="_blank">Maalinauhantie 4, Rajakylä, Vantaa, Rajakylä, vantaa</a></div>
@@ -2479,7 +2606,7 @@ Viimeisimmät ja merkittävimmät toimenpiteet
 <div id="mode-uusimaa" style="display:none">
 <header>
   <h1>Oikotie — sijoitusasunnot PKS (Helsinki · Espoo · Vantaa)</h1>
-  <p>Generated 2026-08-29 12:31 &nbsp;·&nbsp;
+  <p>Generated 2026-08-29 13:53 &nbsp;·&nbsp;
      86 rented out (all shown) &nbsp;·&nbsp;
      5 unrented watch list &nbsp;·&nbsp;
      scored: hub · central · mall · quality</p>
@@ -2539,7 +2666,7 @@ Viimeisimmät ja merkittävimmät toimenpiteet
 <div id="tab-uu-cards" class="tab-panel active">
   
 <section class="sec sec-rented">
-  <h2 class="sec-title">Rented Out — Helsinki / Espoo / Vantaa</h2>
+  <h2 class="sec-title">Rented Out — Helsinki / Espoo / Vantaa <span class="sec-count">(86)</span></h2>
   <p class='sec-note'>For-sale apartments with an existing tenant. Immediate rental income from day one.</p>
   <div class="grid">
 <article class="card">
@@ -2549,6 +2676,7 @@ Viimeisimmät ja merkittävimmät toimenpiteet
   </div>
   <div class="card-price">164 800 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">827 €/mo est.</div>
+  
   <div class="card-loan">+9 168 € yhtiölaina (6%)</div>
   <div class="card-meta">1h · 19.4 m² · fl 4/4 · 1932</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24344972" target="_blank">Malminkatu 32 F, Kamppi, Helsinki, Kamppi, helsinki</a></div>
@@ -2572,6 +2700,7 @@ Viimeisimmät ja merkittävimmät toimenpiteet
   </div>
   <div class="card-price">149 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">920 €/mo est.</div>
+  
   <div class="card-loan">+26 161 € yhtiölaina (18%)</div>
   <div class="card-meta">2h · 53.0 m² · fl 3/3 · 1964</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24288424" target="_blank">Korsholmantie 8 C, Puotinharju, Helsinki, Puotinharju, helsinki</a></div>
@@ -2596,6 +2725,7 @@ Viimeisimmät ja merkittävimmät toimenpiteet
   </div>
   <div class="card-price">179 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 050 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">1h · 33.0 m² · fl 2/4 · 1941</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23835479" target="_blank">Saimaankatu 3 A, Alppila, Helsinki, Alppila, helsinki</a></div>
@@ -2621,6 +2751,7 @@ Taloyhtiöllä on hallituksen vahvistama viiden vuoden korjaussuunnitelma 2026-2
   </div>
   <div class="card-price">195 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 127 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">1h · 39.0 m² · fl 4/4 · 1928</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24424454" target="_blank">Loviisankatu 3 A, Alppila, Helsinki, Alppila, helsinki</a></div>
@@ -2655,6 +2786,7 @@ Velaton h</p>
   </div>
   <div class="card-price">149 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">870 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 42.0 m² · fl 2/4 · 1927</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24434407" target="_blank">Viipurinkatu 16 A, Alppila, Helsinki, Alppila, helsinki</a></div>
@@ -2680,6 +2812,7 @@ Tulevat remontit
   </div>
   <div class="card-price">128 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">856 €/mo est.</div>
+  
   <div class="card-loan">+21 020 € yhtiölaina (16%)</div>
   <div class="card-meta">2h · 47.5 m² · fl 2/3 · 1961</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24549331" target="_blank">Klaavuntie 3 E, Puotila, Helsinki, Puotila, helsinki</a></div>
@@ -2701,6 +2834,7 @@ Tulevat remontit
   </div>
   <div class="card-price">88 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">467 €/mo est.</div>
+  
   <div class="card-loan">+16 715 € yhtiölaina (19%)</div>
   <div class="card-meta">1h · 31.0 m² · fl 3/7 · 1975</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24280529" target="_blank">Pakkamestarinkatu 1 D, Itä-Pasila, Helsinki, Itä-Pasila, helsinki</a></div>
@@ -2718,6 +2852,7 @@ Tulevat remontit
   </div>
   <div class="card-price">139 500 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">770 €/mo est.</div>
+  
   <div class="card-loan">+1 430 € yhtiölaina (1%)</div>
   <div class="card-meta">1h · 29.8 m² · fl 1/4 · 1957</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24519716" target="_blank">Orioninkatu 8 A, Hermanni, Helsinki, Hermanni, helsinki</a></div>
@@ -2739,6 +2874,7 @@ Rauhallinen alue, jossa kaupat, palvelut, liikenneyhteydet sekä harrastusmahdol
   </div>
   <div class="card-price">185 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">881 €/mo est.</div>
+  
   <div class="card-loan">+29 600 € yhtiölaina (16%)</div>
   <div class="card-meta">1h · 24.2 m² · fl 5/7 · 1929</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24489965" target="_blank">Mechelininkatu 15, Etu-Töölö, Helsinki, Etu-Töölö, helsinki</a></div>
@@ -2756,6 +2892,7 @@ Rauhallinen alue, jossa kaupat, palvelut, liikenneyhteydet sekä harrastusmahdol
   </div>
   <div class="card-price">159 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 009 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 60.5 m² · fl 5/5 · 1979</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23714811" target="_blank">Kauppakartanonkatu 8 B, Itäkeskus, Helsinki, Itäkeskus, helsinki</a></div>
@@ -2773,6 +2910,7 @@ Rauhallinen alue, jossa kaupat, palvelut, liikenneyhteydet sekä harrastusmahdol
   </div>
   <div class="card-price">140 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">768 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">1h · 26.5 m² · fl 5/6 · 2018</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24654434" target="_blank">Rosalankuja 5, Kruunuvuorenranta, Helsinki, Kruunuvuorenranta, helsinki</a></div>
@@ -2790,6 +2928,7 @@ Rauhallinen alue, jossa kaupat, palvelut, liikenneyhteydet sekä harrastusmahdol
   </div>
   <div class="card-price">185 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 193 €/mo est.</div>
+  
   <div class="card-loan">+28 693 € yhtiölaina (16%)</div>
   <div class="card-meta">2h · 55.0 m² · fl 2/3 · 1961</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23649823" target="_blank">Klaavuntie 9 E, Puotila, Helsinki, Puotila, helsinki</a></div>
@@ -2811,6 +2950,7 @@ Alue tunn</p>
   </div>
   <div class="card-price">198 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 047 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 43.0 m² · fl 4/7 · 2012</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24552566" target="_blank">Viertolankuja 8 C, Viertola, Vantaa, Viertola, vantaa</a></div>
@@ -2828,6 +2968,7 @@ Alue tunn</p>
   </div>
   <div class="card-price">159 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">887 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 45.0 m² · fl 3/4 · 1959</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24423911" target="_blank">Lumikintie 4 D, Roihuvuori, Helsinki, Roihuvuori, helsinki</a></div>
@@ -2848,6 +2989,7 @@ uusinta, vesi-, sähkö-, kaasu ja viemäriliittymien uusinta, porrashu</p>
   </div>
   <div class="card-price">157 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">866 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">1h · 28.0 m² · fl 1/6 · 2021</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24394741" target="_blank">Käpyläntie 11, Koskela, Helsinki, Koskela, helsinki</a></div>
@@ -2865,6 +3007,7 @@ uusinta, vesi-, sähkö-, kaasu ja viemäriliittymien uusinta, porrashu</p>
   </div>
   <div class="card-price">159 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">847 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">1h · 27.0 m² · fl 1/8 · 2023</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24346199" target="_blank">Haltiantie 16 B, Louhela, Vantaa, Louhela, vantaa</a></div>
@@ -2882,6 +3025,7 @@ uusinta, vesi-, sähkö-, kaasu ja viemäriliittymien uusinta, porrashu</p>
   </div>
   <div class="card-price">99 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">622 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 43.5 m² · fl 2/6 · 1960</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24220672" target="_blank">Ohrakuja 3 B, Satomäki, Vantaa, Satomäki, vantaa</a></div>
@@ -2903,6 +3047,7 @@ keittiöihin uudet sähkösyöttö liedelle ja astianpesukoneelle asti sekä yle
   </div>
   <div class="card-price">187 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">999 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 45.5 m² · fl 4/6 · 2010</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24620266" target="_blank">Antaksentie 13 A, Pakkalanrinne, Vantaa, Pakkalanrinne, vantaa</a></div>
@@ -2920,6 +3065,7 @@ keittiöihin uudet sähkösyöttö liedelle ja astianpesukoneelle asti sekä yle
   </div>
   <div class="card-price">149 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">799 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">1h · 26.3 m² · fl 3/5 · 1911</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24643712" target="_blank">Fleminginkatu 25 D, Harju, Helsinki, Harju, helsinki</a></div>
@@ -2937,6 +3083,7 @@ keittiöihin uudet sähkösyöttö liedelle ja astianpesukoneelle asti sekä yle
   </div>
   <div class="card-price">188 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">971 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">1h · 23.0 m² · fl 4/5 · 1960</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24641710" target="_blank">Merimiehenkatu 24 B, Punavuori, Helsinki, Punavuori, helsinki</a></div>
@@ -2954,6 +3101,7 @@ keittiöihin uudet sähkösyöttö liedelle ja astianpesukoneelle asti sekä yle
   </div>
   <div class="card-price">194 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">963 €/mo est.</div>
+  
   <div class="card-loan">+15 852 € yhtiölaina (8%)</div>
   <div class="card-meta">1h · 14.5 m² · fl 1/4</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24543974" target="_blank">Rehbinderintie 14, Eira, Helsinki, Eira, helsinki</a></div>
@@ -2973,6 +3121,7 @@ Tämä koti sijaitsee aivan Helsi</p>
   </div>
   <div class="card-price">115 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">604 €/mo est.</div>
+  
   <div class="card-loan">+3 877 € yhtiölaina (3%)</div>
   <div class="card-meta">1h · 22.0 m² · fl 5/6 · 1936</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23714836" target="_blank">Vaasankatu 20 a B, Kallio, Helsinki, Kallio, helsinki</a></div>
@@ -2992,6 +3141,7 @@ Tehdyt remontit
   </div>
   <div class="card-price">200 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 139 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 46.5 m² · fl 1/3 · 2017</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24633819" target="_blank">Luutnantintie 13 A, Malminkartano, Helsinki, Malminkartano, helsinki</a></div>
@@ -3009,6 +3159,7 @@ Tehdyt remontit
   </div>
   <div class="card-price">159 500 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 243 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 56.0 m² · fl 1/2 · 2013</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24543440" target="_blank">Helatehtaankatu 6, Ala-Malmi, Helsinki, Ala-Malmi, helsinki</a></div>
@@ -3026,6 +3177,7 @@ Tehdyt remontit
   </div>
   <div class="card-price">110 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">550 €/mo est.</div>
+  
   <div class="card-loan">+8 469 € yhtiölaina (8%)</div>
   <div class="card-meta">1h · 24.0 m² · fl 1/4 · 1958</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24468142" target="_blank">Lumikintie 6, Roihuvuori, Helsinki, Roihuvuori, helsinki</a></div>
@@ -3047,6 +3199,7 @@ Tehdyt remontit
   </div>
   <div class="card-price">154 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">750 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">1h · 31.5 m² · fl 1/6 · 2017</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24393782" target="_blank">Rubiinikehä 3, Kivistö, Vantaa, Kivistö, vantaa</a></div>
@@ -3064,6 +3217,7 @@ Tehdyt remontit
   </div>
   <div class="card-price">102 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">536 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">1h · 22.0 m² · fl 6/6 · 1937</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24650128" target="_blank">Fleminginkatu 13 B, Torkkelinmäki, Helsinki, Torkkelinmäki, helsinki</a></div>
@@ -3083,6 +3237,7 @@ Huoneisto on vuokrattu 01.07.2026 alkaen toistaiseksi voimassa olevalla vuokraso
   </div>
   <div class="card-price">168 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">832 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">1h · 33.5 m² · fl 7/7 · 2018</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24484478" target="_blank">Ullanmäentie 12 B, Ymmersta, Espoo, Ymmersta, espoo</a></div>
@@ -3100,6 +3255,7 @@ Huoneisto on vuokrattu 01.07.2026 alkaen toistaiseksi voimassa olevalla vuokraso
   </div>
   <div class="card-price">128 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">778 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">1h · 34.5 m² · fl 4/6 · 2018</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24372893" target="_blank">Safiirikuja 15, Kivistö, Vantaa, Kivistö, vantaa</a></div>
@@ -3117,6 +3273,7 @@ Huoneisto on vuokrattu 01.07.2026 alkaen toistaiseksi voimassa olevalla vuokraso
   </div>
   <div class="card-price">135 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">693 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">1h · 28.0 m² · fl 5/6 · 2017</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23798260" target="_blank">Rubiinikehä 3 b, Kivistö, Vantaa, Kivistö, vantaa</a></div>
@@ -3134,6 +3291,7 @@ Huoneisto on vuokrattu 01.07.2026 alkaen toistaiseksi voimassa olevalla vuokraso
   </div>
   <div class="card-price">179 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 165 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 49.0 m² · fl 4/5 · 2018</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24513084" target="_blank">Tankomäenkatu 8 A, Vartioharju / Tankovainio, Helsinki, Vartioharju / Tankovainio, helsinki</a></div>
@@ -3151,6 +3309,7 @@ Huoneisto on vuokrattu 01.07.2026 alkaen toistaiseksi voimassa olevalla vuokraso
   </div>
   <div class="card-price">114 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">615 €/mo est.</div>
+  
   <div class="card-loan">+14 363 € yhtiölaina (13%)</div>
   <div class="card-meta">1h · 19.0 m² · fl 4/4 · 1940</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24539706" target="_blank">Mäkelänkatu 10 B, Vallila, Helsinki, Vallila, helsinki</a></div>
@@ -3172,6 +3331,7 @@ Huoneisto on vuokrattu 01.07.2026 alkaen toistaiseksi voimassa olevalla vuokraso
   </div>
   <div class="card-price">137 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">792 €/mo est.</div>
+  
   <div class="card-loan">+3 743 € yhtiölaina (3%)</div>
   <div class="card-meta">2h · 50.5 m² · fl 1/6 · 1964</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24534156" target="_blank">Karistimentie 2 H, Myllypuro, Helsinki, Myllypuro, helsinki</a></div>
@@ -3194,6 +3354,7 @@ Huoneisto on vuokrattu 01.07.2026 alkaen toistaiseksi voimassa olevalla vuokraso
   </div>
   <div class="card-price">185 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 021 €/mo est.</div>
+  
   <div class="card-loan">+18 733 € yhtiölaina (10%)</div>
   <div class="card-meta">2h · 44.0 m² · fl 4/4 · 1999</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24450968" target="_blank">Säterinkatu 7 A, Säteri, Espoo, Säteri, espoo</a></div>
@@ -3211,6 +3372,7 @@ Huoneisto on vuokrattu 01.07.2026 alkaen toistaiseksi voimassa olevalla vuokraso
   </div>
   <div class="card-price">128 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">726 €/mo est.</div>
+  
   <div class="card-loan">+19 833 € yhtiölaina (15%)</div>
   <div class="card-meta">2h · 55.0 m² · fl 4/6 · 1970</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24416836" target="_blank">Kallioruohonpolku 5 B, Simonkallio, Vantaa, Simonkallio, vantaa</a></div>
@@ -3233,6 +3395,7 @@ Huoneisto on vuokrattu 01.07.2026 alkaen toistaiseksi voimassa olevalla vuokraso
   </div>
   <div class="card-price">158 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">988 €/mo est.</div>
+  
   <div class="card-loan">+15 406 € yhtiölaina (10%)</div>
   <div class="card-meta">2h · 60.5 m² · fl 4/4 · 1965</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24546110" target="_blank">Tuulimyllyntie 4 B, Myllypuro, Helsinki, Myllypuro, helsinki</a></div>
@@ -3254,6 +3417,7 @@ Ota nopeasti y</p>
   </div>
   <div class="card-price">145 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">857 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 55.0 m² · fl 4/8 · 1967</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24486056" target="_blank">Leikkikuja 3, Kontula, Helsinki, Kontula, helsinki</a></div>
@@ -3271,6 +3435,7 @@ Ota nopeasti y</p>
   </div>
   <div class="card-price">159 800 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">851 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">1h · 25.0 m² · fl 1/7 · 1927</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24408717" target="_blank">Vilhonvuorenkuja 18 C, Vilhonvuori, Helsinki, Vilhonvuori, helsinki</a></div>
@@ -3288,6 +3453,7 @@ Ota nopeasti y</p>
   </div>
   <div class="card-price">137 900 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">804 €/mo est.</div>
+  
   <div class="card-loan">+61 717 € yhtiölaina (45%)</div>
   <div class="card-meta">2h · 34.5 m² · fl 2/3 · 2015</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24514494" target="_blank">Tegelhagen 2 C, Kauklahti, Espoo, Kauklahti, espoo</a></div>
@@ -3305,6 +3471,7 @@ Ota nopeasti y</p>
   </div>
   <div class="card-price">47 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">265 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">1h · 37.0 m² · fl 1/3 · 1972</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24345181" target="_blank">Aallonhuippu 3, Kivenlahti, Espoo, Kivenlahti, espoo</a></div>
@@ -3324,6 +3491,7 @@ Tuleva yhtiökokous 17.6.2026: Päätetään linjasaneerauksen toteutussuunnitte
   </div>
   <div class="card-price">149 990 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">703 €/mo est.</div>
+  
   <div class="card-loan">+73 108 € yhtiölaina (49%)</div>
   <div class="card-meta">1h · 22.0 m² · fl 6/7 · 2017</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23886125" target="_blank">Ulappasaarentie 7, Vuosaari, Helsinki, Vuosaari, helsinki</a></div>
@@ -3341,6 +3509,7 @@ Tuleva yhtiökokous 17.6.2026: Päätetään linjasaneerauksen toteutussuunnitte
   </div>
   <div class="card-price">134 990 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">632 €/mo est.</div>
+  
   <div class="card-loan">+64 402 € yhtiölaina (48%)</div>
   <div class="card-meta">1h · 26.0 m² · fl 3/8 · 2018</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23831363" target="_blank">Kaskelantie 7, Hakunila, Vantaa, Hakunila, vantaa</a></div>
@@ -3358,6 +3527,7 @@ Tuleva yhtiökokous 17.6.2026: Päätetään linjasaneerauksen toteutussuunnitte
   </div>
   <div class="card-price">138 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">712 €/mo est.</div>
+  
   <div class="card-loan">+32 308 € yhtiölaina (23%)</div>
   <div class="card-meta">1h · 26.0 m² · fl 2/3 · 1958</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24661269" target="_blank">Ulvilantie 29-4 A -, Munkkivuori, Helsinki, Munkkivuori, helsinki</a></div>
@@ -3377,6 +3547,7 @@ Asunto-osakeyhtiö Ulvilantie 29:n ovat perustaneet ja rakennuttaneet Helsing</p
   </div>
   <div class="card-price">119 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">688 €/mo est.</div>
+  
   <div class="card-loan">+36 540 € yhtiölaina (31%)</div>
   <div class="card-meta">2h · 59.5 m² · fl 3/7 · 1967</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24461814" target="_blank">Kaarikuja 4, Kontula, Helsinki, Kontula, helsinki</a></div>
@@ -3394,6 +3565,7 @@ Asunto-osakeyhtiö Ulvilantie 29:n ovat perustaneet ja rakennuttaneet Helsing</p
   </div>
   <div class="card-price">189 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 102 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 37.2 m² · fl 1/4 · 1949</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24499558" target="_blank">Hämeentie 156 a, Vanhakylä, Helsinki, Vanhakylä, helsinki</a></div>
@@ -3411,6 +3583,7 @@ Asunto-osakeyhtiö Ulvilantie 29:n ovat perustaneet ja rakennuttaneet Helsing</p
   </div>
   <div class="card-price">120 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">763 €/mo est.</div>
+  
   <div class="card-loan">+31 537 € yhtiölaina (26%)</div>
   <div class="card-meta">2h · 55.5 m² · fl 5/8 · 1962</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24525795" target="_blank">Maasälväntie 14 C, Pihlajamäki, Helsinki, Pihlajamäki, helsinki</a></div>
@@ -3430,6 +3603,7 @@ Asunto on osa hyvin hoidettua taloyhtiötä, jossa on tehty merkittäviä perusp
   </div>
   <div class="card-price">129 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">644 €/mo est.</div>
+  
   <div class="card-loan">+7 170 € yhtiölaina (6%)</div>
   <div class="card-meta">1h · 26.0 m² · fl 1/3 · 1962</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23733041" target="_blank">Viljatie 6 D, Malmi, Helsinki, Malmi, helsinki</a></div>
@@ -3447,6 +3621,7 @@ Asunto on osa hyvin hoidettua taloyhtiötä, jossa on tehty merkittäviä perusp
   </div>
   <div class="card-price">185 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">983 €/mo est.</div>
+  
   <div class="card-loan">+11 111 € yhtiölaina (6%)</div>
   <div class="card-meta">2h · 47.5 m² · fl 7/8 · 2000</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24545887" target="_blank">Iiluodontie 7 A, Aurinkolahti, Helsinki, Aurinkolahti, helsinki</a></div>
@@ -3464,6 +3639,7 @@ Asunto on osa hyvin hoidettua taloyhtiötä, jossa on tehty merkittäviä perusp
   </div>
   <div class="card-price">169 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">928 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 48.0 m² · fl 3/4 · 2006</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24504109" target="_blank">Ratavallintie 4 B, Tuomarila, Espoo, Tuomarila, espoo</a></div>
@@ -3481,6 +3657,7 @@ Asunto on osa hyvin hoidettua taloyhtiötä, jossa on tehty merkittäviä perusp
   </div>
   <div class="card-price">199 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 162 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 51.1 m² · fl 3/4 · 1960</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24300353" target="_blank">Lumikintie 3 A, Roihuvuori, Helsinki, Roihuvuori, helsinki</a></div>
@@ -3500,6 +3677,7 @@ Taloyhtiö on hyvin hoidettu ja laajasti peruskorjattu. Suuret remontit, kuten l
   </div>
   <div class="card-price">126 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">826 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 55.0 m² · fl 3/3 · 1968</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23669883" target="_blank">Uotinmäentie 11 D 33, Mellunkylä, Helsinki, Mellunkylä, helsinki</a></div>
@@ -3517,6 +3695,7 @@ Taloyhtiö on hyvin hoidettu ja laajasti peruskorjattu. Suuret remontit, kuten l
   </div>
   <div class="card-price">187 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 193 €/mo est.</div>
+  
   <div class="card-loan">+19 807 € yhtiölaina (11%)</div>
   <div class="card-meta">2h · 55.0 m² · fl 2/3 · 1956</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24659342" target="_blank">Keijukaistenpolku 11, Roihuvuori, Helsinki, Roihuvuori, helsinki</a></div>
@@ -3536,6 +3715,7 @@ Sijainti rauhallisen Keijukaistenpolun varrella on idyllinen. Taloyhtiössä on 
   </div>
   <div class="card-price">112 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">695 €/mo est.</div>
+  
   <div class="card-loan">+23 830 € yhtiölaina (21%)</div>
   <div class="card-meta">2h · 42.5 m² · fl 1/2 · 1966</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24651950" target="_blank">Leinikkitie 19 B, Simonmetsä, Vantaa, Simonmetsä, vantaa</a></div>
@@ -3555,6 +3735,7 @@ Asunto Oy Kielomäessä on tehty vuosien varrella runsaasti kunnossapito- ja kor
   </div>
   <div class="card-price">85 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">466 €/mo est.</div>
+  
   <div class="card-loan">+1 646 € yhtiölaina (2%)</div>
   <div class="card-meta">1h · 34.5 m² · fl 2/4 · 1978</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24651420" target="_blank">Savelantie 8, Savela, Helsinki, Savela, helsinki</a></div>
@@ -3576,6 +3757,7 @@ Tilava ja valoisa yksiö Helsingin Savelassa odottaa uutta omistajaa. Asunnossa 
   </div>
   <div class="card-price">85 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">466 €/mo est.</div>
+  
   <div class="card-loan">+1 646 € yhtiölaina (2%)</div>
   <div class="card-meta">1h · 34.5 m² · fl 2/4 · 1978</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24651419" target="_blank">Savelantie 8, Savela, Helsinki, Savela, helsinki</a></div>
@@ -3597,6 +3779,7 @@ Tilava ja valoisa yksiö Helsingin Savelassa odottaa uutta omistajaa. Asunnossa 
   </div>
   <div class="card-price">149 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">841 €/mo est.</div>
+  
   <div class="card-loan">+54 445 € yhtiölaina (37%)</div>
   <div class="card-meta">2h · 58.0 m² · fl 3/4 · 1974</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24620263" target="_blank">Maininkitie 9 D, Kivenlahti, Espoo, Kivenlahti, espoo</a></div>
@@ -3616,6 +3799,7 @@ Asunto Oy Satoluiska tunnetaan erinomaisesti hoidettuna taloyhtiönä. LVIS-linj
   </div>
   <div class="card-price">160 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 003 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 60.0 m² · fl 2/4 · 1964</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24548847" target="_blank">Vuolukiventie 3, Pihlajamäki, Helsinki, Pihlajamäki, helsinki</a></div>
@@ -3633,6 +3817,7 @@ Asunto Oy Satoluiska tunnetaan erinomaisesti hoidettuna taloyhtiönä. LVIS-linj
   </div>
   <div class="card-price">170 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 086 €/mo est.</div>
+  
   <div class="card-loan">+46 811 € yhtiölaina (28%)</div>
   <div class="card-meta">2h · 56.5 m² · fl 1/3 · 1974</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24530660" target="_blank">Ahventie 3 B, Haukilahti, Espoo, Haukilahti, espoo</a></div>
@@ -3652,6 +3837,7 @@ Kohde sopii erityisesti pitkäjänteiselle sijoittajalle tai ostajalle, joka arv
   </div>
   <div class="card-price">135 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">702 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">1h · 24.0 m² · fl 3/4 · 1958</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24649419" target="_blank">Kaskenkaatajantie 10, Tapiola, Espoo, Tapiola, espoo</a></div>
@@ -3669,6 +3855,7 @@ Kohde sopii erityisesti pitkäjänteiselle sijoittajalle tai ostajalle, joka arv
   </div>
   <div class="card-price">179 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 163 €/mo est.</div>
+  
   <div class="card-loan">+21 301 € yhtiölaina (12%)</div>
   <div class="card-meta">2h · 52.0 m² · fl 2/4 · 1958</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24648898" target="_blank">Nuijamiestentie 30 A, Pohjois-Haaga, Helsinki, Pohjois-Haaga, helsinki</a></div>
@@ -3686,6 +3873,7 @@ Kohde sopii erityisesti pitkäjänteiselle sijoittajalle tai ostajalle, joka arv
   </div>
   <div class="card-price">144 800 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">753 €/mo est.</div>
+  
   <div class="card-loan">+4 143 € yhtiölaina (3%)</div>
   <div class="card-meta">1h · 21.0 m² · fl 2/4 · 1939</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24437723" target="_blank">Haahkatie 10, Lauttasaari, Helsinki, Lauttasaari, helsinki</a></div>
@@ -3703,6 +3891,7 @@ Kohde sopii erityisesti pitkäjänteiselle sijoittajalle tai ostajalle, joka arv
   </div>
   <div class="card-price">110 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">620 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">1h · 38.5 m² · fl 5/6 · 1973</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24660897" target="_blank">Aallonkohina 8 A, Espoonlahti, Espoo, Espoonlahti, espoo</a></div>
@@ -3724,6 +3913,7 @@ Sijainti on erinomainen: päättyvän kadun rauha yhdistyy lyhyeen kävelymatkaa
   </div>
   <div class="card-price">148 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">757 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">1h · 27.5 m² · fl 2/7 · 1956</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24656848" target="_blank">Kettutie 4 C, Länsi-Herttoniemi, Helsinki, Länsi-Herttoniemi, helsinki</a></div>
@@ -3741,6 +3931,7 @@ Sijainti on erinomainen: päättyvän kadun rauha yhdistyy lyhyeen kävelymatkaa
   </div>
   <div class="card-price">164 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 014 €/mo est.</div>
+  
   <div class="card-loan">+4 004 € yhtiölaina (2%)</div>
   <div class="card-meta">2h · 51.0 m² · fl 1/4 · 1959</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24424203" target="_blank">Lampuotilantie 34-36 A, Maunula, Helsinki, Maunula, helsinki</a></div>
@@ -3763,6 +3954,7 @@ Sijainti on erinomainen: päättyvän kadun rauha yhdistyy lyhyeen kävelymatkaa
   </div>
   <div class="card-price">179 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">983 €/mo est.</div>
+  
   <div class="card-loan">+15 852 € yhtiölaina (9%)</div>
   <div class="card-meta">1h · 34.0 m² · fl 1/4 · 1965</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/espoo/23665585" target="_blank">Kaskenkaatajantie 18 B, Tapiola, Espoo, Tapiola, espoo</a></div>
@@ -3789,6 +3981,7 @@ Kunnossapitotarve yhtiökokousta seuraavien viiden vuoden aikana:
   </div>
   <div class="card-price">75 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">579 €/mo est.</div>
+  
   <div class="card-loan">+2 895 € yhtiölaina (4%)</div>
   <div class="card-meta">2h · 51.0 m² · fl 1/3 · 1952</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24405661" target="_blank">Pyymosantie 3, Petikko, Vantaa, Petikko, vantaa</a></div>
@@ -3808,6 +4001,7 @@ Tehdyt remontit
   </div>
   <div class="card-price">140 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">723 €/mo est.</div>
+  
   <div class="card-loan">+6 227 € yhtiölaina (4%)</div>
   <div class="card-meta">1h · 30.0 m² · fl 1/4 · 1959</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24393856" target="_blank">Kanneltie 13 A, Kannelmäki, Helsinki, Kannelmäki, helsinki</a></div>
@@ -3826,6 +4020,7 @@ Taloyhtiö on poikkeuksellisen hyvässä kunnossa: putkiremontti, sähköt, julk
   </div>
   <div class="card-price">150 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">846 €/mo est.</div>
+  
   <div class="card-loan">+18 442 € yhtiölaina (12%)</div>
   <div class="card-meta">2h · 45.0 m² · fl 3/4 · 1959</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24526766" target="_blank">Poutamäentie 11, Pajamäki, Helsinki, Pajamäki, helsinki</a></div>
@@ -3843,6 +4038,7 @@ Taloyhtiö on poikkeuksellisen hyvässä kunnossa: putkiremontti, sähköt, julk
   </div>
   <div class="card-price">118 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">878 €/mo est.</div>
+  
   <div class="card-loan">+14 € yhtiölaina (0%)</div>
   <div class="card-meta">2h · 51.0 m² · fl 1/3 · 1963</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24642917" target="_blank">Sulkapolku 4 B, Pitäjänmäki, Helsinki, Pitäjänmäki, helsinki</a></div>
@@ -3860,6 +4056,7 @@ Taloyhtiö on poikkeuksellisen hyvässä kunnossa: putkiremontti, sähköt, julk
   </div>
   <div class="card-price">99 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">573 €/mo est.</div>
+  
   <div class="card-loan">+25 000 € yhtiölaina (25%)</div>
   <div class="card-meta">1h · 28.0 m² · fl 1/2 · 1940</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24534992" target="_blank">Sulkapolku 5 A, Pitäjänmäki, Helsinki, Pitäjänmäki, helsinki</a></div>
@@ -3877,6 +4074,7 @@ Taloyhtiö on poikkeuksellisen hyvässä kunnossa: putkiremontti, sähköt, julk
   </div>
   <div class="card-price">133 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">651 €/mo est.</div>
+  
   <div class="card-loan">+2 682 € yhtiölaina (2%)</div>
   <div class="card-meta">1h · 22.0 m² · fl 3/3 · 1961</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23632295" target="_blank">Ahjokuja 2 D, Haaga, Helsinki, Haaga, helsinki</a></div>
@@ -3894,6 +4092,7 @@ Taloyhtiö on poikkeuksellisen hyvässä kunnossa: putkiremontti, sähköt, julk
   </div>
   <div class="card-price">122 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">729 €/mo est.</div>
+  
   <div class="card-loan">+51 721 € yhtiölaina (42%)</div>
   <div class="card-meta">2h · 55.0 m² · fl 1/3 · 1971</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24605198" target="_blank">Saanatunturintie 3 B, Mellunmäki, Helsinki, Mellunmäki, helsinki</a></div>
@@ -3915,6 +4114,7 @@ Mellunmäki tarjoaa asukkaill</p>
   </div>
   <div class="card-price">98 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">708 €/mo est.</div>
+  
   <div class="card-loan">+1 101 € yhtiölaina (1%)</div>
   <div class="card-meta">2h · 60.0 m² · fl 2/4 · 1964</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24433533" target="_blank">Vuolukiventie 5 M, Pihlajamäki, Helsinki, Pihlajamäki, helsinki</a></div>
@@ -3943,6 +4143,7 @@ Taloyhtiön</p>
   </div>
   <div class="card-price">139 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">823 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 60.5 m² · fl 5/7 · 1977</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23714810" target="_blank">Rapakiventie 2 I, Pihlajanmäki, Helsinki, Pihlajanmäki, helsinki</a></div>
@@ -3960,6 +4161,7 @@ Taloyhtiön</p>
   </div>
   <div class="card-price">193 500 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 016 €/mo est.</div>
+  
   <div class="card-loan">+5 541 € yhtiölaina (3%)</div>
   <div class="card-meta">1h · 34.5 m² · fl 5/6 · 1957</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24579470" target="_blank">Huopalahdentie 12, Munkkiniemi, Helsinki, Munkkiniemi, helsinki</a></div>
@@ -3977,6 +4179,7 @@ Taloyhtiön</p>
   </div>
   <div class="card-price">110 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">645 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 48.0 m² · fl 2/4 · 1978</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24639776" target="_blank">Suunnistajankuja 10 B, Länsimäki, Vantaa, Länsimäki, vantaa</a></div>
@@ -3994,6 +4197,7 @@ Taloyhtiön</p>
   </div>
   <div class="card-price">52 600 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">441 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 59.5 m² · fl 3/6 · 1975</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24394973" target="_blank">Lehmihaka 2 D, Rautkallio, Vantaa, Rautkallio, vantaa</a></div>
@@ -4011,6 +4215,7 @@ Taloyhtiön</p>
   </div>
   <div class="card-price">99 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">529 €/mo est.</div>
+  
   <div class="card-loan">+1 000 € yhtiölaina (1%)</div>
   <div class="card-meta">1h · 34.0 m² · fl 1/3 · 1973</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/17773495" target="_blank">Saariselänkuja 6, Mellunkylä, Helsinki, Mellunkylä, helsinki</a></div>
@@ -4028,6 +4233,7 @@ Taloyhtiön</p>
   </div>
   <div class="card-price">198 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 253 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 47.5 m² · fl 2/3 · 1962</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24519705" target="_blank">Kirkkoherrantie 5 A, Helsinki, Helsinki</a></div>
@@ -4045,6 +4251,7 @@ Taloyhtiön</p>
   </div>
   <div class="card-price">134 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">879 €/mo est.</div>
+  
   <div class="card-loan">+35 455 € yhtiölaina (26%)</div>
   <div class="card-meta">2h · 66.0 m² · fl 4/8 · 1964</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24400211" target="_blank">Vuolukiventie 12 A, Pihlajamäki, Helsinki, Pihlajamäki, helsinki</a></div>
@@ -4062,6 +4269,7 @@ Taloyhtiön</p>
   </div>
   <div class="card-price">154 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">873 €/mo est.</div>
+  
   <div class="card-loan">+10 889 € yhtiölaina (7%)</div>
   <div class="card-meta">2h · 58.0 m² · fl 4/6 · 1969</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24237502" target="_blank">Koivukyläntie 37-39 F, Simonkylä, Vantaa, Simonkylä, vantaa</a></div>
@@ -4081,6 +4289,7 @@ Hyvin hoidettu taloyhtiö sijaitsee omalla tontilla, ja kaikki suuret remontit o
   </div>
   <div class="card-price">98 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">510 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">1h · 24.0 m² · fl 1/3 · 1959</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24345711" target="_blank">Kanneltie 15 B, Kannelmäki, Helsinki, Kannelmäki, helsinki</a></div>
@@ -4100,6 +4309,7 @@ Kaikki palvelut löytyvät kävelyetäisy</p>
   </div>
   <div class="card-price">133 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">697 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">1h · 26.0 m² · fl 2/4 · 1962</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24654590" target="_blank">Suursuontie 6 B, Maunula, Helsinki, Maunula, helsinki</a></div>
@@ -4117,6 +4327,7 @@ Kaikki palvelut löytyvät kävelyetäisy</p>
   </div>
   <div class="card-price">123 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">610 €/mo est.</div>
+  
   <div class="card-loan">+7 864 € yhtiölaina (6%)</div>
   <div class="card-meta">1h · 23.5 m² · fl 9/10 · 1956</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24488607" target="_blank">Adolf Lindforsin tie 7 A, Pohjois-Haaga, Helsinki, Pohjois-Haaga, helsinki</a></div>
@@ -4138,6 +4349,7 @@ Huoneisto on vuokrattu määräaikaisella vuo</p>
   </div>
   <div class="card-price">159 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">992 €/mo est.</div>
+  
   <div class="card-loan">+1 662 € yhtiölaina (1%)</div>
   <div class="card-meta">2h · 51.5 m² · fl 5/7 · 1999</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24483113" target="_blank">Mustankivenaukio 5 A, Vuosaari, Helsinki, Vuosaari, helsinki</a></div>
@@ -4155,6 +4367,7 @@ Huoneisto on vuokrattu määräaikaisella vuo</p>
   </div>
   <div class="card-price">129 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">734 €/mo est.</div>
+  
   <div class="card-loan">+6 287 € yhtiölaina (5%)</div>
   <div class="card-meta">1h · 29.0 m² · fl 2/3 · 1960</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24551197" target="_blank">Kanneltie 6 A, Kannelmäki, Helsinki, Kannelmäki, helsinki</a></div>
@@ -4172,7 +4385,7 @@ Vesimaksu</p>
 </article></div>
 </section>
 <section class="sec sec-new">
-  <h2 class="sec-title">Watch List — Top 5 Unrented</h2>
+  <h2 class="sec-title">Watch List — Top 5 Unrented <span class="sec-count">(5)</span></h2>
   <p class='sec-note'>Highest-scoring unrented apartments in Helsinki/Espoo/Vantaa by hub-proximity model. Verify pipe reno and local market before deciding.</p>
   <div class="grid">
 <article class="card">
@@ -4182,6 +4395,7 @@ Vesimaksu</p>
   </div>
   <div class="card-price">149 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">602 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">1h · 27.0 m² · fl 3/8 · 2021</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24583838" target="_blank">Mestarinkatu 5 A, Vallikallio, Espoo, Vallikallio, espoo</a></div>
@@ -4199,6 +4413,7 @@ Vesimaksu</p>
   </div>
   <div class="card-price">159 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">756 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">1h · 28.0 m² · fl 3/8 · 2023</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24528452" target="_blank">Piispanportti 7 B, Olari, Espoo, Olari, espoo</a></div>
@@ -4216,6 +4431,7 @@ Vesimaksu</p>
   </div>
   <div class="card-price">197 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">844 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">1h · 27.0 m² · fl 3/8 · 2021</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/espoo/17322853" target="_blank">Mestarinkatu 5, Espoo, Leppävaara, Espoo, Leppävaara, espoo</a></div>
@@ -4233,6 +4449,7 @@ Vesimaksu</p>
   </div>
   <div class="card-price">165 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">806 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">1h · 25.0 m² · fl 4/7 · 1928</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24648511" target="_blank">Aleksis Kiven katu 38 A, Kallio, Helsinki, Kallio, helsinki</a></div>
@@ -4253,6 +4470,7 @@ Vesimaksu</p>
   </div>
   <div class="card-price">195 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">979 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">1h · 34.5 m² · fl 4/8 · 2017</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24549141" target="_blank">Matinkallio 7 D, Matinkylä, Espoo, Matinkylä, espoo</a></div>
@@ -4390,10 +4608,10 @@ Vesimaksu</p>
     <button class="tab-btn active" onclick="showTab('nb-cards','mode-newbuild',this)">Cards</button>
     <button class="tab-btn" onclick="showTab('nb-table','mode-newbuild',this)">Table / Analysis</button>
   </div>
-  <div id="nb-cards" class="tab-panel active">
+  <div id="tab-nb-cards" class="tab-panel active">
     
 <section class="sec sec-new">
-  <h2 class="sec-title">PKS New Construction — Top 26 (1 per building)</h2>
+  <h2 class="sec-title">PKS New Construction — Top 26 (1 per building) <span class="sec-count">(26)</span></h2>
   <p class='sec-note'>Newly built / under-construction apartments in Helsinki, Espoo, Vantaa. Price ≤ 200,000 €, loan ≤ 50%. Deduplicated to one listing per building, then top scored by hub proximity.</p>
   <div class="grid">
 <article class="card">
@@ -4403,6 +4621,7 @@ Vesimaksu</p>
   </div>
   <div class="card-price">197 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">844 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">1h · 27.0 m² · fl 3/8 · 2021</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/espoo/17322853" target="_blank">Mestarinkatu 5, Espoo, Leppävaara, Espoo, Leppävaara, espoo</a></div>
@@ -4420,6 +4639,7 @@ Vesimaksu</p>
   </div>
   <div class="card-price">199 600 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">858 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">1h · 33.0 m² · fl 1/5 · 2026</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/22224327" target="_blank">Sörnäistenkatu 14 B 26, Hermanni, Helsinki, Hermanni, helsinki</a></div>
@@ -4437,6 +4657,7 @@ Vesimaksu</p>
   </div>
   <div class="card-price">144 059 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">577 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 37.5 m² · fl 2/8 · 2026</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24597196" target="_blank">Maapallonkuja 1 A 6, Olari, Espoo, Olari, espoo</a></div>
@@ -4454,6 +4675,7 @@ Vesimaksu</p>
   </div>
   <div class="card-price">143 221 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">667 €/mo est.</div>
+  
   <div class="card-loan">+70 200 € yhtiölaina (49%)</div>
   <div class="card-meta">1h · 22.0 m² · fl 6/8 · 2028</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24497282" target="_blank">Leirimetsäntie 21 A28, Leppävaara, Espoo, Leppävaara, espoo</a></div>
@@ -4471,6 +4693,7 @@ Vesimaksu</p>
   </div>
   <div class="card-price">132 378 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">518 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">1h · 27.5 m² · fl 2/7 · 2026</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24475864" target="_blank">Niittykummuntie 2 A06, Niittykumpu, Espoo, Niittykumpu, espoo</a></div>
@@ -4488,6 +4711,7 @@ Vesimaksu</p>
   </div>
   <div class="card-price">137 310 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">993 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">1h · 32.0 m² · fl 6/6 · 2026</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24521602" target="_blank">Tenholantie 12 C 152, Vanha Ruskeasuo, Helsinki, Vanha Ruskeasuo, helsinki</a></div>
@@ -4505,6 +4729,7 @@ Vesimaksu</p>
   </div>
   <div class="card-price">197 100 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">985 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">1h · 28.5 m² · fl 3/6 · 2027</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24455501" target="_blank">Niittyportti 8 A 06, Niittykumpu, Espoo, Niittykumpu, espoo</a></div>
@@ -4522,6 +4747,7 @@ Vesimaksu</p>
   </div>
   <div class="card-price">199 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">855 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 42.0 m² · fl 1/5 · 2027</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24587986" target="_blank">Myllypadontie 3 E 32, Myllärinlaakso, Helsinki, Myllärinlaakso, helsinki</a></div>
@@ -4539,6 +4765,7 @@ Vesimaksu</p>
   </div>
   <div class="card-price">193 700 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">951 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">1h · 25.0 m² · fl 1/6 · 2027</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24393292" target="_blank">Jokiniementie 52 A 01, Oulunkylä, Helsinki, Oulunkylä, helsinki</a></div>
@@ -4556,6 +4783,7 @@ Vesimaksu</p>
   </div>
   <div class="card-price">129 900 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">505 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 40.0 m² · fl 6/8 · 2025</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24624786" target="_blank">Piikkirinne 3 A 29, Vapaala, Vantaa, Vapaala, vantaa</a></div>
@@ -4573,6 +4801,7 @@ Vesimaksu</p>
   </div>
   <div class="card-price">199 700 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">858 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 48.5 m² · 2023</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/espoo/16302266" target="_blank">Keelkorvenkuja 7 A 20, Puolarmetsä, Espoo, Puolarmetsä, espoo</a></div>
@@ -4590,6 +4819,7 @@ Vesimaksu</p>
   </div>
   <div class="card-price">181 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">763 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">1h · 31.5 m² · fl 2/7 · 2027</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24458450" target="_blank">Köökarinkuja 1 B45, Laajasalo, Helsinki, Laajasalo, helsinki</a></div>
@@ -4607,6 +4837,7 @@ Vesimaksu</p>
   </div>
   <div class="card-price">198 245 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 139 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">1h · 36.5 m² · fl 6/7 · 2025</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24331786" target="_blank">Kustinpolku 6 A30, Pohjois-Pasila, Helsinki, Pohjois-Pasila, helsinki</a></div>
@@ -4624,6 +4855,7 @@ Vesimaksu</p>
   </div>
   <div class="card-price">139 700 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">555 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 30.5 m² · fl 6/6 · 2026</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24601630" target="_blank">Nihtisillankuja 2 A 48, Leppävaara, Espoo, Leppävaara, espoo</a></div>
@@ -4641,6 +4873,7 @@ Vesimaksu</p>
   </div>
   <div class="card-price">179 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">900 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">1h · 30.0 m² · fl 9/11 · 2026</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24434722" target="_blank">Topaasikuja 10 B 164, Kivistö, Vantaa, Kivistö, vantaa</a></div>
@@ -4658,6 +4891,7 @@ Vesimaksu</p>
   </div>
   <div class="card-price">192 929 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">1 074 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">1h · 40.0 m² · fl 1/1 · 2025</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24047459" target="_blank">Jokipoikasenkaari 4 E 75, Tapanila, Helsinki, Tapanila, helsinki</a></div>
@@ -4675,6 +4909,7 @@ Vesimaksu</p>
   </div>
   <div class="card-price">149 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">602 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">1h · 25.0 m² · fl 1/4 · 2026</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23660993" target="_blank">Kantelettarentie 9 D, Kannelmäki, Helsinki, Kannelmäki, helsinki</a></div>
@@ -4692,6 +4927,7 @@ Vesimaksu</p>
   </div>
   <div class="card-price">196 179 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">840 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">1h · 33.5 m² · fl 2/4 · 2025</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23248335" target="_blank">Ultramariinikuja 5 C, Kuninkaantammi, Helsinki, Kuninkaantammi, helsinki</a></div>
@@ -4709,6 +4945,7 @@ Vesimaksu</p>
   </div>
   <div class="card-price">179 900 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">758 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 45.5 m² · fl 2/8 · 2023</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/22043697" target="_blank">Haltiantie 16 A 6, Louhela, Vantaa, Louhela, vantaa</a></div>
@@ -4726,6 +4963,7 @@ Vesimaksu</p>
   </div>
   <div class="card-price">127 860 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">495 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">1h · 33.0 m² · fl 2/4 · 2021</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/16241452" target="_blank">Lipstikkakuja 5, Asola, Vantaa, Asola, vantaa</a></div>
@@ -4743,6 +4981,7 @@ Vesimaksu</p>
   </div>
   <div class="card-price">182 900 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">773 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">1h · 26.5 m² · 2024</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/16816223" target="_blank">Maisemamaalauksenkatu 10 C 62, Kaarela, Helsinki, Kaarela, helsinki</a></div>
@@ -4760,6 +4999,7 @@ Vesimaksu</p>
   </div>
   <div class="card-price">139 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">812 €/mo est.</div>
+  
   <div class="card-loan">+69 500 € yhtiölaina (50%)</div>
   <div class="card-meta">1h · 30.5 m² · fl 2/7 · 2027</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24384166" target="_blank">Artesaaninkatu 8 A 5, Kilo, Espoo, Kilo, espoo</a></div>
@@ -4777,6 +5017,7 @@ Vesimaksu</p>
   </div>
   <div class="card-price">129 800 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">505 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">1h · 21.0 m² · fl 3/8 · 2022</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/17223781" target="_blank">Keimolantie 12, Keimolanmäki, Vantaa, Keimolanmäki, vantaa</a></div>
@@ -4794,6 +5035,7 @@ Vesimaksu</p>
   </div>
   <div class="card-price">159 700 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">656 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">1h · 23.5 m² · fl 5/5 · 2023</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/17214930" target="_blank">Elmontie 5 B, Rekola, Vantaa, Rekola, vantaa</a></div>
@@ -4811,6 +5053,7 @@ Vesimaksu</p>
   </div>
   <div class="card-price">142 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">566 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">1h · 23.0 m² · fl 3/7 · 2022</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/16230754" target="_blank">Laajaniitynkuja 11, Martinlaakso, Vantaa, Martinlaakso, vantaa</a></div>
@@ -4828,6 +5071,7 @@ Vesimaksu</p>
   </div>
   <div class="card-price">109 000 € <span class="card-price-sub">velaton</span></div>
   <div class="card-monthly">671 €/mo est.</div>
+  
   <div class="card-loan">yhtiölaina ?</div>
   <div class="card-meta">2h · 38.6 m² · 1973</div>
   <div class="card-address"><a href="https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24638295" target="_blank">Kirstintie 16 B 38, Suvela, Espoo, Suvela, espoo</a></div>
@@ -4848,7 +5092,7 @@ Tulevat remontit
 </article></div>
 </section>
   </div>
-  <div id="nb-table" class="tab-panel" style="display:none">
+  <div id="tab-nb-table" class="tab-panel">
     <table id="nb-table-el" class="results-table">
       <thead><tr>
         <th onclick="sortTable('nb-table-el',0)">Rank</th>
