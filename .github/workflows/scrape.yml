@@ -2,7 +2,7 @@ name: Scrape & Deploy
 
 on:
   schedule:
-    - cron: '0 5,17 * * *'   # 5am + 5pm UTC = 8am + 8pm Helsinki (UTC+3)
+    - cron: '0 5 * * 1'   # Mondays 5am UTC = 8am Helsinki (UTC+3)
   workflow_dispatch:           # manual trigger from GitHub UI
 
 jobs:
