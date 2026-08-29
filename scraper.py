@@ -758,7 +758,7 @@ def scrape_search_page(page, page_num: int,
     url_builder   = url_builder   or build_search_url
     link_selector = link_selector or _TRAM_LINK_SELECTOR
     url = url_builder(page_num)
-    page.goto(url, wait_until="networkidle", timeout=45000)
+    page.goto(url, wait_until="domcontentloaded", timeout=60000)
     body = page.inner_text("body")
 
     m = re.search(r"(\d+)\s*Kohdetta.*?Sivu\s*(\d+)/(\d+)", body, re.DOTALL)
@@ -797,7 +797,7 @@ def fetch_listing_details(page, url: str, cache: dict) -> dict:
         return cache[url]
 
     try:
-        page.goto(url, wait_until="networkidle", timeout=40000)
+        page.goto(url, wait_until="domcontentloaded", timeout=60000)
         text = page.inner_text("body")
     except Exception as exc:
         print(f"    warning: {url}: {exc}", file=sys.stderr)

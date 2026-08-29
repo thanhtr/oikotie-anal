@@ -33,7 +33,7 @@ jobs:
           restore-keys: oikotie-cache-
 
       - name: Run scraper
-        run: python scraper.py --force
+        run: python retry_scraper.py
         env:
           DATA_DIR: data
 
