@@ -1709,12 +1709,12 @@ tr.row-cand:hover {{ background: #fff8dc; }}
 
 <!-- ════════════════════════════════════════════ NEW BUILD VIEW -->
 <div id="mode-newbuild" style="display:none">
+<header>
   <h1>Oikotie — Uudisasunnot PKS (Helsinki · Espoo · Vantaa)</h1>
-  <p style="margin:.5rem 0 1rem;color:#555">
-     {len(newbuild_pks)} listings &nbsp;·&nbsp;
+  <p>{len(newbuild_pks)} listings &nbsp;·&nbsp;
      velaton hinta ≤ {UUSIMAA_PRICE_MAX:,} € · loan ≤ {int(UUSIMAA_LOAN_RATIO_MAX*100)}% ·
-     Sorted by hub-proximity score
-  </p>
+     Sorted by hub-proximity score</p>
+</header>
   <div class="tabs">
     <button class="tab-btn active" onclick="showTab('nb-cards','mode-newbuild',this)">Cards</button>
     <button class="tab-btn" onclick="showTab('nb-table','mode-newbuild',this)">Table / Analysis</button>
