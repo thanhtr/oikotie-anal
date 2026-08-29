@@ -1,0 +1,52 @@
+name: Scrape & Deploy
+
+on:
+  schedule:
+    - cron: '0 5,17 * * *'   # 5am + 5pm UTC = 8am + 8pm Helsinki (UTC+3)
+  workflow_dispatch:           # manual trigger from GitHub UI
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Install Playwright + WebKit
+        run: python -m playwright install --with-deps webkit
+
+      - name: Restore caches
+        uses: actions/cache/restore@v4
+        with:
+          path: data/
+          key: never-match
+          restore-keys: oikotie-cache-
+
+      - name: Run scraper
+        run: python scraper.py --force
+        env:
+          DATA_DIR: data
+
+      - name: Save updated caches
+        uses: actions/cache/save@v4
+        with:
+          path: data/
+          key: oikotie-cache-${{ github.run_id }}
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./data
+          publish_branch: gh-pages
+          include_nojekyll: true
