@@ -882,6 +882,13 @@ def fetch_listing_details(page, url: str, cache: dict) -> dict:
         result["is_rented_out"]  = False
         result["rented_out_info"] = None
 
+    # Rental income — parse €/kk from rented_out_info snippet
+    result["rental_income_eur_month"] = None
+    if result.get("rented_out_info"):
+        m = re.search(r"([\d\xa0\s]+)\s*€\s*/\s*kk", result["rented_out_info"])
+        if m:
+            result["rental_income_eur_month"] = _parse_fin_num(m.group(1))
+
     cache[url] = result
     return result
 
@@ -1040,35 +1047,6 @@ def generate_html_report(confirmed: list[dict], candidates: list[dict],
         except Exception:
             return str(v)
 
-    def badge(l: dict) -> str:
-        tag  = l.get("_search_pass", "")
-        yr   = l.get("year_built", "")
-        rank = l.get("rank", "")
-        sc   = l.get("score", "")
-        rank_badge = f'<span class="badge rank">#{esc(str(rank))} &nbsp;{esc(str(sc))}pts</span>' if rank else ""
-        rent_badge = '<span class="badge rent">rented out</span>' if l.get("is_rented_out") else ""
-        if tag == "new_house_2000plus":
-            main_badge = f'<span class="badge new">built {esc(str(yr))}</span>'
-        elif tag == "candidate_check_pipe_reno":
-            main_badge = f'<span class="badge cand">built {esc(str(yr))} · verify pipe reno</span>'
-        else:
-            reno_yr = l.get("pipe_renovation_year")
-            label   = f"pipe reno {reno_yr}" if reno_yr else "pipe reno ✓"
-            main_badge = f'<span class="badge reno">{esc(label)}</span>'
-        return rank_badge + main_badge + rent_badge
-
-    def loan_tag(l: dict) -> str:
-        loan = l.get("housing_company_loan_eur")
-        if loan is None:
-            return '<span class="loan loan-unk">loan ?</span>'
-        loan = float(loan)
-        dfp  = float(l.get("debt_free_price_eur") or l.get("price_eur") or 0)
-        if loan == 0:
-            return '<span class="loan loan-ok">loan 0 €</span>'
-        pct  = f" {loan/dfp*100:.0f}%" if dfp > 0 else ""
-        cls  = "loan-ok" if dfp > 0 and loan/dfp <= LOAN_RATIO_MAX else "loan-bad"
-        return f'<span class="loan {cls}">{fmt_eur(loan)}{pct}</span>'
-
     def make_cards(lst: list[dict]) -> str:
         if not lst:
             return "<p class='empty'>None this run.</p>"
@@ -1096,16 +1074,22 @@ def generate_html_report(confirmed: list[dict], candidates: list[dict],
             else:
                 loan_s = "yhtiölaina ?"
 
-            mc     = l.get("monthly_cost_eur")
             hoito  = l.get("hoitovastike_eur_month")
             tontti = l.get("tonttivuokra_eur_month")
             mort_v = monthly_mortgage(max(0.0, dfp_v - DOWN_PAYMENT_EUR))
-            if mc is not None:
+            if dfp_v > 0:
                 total_fixed = mort_v + (float(hoito) if hoito else 0) + (float(tontti) if tontti else 0)
                 mc_s = f"{total_fixed:,.0f} €/mo".replace(",", " ")
                 mc_html = f'<div class="card-monthly">{mc_s} est.</div>'
             else:
                 mc_html = ""
+
+            rental_inc = l.get("rental_income_eur_month")
+            if rental_inc and dfp_v > 0:
+                gross_yield = float(rental_inc) * 12 / dfp_v * 100
+                yield_html = f'<div class="card-yield">&#x1F4C8; {gross_yield:.1f}% gross yield &middot; {fmt_eur(rental_inc)}/mo rent</div>'
+            else:
+                yield_html = ""
 
             meta_parts = []
             if l.get("room_count"): meta_parts.append(f"{l['room_count']}h")
@@ -1164,6 +1148,7 @@ def generate_html_report(confirmed: list[dict], candidates: list[dict],
   </div>
   <div class="card-price">{price_s} <span class="card-price-sub">velaton</span></div>
   {mc_html}
+  {yield_html}
   <div class="card-loan">{esc(loan_s)}</div>
   <div class="card-meta">{meta_s}</div>
   <div class="card-address">{addr_link}</div>
@@ -1203,16 +1188,22 @@ def generate_html_report(confirmed: list[dict], candidates: list[dict],
             else:
                 loan_s = "yhtiölaina ?"
 
-            mc     = l.get("monthly_cost_eur")
             hoito  = l.get("hoitovastike_eur_month")
             tontti = l.get("tonttivuokra_eur_month")
             mort_v = monthly_mortgage(max(0.0, dfp_v - DOWN_PAYMENT_EUR))
-            if mc is not None:
+            if dfp_v > 0:
                 total_fixed = mort_v + (float(hoito) if hoito else 0) + (float(tontti) if tontti else 0)
                 mc_s = f"{total_fixed:,.0f} €/mo".replace(",", " ")
                 mc_html = f'<div class="card-monthly">{mc_s} est.</div>'
             else:
                 mc_html = ""
+
+            rental_inc = l.get("rental_income_eur_month")
+            if rental_inc and dfp_v > 0:
+                gross_yield = float(rental_inc) * 12 / dfp_v * 100
+                yield_html = f'<div class="card-yield">&#x1F4C8; {gross_yield:.1f}% gross yield &middot; {fmt_eur(rental_inc)}/mo rent</div>'
+            else:
+                yield_html = ""
 
             meta_parts = []
             if l.get("room_count"): meta_parts.append(f"{l['room_count']}h")
@@ -1276,6 +1267,7 @@ def generate_html_report(confirmed: list[dict], candidates: list[dict],
   </div>
   <div class="card-price">{price_s} <span class="card-price-sub">velaton</span></div>
   {mc_html}
+  {yield_html}
   <div class="card-loan">{esc(loan_s)}</div>
   <div class="card-meta">{meta_s}</div>
   <div class="card-address">{addr_link}</div>
@@ -1354,7 +1346,7 @@ def generate_html_report(confirmed: list[dict], candidates: list[dict],
             return ""
         return f"""
 <section class="sec {cls}">
-  <h2 class="sec-title">{title}</h2>
+  <h2 class="sec-title">{title} <span class="sec-count">({len(lst)})</span></h2>
   {"<p class='sec-note'>" + note + "</p>" if note else ""}
   <div class="grid">{make_cards(lst)}</div>
 </section>"""
@@ -1364,7 +1356,7 @@ def generate_html_report(confirmed: list[dict], candidates: list[dict],
             return ""
         return f"""
 <section class="sec {cls}">
-  <h2 class="sec-title">{title}</h2>
+  <h2 class="sec-title">{title} <span class="sec-count">({len(lst)})</span></h2>
   {"<p class='sec-note'>" + note + "</p>" if note else ""}
   <div class="grid">{make_uusimaa_cards(lst)}</div>
 </section>"""
@@ -1447,16 +1439,17 @@ header p {{ color: #555; font-size: .85rem; }}
 /* ── Card ── */
 .card {{ background: #fff; border-radius: 12px; padding: 18px;
   box-shadow: 0 1px 4px rgba(0,0,0,.07); display: flex; flex-direction: column; gap: .35rem; }}
-.card-top {{ display: flex; justify-content: space-between; align-items: center; margin-bottom: .1rem; }}
+.card-top {{ display: flex; justify-content: space-between; align-items: center; margin-bottom: .1rem; flex-wrap: wrap; gap: .2rem; }}
 .card-rank {{ font-size: .73rem; font-weight: 700; color: #999; letter-spacing: .02em; text-transform: uppercase; }}
 .card-view-link {{ font-size: .78rem; color: #1565c0; text-decoration: none; font-weight: 600; flex-shrink: 0; }}
 .card-view-link:hover {{ text-decoration: underline; }}
 .card-price {{ font-size: 1.55rem; font-weight: 700; letter-spacing: -.5px; color: #1a1a2e; line-height: 1.1; }}
 .card-price-sub {{ font-size: .82rem; font-weight: 400; color: #999; margin-left: 3px; }}
-.card-monthly {{ font-size: 1.0rem; font-weight: 600; color: #1565c0; }}
-.card-loan {{ font-size: .78rem; color: #777; }}
+.card-monthly {{ font-size: 1.0rem; font-weight: 600; color: #1565c0; white-space: nowrap; }}
+.card-yield {{ font-size: .82rem; font-weight: 600; color: #2e7d32; }}
+.card-loan {{ font-size: .78rem; color: #777; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }}
 .card-meta {{ font-size: .8rem; color: #666; margin-top: .05rem; }}
-.card-address {{ font-size: .84rem; color: #444; }}
+.card-address {{ font-size: .84rem; color: #444; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }}
 .card-address a {{ color: #1a1a2e; text-decoration: none; font-weight: 500; }}
 .card-address a:hover {{ color: #1565c0; }}
 .card-hub {{ font-size: .78rem; color: #555; }}
@@ -1468,7 +1461,7 @@ header p {{ color: #555; font-size: .85rem; }}
 .badge.reno {{ background: #fde8d4; color: #7a3a0a; }}
 .badge.cand {{ background: #fff3cd; color: #7a5a00; }}
 .badge.rent {{ background: #e8d4f4; color: #4a1a6b; }}
-.badge.tram {{ background: #e3f2fd; color: #0d47a1; }}
+.badge.tram {{ background: #e3f2fd; color: #0d47a1; max-width: 160px; overflow: hidden; text-overflow: ellipsis; }}
 .stop-note {{ font-size: .75rem; color: #2a6496; background: #eef5fb;
   border-left: 3px solid #2a6496; padding: .2rem .5rem; border-radius: 0 3px 3px 0; }}
 .stop-link {{ font-size: .68rem; color: #2a6496; border: 1px solid #2a6496;
@@ -1528,10 +1521,16 @@ tr.row-cand:hover {{ background: #fff8dc; }}
 .mr-item a:hover {{ background: #c8a800; color: #fff; }}
 /* ── Mode nav ── */
 .mode-nav {{ max-width: 1100px; margin: 0 auto 1.5rem; display: flex; gap: .5rem;
-  border-bottom: 2px solid #d0d0d8; padding-bottom: .6rem; }}
+  border-bottom: 2px solid #d0d0d8; padding-bottom: .6rem;
+  position: sticky; top: 0; z-index: 10; background: #f4f5f7; padding-top: .5rem; }}
 .mode-btn {{ padding: .55rem 1.5rem; border: 2px solid transparent; background: #f0f0f4;
   border-radius: 8px; cursor: pointer; font-size: .9rem; font-weight: 600; color: #555; }}
 .mode-btn.active {{ background: #1565c0; color: #fff; border-color: #1565c0; }}
+.sec-count {{ font-size: .8rem; font-weight: 400; color: #999; }}
+@media (max-width: 480px) {{
+  .grid {{ grid-template-columns: 1fr; }}
+  body {{ padding: 1rem .5rem; }}
+}}
 </style>
 </head>
 <body>
@@ -1720,10 +1719,10 @@ tr.row-cand:hover {{ background: #fff8dc; }}
     <button class="tab-btn active" onclick="showTab('nb-cards','mode-newbuild',this)">Cards</button>
     <button class="tab-btn" onclick="showTab('nb-table','mode-newbuild',this)">Table / Analysis</button>
   </div>
-  <div id="nb-cards" class="tab-panel active">
+  <div id="tab-nb-cards" class="tab-panel active">
     {nb_cards_body}
   </div>
-  <div id="nb-table" class="tab-panel" style="display:none">
+  <div id="tab-nb-table" class="tab-panel">
     <table id="nb-table-el" class="results-table">
       <thead><tr>
         <th onclick="sortTable('nb-table-el',0)">Rank</th>
