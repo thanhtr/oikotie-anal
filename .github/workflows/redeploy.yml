@@ -1,0 +1,28 @@
+name: Redeploy (no scrape)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Restore cached data
+        uses: actions/cache/restore@v4
+        with:
+          path: data/
+          key: never-match
+          restore-keys: oikotie-cache-
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./data
+          publish_branch: gh-pages
+          include_nojekyll: true
