@@ -1,1 +1,335 @@
 address,district,city,price_eur,debt_free_price_eur,housing_company_loan_eur,room_count,size_sqm,floor,year_built,property_type,pipe_renovation_done,pipe_renovation_year,pipe_renovation_info,is_rented_out,monthly_cost_eur,hoitovastike_eur_month,tonttivuokra_eur_month,score,rank,nearest_stop,distance_m,lat,lon,_search_pass,listing_url
+"Kaskelantie 5, Kaskela, Vantaa",Kaskela,vantaa,159000.0,159000.0,,2,35.0,4/7,2019,kerrostalo,False,,,False,792.66,140.4,,100,8,Kaskela,163,60.282215,25.096341,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/22985238
+"Kaskelantie 5, Kaskela, Vantaa",Kaskela,vantaa,159000.0,159000.0,,3,50.0,7/7,2019,kerrostalo,False,,,False,852.26,200.0,,98,9,Kaskela,163,60.282215,25.096341,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24517304
+"Orvokkitie 20 A, Tikkurila, Vantaa",Tikkurila,vantaa,157000.0,157000.0,,2,30.0,5/5,2017,kerrostalo,False,,,False,786.14,144.0,,97,10,Tikkuraitti,110,60.293062,25.035015,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24592910
+"Kaskelantie 7, Hakunila, Vantaa",Hakunila,vantaa,70587.98,134990.0,64402.02,1,26.0,3/8,2018,kerrostalo,False,,,True,632.26,101.4,,91,1,Kaskela,136,60.281799,25.096128,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23831363
+"Heporinne 2 a, Hakunila, Vantaa",Hakunila,vantaa,165000.0,165000.0,,2,38.5,4/7,2022,kerrostalo,False,,,False,919.37,144.38,92.4,89,11,Hevoshaanpolku,74,60.273355,25.10368,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/22257758
+"Kukonharja 3 B, Koivuhaka, Vantaa",Koivuhaka,vantaa,70248.0,116900.0,46652.0,1,23.5,3/4,2019,kerrostalo,False,,,False,563.94,124.55,,88,12,Koivuhaka,187,60.293205,25.008364,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23437301
+"Horsmakuja 4 B, Tikkurila, Vantaa",Tikkurila,vantaa,189000.0,189000.0,,2,39.5,2/6,2013,kerrostalo,False,,,False,977.74,173.8,,85,13,Silkkitehdas,80,60.28901,25.031544,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24585567
+"Heporinne 2, Hakunila, Vantaa",Hakunila,vantaa,145000.0,145000.0,,2,38.5,5/7,2022,kerrostalo,False,,,False,859.06,173.25,104.34,83,14,Hevoshaanpolku,102,60.273265,25.102881,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24399247
+"Orvokkikuja 6, Tikkurila, Vantaa",Tikkurila,vantaa,159000.0,159000.0,,2,39.0,1/6,2000,kerrostalo,False,,,False,831.66,179.4,,80,15,Silkkitehdas,177,60.290359,25.03132,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23547707
+"Tikkurilantie 33 B, Tikkurila, Vantaa",Tikkurila,vantaa,199500.0,199500.0,,2,39.5,4/5,2019,kerrostalo,False,,,False,1011.08,154.05,,80,16,Tikkuraitti,392,60.290026,25.040807,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23291062
+"Kuulakuja 4 B, Länsimäki, Vantaa",Länsimäki,vantaa,125000.0,125000.0,,2,59.0,2/5,1971,kerrostalo,True,2025,"taan Kuulakuja 4 – Keihästie 3 sijaitsee omalla tontilla, ja taloyhtiötä on hoidettu suunnitelmallisesti vuosikymmenten ajan. Vuonna 2025 valmistunut linjasaneeraus on taloyhtiön merkittävin peruskorjaus, jonka yhteydessä kunnostettiin myös porrashuoneet. Lisäksi yhtiössä on vuosien varrella toteutettu laajasti m",False,745.84,265.5,,79,48,Länsimäki,84,60.244718,25.110505,pipe_reno_2025,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24593655
+"Ratakuja 4 A, Tikkurila, Vantaa",Tikkurila,vantaa,107270.23,192000.0,84729.77,2,37.0,3/6,2015,kerrostalo,False,,,False,1007.81,188.7,,79,17,Tikkurilan asema,98,60.293911,25.04323,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24522481
+"Viertolankuja 6, Viertola, Vantaa",Viertola,vantaa,134660.22,179000.0,44339.78,2,42.5,5/7,2013,kerrostalo,False,,,False,963.76,210.38,,79,18,Viertola,72,60.290923,25.020294,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23752425
+"Peltolantie 44, Koivuhaka, Vantaa",Koivuhaka,vantaa,156900.0,156900.0,,2,32.5,2/4,2024,kerrostalo,False,,,False,917.89,276.25,,78,19,Koivuhaka,160,60.293433,25.00578,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24618605
+"Orvokkikuja 6 A, Tikkurila, Vantaa",Tikkurila,vantaa,163490.69,165000.0,1509.31,1,35.0,4/6,2000,kerrostalo,False,,,False,843.59,161.0,,77,20,Silkkitehdas,132,60.290179,25.03325,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24626283
+"Heporinne 2a C, Hakunila, Vantaa",Hakunila,vantaa,198000.0,198000.0,,4,55.5,6/7,2022,kerrostalo,False,,,False,1249.61,249.75,150.41,77,21,Hevoshaanpolku,52,60.273541,25.103782,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24300130
+"Kukonharja 3 B, Koivuhaka, Vantaa",Koivuhaka,vantaa,94361.2,178900.0,84538.8,2,44.0,3/4,2019,kerrostalo,False,,,False,999.28,246.4,,77,22,Koivuhaka,187,60.293205,25.008364,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23437318
+"Hepokuja 6 E, Hakunila, Vantaa",Hakunila,vantaa,77326.2,93000.0,15673.8,1,31.0,3/7,1971,kerrostalo,True,,"a on alkovi. Keittokomero saa valoa isosta ikkunasta ja olohuoneen puolelle mahtuu ruokailutila. 
+
+Taloyhtiössä on tehty kattavasti remontteja, kuten linjasaneeraus jonka yhteydessä kylpyhuone uusittiin. 
+Erityisesti oma tontti takaa turvallisen sijoituksen ja hissi helpottaa arkea. 
+
+Tämä asunto sopii ostajalle,",False,461.14,142.6,,75,49,Hevoshaanpolku,138,60.273924,25.10649,pipe_reno_done,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24547833
+"Antaksentie 13 A, Pakkalanrinne, Vantaa",Pakkalanrinne,vantaa,187000.0,187000.0,,2,45.5,4/6,2010,kerrostalo,False,,,True,998.58,204.75,,74,2,Backasbrinken/Pakkalanrinne,305,60.293417,24.947263,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24620266
+"Jokiniemenkuja 5 A, Jokiniemi, Vantaa",Jokiniemi,vantaa,129900.0,129900.0,,2,31.5,3/5,2020,kerrostalo,False,,,False,816.97,311.85,,74,23,Jokiniemi,158,60.291331,25.054013,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24380208
+"Kaskelantie 7 A, Hakunila, Vantaa",Hakunila,vantaa,164000.0,164000.0,,3,58.0,4/8,2018,kerrostalo,False,,,False,1024.44,226.2,120.7,74,24,Kaskela,218,60.281974,25.094558,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/16978203
+"Osuustie 4, Pakkala, Vantaa",Pakkala,vantaa,164185.16,165000.0,,2,44.0,4/5,2007,kerrostalo,False,,,False,911.39,228.8,,72,25,Backasbrinken/Pakkalanrinne,179,60.290394,24.951737,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24650871
+"Jokiniemenkuja 5 A, Jokiniemi, Vantaa",Jokiniemi,vantaa,154000.0,154000.0,,2,31.5,5/5,2020,kerrostalo,False,,,False,948.28,321.3,,72,26,Jokiniemi,158,60.291331,25.054013,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23309842
+"Jokiniemenkuja 5 A 9, Jokiniemi, Vantaa",Jokiniemi,vantaa,169000.0,169000.0,,2,35.0,2/5,2020,kerrostalo,False,,,False,1059.82,357.0,,72,27,Jokiniemi,158,60.291331,25.054013,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23303762
+"Satulakuja 2 A, Hakunila, Vantaa",Hakunila,vantaa,157000.0,157000.0,,2,48.0,2/9,2014,kerrostalo,False,,,False,925.34,283.2,,71,28,Hakunila,276,60.280183,25.10839,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24428359
+"Tankomäenkatu 5 A, Vartioharju/Mellunkylä, Helsinki",Vartioharju/Mellunkylä,helsinki,142486.51,169000.0,26513.49,2,43.0,3/4,2016,kerrostalo,False,,,False,896.32,193.5,,70,29,,,,,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24566019
+"Hiirakkokuja 6 A, Hakunila, Vantaa",Hakunila,vantaa,88998.2,108000.0,19001.8,3,79.0,4/5,1971,kerrostalo,True,2013,"e korjattiin Valmis/2013
+Sokkelit maalattiin ja entisen kylmäkellarin eristeet uusittiin Valmis/2013
+Saatettiin valmiiksi edellisenä vuonna aloitettu linjasaneeraus Valmis/2013
+Käyttövesiputkisto uusittiin, Sähköjärjestelmä uusittiin, Telejärjestelmät uusittiin Valmis/2012
+Putkiston linjasaneerauksen suunnitelmat",False,810.91,416.52,,70,50,Hevoshaanpolku,161,60.275303,25.105275,pipe_reno_2013,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24427675
+"Orvokkikuja 6, Tikkurila, Vantaa",Tikkurila,vantaa,195916.32,199000.0,3083.68,2,64.5,2/6,2000,kerrostalo,False,,,False,1151.21,296.7,,70,30,Silkkitehdas,177,60.290359,25.03132,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24403039
+"Puutarhatie 13 B, Koivuhaka, Vantaa",Koivuhaka,vantaa,158577.53,199000.0,40422.47,3,50.0,1/5,2023,kerrostalo,False,,,False,1204.51,350.0,,69,31,Koivuhaka,137,60.290776,25.006224,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24465126
+"Oritie 3 B, Hakunila, Vantaa",Hakunila,vantaa,54498.67,87000.0,32501.33,1,30.5,4/6,1974,kerrostalo,True,2023,"äminen
+- Parvekkeiden kuntotutkimus ja tutkimuksen suosittamat toimenpiteet
+- Kattojen paikkakorjauksia
+- Hissien peruskunnostus
+Tehdyt remontit
+2023 Linjasaneeraus (perinteinen) ja maalämpöön siirtyminen.
+2022 Katon tarkastus ja pienkorjauksia.
+2021: Puiden kaatoa. Linjasaneerauksen toteutussuunnittelu.
+2020: Li",False,471.09,182.88,,68,51,Hevoshaanpolku,251,60.271763,25.103355,pipe_reno_2023,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24545552
+"Hepokuja 7 A, Hakunila, Vantaa",Hakunila,vantaa,90981.56,148000.0,57018.44,4,86.5,8/10,1973,kerrostalo,True,2020,"on remontoitu putkiremontin yhteydessä yhtiön toimesta. Hoitovastike on kohtuullinen, vain 4,0 e/m2. 
+
+Taloyhtiössä on tehty:
+2020 - 2021 Perinteinen putkiremontti ja samalla yhtiö on siirtynyt maalämpöön.
+2016 Hissien uusinta.
+2008 - 2009 Julkisivusaneeraus ja julkisivun ikkunoiden uusinta.
+
+Taloyhtiössä on pes",False,942.64,346.0,,68,52,Hevoshaanpolku,156,60.273431,25.106585,pipe_reno_2020,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24356402
+"Ruokotie 7, Tikkurila, Vantaa",Tikkurila,vantaa,179000.0,179000.0,,1,29.0,1/2,2020,luhtitalo,False,,,False,956.38,203.0,,67,32,,,,,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24632184
+"Väinö Tannerin tie 17, Pakkalanrinne, Vantaa",Pakkalanrinne,vantaa,199000.0,199000.0,,2,54.0,2/4,2008,kerrostalo,False,,,False,1075.91,221.4,,67,33,Backasbrinken/Pakkalanrinne,335,60.290286,24.946995,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24605695
+"Väinö Tannerin tie 17, Pakkala, Vantaa",Pakkala,vantaa,191000.0,191000.0,,2,52.5,1/4,2008,kerrostalo,False,,,False,1029.31,215.25,,67,34,Backasbrinken/Pakkalanrinne,335,60.290286,24.946995,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24341914
+"Kukantie 10, Koivuhaka, Vantaa",Koivuhaka,vantaa,199000.0,,,4,150.0,,,,True,2024,"ilytystilaa
+Ominaisuudet
+Paljon ikkunoita, Hyvä äänieristys
+Kylpyhuoneen remontit
+2024
+Julkisivuremontti
+2024
+Kattoremontti
+2024
+Parvekeremontti
+2024
+Putkiremontti
+2024
+Tehdyt remontit
+2024  uusittu katto Janla peltikate
+2024  uusittu käyttövesiputket
+2024  uusittu sähkökeskukset, mittarikeskus ja jakokeskus
+202",False,854.51,,,67,35,Koivuhaka,457,60.29591,25.008574,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24432353
+"Väinö Tannerin tie 17 C, Pakkala, Vantaa",Pakkala,vantaa,188661.63,189000.0,338.37,2,49.5,1/4,2008,kerrostalo,False,,,False,1006.89,202.95,,66,36,Backasbrinken/Pakkalanrinne,335,60.290286,24.946995,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24550427
+"Hiirakkotie 2 D, Hakunila, Vantaa",Hakunila,vantaa,70579.85,112000.0,41420.15,2,54.0,2/9,1971,kerrostalo,True,2020,"inen. A-portaan hissin valoverho. C-portaan hissin kannatinköydet. 2020 Yleisten tilojen lukitus iLOQ-järjestelmään. Seinävalaisimien uusiminen. 2019 Linjasaneeraus: Kaikki vesi- ja viemäriputket (ei sadevesipystyviemärit). Sähkö-, tele-, antenni- ja puhelinkaapelit, kuituverkko. Kaikki saunat ja pukuhuoneet. Kai",False,661.21,246.6,,66,53,Hevoshaanpolku,242,60.275414,25.100669,pipe_reno_2020,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23873740
+"Oritie 4, Hakunila, Vantaa",Hakunila,vantaa,79000.0,79000.0,461.0,2,52.5,1/6,1975,kerrostalo,True,2019,"Ikkunoiden suunta
+Parveke ilta-aurinkoon, Olohuone ilta-aurinkoon
+Näkymät
+Puisto ja metsänäkymät
+Kylpyhuoneen remontit
+Tehty n.2019
+Tulevat remontit
+Linjasaneeraus ehkä 2028-2029 välillä. Ei päätöstä vielä.
+Tehdyt remontit
+Kylpyhuone/wc  v2018
+Keittiön remontit
+2025
+Muut remontit
+Koko asunto remontoitu 8/2025. L",False,641.51,393.75,,66,54,Hevoshaanpolku,282,60.271901,25.101125,pipe_reno_2019,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23637251
+"Harmokuja 4, Hakunila, Vantaa",Hakunila,vantaa,61545.33,65000.0,,2,55.0,3/7,1977,kerrostalo,True,2018,"sisuihku, Kaapisto, Allas, WC-istuin, Peilikaappi
+Säilytystilat
+Kaapisto
+Näkymät
+Piha, Takapiha, Naapurusto
+Julkisivuremontti
+2018
+Kattoremontti
+2022
+Putkiremontti
+2025
+Tehdyt remontit
+2026 Korjaussuunnitelma, 2025 Lämmitys - Lämmön alakeskuksen uusiminen (Putkiteho Oy), 2025 Linjasaneeraus - putkiurakan hankesu",False,534.47,357.5,,65,55,Hakunila,287,60.277694,25.100828,pipe_reno_2018,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24630066
+"Rajakyläntie 2B A3, Rajakylä, Vantaa",Rajakylä,vantaa,62677.32,124000.0,61322.68,1,21.0,1/2,2016,luhtitalo,False,,,True,670.59,195.3,,64,3,,,,,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23307800
+"Jokiniemenkuja 7, Jokiniemi, Vantaa",Jokiniemi,vantaa,129000.0,129000.0,,2,31.5,1/6,2020,kerrostalo,False,,,False,821.87,321.3,,64,37,Jokiniemi,305,60.292224,25.056225,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23822944
+"Kuulakuja 3 A, Länsimäki, Vantaa",Länsimäki,vantaa,62179.18,109000.0,46820.82,2,59.0,3/5,1972,kerrostalo,True,,"Asunto sijaitsee hissitalon 3. kerroksessa (3/5) vuonna 1972 valmistuneessa taloyhtiössä, joka on omalla tontilla. Taloyhtiössä on juuri valmistunut linjasaneeraus, mikä tuo huolettomuutta asumiseen vuosiksi eteenpäin.
+
+Asunnon pohjaratkaisu on toimiva ja tilat helposti kalustettavissa. Kodin kunto on tyydyttävä",False,694.44,295.0,,64,56,Länsimäki,84,60.244718,25.110505,pipe_reno_done,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24335654
+"Kuunlilja 1 C, Tikkurila, Vantaa",Tikkurila,vantaa,144557.59,198000.0,53442.41,2,44.5,2/2,2020,kerrostalo,False,,,True,1089.75,240.3,,62,4,,,,,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24537372
+"Hiirakkotie 10, Hakunila, Vantaa",Hakunila,vantaa,62193.28,89000.0,,2,61.0,2/3,1973,kerrostalo,True,,"mä kohde
+2h, k, kph
+Valoisa 2/3 kerroksen läpitalon huoneisto, jolla lasitettu eteläparveke. Hyvin hoidettu taloyhtiö, johon on tehty julkisivu- sekä putkiremontti, jonka yhteydessä uusittu kylpyhuone. Hyvässä kunnossa oleva kaksio rauhallisella alueella. Kävelymatkan päässä Hakunilan palvelut. Julkinen liikenne",False,593.52,295.2,,61,57,Hevoshaanpolku,279,60.274629,25.099093,pipe_reno_done,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24653471
+"Tädyketie 6 D, Tikkurila, Vantaa",Tikkurila,vantaa,162000.0,162000.0,,1,36.0,4/6,2003,kerrostalo,False,,,False,824.75,157.32,,61,38,,,,,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24541245
+"Junkkarinkaari 3, Kartanonkoski, Vantaa",Kartanonkoski,vantaa,189000.0,189000.0,,2,47.5,2/4,2004,kerrostalo,False,,,False,1065.19,261.25,,61,39,Pakkala,284,60.287558,24.961534,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24514833
+"Raudikkokuja 6 B, Hakunila, Vantaa",Hakunila,vantaa,96420.85,134000.0,37579.15,3,72.5,5/8,1976,kerrostalo,True,,"sta tekoälyllä -painikkeesta pääset vaihtamaan sisustustyyliä ja näet eron heti!
+
+Kokeile sisustusta tästä
+ 
+Lisää suosikiksi
+Jaa tämä kohde
+Valoisa, linjasaneerattu ja hyväkuntoinen kolmio huippusijainnilla – upeat metsäiset näkymät
+Tervetuloa tutustumaan tähän vuonna 1976 valmistuneeseen, 72,5 m²:n kokoiseen vii",False,858.77,332.92,,60,58,Hakunila,99,60.277173,25.106645,pipe_reno_done,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24305603
+"Hepokuja 6 C, Hakunila, Vantaa",Hakunila,vantaa,99315.48,139000.0,39684.52,3,79.0,5/6,1971,kerrostalo,True,,"to on viihtyisä, valoisa ja pintoja on päivitetty vuosien saatossa.
+
+Taloyhtiö sijaitsee omalla tontillaan ja sitä on hoidettu suunnitelmallisesti mm linjasaneeraus on jo tehty. Hoitovastike on edullinen, vain 4,60 €/m2. Vesimaksu kulutuksen mukaan, huoneistoissa omat vesimittarit.Toimiva pohjaratkaisu tekee täst",False,914.13,363.0,,60,59,Hevoshaanpolku,136,60.273921,25.106463,pipe_reno_done,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24563374
+"Rajakentänkuja 4 A, Länsimäki, Vantaa",Länsimäki,vantaa,73645.74,120000.0,46354.26,2,51.0,7/9,1971,kerrostalo,True,2025,"ksessa, tarjoten upeat näkymät puiden yli. Asunto on osa hyvin hoidettua taloyhtiötä, jossa on tehty merkittäviä peruskorjauksia viime vuosina, kuten linjasaneeraus ja kylpyhuoneiden uusiminen vuonna 2025.
+
+Asunnossa on käytännöllinen pohjaratkaisu, jossa keittiö ja olohuone muodostavat viihtyisän kokonaisuuden.",False,750.86,295.8,,60,60,Länsimäki,272,60.246335,25.109531,pipe_reno_2025,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24320160
+"Pehtoorintie 2, Pakkala, Vantaa",Pakkala,vantaa,115797.36,184000.0,68202.64,2,46.5,1/4,2012,kerrostalo,False,,,False,1034.41,255.75,,59,40,Pakkala,356,60.286839,24.959025,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24305457
+"Hiirakkotie 8 A, Hakunila, Vantaa",Hakunila,vantaa,91412.4,149000.0,57587.6,3,79.5,1/3,1973,kerrostalo,True,2023,"uuttaminen maksulliseksi
+2023-2024 Vesikaton kuntotutkimus ja kuntotutkimukseen kirjattujen korjauksien suoritus
+2022 Kerrostaso-ovien uusiminen
+2020 Linjasaneeraus
+2019 Linjasaneeraus hanke- ja toteutussuunnittelu
+2018 Katon huoltokorjauksia
+2018 Poistokanavien puhdistus ja ilmamäärien säätö
+2018 Paineenalennusv",False,924.69,323.0,,58,61,Hevoshaanpolku,242,60.275414,25.100669,pipe_reno_2023,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24359151
+"Uotinmäentie 11 D 33, Mellunkylä, Helsinki",Mellunkylä,helsinki,126000.0,126000.0,,2,55.0,3/3,1968,kerrostalo,True,2024,"aapin lisäksi iso pakastin, sekä keraaminen liesi. Makuuhuoneen seinät maalattu 2024. Ikkunat, sekä parvekkeen ovi uusittu 2024. Pesutilat uusittu ja putkiremontti tehty 2015. Wc:ssä pyykinpesukone, joka ostettu uutena 7/2024. Asunnossa runsaasti säilytystilaa, lisäksi reilun kokoinen kellarikomero. Eteisessä ko",True,826.4,341.0,,58,5,Mellunmäki,413,60.236699,25.114868,pipe_reno_2024,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23669883
+"Hepokuja 9, Hakunila, Vantaa",Hakunila,vantaa,98000.0,,,3,58.5,2/10,1974,kerrostalo,True,,"Kaupunki
+Vantaa
+ 
+Lisää suosikiksi
+Jaa tämä kohde
+Putkiremontoitu ja uusi keittiö
+Myydään vuokrattu, hyväkuntoinen asunto, jossa on juuri valmistunut putkiremontti sekä tänä vuonna tehty moderni keittiöremontti –  huoleton sijoituskohde tai tuleva koti.
+
+Sijainti on erinomainen: rauhallinen mutta keskeinen alue",False,343.83,,,57,62,Hevoshaanpolku,213,60.272446,25.106246,pipe_reno_done,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23015854
+"Lähdepuistontie 5 A, Kuussilta, Vantaa",Kuussilta,vantaa,57127.7,62000.0,4872.3,2,40.5,5/6,,,False,,,False,364.3,202.5,,56,41,Vaarala,244,60.265198,25.102541,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24551102
+"Jokiniemenkuja 3, Tikkurila, Vantaa",Tikkurila,vantaa,145000.0,145000.0,,1,28.5,4/5,2019,kerrostalo,False,,,False,581.47,,,55,42,,,,,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/17739438
+"Lähdepuistontie 13 C, Vaarala, Vantaa",Vaarala,vantaa,81776.32,82000.0,223.68,2,40.5,6/6,,,False,,,False,465.43,202.5,,54,43,Vaarala,244,60.265198,25.102541,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24338163
+"Neilikkatie 7 C, Tikkurila, Vantaa",Tikkurila,vantaa,153429.99,200000.0,46570.01,2,59.0,3/6,1970,kerrostalo,True,2020,"tuksen korjaus, 2020-2022: normaaleja korjaus- ja huoltotoimenpiteitä, 2019: piha-alueen osittainen kunnostus, 2018-2019: LVIS-saneeraus, perinteinen linjasaneeraus sisältäen kylpyhuonesaneeraukset, sähkö- ja vesijohtojen uusimisen, saunatilan saneerauksen, yleiskaapeloinnin, lisäksi lukoston uusiminen Ilog ja On",False,1154.56,295.0,,53,63,Tikkuraitti,234,60.290926,25.037682,pipe_reno_2020,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24467300
+"Harmokuja 6, Hakunila, Vantaa",Hakunila,vantaa,69600.0,69600.0,,2,56.0,2/9,,,False,,,False,511.19,310.96,,50,44,Hakunila,264,60.277267,25.10145,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24642357
+"Neilikkatie 14, Tikkurila, Vantaa",Tikkurila,vantaa,182000.0,182000.0,,3,74.5,,,,False,,,True,1155.95,387.4,,50,7,Silkkitehdas,197,60.290734,25.032257,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23252040
+"Mellunmäenraitio 2 A, Mellunmäki, Helsinki",Mellunmäki,helsinki,71381.09,79000.0,7618.91,2,44.0,3/3,,,False,,,False,562.86,315.1,,49,45,Mellunmäki,90,60.239784,25.108596,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24522983
+"Hiirakkotie 2 D, Hakunila, Vantaa",Hakunila,vantaa,89564.41,149000.0,59435.59,4,93.0,7/9,1971,kerrostalo,True,,"hengähtää arjen kiireistä. Taloyhtiössä on sauna, runsaasti varastotilaa sekä asumisen huolettomuutta lisää se, että yhtiön suurimmat remontit, kuten putkiremontti ja julkisivuremontti, on jo toteutettu. Asunto on erinomainen vaihtoehto myös sijoittajalle, sillä se on tällä hetkellä vuokrattuna.
+
+Alue kehittyy j",False,958.97,357.28,,48,64,Hevoshaanpolku,242,60.275414,25.100669,pipe_reno_done,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24602268
+"Hiekkaharjuntie 9 A, Hiekkaharju, Vantaa",Hiekkaharju,vantaa,111153.41,186000.0,74846.59,3,65.5,1/3,1969,kerrostalo,True,2025,"pöjohtoverkoston kuntotutkimus, pihaviemärien kuntotutkimus
+2033 Kaukolämmön alajakokeskuksen uusiminen
+Tehdyt remontit
+2025 Yhtiön PTS päivitys
+2024 Linjasaneeraus, kph, putket ja sähköt
+2022 Linjasaneerauksen hankesuunnittelu
+2022 Linjasaneerauksen suunnittelu
+2020 Kevyt julkisivun huoltokorjaus
+2020 Ikkunoiden",False,1083.53,294.75,,46,65,,,,,pipe_reno_2025,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24645455
+"Suunnistajankuja 6 C, Länsimäki, Vantaa",Länsimäki,vantaa,105353.19,171000.0,65646.81,3,76.0,3/6,1976,kerrostalo,True,,"n. Säilytystilaa löytyy runsaasti suuren vaatehuoneen ja kaapistojen ansiosta. Lisäksi suuri lasitettu parveke. 
+
+Taloyhtiössä on valmistunut mittava linjasaneeraus, jossa putkistot on uusittu. Samalla myös yhteiset tilat on päivitetty moderniin ilmeeseen, mikä lisää asumismukavuutta ja tukee kiinteistön arvon sä",False,1016.93,304.0,,44,66,Länsimäki,278,60.246295,25.113015,pipe_reno_done,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24593292
+"Ounasvaarantie 1, Mellunkylä, Helsinki",Mellunkylä,helsinki,125000.0,195000.0,70000.0,3,60.5,3/5,1974,kerrostalo,True,,"palauttaa ennalleen. Sijoittajalle hyvä 7,5 % vuokratuotto. 
+
+Iso, hyvin hoidettu taloyhtiö omalla tontilla. Taloyhtiössä on valmistunut perinteinen putkiremontti. Putkiremontin kustannus sisältyy velattomaan hintaan.
+
+Ounasvaarantie on väljästi rakennettua ja vehreää Mellunmäkeä. Hyvät ulkoilumahdollisuudet, p",False,1112.58,278.3,,37,67,Mellunmäki,409,60.237235,25.115501,pipe_reno_done,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/17773543
+"Yllästunturintie 2 C, Mellunmäki, Helsinki",Mellunmäki,helsinki,87778.19,139000.0,51221.81,2,45.0,3/3,1976,kerrostalo,True,2025,"kokouksessa erikseen.
+Tehdyt remontit
+Palovaroittimet joka huoneistoon 2025
+Vesi- ja viemärijärjestelmät, takuutarkastukset takuuajan puitteissa 2025
+Linjasaneeraus 2023
+Autojen latauslaitteet 6 autopaikalle 2023
+Aurinkoenergiahanke 2023
+ML-/LTO-hanke 2023
+Autotallien ovien uusinta linjasaneerauksen yhteydessä 20",False,875.13,324.0,,36,68,,,,,pipe_reno_2025,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24643215
+"Uotinmäentie 11 D 31, Mellunkylä, Helsinki",Mellunkylä,helsinki,155000.0,144000.0,,2,55.0,3/3,,,False,,,False,867.91,291.5,,35,46,Mellunmäki,413,60.236699,25.114868,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/17024712
+"Albert Petreliuksen katu 4b B, Jokiniemi, Vantaa",Jokiniemi,vantaa,193727.23,194000.0,272.77,3,75.0,2/5,,,False,,,False,1185.48,356.25,,33,47,Tikkurilan asema,349,60.296148,25.049612,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24565190
+"Lähdepuistontie 5 A, Vaarala, Vantaa",Vaarala,vantaa,63736.05,64000.0,263.95,2,45.5,1/6,1972,kerrostalo,False,,,False,176.91,5.0,,89,69,Vaarala,46,60.266716,25.099396,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24490311
+"Lähdepuistontie 5, Vaarala, Vantaa",Vaarala,vantaa,7200.0,64900.0,1700.0,2,45.5,6/6,1972,kerrostalo,False,,,False,403.96,227.5,,71,70,Vaarala,137,60.265778,25.100331,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/16953238
+"Hepokuja 6 E, Hakunila, Vantaa",Hakunila,vantaa,104000.0,104000.0,,1,31.0,6/7,1971,kerrostalo,False,,,False,516.76,142.6,,70,71,Hevoshaanpolku,138,60.273924,25.10649,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24560644
+"Kuulakuja 4, Länsimäki, Vantaa",Länsimäki,vantaa,69990.0,69990.0,,2,59.0,4/5,1971,kerrostalo,True,,"nginosa
+Länsimäki
+Kaupunki
+Vantaa
+ 
+Lisää suosikiksi
+Jaa tämä kohde
+Hieno kaksio
+Hieno kaksio metron lähellä. Neljännen kerroksen asunto länsimäestä. Linjasaneeraus ja muut isot remontit tehty. Pikaraitiovaunu tulossa tähän lähelle. Metro jo löytyy kävelymatkan päästä. Alepa 24 auki. Putket on tehty. Oma tontti.",False,467.7,265.5,,66,72,Länsimäki,95,60.244035,25.109282,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24021458
+"Lähdepuistontie 5, Vaarala, Vantaa",Vaarala,vantaa,72307.21,78000.0,5692.79,2,45.5,2/6,1972,kerrostalo,False,,,False,470.2,227.5,,66,73,Vaarala,137,60.265778,25.100331,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23407179
+"Lähdepuistontie 5 A, Vaarala, Vantaa",Vaarala,vantaa,85581.28,87000.0,1418.72,2,40.5,3/6,1972,kerrostalo,False,,,False,490.71,202.5,,64,74,Vaarala,46,60.266716,25.099396,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23668264
+"Pallastunturinkuja 1 G, Länsimäki, Vantaa",Länsimäki,vantaa,69000.0,69000.0,,2,48.0,1/3,1979,kerrostalo,False,,,False,437.19,240.0,,62,75,Länsimäki,485,60.246425,25.118305,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24530388
+"Taivaskero 4, Länsimäki, Vantaa",Länsimäki,vantaa,79000.0,79000.0,,3,81.0,5/6,1975,kerrostalo,False,,"n pienimuotoisen kuntosalin, saunan ja varastot. Etupihalta löytyy parkkipaikkoja ja viihtyisällä takapihalla on grillialue. 
+
+Taloyhtiössä alkamassa linjasaneeraus, jonka yhteydessä saneerataan myös kylpyhuoneet.
+
+Katso kohteen tarkemmat tiedot www.habita.com -sivustolta.
+
+Seuraavat esittelyt
+
+Ei sovittuja esitt",False,559.36,311.6,,60,76,Länsimäki,179,60.243582,25.11413,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24661021
+"Maalinauhantie 1 B, Länsimäki, Vantaa",Länsimäki,vantaa,104154.0,109000.0,4846.0,3,76.0,2/5,1972,kerrostalo,False,,,False,764.24,364.8,,59,77,Länsimäki,158,60.244799,25.108635,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24400270
+"Ounasvaarankuja 3 C, Mellunmäki, Helsinki",Mellunmäki,helsinki,79531.32,79600.0,68.68,1,31.0,5/5,1978,kerrostalo,False,,,False,390.29,139.5,,58,78,Mellunmäki,354,60.238378,25.115296,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24419269
+"Keihästie 5 D, Länsimäki, Vantaa",Länsimäki,vantaa,103570.46,110000.0,6429.54,3,76.0,1/5,1972,kerrostalo,False,,,False,731.3,326.8,,57,79,Länsimäki,172,60.242811,25.109003,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24441515
+"Lumikero 4 B, Länsimäki, Vantaa",Länsimäki,vantaa,89000.0,89000.0,,1,35.0,4/9,1974,kerrostalo,False,,,False,462.07,163.75,,57,80,Länsimäki,313,60.244915,25.116358,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/21231683
+"Lumikero 6, Länsimäki, Vantaa",Länsimäki,vantaa,78740.0,79999.0,,1,33.5,1/3,1974,kerrostalo,True,2026,"eita
+1
+Kerros
+1 / 3
+Rakennusvuosi
+1974
+Rakennuksen tyyppi
+Kerrostalo
+Kaupunginosa
+Länsimäki
+Kaupunki
+Vantaa
+ 
+Lisää suosikiksi
+Jaa tämä kohde
+Yksiö - putkiremontti alkamassa
+Ensimmäisen kerroksen parvekkeellinen asunto.
+
+Taloyhtiön putkiremontti on päätetty toteuttaa keväällä 2026. Tämän asunnon osalta remontti",False,423.66,170.85,,56,81,Länsimäki,235,60.244888,25.114872,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23757429
+"Suunnistajankuja 10 B, Länsimäki, Vantaa",Länsimäki,vantaa,110000.0,110000.0,,2,48.0,2/4,1978,kerrostalo,False,,,True,644.5,240.0,,55,6,Länsimäki,278,60.246295,25.113015,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24639776
+"Lumikero 4 A, Länsimäki, Vantaa",Länsimäki,vantaa,58265.19,59000.0,734.81,2,59.5,4/9,1974,kerrostalo,True,,"en keittiö tarjoavat toimivat puitteet arkeen ja antavat joustavuutta kalustamiseen sekä sisustusratkaisuihin.
+
+Taloyhtiössä on parhaillaan käynnissä linjasaneeraus, jonka valmistuttua myös tämän asunnon kylpyhuone on uusittu.
+
+Mellunmäen metroasemalle on noin 900 metrin matka, ja alueella on lisäksi hyvät bussiy",False,425.68,279.05,,55,82,Länsimäki,313,60.244915,25.116358,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24487197
+"Lähdepuistontie 18 B, Vaarala, Vantaa",Vaarala,vantaa,149000.0,149000.0,,4,116.0,,1969,rivitalo,True,2026,"idee-suihku.
+Säilytystilat
+Kylmä ulkovarasto, lämmin ulkovarasto ja kaapistot
+Tulevat remontit
+2026-2030 Normaaleja huolto- ja kunnossapitotöitä
+2029 Linjasaneeraus
+2026-2027 Huonokuntoisten piha-aitojen, kuistien ja portaiden korjauksia
+2026 Sähköautolatausten infran kartoitus ja suunnittelu
+2026 Huonokuntoisten",False,1165.69,564.0,,50,83,Vaarala,352,60.264373,25.103562,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24656626
+"Oritie 2 A, Hakunila, Vantaa",Hakunila,vantaa,73000.0,73000.0,,3,79.0,3/3,1974,kerrostalo,False,,,False,667.72,450.3,,50,84,Hevoshaanpolku,251,60.271763,25.103355,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24390111
+"Harmokuja 6, Hakunila, Vantaa",Hakunila,vantaa,78000.0,78000.0,,2,56.0,9/9,1976,kerrostalo,False,,,False,574.92,332.22,,50,85,Hakunila,264,60.277267,25.10145,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24630065
+"Harmotie 4, Hakunila, Vantaa",Hakunila,vantaa,55000.0,55000.0,,2,64.0,2/3,1978,kerrostalo,False,,,False,497.61,371.2,,50,86,Hevoshaanpolku,367,60.276352,25.099333,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24609158
+"Oritie 2, Hakunila, Vantaa",Hakunila,vantaa,65000.0,65000.0,,2,61.0,1/5,1974,kerrostalo,False,,,False,524.67,347.7,,50,87,Hevoshaanpolku,287,60.27148,25.102846,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24580856
+"Pallaskero 4, Länsimäki, Vantaa",Länsimäki,vantaa,119000.0,119000.0,,3,82.0,2/9,1975,kerrostalo,False,,,False,814.81,364.8,,50,88,Länsimäki,342,60.245818,25.116,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24545661
+"Pallaskero 4, Länsimäki, Vantaa",Länsimäki,vantaa,98000.0,98000.0,,3,82.0,2/9,1975,kerrostalo,False,,,False,777.03,433.2,,50,89,Länsimäki,342,60.245818,25.116,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24519302
+"Hepokuja 6 C, Hakunila, Vantaa",Hakunila,vantaa,121760.6,169000.0,47239.4,4,94.0,4/6,1971,kerrostalo,False,,,False,1135.22,432.4,,50,90,Hevoshaanpolku,136,60.273921,25.106463,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23678381
+"Oritie 2 B, Hakunila, Vantaa",Hakunila,vantaa,69000.0,69000.0,,2,61.0,2/3,1974,kerrostalo,True,,"injasaneerauksen hankesuunnittelu, Lisätutkimuset hankesuunnittelun yhteydessä, Peruskuntoarvion päivitys
+2030 Linjasaneerauksen toteutussuunnittelu, Linjasaneeraus
+
+Kunnossapitotarveselvityksessä mainitut kustannusarviot ovat alustavia arvioita ja todelliset kustannukset selviävät vasta urakan valmistuttua. Kust",False,544.89,347.7,,50,91,Hevoshaanpolku,251,60.271763,25.103355,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24413388
+"Estetie 19, Rajakylä, Vantaa",Rajakylä,vantaa,199000.0,,,4,139.0,,1951,omakotitalo,False,,,False,854.51,,,50,92,Rajakylä,360,60.249232,25.106538,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24347714
+"Linnoituskuja 1, Länsimäki, Vantaa",Länsimäki,vantaa,82321.82,89000.0,6678.18,2,50.0,1/3,1978,kerrostalo,True,2026,"hyväpohjainen kaksio.
+
+Yhtiössä on valmistunut linjasaneerauksen toteutusuunnittelu joka esitetään infotilaisuudessa 25.3.2026, jonka jälkeen päätös linjasaneeraus-remonttiin ryhtymisestä tuodaan ylimääräisen yhtiökokouksen päätettäväksi.
+
+Iso olohuone, josta pääset lasitetulle länsiparvekkeelle.  Keittokomero y",False,578.32,280.0,,50,93,Länsimäki,335,60.244366,25.117018,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23993501
+"Oritie 4 A, Hakunila, Vantaa",Hakunila,vantaa,86540.51,89000.0,2459.49,2,61.0,3/4,1975,kerrostalo,False,2027,"nittelu 10 000,00€
+Huoneisto-ovien uusiminen 60 000,00€
+Ulko-ovien uusiminen 50 000,00€
+2027: Linjasaneerauksen toteutussuunnittelu. 15 000,00€
+2028: Linjasaneeraus 3 900 000,00€
+Porraskäytävien maalaus 15 000,00€
+2030: Patteriventtiilien uusiminen ja lämm.verkoston tasapainotus 50 000,00 €
+Ilmanvaihtokanavien nu",False,755.82,457.5,,49,94,Hevoshaanpolku,251,60.271763,25.103355,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24408830
+"Oritie 4 D, Hakunila, Vantaa",Hakunila,vantaa,84147.63,85000.0,852.37,4,97.5,4/6,1975,kerrostalo,False,,,False,911.84,633.75,,49,95,Hevoshaanpolku,251,60.271763,25.103355,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/22092388
+"Satulakuja 4 B, Hakunila, Vantaa",Hakunila,vantaa,97717.95,110000.0,12282.05,3,75.5,1/5,1979,kerrostalo,False,,,False,766.9,362.4,,47,96,Hakunila,276,60.280183,25.10839,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24654511
+"Lähdepuistontie 12 G, Vaarala, Vantaa",Vaarala,vantaa,185000.0,185000.0,,4,99.5,,1969,rivitalo,False,,,False,1333.72,550.0,,47,97,Vaarala,298,60.265451,25.104417,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24596489
+"Ratsumiehenpolku 2 A, Hakunila, Vantaa",Hakunila,vantaa,124900.0,124900.0,,3,78.5,2/6,1979,kerrostalo,False,,,False,856.64,376.8,,47,98,Hakunila,229,60.279828,25.104068,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24394248
+"Oritie 4, Hakunila, Vantaa",Hakunila,vantaa,65742.55,77000.0,11257.45,3,79.5,3/6,1975,kerrostalo,False,2029,"eerauksen toteutussuunnittelu.
+
+2029 Linjasaneerauksen toteutussuunnittelu
+
+2030 Patteriventtiilien uusiminen ja lämmitysverkoston tasapainotus.
+2030 Linjasaneeraus.
+Tehdyt remontit
+2016: Kph laatoitettu, uudet putket.
+2013: Keittiö kalusteet vaihdettu.  Viimeisimmät ja merkittävimmät toimenpiteet
+2025: Julkisivu",False,833.89,596.25,,47,99,Hevoshaanpolku,282,60.271901,25.101125,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24534268
+"Harmokuja 4, Hakunila, Vantaa",Hakunila,vantaa,43896.33,48000.0,4103.67,2,55.0,5/7,1977,kerrostalo,False,2027,"aloyhtiön hallinnassa olevien parvekkeiden lasitus (6kpl)
+2027-2028 B-rapun hissikonehuoneen katon uusiminen (linjasaneerauksen yhteydessä)
+2027-2028 Linjasaneeraus
+Tehdyt remontit
+1996 lämmitysjärjestelmän säätö ja lämmönvaihtimien uusinta, 1997 vesikalusteiden uusinta, 1998 julkisivujen ja parvekkeiden peruskor",False,448.51,357.5,,47,100,Hakunila,287,60.277694,25.100828,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24463536
+"Linnoituskuja 1 E, Länsimäki, Vantaa",Länsimäki,vantaa,75372.21,84000.0,8627.79,3,77.5,2/3,1978,kerrostalo,False,,,False,707.04,434.0,,47,101,Länsimäki,387,60.245038,25.117694,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24334699
+"Kurukuja 4 A, Länsimäki, Vantaa",Länsimäki,vantaa,199000.0,199000.0,,3,110.0,,1979,rivitalo,False,,,False,1242.51,388.0,,47,102,Länsimäki,460,60.247061,25.116601,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23288681
+"Lumikero 6 A, Länsimäki, Vantaa",Länsimäki,vantaa,112433.04,115000.0,2566.96,3,76.0,2/3,1974,kerrostalo,False,,"ksen tyyppi
+Kerrostalo
+Kaupunginosa
+Länsimäki
+Kaupunki
+Vantaa
+
+Lisää suosikiksi
+Jaa tämä kohde
+Tilava ja toimivapohjainen koti puistomaisin näkymin – linjasaneeraus jo takana
+
+Tässä kodissa yhdistyvät toimiva pohjaratkaisu, väljät huoneet ja mahdollisuus tehdä asunnosta juuri oman näköinen. Taloyhtiössä on toteut",False,866.78,437.0,,46,103,Länsimäki,313,60.244915,25.116358,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24660330
+"Lähdepuistontie 12 B, Vaarala, Vantaa",Vaarala,vantaa,180492.68,189000.0,8507.32,4,99.5,,1969,rivitalo,False,,,False,1353.94,550.0,,46,104,Vaarala,258,60.266194,25.104386,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24579809
+"Lähdepuistontie 12 H, Vaarala, Vantaa",Vaarala,vantaa,169610.27,178000.0,8389.73,4,99.5,,1969,rivitalo,False,,,False,1298.33,550.0,,46,105,Vaarala,334,60.265177,25.104818,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24641801
+"Lähdepuistontie 12, Vaarala, Vantaa",Vaarala,vantaa,185402.83,194000.0,8597.17,4,99.5,,1969,rivitalo,False,,,False,1379.23,550.0,,46,106,Vaarala,233,60.26648,25.104095,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24531612
+"Peltolantie 21 A, Viertola, Vantaa",Viertola,vantaa,134000.0,134000.0,,2,54.5,3/3,1976,kerrostalo,False,,,False,776.55,250.7,,46,107,Tikkuraitti,251,60.293616,25.032619,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24424263
+"Oritie 4 D 57, Hakunila, Vantaa",Hakunila,vantaa,56378.16,70000.0,13621.84,4,784.0,6/6,1975,kerrostalo,False,2027,"eruskorjaus, linjasaneerauksen hankesuunnittelu, porraskäytävien ulko-ovien uusiminen/kunnostaminen. 2027 linjasaneerauksen toteutussuunnittelu. 2028 linjasaneeraus. 2029 porraskäytävien maalaus. 2029 huoneisto-ovien uusiminen. 2030 patteriventtiilien uusiminen ja lämmityksen tasapainotus, Ilmanvaihtokanavien puh",False,1079.75,877.5,,45,108,Hevoshaanpolku,251,60.271763,25.103355,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24609440
+"Oritie 4, Hakunila, Vantaa",Hakunila,vantaa,38518.59,46000.0,7481.41,2,52.5,1/6,1975,kerrostalo,False,2029,"eerauksen toteutussuunnittelu.
+
+2029 Linjasaneerauksen toteutussuunnittelu
+
+2030 Patteriventtiilien uusiminen ja lämmitysverkoston tasapainotus.
+2030 Linjasaneeraus.
+Tehdyt remontit
+Viimeisimmät ja merkittävimmät toimenpiteet
+2025: Julkisivujen ja parvekkeiden kuntotutkimus 
+
+2024: Piharemontin ensimmäinen vaihe.",False,474.65,393.75,,45,109,Hevoshaanpolku,282,60.271901,25.101125,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24441682
+"Relanderinpiha 5, Jokiniemi, Vantaa",Jokiniemi,vantaa,180000.0,180000.0,,2,97.0,86/97,1909,omakotitalo,False,,,False,758.44,,,44,110,Jokiniemi,417,60.293517,25.055612,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24546063
+"Jousitie 20 A, Rajakylä, Vantaa",Rajakylä,vantaa,138000.0,138000.0,,2,62.0,,1977,rivitalo,False,,,False,856.08,310.0,,43,111,Rajakylä,374,60.250922,25.10522,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24533299
+"Ratsumiehenpolku 2 A, Hakunila, Vantaa",Hakunila,vantaa,93466.69,119000.0,25533.31,3,78.5,3/6,1979,kerrostalo,False,,,False,826.81,376.8,,42,112,Hakunila,229,60.279828,25.104068,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24619918
+"Kurukuja 4 E, Länsimäki, Vantaa",Länsimäki,vantaa,182139.26,183000.0,860.74,3,80.0,,1979,rivitalo,False,,,False,1161.61,388.0,,42,113,Länsimäki,478,60.246774,25.117628,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23830560
+"Orvokkitie 4 B, Tikkurila, Vantaa",Tikkurila,vantaa,149000.0,149000.0,,2,55.0,3/3,1974,kerrostalo,False,,,False,873.94,272.25,,42,114,Tikkuraitti,206,60.29467,25.035363,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23570196
+"Peltolantie 21 B, Viertola, Vantaa",Viertola,vantaa,142032.95,149000.0,6967.05,2,55.0,1/3,1976,kerrostalo,False,,,False,854.69,253.0,,41,115,Koivuhaka,329,60.294107,25.010188,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24661923
+"Peltolantie 21 A, Viertola, Vantaa",Viertola,vantaa,150467.06,158000.0,7532.94,2,55.0,3/3,1976,kerrostalo,False,,,False,900.2,253.0,,41,116,Tikkuraitti,251,60.293616,25.032619,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24237812
+"Harmotie 6, Hakunila, Vantaa",Hakunila,vantaa,111000.0,130000.0,19000.0,2,64.5,2/2,1978,kerrostalo,False,,,False,828.13,322.5,,40,117,Hakunila,364,60.277668,25.099433,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/17414459
+"Peltolantie 21 A, Tikkurila, Vantaa",Tikkurila,vantaa,165000.0,165000.0,,2,58.0,1/3,1976,kerrostalo,False,,,False,949.39,266.8,,35,118,,,,,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24586822
+"Uotinmäentie 11 H, Mellunmäki, Helsinki",Mellunmäki,helsinki,137235.59,149000.0,11764.41,3,73.0,2/3,1968,kerrostalo,False,,,False,1054.29,452.6,,35,119,Mellunmäki,413,60.236699,25.114868,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24346304
+"Maalinauhantie 4, Rajakylä, Vantaa",Rajakylä,vantaa,139074.38,174000.0,34925.62,3,79.5,,1979,rivitalo,False,,,False,1157.4,429.3,,28,120,,,,,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24083443
