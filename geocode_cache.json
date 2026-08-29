@@ -9073,5 +9073,238 @@
   "Lähdepuistontie 18 B, Vaarala, Vantaa, vantaa, Finland": [
     60.2643733,
     25.1035622
+  ],
+  "Talvikkitie 7, Tikkurila, Vantaa, vantaa, Finland": [
+    60.2877881,
+    25.0321561
+  ],
+  "Klaavuntie 9, Puotila, Helsinki, helsinki, Finland": [
+    60.2123786,
+    25.0977547
+  ],
+  "Vuosaarentie 6b B, Keski-Vuosaari, Helsinki, helsinki, Finland": [
+    60.2095751,
+    25.1463086
+  ],
+  "Ormusmäentie 1 A, Ala-Malmi, Helsinki, helsinki, Finland": [
+    60.2558754,
+    25.0213682
+  ],
+  "Asiakkaankatu 1, Itäkeskus, Helsinki, helsinki, Finland": [
+    60.2079095,
+    25.0811015
+  ],
+  "Veräjäkallionkuja 3, Vallikallio, Espoo, espoo, Finland": null,
+  "Pursimiehenkatu 5 A, Punavuori, Helsinki, helsinki, Finland": [
+    60.1604875,
+    24.940654
+  ],
+  "Krankantie 3, Pohjois-Haaga, Helsinki, helsinki, Finland": [
+    60.2247037,
+    24.9032777
+  ],
+  "Rantakartanontie 2 F, Puotila, Helsinki, helsinki, Finland": [
+    60.2130465,
+    25.1032582
+  ],
+  "Pääskylänkatu 5 B, Sörnäinen, Helsinki, helsinki, Finland": [
+    60.1884033,
+    24.9691584
+  ],
+  "Olavinlinnantie 4, Puotinharju, Helsinki, helsinki, Finland": [
+    60.21202,
+    25.0774167
+  ],
+  "Tornihaukantie 6 E, Karakallio, Espoo, espoo, Finland": [
+    60.2290275,
+    24.7735627
+  ],
+  "Soodakuja 3, Konala, Helsinki, helsinki, Finland": [
+    60.23771,
+    24.8496034
+  ],
+  "Kirstinkatu 4 D, Kallio, Helsinki, helsinki, Finland": [
+    60.1852547,
+    24.9469256
+  ],
+  "Päivärinnankatu 2 C, Taka-Töölö, Helsinki, helsinki, Finland": [
+    60.1887673,
+    24.9170354
+  ],
+  "Lauranpolku 10, Havukoski, Vantaa, vantaa, Finland": [
+    60.3196359,
+    25.0715915
+  ],
+  "Karhunkierros 2 F A, Pähkinärinne, Vantaa, vantaa, Finland": [
+    60.2579851,
+    24.810849
+  ],
+  "Vellamonkatu 16-18, Hermanni, Helsinki, helsinki, Finland": [
+    60.1958652,
+    24.9657209
+  ],
+  "Caloniuksenkatu 4, Etu-Töölö, Helsinki, helsinki, Finland": [
+    60.1743851,
+    24.92006
+  ],
+  "Vähäntuvantie 5 B, Konala, Helsinki, helsinki, Finland": [
+    60.2333915,
+    24.8523073
+  ],
+  "Jussaarenkuja 4, Laajasalo, Helsinki, helsinki, Finland": [
+    60.1768495,
+    25.0466804
+  ],
+  "Kalliolähteentie 5 C, Friisilä, Espoo, espoo, Finland": [
+    60.1777553,
+    24.7149857
+  ],
+  "Lehmipolku 2 B, Rautkallio, Vantaa, vantaa, Finland": [
+    60.3217824,
+    25.0759804
+  ],
+  "Pohjolankatu 1 A, Käpylä, Helsinki, helsinki, Finland": [
+    60.213484,
+    24.9441765
+  ],
+  "Konalantie 12 B, Pitäjänmäki, Helsinki, helsinki, Finland": [
+    60.227019,
+    24.8518788
+  ],
+  "Pohjoiskaari 12 B, Lauttasaari, Helsinki, helsinki, Finland": [
+    60.1625965,
+    24.8906909
+  ],
+  "Pengerkatu 29 C, Torkkelinmäki, Helsinki, helsinki, Finland": [
+    60.1850102,
+    24.958094
+  ],
+  "Nelikkotie 12 A, Matinkylä, Espoo, espoo, Finland": [
+    60.1618882,
+    24.7406623
+  ],
+  "Maneesikatu 8 C, Kruununhaka, Helsinki, helsinki, Finland": [
+    60.1732489,
+    24.9572215
+  ],
+  "Ulvilantie 29-4 A -, Munkkivuori, Helsinki, helsinki, Finland": [
+    60.2071446,
+    24.8737337
+  ],
+  "Kaarelantie 97 G, Kannelmäki, Helsinki, helsinki, Finland": [
+    60.2371179,
+    24.9014315
+  ],
+  "Venuksentie 6, Mikkola, Vantaa, vantaa, Finland": [
+    60.3426759,
+    25.0965546
+  ],
+  "Teollisuuskatu 3b B, Vallila, Helsinki, helsinki, Finland": [
+    60.1898117,
+    24.9605279
+  ],
+  "Aallonkohina 8 A, Espoonlahti, Espoo, espoo, Finland": [
+    60.1493718,
+    24.6406903
+  ],
+  "Piispansilta 16 A, Matinkylä, Espoo, espoo, Finland": [
+    60.1643213,
+    24.7369792
+  ],
+  "Neljäs linja 14 D, Kallio, Helsinki, helsinki, Finland": [
+    60.1844215,
+    24.9472065
+  ],
+  "Pyörrekuja 4 G, Louhela, Vantaa, vantaa, Finland": [
+    60.2644447,
+    24.8508486
+  ],
+  "Wallininkuja 4 B, Linjat, Helsinki, helsinki, Finland": [
+    60.1847871,
+    24.9449404
+  ],
+  "Armas Launiksen katu 12 B, Leppävaara, Espoo, espoo, Finland": [
+    60.2223012,
+    24.819724
+  ],
+  "Haapasaarentie 1 K, Vuosaari, Helsinki, helsinki, Finland": [
+    60.2186548,
+    25.1463148
+  ],
+  "Aleksis Kiven katu 48, Alppila, Helsinki, helsinki, Finland": [
+    60.1910877,
+    24.9477535
+  ],
+  "Töölöntorinkatu 11, Taka-Töölö, Helsinki, helsinki, Finland": [
+    60.1789029,
+    24.9253543
+  ],
+  "Sepänkatu 9 A, Punavuori, Helsinki, helsinki, Finland": [
+    60.1590987,
+    24.939235
+  ],
+  "Vaasankatu 25, Harju, Helsinki, helsinki, Finland": [
+    60.1887382,
+    24.9544578
+  ],
+  "Mäkelänkatu 3 B, Vallila, Helsinki, helsinki, Finland": [
+    60.2120303,
+    24.943649
+  ],
+  "Kettutie 4 C, Länsi-Herttoniemi, Helsinki, helsinki, Finland": [
+    60.2068414,
+    25.0384093
+  ],
+  "Pitkänkalliontie 11 B, Haukilahti, Espoo, espoo, Finland": [
+    60.1573589,
+    24.7790281
+  ],
+  "Adolf Lindforsin tie 5, Pohjois-Haaga, Helsinki, helsinki, Finland": [
+    60.2299029,
+    24.8920797
+  ],
+  "Fleminginkatu 20 A, Harju, Helsinki, helsinki, Finland": [
+    60.1854632,
+    24.9530554
+  ],
+  "Kolmas linja 32 C, Kallio, Helsinki, helsinki, Finland": [
+    60.1814216,
+    24.951788
+  ],
+  "Värikuja 6, Oulunkylä, Helsinki, helsinki, Finland": [
+    60.2232281,
+    24.9517927
+  ],
+  "Piispankallionpää 4 A, Piispankallio, Espoo, espoo, Finland": [
+    60.1659103,
+    24.7439529
+  ],
+  "Säteritilankatu 6 A, Tammisto, Vantaa, vantaa, Finland": [
+    60.2691069,
+    24.964462
+  ],
+  "Mechelininkatu 2 B, Etu-Töölö, Helsinki, helsinki, Finland": [
+    60.1704503,
+    24.9204875
+  ],
+  "Kauppalantie 24 A, Etelä-Haaga, Helsinki, helsinki, Finland": [
+    60.2159765,
+    24.8970074
+  ],
+  "Mäkitorpantie 5, Oulunkylä, Helsinki, helsinki, Finland": [
+    60.2233164,
+    24.9499382
+  ],
+  "Tatartie 1, Rastaspuisto, Espoo, espoo, Finland": [
+    60.2320292,
+    24.7767337
+  ],
+  "Tammistonkatu 13, Tammisto, Vantaa, vantaa, Finland": [
+    60.2706811,
+    24.965574
+  ],
+  "Matinpuronkuja 2 F, Matinkylä, Espoo, espoo, Finland": [
+    60.161968,
+    24.7553286
   ]
 }
