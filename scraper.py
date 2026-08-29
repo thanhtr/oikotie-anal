@@ -746,9 +746,9 @@ def parse_card_text(text: str, url: str) -> Optional[dict]:
     return result if len(result) > 3 else None
 
 
-_TRAM_LINK_SELECTOR    = 'a[href*="/myytavat-asunnot/vantaa/"], a[href*="/myytavat-asunnot/helsinki/"]'
-_UUSIMAA_LINK_SELECTOR = 'a[href*="/myytavat-asunnot/"]'
-_NEWBUILD_LINK_SELECTOR = 'a[href*="/myytavat-asunnot/"], a[href*="/myytavat-uudisasunnot/"]'
+_TRAM_LINK_SELECTOR     = 'a[href*="/myytavat-asunnot/vantaa/"], a[href*="/myytavat-asunnot/helsinki/"]'
+_UUSIMAA_LINK_SELECTOR  = 'a[href*="/myytavat-asunnot/helsinki/"], a[href*="/myytavat-asunnot/espoo/"], a[href*="/myytavat-asunnot/vantaa/"]'
+_NEWBUILD_LINK_SELECTOR = 'a[href*="/myytavat-asunnot/helsinki/"], a[href*="/myytavat-asunnot/espoo/"], a[href*="/myytavat-asunnot/vantaa/"], a[href*="/myytavat-uudisasunnot/"]'
 
 
 def scrape_search_page(page, page_num: int,
