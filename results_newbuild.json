@@ -244,29 +244,31 @@
     "rank": 9
   },
   {
-    "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24624786",
-    "price_eur": 129900.0,
-    "size_sqm": 40.0,
+    "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24668582",
+    "price_eur": 139700.0,
+    "size_sqm": 30.5,
     "room_count": 2,
-    "floor": "6/8",
+    "floor": "6/6",
     "property_type": "kerrostalo",
-    "year_built": 2025,
-    "address": "Piikkirinne 3 A 29, Vapaala, Vantaa",
-    "district": "Vapaala",
-    "city": "vantaa",
+    "year_built": 2026,
+    "address": "Nihtisillankuja 2 A 48, Leppävaara, Espoo",
+    "district": "Leppävaara",
+    "city": "espoo",
+    "debt_free_price_eur": 139700.0,
     "pipe_renovation_done": false,
+    "hoitovastike_eur_month": 177.32,
     "is_rented_out": false,
-    "lat": 60.257914,
-    "lon": 24.829187,
+    "lat": 60.209887,
+    "lon": 24.760591,
     "nearest_hub": "Leppävaara",
-    "hub_distance_m": 4354,
+    "hub_distance_m": 3186,
     "nearest_mall": "Sello",
-    "mall_distance_m": 4542,
-    "helsinki_central_km": 11.5,
+    "mall_distance_m": 2920,
+    "helsinki_central_km": 10.78,
     "tram_badge": null,
     "_search_pass": "new_build",
-    "monthly_cost_eur": 505.12,
-    "score": 43,
+    "monthly_cost_eur": 731.99,
+    "score": 44,
     "rank": 10
   },
   {
@@ -349,32 +351,6 @@
     "rank": 13
   },
   {
-    "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24601630",
-    "price_eur": 139700.0,
-    "size_sqm": 30.5,
-    "room_count": 2,
-    "floor": "6/6",
-    "property_type": "kerrostalo",
-    "year_built": 2026,
-    "address": "Nihtisillankuja 2 A 48, Leppävaara, Espoo",
-    "district": "Leppävaara",
-    "city": "espoo",
-    "pipe_renovation_done": false,
-    "is_rented_out": false,
-    "lat": 60.209887,
-    "lon": 24.760591,
-    "nearest_hub": "Leppävaara",
-    "hub_distance_m": 3186,
-    "nearest_mall": "Sello",
-    "mall_distance_m": 2920,
-    "helsinki_central_km": 10.78,
-    "tram_badge": null,
-    "_search_pass": "new_build",
-    "monthly_cost_eur": 554.67,
-    "score": 40,
-    "rank": 14
-  },
-  {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24434722",
     "price_eur": 179000.0,
     "size_sqm": 30.0,
@@ -400,7 +376,7 @@
     "_search_pass": "new_build",
     "monthly_cost_eur": 900.38,
     "score": 40,
-    "rank": 15
+    "rank": 14
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24047459",
@@ -428,7 +404,7 @@
     "_search_pass": "new_build",
     "monthly_cost_eur": 1073.81,
     "score": 40,
-    "rank": 16
+    "rank": 15
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23660993",
@@ -454,7 +430,7 @@
     "_search_pass": "new_build",
     "monthly_cost_eur": 601.69,
     "score": 39,
-    "rank": 17
+    "rank": 16
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23248335",
@@ -480,7 +456,7 @@
     "_search_pass": "new_build",
     "monthly_cost_eur": 840.24,
     "score": 39,
-    "rank": 18
+    "rank": 17
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/22043697",
@@ -506,7 +482,7 @@
     "_search_pass": "new_build",
     "monthly_cost_eur": 757.93,
     "score": 39,
-    "rank": 19
+    "rank": 18
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/16241452",
@@ -532,7 +508,7 @@
     "_search_pass": "new_build",
     "monthly_cost_eur": 494.8,
     "score": 39,
-    "rank": 20
+    "rank": 19
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/16816223",
@@ -557,7 +533,7 @@
     "_search_pass": "new_build",
     "monthly_cost_eur": 773.1,
     "score": 39,
-    "rank": 21
+    "rank": 20
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24384166",
@@ -587,7 +563,7 @@
     "_search_pass": "new_build",
     "monthly_cost_eur": 812.13,
     "score": 37,
-    "rank": 22
+    "rank": 21
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/17223781",
@@ -613,7 +589,7 @@
     "_search_pass": "new_build",
     "monthly_cost_eur": 504.61,
     "score": 35,
-    "rank": 23
+    "rank": 22
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/17214930",
@@ -639,7 +615,7 @@
     "_search_pass": "new_build",
     "monthly_cost_eur": 655.8,
     "score": 35,
-    "rank": 24
+    "rank": 23
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/16230754",
@@ -665,7 +641,7 @@
     "_search_pass": "new_build",
     "monthly_cost_eur": 566.3,
     "score": 35,
-    "rank": 25
+    "rank": 24
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24638295",
@@ -694,6 +670,6 @@
     "_search_pass": "new_build",
     "monthly_cost_eur": 670.93,
     "score": 16,
-    "rank": 26
+    "rank": 25
   }
 ]
