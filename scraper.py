@@ -1035,6 +1035,7 @@ def generate_html_report(confirmed: list[dict], candidates: list[dict],
     uusimaa_top5   = uusimaa_top5   or []
     newbuild_pks   = newbuild_pks   or []
     run_time = datetime.now().strftime("%Y-%m-%d %H:%M")
+    _card_id = [0]  # mutable counter for unique per-card detail IDs
 
     def esc(v) -> str:
         return str(v or "").replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
@@ -1052,6 +1053,9 @@ def generate_html_report(confirmed: list[dict], candidates: list[dict],
             return "<p class='empty'>None this run.</p>"
         html = ""
         for l in lst:
+            _card_id[0] += 1
+            cid = f"c{_card_id[0]}"
+
             url    = l.get("listing_url") or ""
             addr   = esc(l.get("address", "N/A"))
             dist_s = esc(l.get("district") or "")
@@ -1077,19 +1081,11 @@ def generate_html_report(confirmed: list[dict], candidates: list[dict],
             hoito  = l.get("hoitovastike_eur_month")
             tontti = l.get("tonttivuokra_eur_month")
             mort_v = monthly_mortgage(max(0.0, dfp_v - DOWN_PAYMENT_EUR))
+            mc_html = ""
             if dfp_v > 0:
                 total_fixed = mort_v + (float(hoito) if hoito else 0) + (float(tontti) if tontti else 0)
                 mc_s = f"{total_fixed:,.0f} €/mo".replace(",", " ")
                 mc_html = f'<div class="card-monthly">{mc_s} est.</div>'
-            else:
-                mc_html = ""
-
-            rental_inc = l.get("rental_income_eur_month")
-            if rental_inc and dfp_v > 0:
-                gross_yield = float(rental_inc) * 12 / dfp_v * 100
-                yield_html = f'<div class="card-yield">&#x1F4C8; {gross_yield:.1f}% gross yield &middot; {fmt_eur(rental_inc)}/mo rent</div>'
-            else:
-                yield_html = ""
 
             meta_parts = []
             if l.get("room_count"): meta_parts.append(f"{l['room_count']}h")
@@ -1098,7 +1094,6 @@ def generate_html_report(confirmed: list[dict], candidates: list[dict],
             if l.get("year_built"): meta_parts.append(str(l["year_built"]))
             meta_s = " · ".join(meta_parts)
 
-            # Badges: age/pipe, tram stop, rented
             tag = l.get("_search_pass", "")
             if tag == "new_house_2000plus":
                 status_badge = f'<span class="badge new">built {esc(str(l.get("year_built","")))}</span>'
@@ -1116,29 +1111,52 @@ def generate_html_report(confirmed: list[dict], candidates: list[dict],
             rent_b = '<span class="badge rent">rented out</span>' if l.get("is_rented_out") else ""
             badges_html = status_badge + tram_b + rent_b
 
+            distance_html = (f'<div class="card-hub">🚋 {esc(stop)} {round(dist_m) if dist_m is not None else "?"}m</div>'
+                             if stop else "")
+
+            # Details content (collapsed by default)
             stop_note  = _STOP_NOTE.get(stop, "")
             stop_links = _STOP_LINKS.get(stop, [])
             note_html  = ""
             if stop_note:
                 links_html = "".join(
-                    f'<a href="{esc(u)}" class="stop-link" target="_blank" rel="noopener">{esc(lb)}</a>'
+                    f'<a href="{esc(u)}" class="card-flag-link" target="_blank" rel="noopener">{esc(lb)}</a>'
                     for u, lb in stop_links
                 )
-                note_html = f'<p class="stop-note">{esc(stop_note)}{" " + links_html if links_html else ""}</p>'
+                note_html = f'<p class="card-note">{esc(stop_note)}{" " + links_html if links_html else ""}</p>'
 
             flags = listing_red_flags(l)
-            flags_html = ""
-            if flags:
-                items = "".join(
-                    f'<li><span class="rf-text">{esc(txt)}</span>'
-                    f'<a href="{esc(u)}" class="rf-link" target="_blank" rel="noopener">{esc(lb)}</a></li>'
-                    for txt, u, lb in flags
-                )
-                flags_html = f'<ul class="risk-flags">{items}</ul>'
+            flags_html = "".join(
+                f'<div class="card-flag"><span class="card-flag-text">{esc(txt)}</span>'
+                f'<a href="{esc(u)}" class="card-flag-link" target="_blank" rel="noopener">{esc(lb)}</a></div>'
+                for txt, u, lb in flags
+            )
 
             reno = esc(l.get("pipe_renovation_info") or "")
-            view_link = f'<a href="{esc(url)}" class="card-view-link" target="_blank">View →</a>' if url else ""
-            addr_link = f'<a href="{esc(url)}" target="_blank">{full_addr}</a>' if url else full_addr
+            reno_html = f'<p class="card-reno">{reno}</p>' if reno else ""
+
+            rental_inc = l.get("rental_income_eur_month")
+            yield_html = ""
+            if rental_inc and dfp_v > 0:
+                gross_yield = float(rental_inc) * 12 / dfp_v * 100
+                yield_html = f'<div class="card-yield">📈 {gross_yield:.1f}% gross yield · {fmt_eur(rental_inc)}/mo rent</div>'
+
+            has_details = bool(stop_note or flags or reno or yield_html)
+            details_html = ""
+            if has_details:
+                details_body = note_html + flags_html + reno_html + yield_html
+                details_html = (
+                    f'<button class="card-details-btn" onclick="toggleDetails(\'{cid}\')" id="btn-{cid}">'
+                    f'<span class="details-label">Details</span>'
+                    f'<svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>'
+                    f'</button>'
+                    f'<div id="{cid}" class="card-details-body" hidden>{details_body}</div>'
+                )
+
+            view_svg = '<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg>'
+            view_link = (f'<a href="{esc(url)}" class="card-view-link" target="_blank" rel="noopener">View {view_svg}</a>'
+                         if url else "")
+            addr_link = f'<a href="{esc(url)}" target="_blank" rel="noopener">{full_addr}</a>' if url else full_addr
 
             html += f"""
 <article class="card">
@@ -1148,15 +1166,13 @@ def generate_html_report(confirmed: list[dict], candidates: list[dict],
   </div>
   <div class="card-price">{price_s} <span class="card-price-sub">velaton</span></div>
   {mc_html}
-  {yield_html}
   <div class="card-loan">{esc(loan_s)}</div>
   <div class="card-meta">{meta_s}</div>
   <div class="card-address">{addr_link}</div>
+  {distance_html}
   <div class="card-divider"></div>
   <div class="card-badges">{badges_html}</div>
-  {note_html}
-  {flags_html}
-  {"<p class='reno-note'>" + reno + "</p>" if reno else ""}
+  {details_html}
 </article>"""
         return html
 
@@ -1166,6 +1182,9 @@ def generate_html_report(confirmed: list[dict], candidates: list[dict],
             return "<p class='empty'>None this run.</p>"
         html = ""
         for l in lst:
+            _card_id[0] += 1
+            cid = f"c{_card_id[0]}"
+
             url    = l.get("listing_url") or ""
             addr   = esc(l.get("address", "N/A"))
             dist_s = esc(l.get("district") or "")
@@ -1191,19 +1210,11 @@ def generate_html_report(confirmed: list[dict], candidates: list[dict],
             hoito  = l.get("hoitovastike_eur_month")
             tontti = l.get("tonttivuokra_eur_month")
             mort_v = monthly_mortgage(max(0.0, dfp_v - DOWN_PAYMENT_EUR))
+            mc_html = ""
             if dfp_v > 0:
                 total_fixed = mort_v + (float(hoito) if hoito else 0) + (float(tontti) if tontti else 0)
                 mc_s = f"{total_fixed:,.0f} €/mo".replace(",", " ")
                 mc_html = f'<div class="card-monthly">{mc_s} est.</div>'
-            else:
-                mc_html = ""
-
-            rental_inc = l.get("rental_income_eur_month")
-            if rental_inc and dfp_v > 0:
-                gross_yield = float(rental_inc) * 12 / dfp_v * 100
-                yield_html = f'<div class="card-yield">&#x1F4C8; {gross_yield:.1f}% gross yield &middot; {fmt_eur(rental_inc)}/mo rent</div>'
-            else:
-                yield_html = ""
 
             meta_parts = []
             if l.get("room_count"): meta_parts.append(f"{l['room_count']}h")
@@ -1212,23 +1223,19 @@ def generate_html_report(confirmed: list[dict], candidates: list[dict],
             if l.get("year_built"): meta_parts.append(str(l["year_built"]))
             meta_s = " · ".join(meta_parts)
 
-            hub    = l.get("nearest_hub") or "?"
-            hdist  = l.get("hub_distance_m")
-            hc_km  = l.get("helsinki_central_km")
-            mall   = l.get("nearest_mall") or "?"
-            mdist  = l.get("mall_distance_m")
+            hub   = l.get("nearest_hub") or "?"
+            hdist = l.get("hub_distance_m")
+            hc_km = l.get("helsinki_central_km")
+            mall  = l.get("nearest_mall") or "?"
+            mdist = l.get("mall_distance_m")
 
-            hub_line = (
-                f'<div class="card-hub">🚉 {esc(hub)} · {round(hdist) if hdist else "?"}m'
-                + (f'  ·  🏙 {hc_km:.1f} km centre' if hc_km else "")
-                + '</div>'
-            )
-            mall_line = (
-                f'<div class="card-hub">🛍 {esc(mall)} · {round(mdist) if mdist else "?"}m</div>'
-                if mdist else ""
-            )
+            hub_parts = [f"🚉 {esc(hub)} · {round(hdist) if hdist else '?'}m"]
+            if hc_km:
+                hub_parts.append(f"🏙 {hc_km:.1f} km centre")
+            hub_line = f'<div class="card-hub">{" · ".join(hub_parts)}</div>'
+            mall_line = (f'<div class="card-hub">🛍 {esc(mall)} · {round(mdist) if mdist else "?"}m</div>'
+                         if mdist else "")
 
-            # Badges: age/pipe, tram proximity (if any), rented
             tag = l.get("_search_pass", "")
             if tag == "new_house_2000plus":
                 status_badge = f'<span class="badge new">built {esc(str(l.get("year_built","")))}</span>'
@@ -1239,25 +1246,44 @@ def generate_html_report(confirmed: list[dict], candidates: list[dict],
                 label   = f"pipe reno {reno_yr}" if reno_yr else "pipe reno ✓"
                 status_badge = f'<span class="badge reno">{esc(label)}</span>'
 
-            tb   = l.get("tram_badge")
-            tram_b = (f'<span class="badge tram">🚋 {esc(tb["stop"])} {tb["dist"]}m</span>'
-                      if tb else "")
+            tb     = l.get("tram_badge")
+            tram_b = (f'<span class="badge tram">🚋 {esc(tb["stop"])} {tb["dist"]}m</span>' if tb else "")
             rent_b = '<span class="badge rent">rented out</span>' if l.get("is_rented_out") else ""
             badges_html = status_badge + tram_b + rent_b
 
+            # Details content
             flags = listing_red_flags_uusimaa(l)
-            flags_html = ""
-            if flags:
-                items = "".join(
-                    f'<li><span class="rf-text">{esc(txt)}</span>'
-                    f'<a href="{esc(u)}" class="rf-link" target="_blank" rel="noopener">{esc(lb)}</a></li>'
-                    for txt, u, lb in flags
-                )
-                flags_html = f'<ul class="risk-flags">{items}</ul>'
+            flags_html = "".join(
+                f'<div class="card-flag"><span class="card-flag-text">{esc(txt)}</span>'
+                f'<a href="{esc(u)}" class="card-flag-link" target="_blank" rel="noopener">{esc(lb)}</a></div>'
+                for txt, u, lb in flags
+            )
 
             reno = esc(l.get("pipe_renovation_info") or "")
-            view_link = f'<a href="{esc(url)}" class="card-view-link" target="_blank">View →</a>' if url else ""
-            addr_link = f'<a href="{esc(url)}" target="_blank">{full_addr}</a>' if url else full_addr
+            reno_html = f'<p class="card-reno">{reno}</p>' if reno else ""
+
+            rental_inc = l.get("rental_income_eur_month")
+            yield_html = ""
+            if rental_inc and dfp_v > 0:
+                gross_yield = float(rental_inc) * 12 / dfp_v * 100
+                yield_html = f'<div class="card-yield">📈 {gross_yield:.1f}% gross yield · {fmt_eur(rental_inc)}/mo rent</div>'
+
+            has_details = bool(flags or reno or yield_html)
+            details_html = ""
+            if has_details:
+                details_body = flags_html + reno_html + yield_html
+                details_html = (
+                    f'<button class="card-details-btn" onclick="toggleDetails(\'{cid}\')" id="btn-{cid}">'
+                    f'<span class="details-label">Details</span>'
+                    f'<svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>'
+                    f'</button>'
+                    f'<div id="{cid}" class="card-details-body" hidden>{details_body}</div>'
+                )
+
+            view_svg = '<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg>'
+            view_link = (f'<a href="{esc(url)}" class="card-view-link" target="_blank" rel="noopener">View {view_svg}</a>'
+                         if url else "")
+            addr_link = f'<a href="{esc(url)}" target="_blank" rel="noopener">{full_addr}</a>' if url else full_addr
 
             html += f"""
 <article class="card">
@@ -1267,7 +1293,6 @@ def generate_html_report(confirmed: list[dict], candidates: list[dict],
   </div>
   <div class="card-price">{price_s} <span class="card-price-sub">velaton</span></div>
   {mc_html}
-  {yield_html}
   <div class="card-loan">{esc(loan_s)}</div>
   <div class="card-meta">{meta_s}</div>
   <div class="card-address">{addr_link}</div>
@@ -1275,8 +1300,7 @@ def generate_html_report(confirmed: list[dict], candidates: list[dict],
   {mall_line}
   <div class="card-divider"></div>
   <div class="card-badges">{badges_html}</div>
-  {flags_html}
-  {"<p class='reno-note'>" + reno + "</p>" if reno else ""}
+  {details_html}
 </article>"""
         return html
 
@@ -1285,24 +1309,26 @@ def generate_html_report(confirmed: list[dict], candidates: list[dict],
         for l in lst:
             url   = l.get("listing_url") or ""
             addr  = esc(l.get("address", "—"))
-            link  = f'<a href="{esc(url)}" target="_blank">{addr}</a>' if url else addr
+            link  = f'<a href="{esc(url)}" target="_blank" rel="noopener">{addr}</a>' if url else addr
             dfp   = l.get("debt_free_price_eur") or l.get("price_eur") or 0
             loan_s = _loan_ratio_str(l)
             tag   = l.get("_search_pass", "")
             status = ("new ≥2000" if tag == "new_house_2000plus"
                       else "check pipe reno" if tag == "candidate_check_pipe_reno"
                       else "pipe reno ✓")
+            rank  = l.get("rank", "—")
+            sc    = l.get("score", "")
+            rank_s = f"#{rank} · {sc}" if rank != "—" else "—"
             rows += (
                 f'<tr class="{row_class}">'
+                f"<td>{rank_s}</td>"
                 f"<td>{link}</td>"
                 f"<td>{esc(l.get('district') or '—')}</td>"
-                f"<td>{esc(l.get('city') or '—')}</td>"
-                f'<td class="num">{fmt_eur(l.get("price_eur"))}</td>'
                 f'<td class="num">{fmt_eur(dfp)}</td>'
                 f'<td class="num">{loan_s}</td>'
                 f"<td>{l.get('room_count','—')}h</td>"
-                f"<td>{l.get('size_sqm','—')}</td>"
-                f"<td>{l.get('year_built','—')}</td>"
+                f'<td class="num">{l.get("size_sqm","—")}</td>"'
+                f'<td class="num">{l.get("year_built","—")}</td>'
                 f"<td>{status}</td>"
                 f"</tr>\n"
             )
@@ -1313,7 +1339,7 @@ def generate_html_report(confirmed: list[dict], candidates: list[dict],
         for l in lst:
             url    = l.get("listing_url") or ""
             addr   = esc(l.get("address", "—"))
-            link   = f'<a href="{esc(url)}" target="_blank">{addr}</a>' if url else addr
+            link   = f'<a href="{esc(url)}" target="_blank" rel="noopener">{addr}</a>' if url else addr
             dfp    = l.get("debt_free_price_eur") or l.get("price_eur") or 0
             loan_s = _loan_ratio_str(l)
             tag    = l.get("_search_pass", "")
@@ -1323,20 +1349,21 @@ def generate_html_report(confirmed: list[dict], candidates: list[dict],
             hub    = l.get("nearest_hub") or "—"
             hdist  = l.get("hub_distance_m")
             hub_str = f"{esc(hub)} {round(hdist)}m" if hdist else esc(hub)
-            sc     = l.get("score", "—")
+            rank  = l.get("rank", "—")
+            sc    = l.get("score", "")
+            rank_s = f"#{rank} · {sc}" if rank != "—" else "—"
             rows += (
                 f'<tr class="{row_class}">'
+                f"<td>{rank_s}</td>"
                 f"<td>{link}</td>"
                 f"<td>{esc(l.get('district') or '—')}</td>"
-                f"<td>{esc(l.get('city') or '—')}</td>"
-                f'<td class="num">{fmt_eur(l.get("price_eur"))}</td>'
                 f'<td class="num">{fmt_eur(dfp)}</td>'
                 f'<td class="num">{loan_s}</td>'
                 f"<td>{l.get('room_count','—')}h</td>"
-                f"<td>{l.get('size_sqm','—')}</td>"
-                f"<td>{l.get('year_built','—')}</td>"
+                f'<td class="num">{l.get("size_sqm","—")}</td>'
+                f'<td class="num">{l.get("year_built","—")}</td>'
                 f"<td>{hub_str}</td>"
-                f'<td class="num">{sc}</td>'
+                f"<td>{status}</td>"
                 f"</tr>\n"
             )
         return rows
@@ -1409,7 +1436,81 @@ def generate_html_report(confirmed: list[dict], candidates: list[dict],
         newbuild_pks, "sec-new"
     )
 
-    loc_names = ", ".join(l[2] for l in TRAMLINE_LOCATIONS)
+    total_tram = len(rented_cards) + len(new_cards) + len(pipe_cards) + len(cand_cards)
+    total_uu   = len(uusimaa_rented) + len(uusimaa_top5)
+    total_nb   = len(newbuild_pks)
+
+    def risk_item(sev: str, text: str, url: str, label: str) -> str:
+        sev_cls = sev.lower()
+        return (
+            f'<div class="risk-item">'
+            f'<span class="risk-sev {sev_cls}">{esc(sev)}</span>'
+            f'<span class="risk-text">{esc(text)}</span>'
+            f'<a href="{esc(url)}" class="risk-link" target="_blank" rel="noopener">{esc(label)}</a>'
+            f'</div>'
+        )
+
+    def crit_item(text: str) -> str:
+        return (
+            f'<div class="filters-crit">'
+            f'<span class="filters-crit-dot"></span>'
+            f'<span class="filters-crit-text">{esc(text)}</span>'
+            f'</div>'
+        )
+
+    tram_risks = (
+        risk_item("HIGH", "Vantaa apartment prices were the worst-performing major city 2024–2025 (−9.1% peak YoY, −5.2% May 2025).", "https://www.helsinkitimes.fi/finland/finland-news/domestic/27245-housing-prices-drop-again-in-may-with-vantaa-hit-hardest.html", "Helsinki Times") +
+        risk_item("HIGH", "Rental vacancy in the Helsinki metro area tripled 2020–2024; Vantaa occupancy kept declining in Q4 2025.", "https://innagroup.fi/en/news/market-reviews/", "INNA Q4 2025") +
+        risk_item("HIGH", "Tram budget already overrun 16%+ (€647M → €750M) before construction started; Vantaa faces a €79.7M fiscal deficit.", "https://www.mtvuutiset.fi/artikkeli/vantaan-ratikan-hinta-noussut-750-miljoonaan-selvasti-muita-kaupunkeja-kalliimpi/9246426", "MTV Uutiset") +
+        risk_item("HIGH", "New-build oversupply: YIT alone had 1,359 completed unsold units in 2024, competing directly with private sellers.", "https://www.salkunrakentaja.fi/2024/05/yit-myymattomat-asunnot/", "Salkunrakentaja") +
+        risk_item("MED",  "Tram opens at earliest 2029 — asking prices already price in the tram premium with no transit benefit yet.", "https://ratikka.vantaa.fi/en/traffic-and-transport/vantaa-light-rail/information-about-vantaa-light-rail", "ratikka.vantaa.fi") +
+        risk_item("MED",  "Finnish construction sector saw 381 bankruptcies in January 2025 alone — pre-completion developer risk.", "https://www.rakennuslehti.fi/2025/02/konkurssiin-haettiin-tammikuussa-kymmenia-rakennusalan-yrityksia/", "Rakennuslehti")
+    )
+
+    uu_risks = (
+        risk_item("OPP",  "Occupancy recovering — Helsinki metro rental occupancy 94% in Q3 2025, best since H1 2020; oversupply gradually melting away.", "https://rettamanagement.fi/en/ajankohtaista/releases/finnish-residential-rental-market-q3-2025-strong-results-as-expected/", "Retta Q3 2025") +
+        risk_item("OPP",  "Gross yields 5–7% in transit-connected PKS suburbs; HMA identified as clear growth area 2025–2026; new construction halted → supply constraint building.", "https://investropa.com/blogs/news/helsinki-rental-yields", "Investropa 2026") +
+        risk_item("OPP",  "Prices near historical lows — buyers market; current correction may prove excellent entry if bought below replacement cost.", "https://kasvutalous.fi/%F0%9F%8F%A0-asuntomarkkinoiden-toipuminen-suomessa-mita-tapahtuu-vuonna-2026/", "kasvutalous.fi") +
+        risk_item("RISK", "Rental supply still abundant — non-subsidized rents declined −1.3% recently; upward rent pressure will take more time to materialize.", "https://rettamanagement.fi/en/ajankohtaista/releases/finnish-residential-rental-market-q3-2025-strong-results-as-expected/", "Retta Management") +
+        risk_item("RISK", "Price uncertainty — realistic planning range for Helsinki next 12 months: −3% to +2%.", "https://investropa.com/blogs/news/helsinki-good-time", "Investropa 2026") +
+        risk_item("RISK", "Pipe renovation liability in 1975–1995 stock — major capital expenditure risk; confirm renovation status before any offer.", "https://www.kiinteistoliitto.fi/", "kiinteistöliitto") +
+        risk_item("RISK", "Interest rate sensitivity — Euribor 12M at 2.2–2.3%; any reversal upward directly compresses net yield on leveraged properties.", "https://www.sijoittaja.fi/424295/asuntosijoittaminen-vuonna-2026/", "sijoittaja.fi")
+    )
+
+    nb_risks = (
+        risk_item("HIGH", "New-build oversupply: developers are offering concessions that compete directly with private sellers.", "https://www.salkunrakentaja.fi/2024/05/yit-myymattomat-asunnot/", "Salkunrakentaja") +
+        risk_item("MED",  "381 construction-sector bankruptcies in January 2025 alone — pre-completion developer risk.", "https://www.rakennuslehti.fi/2025/02/konkurssiin-haettiin-tammikuussa-kymmenia-rakennusalan-yrityksia/", "Rakennuslehti")
+    )
+
+    tram_crit = (
+        crit_item(f"Free-market listings (habitationType = 1)") +
+        crit_item(f"Velaton hinta ≤ {PRICE_MAX:,} €") +
+        crit_item(f"Housing-company loan ≤ {int(LOAN_RATIO_MAX*100)}% of debt-free price") +
+        crit_item("Built ≥ 2000, or older with a completed pipe renovation") +
+        crit_item("1980–1995 builds without confirmed pipe reno excluded") +
+        crit_item(f"≤ {MAX_STOP_DIST_M} m walk from a Vantaa light-rail (ratikka) stop")
+    )
+
+    uu_crit = (
+        crit_item("Free-market listings only") +
+        crit_item(f"Velaton hinta ≤ {UUSIMAA_PRICE_MAX:,} €") +
+        crit_item(f"Housing-company loan ≤ {int(UUSIMAA_LOAN_RATIO_MAX*100)}% of debt-free price") +
+        crit_item("Built ≥ 2000, or older with confirmed pipe reno") +
+        crit_item(f"Rented-out: all shown · Unrented: top {UUSIMAA_TOP_UNRENTED} by score") +
+        crit_item(f"🚋 tram badge if ≤ {MAX_STOP_DIST_M} m from a Vantaa ratikka stop")
+    )
+
+    nb_crit = (
+        crit_item("Newly built or under-construction apartments only") +
+        crit_item(f"Velaton hinta ≤ {UUSIMAA_PRICE_MAX:,} €") +
+        crit_item(f"Housing-company loan ≤ {int(UUSIMAA_LOAN_RATIO_MAX*100)}% of debt-free price") +
+        crit_item("Deduplicated to one listing per building") +
+        crit_item("Sorted by hub-proximity score")
+    )
+
+    chevron_svg = '<svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>'
+    filter_svg  = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="18" x2="20" y2="18"></line><circle cx="9" cy="6" r="2" fill="#f5f6f8"></circle><circle cx="15" cy="12" r="2" fill="#f5f6f8"></circle><circle cx="7" cy="18" r="2" fill="#f5f6f8"></circle></svg>'
+    close_svg   = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18"></path><path d="M6 6l12 12"></path></svg>'
 
     html = f"""<!DOCTYPE html>
 <html lang="fi">
@@ -1417,361 +1518,405 @@ def generate_html_report(confirmed: list[dict], candidates: list[dict],
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Oikotie — asuntoanalyysi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after {{ box-sizing: border-box; margin: 0; padding: 0; }}
-body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-       background: #f4f5f7; color: #1a1a2e; padding: 2rem 1rem; }}
-header {{ max-width: 1100px; margin: 0 auto 1.5rem; }}
-header h1 {{ font-size: 1.5rem; font-weight: 700; margin-bottom: .25rem; }}
-header p {{ color: #555; font-size: .85rem; }}
-.criteria {{ max-width: 1100px; margin: 0 auto 1.5rem;
-  background: #e8f4fd; border-left: 4px solid #2196f3;
-  padding: .75rem 1rem; border-radius: 0 6px 6px 0;
-  font-size: .82rem; color: #333; line-height: 1.7; }}
-.tabs {{ max-width: 1100px; margin: 0 auto 1rem; display: flex; gap: .5rem; }}
-.tab-btn {{ padding: .45rem 1.1rem; border: 1px solid #ccc; background: #fff;
-  border-radius: 6px; cursor: pointer; font-size: .85rem; font-weight: 500; }}
-.tab-btn.active {{ background: #1565c0; color: #fff; border-color: #1565c0; }}
-.tab-panel {{ display: none; }}
-.tab-panel.active {{ display: block; }}
-.grid {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1rem; max-width: 1100px; margin: 0 auto; }}
+::selection {{ background: rgba(255,106,44,0.22); }}
+:focus-visible {{ outline: 2px solid #ff6a2c; outline-offset: 2px; }}
+body {{ font-family: 'Public Sans', system-ui, sans-serif;
+  background: #ffffff; color: #14161c; font-size: 15px;
+  line-height: 1.55; padding-bottom: 56px; }}
+/* ── Top bar ── */
+.topbar {{ position: sticky; top: 0; z-index: 20;
+  background: rgba(255,255,255,0.93); backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(20,22,28,0.1);
+  padding: 10px 16px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }}
+.topbar-brand {{ display: flex; align-items: center; gap: 8px; margin-right: auto; }}
+.topbar-mark {{ width: 30px; height: 30px; border-radius: 8px; background: #ff6a2c; flex-shrink: 0; }}
+.topbar-name {{ font-family: 'Manrope', system-ui, sans-serif; font-weight: 800; font-size: 18px; }}
+.seg {{ display: inline-flex; overflow: hidden;
+  border: 1px solid rgba(20,22,28,0.14); border-radius: 999px; flex-shrink: 0; }}
+.seg-btn {{ padding: 8px 16px; border: none; cursor: pointer;
+  font-family: 'Public Sans', sans-serif; font-size: 12.5px; font-weight: 700;
+  white-space: nowrap; background: transparent; color: #14161c; }}
+.seg-btn.active {{ background: #ff6a2c; color: #ffffff; }}
+/* ── Content ── */
+.content {{ max-width: 1080px; margin: 0 auto; padding: 28px 16px 0; }}
+/* ── Header ── */
+.page-title {{ font-family: 'Manrope', system-ui, sans-serif; font-weight: 800;
+  font-size: clamp(24px, 4.5vw, 34px); line-height: 1.15; letter-spacing: -0.01em; margin: 0 0 8px; }}
+.page-meta {{ color: rgba(20,22,28,0.6); font-size: 13px; margin: 0 0 16px; }}
+/* ── Controls ── */
+.controls {{ display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 14px; }}
+.filters-btn {{ display: inline-flex; align-items: center; gap: 8px;
+  background: #f5f6f8; border: 1px solid rgba(20,22,28,0.14); border-radius: 999px;
+  padding: 9px 16px; font-family: 'Public Sans', sans-serif; font-weight: 600;
+  font-size: 13px; color: #14161c; cursor: pointer; }}
+.filters-btn:hover {{ background: #eef0f3; }}
+.result-count {{ font-size: 12px; color: rgba(20,22,28,0.45); margin-left: auto; }}
+/* ── Risk panel ── */
+.risk-panel {{ background: #fff1e8; border: 1px solid #ffdec8;
+  border-radius: 14px; overflow: hidden; margin-bottom: 20px; }}
+.risk-panel > summary {{ list-style: none; padding: 13px 16px; cursor: pointer;
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  font-family: 'Public Sans', sans-serif; font-weight: 700; font-size: 14px; color: #8a3609; }}
+.risk-panel > summary::-webkit-details-marker {{ display: none; }}
+.risk-panel > summary .chevron {{ flex-shrink: 0; transition: transform 0.2s; }}
+details.risk-panel[open] > summary .chevron {{ transform: rotate(180deg); }}
+.risk-grid {{ display: flex; flex-direction: column; gap: 6px; padding: 0 14px 14px; }}
+.risk-item {{ display: flex; align-items: baseline; gap: 8px;
+  background: #ffffff; border-radius: 10px; padding: 8px 10px; }}
+.risk-sev {{ font-size: 10.5px; font-weight: 700; padding: 2px 7px;
+  border-radius: 999px; white-space: nowrap; flex-shrink: 0; }}
+.risk-sev.high {{ background: #ffdec8; color: #8a3609; }}
+.risk-sev.med  {{ background: #eef0f3; color: #565c68; }}
+.risk-sev.opp  {{ background: #d4f4e0; color: #1a6b3a; }}
+.risk-sev.risk {{ background: #eef0f3; color: #565c68; }}
+.risk-text {{ flex: 1; font-size: 12.5px; color: rgba(20,22,28,0.7); line-height: 1.5; }}
+.risk-link {{ font-size: 11px; color: #8a3609; border: 1px solid #ffdec8;
+  padding: 2px 8px; border-radius: 999px; text-decoration: none;
+  white-space: nowrap; flex-shrink: 0; }}
+.risk-link:hover {{ background: #ffdec8; }}
+/* ── Sections ── */
+.sec {{ margin-top: 28px; }}
+.sec-title {{ font-family: 'Manrope', system-ui, sans-serif;
+  font-weight: 800; font-size: 19px; margin: 0 0 4px; }}
+.sec-note {{ font-size: 12.5px; color: rgba(20,22,28,0.55); margin: 0 0 12px; }}
+.sec-count {{ font-family: 'Public Sans', sans-serif; font-weight: 400;
+  font-size: 13px; color: rgba(20,22,28,0.4); }}
+.sec-rented .sec-title {{ color: #0d2c78; }}
+.sec-new    .sec-title {{ color: #123a9e; }}
+.sec-reno   .sec-title {{ color: #c94a10; }}
+.sec-cand   .sec-title {{ color: #e85817; }}
+.empty {{ text-align: center; color: rgba(20,22,28,0.45); padding: 2rem; }}
+/* ── Cards grid ── */
+.grid {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(272px, 1fr)); gap: 14px; }}
 /* ── Card ── */
-.card {{ background: #fff; border-radius: 12px; padding: 18px;
-  box-shadow: 0 1px 4px rgba(0,0,0,.07); display: flex; flex-direction: column; gap: .35rem; }}
-.card-top {{ display: flex; justify-content: space-between; align-items: center; margin-bottom: .1rem; flex-wrap: wrap; gap: .2rem; }}
-.card-rank {{ font-size: .73rem; font-weight: 700; color: #999; letter-spacing: .02em; text-transform: uppercase; }}
-.card-view-link {{ font-size: .78rem; color: #1565c0; text-decoration: none; font-weight: 600; flex-shrink: 0; }}
-.card-view-link:hover {{ text-decoration: underline; }}
-.card-price {{ font-size: 1.55rem; font-weight: 700; letter-spacing: -.5px; color: #1a1a2e; line-height: 1.1; }}
-.card-price-sub {{ font-size: .82rem; font-weight: 400; color: #999; margin-left: 3px; }}
-.card-monthly {{ font-size: 1.0rem; font-weight: 600; color: #1565c0; white-space: nowrap; }}
-.card-yield {{ font-size: .82rem; font-weight: 600; color: #2e7d32; }}
-.card-loan {{ font-size: .78rem; color: #777; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }}
-.card-meta {{ font-size: .8rem; color: #666; margin-top: .05rem; }}
-.card-address {{ font-size: .84rem; color: #444; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }}
-.card-address a {{ color: #1a1a2e; text-decoration: none; font-weight: 500; }}
-.card-address a:hover {{ color: #1565c0; }}
-.card-hub {{ font-size: .78rem; color: #555; }}
-.card-divider {{ border: none; border-top: 1px solid #eee; margin: .2rem 0; }}
-.card-badges {{ display: flex; gap: .3rem; flex-wrap: wrap; }}
-.badge {{ font-size: .7rem; font-weight: 600; padding: 2px 8px;
-  border-radius: 99px; white-space: nowrap; }}
-.badge.new  {{ background: #d4f4e0; color: #1a6b3a; }}
-.badge.reno {{ background: #fde8d4; color: #7a3a0a; }}
-.badge.cand {{ background: #fff3cd; color: #7a5a00; }}
-.badge.rent {{ background: #e8d4f4; color: #4a1a6b; }}
-.badge.tram {{ background: #e3f2fd; color: #0d47a1; max-width: 160px; overflow: hidden; text-overflow: ellipsis; }}
-.stop-note {{ font-size: .75rem; color: #2a6496; background: #eef5fb;
-  border-left: 3px solid #2a6496; padding: .2rem .5rem; border-radius: 0 3px 3px 0; }}
-.stop-link {{ font-size: .68rem; color: #2a6496; border: 1px solid #2a6496;
-  padding: 0 .35rem; border-radius: 3px; text-decoration: none; margin-left: .3rem; white-space: nowrap; }}
-.stop-link:hover {{ background: #2a6496; color: #fff; }}
-.risk-flags {{ list-style: none; margin: .1rem 0; padding: 0; display: flex; flex-direction: column; gap: .2rem; }}
-.risk-flags li {{ font-size: .72rem; background: #fff5f5; border-left: 3px solid #c0392b;
-  padding: .2rem .5rem; border-radius: 0 3px 3px 0;
-  display: flex; justify-content: space-between; align-items: baseline; gap: .4rem; }}
-.rf-text {{ color: #7a1010; flex: 1; }}
-.rf-link {{ font-size: .66rem; color: #c0392b; border: 1px solid #c0392b;
-  padding: 0 .3rem; border-radius: 3px; text-decoration: none; white-space: nowrap; flex-shrink: 0; }}
-.rf-link:hover {{ background: #c0392b; color: #fff; }}
-.reno-note {{ font-size: .72rem; color: #888; border-top: 1px solid #eee;
-  padding-top: .3rem; line-height: 1.4; }}
+.card {{ background: #f5f6f8; border: 1px solid rgba(20,22,28,0.08);
+  border-radius: 14px; padding: 16px; display: flex; flex-direction: column; gap: 8px; }}
+.card-top {{ display: flex; justify-content: space-between; align-items: center; }}
+.card-rank {{ font-size: 11px; font-weight: 700; color: rgba(20,22,28,0.4); letter-spacing: 0.03em; }}
+.card-view-link {{ display: inline-flex; align-items: center; gap: 3px;
+  font-size: 12px; font-weight: 700; color: #c94a10; text-decoration: none; }}
+.card-view-link:hover {{ opacity: 0.8; }}
+.card-price {{ font-family: 'Manrope', system-ui, sans-serif;
+  font-weight: 800; font-size: 25px; line-height: 1.1; }}
+.card-price-sub {{ font-family: 'Public Sans', sans-serif;
+  font-size: 12px; font-weight: 400; color: rgba(20,22,28,0.4); }}
+.card-monthly {{ font-size: 15px; font-weight: 700; color: #c94a10; }}
+.card-loan {{ font-size: 12px; color: rgba(20,22,28,0.55); }}
+.card-meta {{ font-size: 12.5px; color: rgba(20,22,28,0.7); margin-top: 2px; }}
+.card-address {{ font-size: 13px; font-weight: 700; }}
+.card-address a {{ color: #14161c; text-decoration: none; }}
+.card-address a:hover {{ color: #c94a10; }}
+.card-hub {{ font-size: 12px; color: rgba(20,22,28,0.55); }}
+.card-divider {{ height: 1px; background: rgba(20,22,28,0.08); margin: 2px 0; }}
+.card-badges {{ display: flex; gap: 6px; flex-wrap: wrap; }}
+.badge {{ font-size: 11px; font-weight: 600; padding: 3px 10px;
+  border-radius: 999px; white-space: nowrap; }}
+.badge.new  {{ background: #eef0f3; color: #33394d; }}
+.badge.reno {{ background: #e8eefd; color: #0d2c78; }}
+.badge.cand {{ background: #ffdec8; color: #8a3609; }}
+.badge.rent {{ background: #123a9e; color: #ffffff; }}
+.badge.tram {{ background: #f7f8fa; color: #565c68; }}
+/* ── Card details ── */
+.card-details-btn {{ display: inline-flex; align-items: center; gap: 4px;
+  background: transparent; border: none; padding: 2px 0; margin-top: 2px;
+  font-size: 12px; font-weight: 700; color: #1a4fd6; cursor: pointer; align-self: flex-start; }}
+.card-details-btn .chevron {{ transition: transform 0.2s; }}
+.card-details-btn.open .chevron {{ transform: rotate(180deg); }}
+.card-details-body {{ display: flex; flex-direction: column; gap: 6px; margin-top: 2px; }}
+.card-details-body[hidden] {{ display: none; }}
+.card-note {{ font-size: 12px; color: #123a9e; background: #e8eefd;
+  border-left: 3px solid #1a4fd6; padding: 6px 8px;
+  border-radius: 0 8px 8px 0; margin: 0; line-height: 1.5; }}
+.card-flag {{ display: flex; justify-content: space-between; align-items: baseline;
+  gap: 8px; font-size: 11.5px; background: #fff1e8;
+  border-left: 3px solid #ff6a2c; padding: 6px 8px; border-radius: 0 8px 8px 0; }}
+.card-flag-text {{ color: #8a3609; flex: 1; line-height: 1.5; }}
+.card-flag-link {{ font-size: 10.5px; color: #8a3609; border: 1px solid #ffdec8;
+  padding: 1px 6px; border-radius: 999px; text-decoration: none; white-space: nowrap; flex-shrink: 0; }}
+.card-flag-link:hover {{ background: #ffdec8; }}
+.card-reno {{ font-size: 11.5px; color: rgba(20,22,28,0.45);
+  border-top: 1px solid rgba(20,22,28,0.1); padding-top: 6px; margin: 0; line-height: 1.5; }}
+.card-yield {{ font-size: 11.5px; color: #1a6b3a; background: #d4f4e0;
+  padding: 4px 8px; border-radius: 6px; }}
 /* ── Table ── */
-.tbl-wrap {{ max-width: 1100px; margin: 0 auto; overflow-x: auto; }}
-table {{ border-collapse: collapse; width: 100%; font-size: .82rem; }}
-th {{ background: #1565c0; color: #fff; padding: .5rem .75rem;
+.tbl-wrap {{ overflow-x: auto; margin-top: 8px; }}
+table {{ width: 100%; border-collapse: collapse; font-size: 13px;
+  background: #f5f6f8; border-radius: 12px; overflow: hidden; }}
+thead tr {{ background: #14161c; }}
+th {{ padding: 10px 12px; font-size: 11px; letter-spacing: 0.06em;
+  text-transform: uppercase; color: #ffffff; background: #14161c;
   text-align: left; cursor: pointer; white-space: nowrap; user-select: none; }}
-th:hover {{ background: #1976d2; }}
-td {{ padding: .45rem .75rem; border-bottom: 1px solid #e8e8e8; vertical-align: top; }}
-td a {{ color: #1565c0; text-decoration: none; }}
-td a:hover {{ text-decoration: underline; }}
+th:hover {{ background: #33394d; }}
+td {{ padding: 8px 12px; border-bottom: 1px solid rgba(20,22,28,0.08); vertical-align: top; }}
+td a {{ color: #c94a10; text-decoration: none; font-weight: 700; }}
+td a:hover {{ opacity: 0.8; }}
 .num {{ text-align: right; white-space: nowrap; }}
-tr.row-confirmed:hover {{ background: #f0f8ff; }}
-tr.row-cand {{ background: #fffdf0; }}
-tr.row-cand:hover {{ background: #fff8dc; }}
+tr.row-cand {{ background: #fff1e8; }}
+tr.row-cand:hover {{ background: #ffdec8; }}
+tr.row-confirmed:hover {{ background: rgba(20,22,28,0.02); }}
 .sort-asc::after {{ content: " ▲"; }}
 .sort-desc::after {{ content: " ▼"; }}
-/* ── Sections ── */
-.sec {{ margin-top: 2rem; }}
-.sec-title {{ font-size: 1rem; font-weight: 700; margin: 0 auto .3rem; max-width: 1100px; }}
-.sec-note  {{ font-size: .8rem; color: #888; margin: 0 auto .75rem; max-width: 1100px; }}
-.sec-rented .sec-title {{ color: #4a1a6b; }}
-.sec-new    .sec-title {{ color: #1a6b3a; }}
-.sec-reno   .sec-title {{ color: #7a3a0a; }}
-.sec-cand   .sec-title {{ color: #7a5a00; }}
-.empty {{ text-align: center; color: #888; padding: 2rem; }}
-/* ── Market risks ── */
-.market-risks {{ max-width: 1100px; margin: .75rem auto; background: #fffbf0;
-  border: 1px solid #e6c84a; border-radius: 8px; overflow: hidden; }}
-.market-risks summary {{ padding: .6rem 1rem; cursor: pointer; font-size: .85rem;
-  font-weight: 600; color: #7a5a00; user-select: none; }}
-.market-risks summary:hover {{ background: #fff3cd; }}
-.mr-grid {{ display: flex; flex-direction: column; gap: .3rem; padding: .5rem 1rem .75rem; }}
-.mr-item {{ display: flex; align-items: baseline; gap: .5rem; font-size: .78rem;
-  background: #fff; border-radius: 4px; padding: .3rem .5rem; }}
-.mr-sev {{ font-size: .66rem; font-weight: 700; padding: 1px 5px; border-radius: 3px;
-  white-space: nowrap; flex-shrink: 0; }}
-.mr-opp  .mr-sev {{ background: #d4f4e0; color: #1a6b3a; }}
-.mr-high .mr-sev {{ background: #ffe0e0; color: #8b0000; }}
-.mr-med  .mr-sev {{ background: #fff3cd; color: #7a5a00; }}
-.mr-text {{ flex: 1; color: #444; line-height: 1.4; }}
-.mr-item a {{ font-size: .68rem; color: #7a5a00; border: 1px solid #c8a800;
-  padding: 0 .3rem; border-radius: 3px; text-decoration: none; white-space: nowrap; flex-shrink: 0; }}
-.mr-item a:hover {{ background: #c8a800; color: #fff; }}
-/* ── Mode nav ── */
-.mode-nav {{ max-width: 1100px; margin: 0 auto 1.5rem; display: flex; gap: .5rem;
-  border-bottom: 2px solid #d0d0d8; padding-bottom: .6rem;
-  position: sticky; top: 0; z-index: 10; background: #f4f5f7; padding-top: .5rem; }}
-.mode-btn {{ padding: .55rem 1.5rem; border: 2px solid transparent; background: #f0f0f4;
-  border-radius: 8px; cursor: pointer; font-size: .9rem; font-weight: 600; color: #555; }}
-.mode-btn.active {{ background: #1565c0; color: #fff; border-color: #1565c0; }}
-.sec-count {{ font-size: .8rem; font-weight: 400; color: #999; }}
-@media (max-width: 480px) {{
+/* ── Tab panels ── */
+.tab-panel {{ display: none; }}
+.tab-panel.active {{ display: block; }}
+/* ── Filters sheet ── */
+.filters-scrim {{ position: fixed; inset: 0; background: rgba(20,22,28,0.45); z-index: 30; display: none; }}
+.filters-sheet {{ position: fixed; left: 0; right: 0; bottom: 0; z-index: 31;
+  background: #ffffff; border-radius: 20px 20px 0 0;
+  box-shadow: 0 -12px 32px rgba(20,22,28,0.2);
+  max-width: 1080px; margin: 0 auto; max-height: 80vh; overflow-y: auto; display: none; }}
+.filters-header {{ display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 20px 8px; }}
+.filters-title {{ font-family: 'Manrope', system-ui, sans-serif;
+  font-weight: 800; font-size: 18px; margin: 0; }}
+.filters-close {{ width: 32px; height: 32px; border-radius: 999px; border: none;
+  background: #f5f6f8; display: flex; align-items: center; justify-content: center;
+  cursor: pointer; flex-shrink: 0; }}
+.filters-body {{ padding: 4px 20px 28px; display: flex; flex-direction: column; gap: 10px; }}
+.filters-crit {{ display: flex; gap: 10px; align-items: baseline;
+  background: #f5f6f8; border-radius: 12px; padding: 10px 14px; }}
+.filters-crit-dot {{ width: 6px; height: 6px; border-radius: 50%;
+  background: #ff6a2c; flex-shrink: 0; margin-top: 6px; }}
+.filters-crit-text {{ font-size: 13.5px; line-height: 1.5; }}
+@media (max-width: 600px) {{
   .grid {{ grid-template-columns: 1fr; }}
-  body {{ padding: 1rem .5rem; }}
+  .seg-btn {{ padding: 8px 10px; font-size: 11.5px; }}
 }}
 </style>
 </head>
 <body>
-<div class="mode-nav">
-  <button class="mode-btn active" onclick="showMode('tram', this)">🚋 Vantaan Ratikka</button>
-  <button class="mode-btn" onclick="showMode('uusimaa', this)">🏘 PKS Vuokratut</button>
-  <button class="mode-btn" onclick="showMode('newbuild', this)">🏗 PKS Uutuudet</button>
+
+<!-- ── Top bar ── -->
+<div class="topbar">
+  <div class="topbar-brand">
+    <div class="topbar-mark"></div>
+    <span class="topbar-name">Oikotie</span>
+  </div>
+  <div class="seg">
+    <button class="seg-btn active" onclick="showMode('tram', this)">🚋 Vantaan Ratikka</button>
+    <button class="seg-btn" onclick="showMode('uusimaa', this)">🏘 PKS Vuokratut</button>
+    <button class="seg-btn" onclick="showMode('newbuild', this)">🏗 PKS Uutuudet</button>
+  </div>
 </div>
+
 <!-- ═══════════════════════════════════════════════════════ TRAM VIEW -->
 <div id="mode-tram">
-<header>
-  <h1>Oikotie — asunnot lähellä Vantaan ratikkaa</h1>
-  <p>Generated {run_time} &nbsp;·&nbsp;
-     {len(rented_cards)} rented out &nbsp;·&nbsp;
-     {len(new_cards)} new builds &nbsp;·&nbsp;
-     {len(pipe_cards)} pipe reno done &nbsp;·&nbsp;
-     {len(cand_cards)} candidates &nbsp;·&nbsp;
-     ranked by score</p>
-</header>
-<div class="criteria">
-  <strong>Filters:</strong>
-  Free-market (habitationType=1) · velaton hinta ≤ {PRICE_MAX:,} € ·
-  loan ≤ {int(LOAN_RATIO_MAX*100)}% of debt-free price ·
-  Built ≥ 2000 <em>or</em> older with completed pipe renovation ·
-  1980–1995 builds without confirmed pipe reno excluded ·
-  ≤ {MAX_STOP_DIST_M} m from a tram stop
-</div>
-<details class="market-risks">
-  <summary>⚠️ Market &amp; project risk factors (click to expand)</summary>
-  <div class="mr-grid">
-    <div class="mr-item mr-high">
-      <span class="mr-sev">HIGH</span>
-      <span class="mr-text">Vantaa apartment prices have been the worst-performing major city 2024–2025 (–9.1% peak YoY, –5.2% May 2025)</span>
-      <a href="https://www.helsinkitimes.fi/finland/finland-news/domestic/27245-housing-prices-drop-again-in-may-with-vantaa-hit-hardest.html" target="_blank" rel="noopener">helsinkitimes</a>
+  <div class="content">
+    <h1 class="page-title">Oikotie — asunnot lähellä Vantaan ratikkaa</h1>
+    <p class="page-meta">Generated {run_time} · {len(rented_cards)} rented out · {len(new_cards)} new builds · {len(pipe_cards)} pipe reno done · {len(cand_cards)} candidates · ranked by score</p>
+    <div class="controls">
+      <button class="filters-btn" onclick="openFilters()">{filter_svg} Filters</button>
+      <div class="seg">
+        <button class="seg-btn view-btn active" data-view="cards" onclick="showTab('tram-cards','mode-tram',this)">Cards</button>
+        <button class="seg-btn view-btn" data-view="table" onclick="showTab('tram-table','mode-tram',this)">Table</button>
+      </div>
+      <span class="result-count">{total_tram} listings</span>
     </div>
-    <div class="mr-item mr-high">
-      <span class="mr-sev">HIGH</span>
-      <span class="mr-text">Rental vacancy in HMA tripled 2020–2024; Vantaa occupancy declined Q4 2025 while Helsinki/Espoo held steady</span>
-      <a href="https://innagroup.fi/en/news/market-reviews/residential-rental-market-q4-2025-seasonal-fluctuations-and-economic-conditions-reflected-in-q4-outlook-for-2026-cautiously-upward/" target="_blank" rel="noopener">INNA Q4 2025</a>
+    <details class="risk-panel">
+      <summary><span style="flex:1; min-width:0;">⚠️ Market &amp; project risk factors</span>{chevron_svg}</summary>
+      <div class="risk-grid">{tram_risks}</div>
+    </details>
+  </div>
+  <div class="content">
+    <div id="tab-tram-cards" class="tab-panel active">
+      {tram_cards_body}
     </div>
-    <div class="mr-item mr-high">
-      <span class="mr-sev">HIGH</span>
-      <span class="mr-text">Tram budget already overrun 16%+ (€647M → €750M) before construction started; Vantaa in €79.7M fiscal deficit with €544M tram commitment</span>
-      <a href="https://www.mtvuutiset.fi/artikkeli/vantaan-ratikan-hinta-noussut-750-miljoonaan-selvasti-muita-kaupunkeja-kalliimpi/9246426" target="_blank" rel="noopener">MTV Uutiset</a>
-    </div>
-    <div class="mr-item mr-high">
-      <span class="mr-sev">HIGH</span>
-      <span class="mr-text">New-build oversupply: YIT had 1,359 completed unsold units (full year inventory) in 2024; developers offering concessions, competing directly with private investors</span>
-      <a href="https://www.salkunrakentaja.fi/2024/05/yit-myymattomat-asunnot/" target="_blank" rel="noopener">salkunrakentaja</a>
-    </div>
-    <div class="mr-item mr-med">
-      <span class="mr-sev">MED</span>
-      <span class="mr-text">Tram opens at earliest 2029 — asking prices already reflect "tram premium" but buyers bear 3+ years of financing with no transit benefit</span>
-      <a href="https://ratikka.vantaa.fi/en/traffic-and-transport/vantaa-light-rail/information-about-vantaa-light-rail" target="_blank" rel="noopener">ratikka.vantaa.fi</a>
-    </div>
-    <div class="mr-item mr-med">
-      <span class="mr-sev">MED</span>
-      <span class="mr-text">Finnish construction sector: 381 bankruptcies in Jan 2025 alone — risk of developer insolvency on pre-completion new builds</span>
-      <a href="https://www.rakennuslehti.fi/2025/02/konkurssiin-haettiin-tammikuussa-kymmenia-rakennusalan-yrityksia/" target="_blank" rel="noopener">rakennuslehti</a>
+    <div id="tab-tram-table" class="tab-panel">
+      <div class="tbl-wrap">
+        <table id="tram-table">
+          <thead><tr>
+            <th onclick="sortTable('tram-table',0)">Rank</th>
+            <th onclick="sortTable('tram-table',1)">Address</th>
+            <th onclick="sortTable('tram-table',2)">District</th>
+            <th onclick="sortTable('tram-table',3)">Price</th>
+            <th onclick="sortTable('tram-table',4)">Loan</th>
+            <th onclick="sortTable('tram-table',5)">Rooms</th>
+            <th onclick="sortTable('tram-table',6)">m²</th>
+            <th onclick="sortTable('tram-table',7)">Year</th>
+            <th onclick="sortTable('tram-table',8)">Status</th>
+          </tr></thead>
+          <tbody>{tram_table_body}</tbody>
+        </table>
+      </div>
     </div>
   </div>
-</details>
-<div class="tabs">
-  <button class="tab-btn active" onclick="showTab('tram-cards','mode-tram',this)">Cards</button>
-  <button class="tab-btn" onclick="showTab('tram-table','mode-tram',this)">Table / Analysis</button>
-</div>
-<div id="tab-tram-cards" class="tab-panel active">
-  {tram_cards_body}
-</div>
-<div id="tab-tram-table" class="tab-panel">
-  <div class="tbl-wrap">
-    <table id="tram-table">
-      <thead><tr>
-        <th onclick="sortTable('tram-table',0)">Address</th>
-        <th onclick="sortTable('tram-table',1)">District</th>
-        <th onclick="sortTable('tram-table',2)">City</th>
-        <th onclick="sortTable('tram-table',3)">Price</th>
-        <th onclick="sortTable('tram-table',4)">Velaton</th>
-        <th onclick="sortTable('tram-table',5)">Loan</th>
-        <th onclick="sortTable('tram-table',6)">Rooms</th>
-        <th onclick="sortTable('tram-table',7)">m²</th>
-        <th onclick="sortTable('tram-table',8)">Year</th>
-        <th onclick="sortTable('tram-table',9)">Status</th>
-      </tr></thead>
-      <tbody>{tram_table_body}</tbody>
-    </table>
-  </div>
-</div>
 </div><!-- /mode-tram -->
 
 <!-- ═══════════════════════════════════════════════════ UUSIMAA VIEW -->
 <div id="mode-uusimaa" style="display:none">
-<header>
-  <h1>Oikotie — sijoitusasunnot PKS (Helsinki · Espoo · Vantaa)</h1>
-  <p>Generated {run_time} &nbsp;·&nbsp;
-     {len(uusimaa_rented)} rented out (all shown) &nbsp;·&nbsp;
-     {len(uusimaa_top5)} unrented watch list &nbsp;·&nbsp;
-     scored: hub · central · mall · quality</p>
-</header>
-<div class="criteria">
-  <strong>Filters:</strong>
-  Free-market · velaton hinta ≤ {UUSIMAA_PRICE_MAX:,} € ·
-  loan ≤ {int(UUSIMAA_LOAN_RATIO_MAX*100)}% · Built ≥ 2000 <em>or</em> older with pipe reno ·
-  1980–1995 without confirmed reno excluded ·
-  Rented-out: all shown &nbsp;·&nbsp; Unrented: top {UUSIMAA_TOP_UNRENTED} by score ·
-  🚋 tram badge if ≤ {MAX_STOP_DIST_M} m from Vantaan ratikka stop
-</div>
-<details class="market-risks">
-  <summary>📊 PKS market signals &amp; risks (click to expand)</summary>
-  <div class="mr-grid">
-    <div class="mr-item mr-opp">
-      <span class="mr-sev">OPP</span>
-      <span class="mr-text">Occupancy recovering — Helsinki metro rental occupancy 94% in Q3 2025, best since H1 2020; oversupply gradually melting away</span>
-      <a href="https://rettamanagement.fi/en/ajankohtaista/releases/finnish-residential-rental-market-q3-2025-strong-results-as-expected/" target="_blank" rel="noopener">Retta Q3 2025</a>
+  <div class="content">
+    <h1 class="page-title">Oikotie — sijoitusasunnot PKS (Helsinki · Espoo · Vantaa)</h1>
+    <p class="page-meta">Generated {run_time} · {len(uusimaa_rented)} rented out (all shown) · {len(uusimaa_top5)} unrented watch list · scored: hub · central · mall · quality</p>
+    <div class="controls">
+      <button class="filters-btn" onclick="openFilters()">{filter_svg} Filters</button>
+      <div class="seg">
+        <button class="seg-btn view-btn active" data-view="cards" onclick="showTab('uu-cards','mode-uusimaa',this)">Cards</button>
+        <button class="seg-btn view-btn" data-view="table" onclick="showTab('uu-table','mode-uusimaa',this)">Table</button>
+      </div>
+      <span class="result-count">{total_uu} listings</span>
     </div>
-    <div class="mr-item mr-opp">
-      <span class="mr-sev">OPP</span>
-      <span class="mr-text">Gross yields 5–7% in transit-connected PKS suburbs; HMA identified as clear growth area 2025–2026; new construction halted → supply constraint building</span>
-      <a href="https://investropa.com/blogs/news/helsinki-rental-yields" target="_blank" rel="noopener">Investropa 2026</a>
+    <details class="risk-panel">
+      <summary><span style="flex:1; min-width:0;">📊 PKS market signals &amp; risks</span>{chevron_svg}</summary>
+      <div class="risk-grid">{uu_risks}</div>
+    </details>
+  </div>
+  <div class="content">
+    <div id="tab-uu-cards" class="tab-panel active">
+      {uu_cards_body}
     </div>
-    <div class="mr-item mr-opp">
-      <span class="mr-sev">OPP</span>
-      <span class="mr-text">Prices near historical lows — buyers market; sellers negotiating; current correction may prove excellent entry if bought below replacement cost</span>
-      <a href="https://kasvutalous.fi/%F0%9F%8F%A0-asuntomarkkinoiden-toipuminen-suomessa-mita-tapahtuu-vuonna-2026/" target="_blank" rel="noopener">kasvutalous.fi</a>
-    </div>
-    <div class="mr-item mr-med">
-      <span class="mr-sev">RISK</span>
-      <span class="mr-text">Rental supply still abundant — non-subsidized rents declined –1.3% recently; upward rent pressure will take more time to materialize</span>
-      <a href="https://rettamanagement.fi/en/ajankohtaista/releases/finnish-residential-rental-market-q3-2025-strong-results-as-expected/" target="_blank" rel="noopener">Retta Management</a>
-    </div>
-    <div class="mr-item mr-med">
-      <span class="mr-sev">RISK</span>
-      <span class="mr-text">Price uncertainty — realistic planning range for Helsinki next 12 months: –3% to +2%; small further dip in early 2026 remains plausible</span>
-      <a href="https://investropa.com/blogs/news/helsinki-good-time" target="_blank" rel="noopener">Investropa 2026</a>
-    </div>
-    <div class="mr-item mr-high">
-      <span class="mr-sev">RISK</span>
-      <span class="mr-text">Pipe renovation liability in 1975–1995 Helsinki/Espoo/Vantaa stock — major capital expenditure risk; confirm renovation status before any offer</span>
-      <a href="https://www.kiinteistoliitto.fi/" target="_blank" rel="noopener">kiinteistöliitto</a>
-    </div>
-    <div class="mr-item mr-med">
-      <span class="mr-sev">RISK</span>
-      <span class="mr-text">Interest rate sensitivity — Euribor 12M at 2.2–2.3%; any reversal upward directly compresses net yield on leveraged properties</span>
-      <a href="https://www.sijoittaja.fi/424295/asuntosijoittaminen-vuonna-2026/" target="_blank" rel="noopener">sijoittaja.fi</a>
+    <div id="tab-uu-table" class="tab-panel">
+      <div class="tbl-wrap">
+        <table id="uu-table">
+          <thead><tr>
+            <th onclick="sortTable('uu-table',0)">Rank</th>
+            <th onclick="sortTable('uu-table',1)">Address</th>
+            <th onclick="sortTable('uu-table',2)">District</th>
+            <th onclick="sortTable('uu-table',3)">Price</th>
+            <th onclick="sortTable('uu-table',4)">Loan</th>
+            <th onclick="sortTable('uu-table',5)">Rooms</th>
+            <th onclick="sortTable('uu-table',6)">m²</th>
+            <th onclick="sortTable('uu-table',7)">Year</th>
+            <th onclick="sortTable('uu-table',8)">Hub</th>
+            <th onclick="sortTable('uu-table',9)">Status</th>
+          </tr></thead>
+          <tbody>{uu_table_body}</tbody>
+        </table>
+      </div>
     </div>
   </div>
-</details>
-<div class="tabs">
-  <button class="tab-btn active" onclick="showTab('uu-cards','mode-uusimaa',this)">Cards</button>
-  <button class="tab-btn" onclick="showTab('uu-table','mode-uusimaa',this)">Table / Analysis</button>
-</div>
-<div id="tab-uu-cards" class="tab-panel active">
-  {uu_cards_body}
-</div>
-<div id="tab-uu-table" class="tab-panel">
-  <div class="tbl-wrap">
-    <table id="uu-table">
-      <thead><tr>
-        <th onclick="sortTable('uu-table',0)">Address</th>
-        <th onclick="sortTable('uu-table',1)">District</th>
-        <th onclick="sortTable('uu-table',2)">City</th>
-        <th onclick="sortTable('uu-table',3)">Price</th>
-        <th onclick="sortTable('uu-table',4)">Velaton</th>
-        <th onclick="sortTable('uu-table',5)">Loan</th>
-        <th onclick="sortTable('uu-table',6)">Rooms</th>
-        <th onclick="sortTable('uu-table',7)">m²</th>
-        <th onclick="sortTable('uu-table',8)">Year</th>
-        <th onclick="sortTable('uu-table',9)">Nearest Hub</th>
-        <th onclick="sortTable('uu-table',10)">Score</th>
-      </tr></thead>
-      <tbody>{uu_table_body}</tbody>
-    </table>
-  </div>
-</div>
 </div><!-- /mode-uusimaa -->
 
 <!-- ════════════════════════════════════════════ NEW BUILD VIEW -->
 <div id="mode-newbuild" style="display:none">
-<header>
-  <h1>Oikotie — Uudisasunnot PKS (Helsinki · Espoo · Vantaa)</h1>
-  <p>{len(newbuild_pks)} listings &nbsp;·&nbsp;
-     velaton hinta ≤ {UUSIMAA_PRICE_MAX:,} € · loan ≤ {int(UUSIMAA_LOAN_RATIO_MAX*100)}% ·
-     Sorted by hub-proximity score</p>
-</header>
-  <div class="tabs">
-    <button class="tab-btn active" onclick="showTab('nb-cards','mode-newbuild',this)">Cards</button>
-    <button class="tab-btn" onclick="showTab('nb-table','mode-newbuild',this)">Table / Analysis</button>
+  <div class="content">
+    <h1 class="page-title">Oikotie — Uudisasunnot PKS (Helsinki · Espoo · Vantaa)</h1>
+    <p class="page-meta">{total_nb} listings · velaton hinta ≤ {UUSIMAA_PRICE_MAX:,} € · loan ≤ {int(UUSIMAA_LOAN_RATIO_MAX*100)}% · sorted by hub-proximity score</p>
+    <div class="controls">
+      <button class="filters-btn" onclick="openFilters()">{filter_svg} Filters</button>
+      <div class="seg">
+        <button class="seg-btn view-btn active" data-view="cards" onclick="showTab('nb-cards','mode-newbuild',this)">Cards</button>
+        <button class="seg-btn view-btn" data-view="table" onclick="showTab('nb-table','mode-newbuild',this)">Table</button>
+      </div>
+      <span class="result-count">{total_nb} listings</span>
+    </div>
+    <details class="risk-panel">
+      <summary><span style="flex:1; min-width:0;">⚠️ New build risk factors</span>{chevron_svg}</summary>
+      <div class="risk-grid">{nb_risks}</div>
+    </details>
   </div>
-  <div id="tab-nb-cards" class="tab-panel active">
-    {nb_cards_body}
-  </div>
-  <div id="tab-nb-table" class="tab-panel">
-    <table id="nb-table-el" class="results-table">
-      <thead><tr>
-        <th onclick="sortTable('nb-table-el',0)">Rank</th>
-        <th onclick="sortTable('nb-table-el',1)">Address</th>
-        <th onclick="sortTable('nb-table-el',2)">Price €</th>
-        <th onclick="sortTable('nb-table-el',3)">m²</th>
-        <th onclick="sortTable('nb-table-el',4)">Year</th>
-        <th onclick="sortTable('nb-table-el',5)">Monthly €</th>
-        <th onclick="sortTable('nb-table-el',6)">Hub</th>
-        <th onclick="sortTable('nb-table-el',7)">Score</th>
-      </tr></thead>
-      <tbody>{nb_table_body}</tbody>
-    </table>
+  <div class="content">
+    <div id="tab-nb-cards" class="tab-panel active">
+      {nb_cards_body}
+    </div>
+    <div id="tab-nb-table" class="tab-panel">
+      <div class="tbl-wrap">
+        <table id="nb-table-el">
+          <thead><tr>
+            <th onclick="sortTable('nb-table-el',0)">Rank</th>
+            <th onclick="sortTable('nb-table-el',1)">Address</th>
+            <th onclick="sortTable('nb-table-el',2)">District</th>
+            <th onclick="sortTable('nb-table-el',3)">Price</th>
+            <th onclick="sortTable('nb-table-el',4)">Loan</th>
+            <th onclick="sortTable('nb-table-el',5)">Rooms</th>
+            <th onclick="sortTable('nb-table-el',6)">m²</th>
+            <th onclick="sortTable('nb-table-el',7)">Year</th>
+            <th onclick="sortTable('nb-table-el',8)">Hub</th>
+            <th onclick="sortTable('nb-table-el',9)">Status</th>
+          </tr></thead>
+          <tbody>{nb_table_body}</tbody>
+        </table>
+      </div>
+    </div>
   </div>
 </div><!-- /mode-newbuild -->
 
+<!-- ── Filters bottom sheet ── -->
+<div id="filters-scrim" class="filters-scrim" onclick="closeFilters()"></div>
+<div id="filters-sheet" class="filters-sheet">
+  <div class="filters-header">
+    <h3 class="filters-title">Filters &amp; criteria</h3>
+    <button class="filters-close" onclick="closeFilters()" aria-label="Close">{close_svg}</button>
+  </div>
+  <div class="filters-body">
+    <div id="crit-tram" class="crit-panel">{tram_crit}</div>
+    <div id="crit-uusimaa" class="crit-panel" style="display:none">{uu_crit}</div>
+    <div id="crit-newbuild" class="crit-panel" style="display:none">{nb_crit}</div>
+  </div>
+</div>
+
 <script>
+var _activeMode = 'tram';
 function showMode(name, btn) {{
   document.querySelectorAll('[id^="mode-"]').forEach(v => v.style.display = 'none');
-  document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
-  document.getElementById('mode-' + name).style.display = 'block';
+  document.querySelectorAll('.topbar .seg-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('mode-' + name).style.display = '';
   btn.classList.add('active');
+  document.querySelectorAll('.crit-panel').forEach(d => d.style.display = 'none');
+  var cp = document.getElementById('crit-' + name);
+  if (cp) cp.style.display = '';
+  _activeMode = name;
 }}
 function showTab(tabId, modeId, btn) {{
-  const mode = document.getElementById(modeId);
+  var mode = document.getElementById(modeId);
   mode.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-  mode.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  mode.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
   document.getElementById('tab-' + tabId).classList.add('active');
   btn.classList.add('active');
 }}
+function openFilters() {{
+  document.getElementById('filters-scrim').style.display = '';
+  document.getElementById('filters-sheet').style.display = '';
+}}
+function closeFilters() {{
+  document.getElementById('filters-scrim').style.display = 'none';
+  document.getElementById('filters-sheet').style.display = 'none';
+}}
+function toggleDetails(id) {{
+  var body = document.getElementById(id);
+  var btn  = document.getElementById('btn-' + id);
+  var open = !body.hidden;
+  body.hidden = open;
+  btn.querySelector('.details-label').textContent = open ? 'Details' : 'Hide details';
+  if (open) {{ btn.classList.remove('open'); }} else {{ btn.classList.add('open'); }}
+}}
 const _sortState = {{}};
 function sortTable(tableId, col) {{
-  const st = _sortState[tableId] || {{c: -1, d: 1}};
-  if (st.c === col) st.d *= -1; else {{ st.c = col; st.d = 1; }}
+  var st = _sortState[tableId] || {{c: -1, d: 1}};
+  if (st.c === col) {{ st.d *= -1; }} else {{ st.c = col; st.d = 1; }}
   _sortState[tableId] = st;
-  const tbl = document.getElementById(tableId);
-  const tb  = tbl.querySelector('tbody');
-  const rows = Array.from(tb.querySelectorAll('tr'));
+  var tbl  = document.getElementById(tableId);
+  var tb   = tbl.querySelector('tbody');
+  var rows = Array.from(tb.querySelectorAll('tr'));
   tbl.querySelectorAll('th').forEach(h => h.classList.remove('sort-asc','sort-desc'));
   tbl.querySelectorAll('th')[col].classList.add(st.d === 1 ? 'sort-asc' : 'sort-desc');
-  rows.sort((a, b) => {{
-    const av = a.cells[col].innerText.replace(/[€ \s,%]/g,'');
-    const bv = b.cells[col].innerText.replace(/[€ \s,%]/g,'');
-    const an = parseFloat(av), bn = parseFloat(bv);
+  rows.sort(function(a, b) {{
+    var av = a.cells[col].innerText.replace(/[€  \t\n,%]/g,'');
+    var bv = b.cells[col].innerText.replace(/[€  \t\n,%]/g,'');
+    var an = parseFloat(av), bn = parseFloat(bv);
     if (!isNaN(an) && !isNaN(bn)) return (an - bn) * st.d;
     return av.localeCompare(bv, 'fi') * st.d;
   }});
   rows.forEach(r => tb.appendChild(r));
 }}
+(function() {{
+  if (window.innerWidth >= 880) {{
+    ['tram', 'uusimaa', 'newbuild'].forEach(function(m) {{
+      var modeEl = document.getElementById('mode-' + m);
+      if (!modeEl) return;
+      var tabMap = {{tram: 'tram-table', uusimaa: 'uu-table', newbuild: 'nb-table'}};
+      modeEl.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      modeEl.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+      var tp = document.getElementById('tab-' + tabMap[m]);
+      if (tp) tp.classList.add('active');
+      modeEl.querySelectorAll('.view-btn[data-view="table"]').forEach(b => b.classList.add('active'));
+    }});
+  }}
+}})();
 </script>
 </body>
 </html>"""
