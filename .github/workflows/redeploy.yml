@@ -2,6 +2,17 @@ name: Redeploy (no scrape)
 
 on:
   workflow_dispatch:
+  # Auto-redeploy on static-asset-only changes (css/js/manifest/icons) — this
+  # job never re-renders index.html, so it can't pick up template/Python
+  # changes; those need a real scrape (workflow_dispatch on scrape.yml).
+  push:
+    branches: [main]
+    paths:
+      - 'static/**'
+
+concurrency:
+  group: gh-pages-deploy
+  cancel-in-progress: false
 
 jobs:
   deploy:
@@ -18,6 +29,16 @@ jobs:
           path: data/
           key: never-match
           restore-keys: oikotie-cache-
+
+      - name: Copy static PWA assets
+        run: cp -r static/. data/
+
+      - name: Verify a report exists to redeploy
+        run: |
+          if [ ! -f data/index.html ]; then
+            echo "::error::data/index.html missing — no scrape cache to restore. Run 'Scrape & Deploy' first." >&2
+            exit 1
+          fi
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4

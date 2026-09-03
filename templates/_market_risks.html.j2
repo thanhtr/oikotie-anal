@@ -1,0 +1,14 @@
+{% macro risks(summary_text, items) -%}
+<details class="market-risks">
+  <summary>{{ summary_text }}</summary>
+  <div class="mr-grid">
+    {%- for r in items %}
+    <div class="mr-item mr-{{ r.severity }}">
+      <span class="mr-sev">{{ r.sev_label }}</span>
+      <span class="mr-text">{{ r.text }}</span>
+      <a href="{{ r.url }}" target="_blank" rel="noopener">{{ r.label }}</a>
+    </div>
+    {%- endfor %}
+  </div>
+</details>
+{%- endmacro %}

@@ -5,6 +5,10 @@ on:
     - cron: '0 5 * * 1'   # Mondays 5am UTC = 8am Helsinki (UTC+3)
   workflow_dispatch:           # manual trigger from GitHub UI
 
+concurrency:
+  group: gh-pages-deploy
+  cancel-in-progress: false
+
 jobs:
   scrape:
     runs-on: ubuntu-latest
@@ -42,6 +46,9 @@ jobs:
         with:
           path: data/
           key: oikotie-cache-${{ github.run_id }}
+
+      - name: Copy static PWA assets
+        run: cp -r static/. data/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
