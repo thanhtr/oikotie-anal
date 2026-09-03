@@ -133,13 +133,15 @@ def _card_context(l: dict, mode: str) -> dict:
 
 def _table_row_context(l: dict, mode: str, row_class: str = "") -> dict:
     dfp = l.get("debt_free_price_eur") or l.get("price_eur") or 0
+    rank = l.get("rank", "")
+    sc   = l.get("score", "")
+    rank_s = f"#{rank} · {sc}" if (rank is not None and rank != "") else "—"
     ctx = {
         "row_class": row_class,
+        "rank_s": rank_s,
         "url": l.get("listing_url") or "",
         "addr": l.get("address", "—"),
         "district": l.get("district") or "—",
-        "city": l.get("city") or "—",
-        "price_s": fmt_eur(l.get("price_eur")),
         "dfp_s": fmt_eur(dfp),
         "loan_s": _loan_ratio_str(l),
         "rooms": l.get("room_count", "—"),

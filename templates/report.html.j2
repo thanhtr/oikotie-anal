@@ -11,141 +11,229 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="icons/icon-192.png" sizes="192x192" type="image/png">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
-<meta name="theme-color" content="#1565c0" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#14151c" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ff6a2c">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Oikotie asunnot">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="report.css">
 </head>
 <body>
-<div class="mode-nav">
-  <button class="mode-btn active" onclick="showMode('tram', this)">🚋 Vantaan Ratikka</button>
-  <button class="mode-btn" onclick="showMode('uusimaa', this)">🏘 PKS Vuokratut</button>
-  <button class="mode-btn" onclick="showMode('newbuild', this)">🏗 PKS Uutuudet</button>
-  <button id="install-btn" class="install-btn" hidden>⬇ Install</button>
-</div>
 
-<!-- ═══════════════════════════════════════════════════════ TRAM VIEW -->
-<div id="mode-tram">
-<header>
-  <h1>Oikotie — asunnot lähellä Vantaan ratikkaa</h1>
-  <p>Generated {{ run_time }} &nbsp;·&nbsp;
-     {{ rented_count }} rented out &nbsp;·&nbsp;
-     {{ new_count }} new builds &nbsp;·&nbsp;
-     {{ pipe_count }} pipe reno done &nbsp;·&nbsp;
-     {{ cand_count }} candidates &nbsp;·&nbsp;
-     ranked by score</p>
-</header>
-<div class="criteria">
-  <strong>Filters:</strong>
-  Free-market (habitationType=1) · velaton hinta ≤ {{ "{:,}".format(price_max) }} € ·
-  loan ≤ {{ loan_ratio_max_pct }}% of debt-free price ·
-  Built ≥ 2000 <em>or</em> older with completed pipe renovation ·
-  1980–1995 builds without confirmed pipe reno excluded ·
-  ≤ {{ max_stop_dist_m }} m from a tram stop
-</div>
-{{ riskm.risks("⚠️ Market & project risk factors (click to expand)", tram_market_risks) }}
-<div class="tabs">
-  <button class="tab-btn active" onclick="showTab('tram-cards','mode-tram',this)">Cards</button>
-  <button class="tab-btn" onclick="showTab('tram-table','mode-tram',this)">Table / Analysis</button>
-</div>
-<div id="tab-tram-cards" class="tab-panel active">
-  {% for sec in tram_sections %}
-  <section class="sec {{ sec.cls }}">
-    <h2 class="sec-title">{{ sec.title }} <span class="sec-count">({{ sec.count }})</span></h2>
-    {% if sec.note %}<p class="sec-note">{{ sec.note }}</p>{% endif %}
-    <div class="grid">
-      {%- if sec.cards %}{% for l in sec.cards %}{{ cardm.card(l) }}{% endfor %}{% else %}<p class="empty">None this run.</p>{% endif -%}
-    </div>
-  </section>
-  {% endfor %}
-</div>
-<div id="tab-tram-table" class="tab-panel">
-  <div class="tbl-wrap">
-    <table id="tram-table">
-      <thead>{{ tablem.headers("tram-table", "tram") }}</thead>
-      <tbody>{% for row in tram_table_rows %}{{ tablem.row(row) }}{% endfor %}</tbody>
-    </table>
+<!-- ── Topbar ─────────────────────────────────────────────────────────── -->
+<div class="topbar">
+  <a class="topbar-brand" href=".">
+    <div class="topbar-mark"></div>
+    <span class="topbar-wordmark">Oikotie</span>
+  </a>
+  <div class="seg-group topbar-modes">
+    <button class="seg-btn active" onclick="showMode('tram',this)">🚋 Vantaan Ratikka</button>
+    <button class="seg-btn" onclick="showMode('uusimaa',this)">🏘 PKS Vuokratut</button>
+    <button class="seg-btn" onclick="showMode('newbuild',this)">🏗 PKS Uutuudet</button>
   </div>
 </div>
+
+<!-- ── Filters bottom sheet (shared) ─────────────────────────────────── -->
+<div id="filters-scrim" class="filters-scrim" onclick="closeFilters()"></div>
+<div id="filters-sheet" class="filters-sheet">
+  <div class="filters-header">
+    <h3 class="filters-title">Filters &amp; criteria</h3>
+    <button class="filters-close" onclick="closeFilters()" aria-label="Close">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="2.5" stroke-linecap="round">
+        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+  </div>
+  <div class="filters-body">
+    <div id="crit-tram" class="crit-panel active">
+      <div class="filters-crit">
+        Free-market (habitationType=1) &nbsp;·&nbsp;
+        Velaton hinta ≤ {{ "{:,}".format(price_max)|replace(",", " ") }} € &nbsp;·&nbsp;
+        Loan ≤ {{ loan_ratio_max_pct }}% of debt-free price &nbsp;·&nbsp;
+        Built ≥ 2000 <em>or</em> older with completed pipe renovation &nbsp;·&nbsp;
+        1980–1995 builds without confirmed pipe reno excluded &nbsp;·&nbsp;
+        ≤ {{ max_stop_dist_m }} m from a Vantaan ratikka stop
+      </div>
+    </div>
+    <div id="crit-uusimaa" class="crit-panel">
+      <div class="filters-crit">
+        Free-market &nbsp;·&nbsp;
+        Velaton hinta ≤ {{ "{:,}".format(uusimaa_price_max)|replace(",", " ") }} € &nbsp;·&nbsp;
+        Loan ≤ {{ uusimaa_loan_ratio_max_pct }}% &nbsp;·&nbsp;
+        Built ≥ 2000 <em>or</em> older with pipe reno &nbsp;·&nbsp;
+        1980–1995 without confirmed reno excluded &nbsp;·&nbsp;
+        Rented-out: all shown &nbsp;·&nbsp;
+        Unrented: top {{ uusimaa_top_unrented }} by score &nbsp;·&nbsp;
+        🚋 tram badge if ≤ {{ max_stop_dist_m }} m from Vantaan ratikka stop
+      </div>
+    </div>
+    <div id="crit-newbuild" class="crit-panel">
+      <div class="filters-crit">
+        PKS new construction &amp; under-construction &nbsp;·&nbsp;
+        Velaton hinta ≤ {{ "{:,}".format(uusimaa_price_max)|replace(",", " ") }} € &nbsp;·&nbsp;
+        Loan ≤ {{ uusimaa_loan_ratio_max_pct }}% &nbsp;·&nbsp;
+        Deduplicated to one listing per building &nbsp;·&nbsp;
+        Sorted by hub-proximity score
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ TRAM VIEW ══ -->
+{% set tram_total = rented_count + new_count + pipe_count + cand_count %}
+<div id="mode-tram">
+  <header>
+    <h1>Asunnot lähellä Vantaan ratikkaa</h1>
+    <p>Generated {{ run_time }} &nbsp;·&nbsp;
+       {{ rented_count }} rented out &nbsp;·&nbsp;
+       {{ new_count }} new builds &nbsp;·&nbsp;
+       {{ pipe_count }} pipe reno done &nbsp;·&nbsp;
+       {{ cand_count }} candidates &nbsp;·&nbsp;
+       ranked by score</p>
+  </header>
+  <div class="controls-row">
+    <button class="filters-btn" onclick="openFilters()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="4" y1="6" x2="20" y2="6"/>
+        <line x1="4" y1="12" x2="20" y2="12"/>
+        <line x1="4" y1="18" x2="20" y2="18"/>
+      </svg>
+      Filters
+    </button>
+    <div class="seg-group">
+      <button class="view-btn active" data-view="cards"
+              onclick="showTab('tram-cards','mode-tram',this)">Cards</button>
+      <button class="view-btn" data-view="table"
+              onclick="showTab('tram-table','mode-tram',this)">Table</button>
+    </div>
+    <span class="result-count">{{ tram_total }} listings</span>
+  </div>
+  {{ riskm.risks("⚠️ Market & project risk factors", tram_market_risks) }}
+  <div id="tab-tram-cards" class="tab-panel active">
+    {% set ns = namespace(cid=0) %}
+    {% for sec in tram_sections %}
+    <section class="sec {{ sec.cls }}">
+      <h2 class="sec-title">{{ sec.title }} <span class="sec-count">({{ sec.count }})</span></h2>
+      {% if sec.note %}<p class="sec-note">{{ sec.note }}</p>{% endif %}
+      <div class="grid">
+        {%- if sec.cards %}{% for l in sec.cards %}{% set ns.cid = ns.cid + 1 %}{{ cardm.card(l, "tc" ~ ns.cid) }}{% endfor %}{% else %}<p class="empty">None this run.</p>{% endif -%}
+      </div>
+    </section>
+    {% endfor %}
+  </div>
+  <div id="tab-tram-table" class="tab-panel">
+    <div class="tbl-wrap">
+      <table id="tram-table">
+        <thead>{{ tablem.headers("tram-table", "tram") }}</thead>
+        <tbody>{% for row in tram_table_rows %}{{ tablem.row(row) }}{% endfor %}</tbody>
+      </table>
+    </div>
+  </div>
 </div><!-- /mode-tram -->
 
-<!-- ═══════════════════════════════════════════════════ UUSIMAA VIEW -->
+<!-- ═══════════════════════════════════════════════════ UUSIMAA VIEW ══ -->
+{% set uu_total = uusimaa_rented_count + uusimaa_top5_count %}
 <div id="mode-uusimaa" style="display:none">
-<header>
-  <h1>Oikotie — sijoitusasunnot PKS (Helsinki · Espoo · Vantaa)</h1>
-  <p>Generated {{ run_time }} &nbsp;·&nbsp;
-     {{ uusimaa_rented_count }} rented out (all shown) &nbsp;·&nbsp;
-     {{ uusimaa_top5_count }} unrented watch list &nbsp;·&nbsp;
-     scored: hub · central · mall · quality</p>
-</header>
-<div class="criteria">
-  <strong>Filters:</strong>
-  Free-market · velaton hinta ≤ {{ "{:,}".format(uusimaa_price_max) }} € ·
-  loan ≤ {{ uusimaa_loan_ratio_max_pct }}% · Built ≥ 2000 <em>or</em> older with pipe reno ·
-  1980–1995 without confirmed reno excluded ·
-  Rented-out: all shown &nbsp;·&nbsp; Unrented: top {{ uusimaa_top_unrented }} by score ·
-  🚋 tram badge if ≤ {{ max_stop_dist_m }} m from Vantaan ratikka stop
-</div>
-{{ riskm.risks("📊 PKS market signals & risks (click to expand)", uusimaa_market_risks) }}
-<div class="tabs">
-  <button class="tab-btn active" onclick="showTab('uu-cards','mode-uusimaa',this)">Cards</button>
-  <button class="tab-btn" onclick="showTab('uu-table','mode-uusimaa',this)">Table / Analysis</button>
-</div>
-<div id="tab-uu-cards" class="tab-panel active">
-  {% for sec in uu_sections %}
-  <section class="sec {{ sec.cls }}">
-    <h2 class="sec-title">{{ sec.title }} <span class="sec-count">({{ sec.count }})</span></h2>
-    {% if sec.note %}<p class="sec-note">{{ sec.note }}</p>{% endif %}
-    <div class="grid">
-      {%- if sec.cards %}{% for l in sec.cards %}{{ cardm.card(l) }}{% endfor %}{% else %}<p class="empty">None this run.</p>{% endif -%}
+  <header>
+    <h1>Sijoitusasunnot PKS (Helsinki · Espoo · Vantaa)</h1>
+    <p>Generated {{ run_time }} &nbsp;·&nbsp;
+       {{ uusimaa_rented_count }} rented out (all shown) &nbsp;·&nbsp;
+       {{ uusimaa_top5_count }} unrented watch list &nbsp;·&nbsp;
+       scored: hub · central · mall · quality</p>
+  </header>
+  <div class="controls-row">
+    <button class="filters-btn" onclick="openFilters()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="4" y1="6" x2="20" y2="6"/>
+        <line x1="4" y1="12" x2="20" y2="12"/>
+        <line x1="4" y1="18" x2="20" y2="18"/>
+      </svg>
+      Filters
+    </button>
+    <div class="seg-group">
+      <button class="view-btn active" data-view="cards"
+              onclick="showTab('uu-cards','mode-uusimaa',this)">Cards</button>
+      <button class="view-btn" data-view="table"
+              onclick="showTab('uu-table','mode-uusimaa',this)">Table</button>
     </div>
-  </section>
-  {% endfor %}
-</div>
-<div id="tab-uu-table" class="tab-panel">
-  <div class="tbl-wrap">
-    <table id="uu-table">
-      <thead>{{ tablem.headers("uu-table", "uusimaa") }}</thead>
-      <tbody>{% for row in uu_table_rows %}{{ tablem.row(row) }}{% endfor %}</tbody>
-    </table>
+    <span class="result-count">{{ uu_total }} listings</span>
   </div>
-</div>
+  {{ riskm.risks("📊 PKS market signals & risks", uusimaa_market_risks) }}
+  <div id="tab-uu-cards" class="tab-panel active">
+    {% set ns = namespace(cid=0) %}
+    {% for sec in uu_sections %}
+    <section class="sec {{ sec.cls }}">
+      <h2 class="sec-title">{{ sec.title }} <span class="sec-count">({{ sec.count }})</span></h2>
+      {% if sec.note %}<p class="sec-note">{{ sec.note }}</p>{% endif %}
+      <div class="grid">
+        {%- if sec.cards %}{% for l in sec.cards %}{% set ns.cid = ns.cid + 1 %}{{ cardm.card(l, "uc" ~ ns.cid) }}{% endfor %}{% else %}<p class="empty">None this run.</p>{% endif -%}
+      </div>
+    </section>
+    {% endfor %}
+  </div>
+  <div id="tab-uu-table" class="tab-panel">
+    <div class="tbl-wrap">
+      <table id="uu-table">
+        <thead>{{ tablem.headers("uu-table", "uusimaa") }}</thead>
+        <tbody>{% for row in uu_table_rows %}{{ tablem.row(row) }}{% endfor %}</tbody>
+      </table>
+    </div>
+  </div>
 </div><!-- /mode-uusimaa -->
 
-<!-- ════════════════════════════════════════════ NEW BUILD VIEW -->
+<!-- ════════════════════════════════════════════ NEW BUILD VIEW ══ -->
 <div id="mode-newbuild" style="display:none">
-<header>
-  <h1>Oikotie — Uudisasunnot PKS (Helsinki · Espoo · Vantaa)</h1>
-  <p>{{ newbuild_count }} listings &nbsp;·&nbsp;
-     velaton hinta ≤ {{ "{:,}".format(uusimaa_price_max) }} € · loan ≤ {{ uusimaa_loan_ratio_max_pct }}% ·
-     Sorted by hub-proximity score</p>
-</header>
-<div class="tabs">
-  <button class="tab-btn active" onclick="showTab('nb-cards','mode-newbuild',this)">Cards</button>
-  <button class="tab-btn" onclick="showTab('nb-table','mode-newbuild',this)">Table / Analysis</button>
-</div>
-<div id="tab-nb-cards" class="tab-panel active">
-  {% for sec in nb_sections %}
-  <section class="sec {{ sec.cls }}">
-    <h2 class="sec-title">{{ sec.title }} <span class="sec-count">({{ sec.count }})</span></h2>
-    {% if sec.note %}<p class="sec-note">{{ sec.note }}</p>{% endif %}
-    <div class="grid">
-      {%- if sec.cards %}{% for l in sec.cards %}{{ cardm.card(l) }}{% endfor %}{% else %}<p class="empty">None this run.</p>{% endif -%}
+  <header>
+    <h1>Uudisasunnot PKS (Helsinki · Espoo · Vantaa)</h1>
+    <p>{{ newbuild_count }} listings &nbsp;·&nbsp;
+       Velaton hinta ≤ {{ "{:,}".format(uusimaa_price_max)|replace(",", " ") }} € &nbsp;·&nbsp;
+       Loan ≤ {{ uusimaa_loan_ratio_max_pct }}% &nbsp;·&nbsp;
+       Sorted by hub-proximity score</p>
+  </header>
+  <div class="controls-row">
+    <button class="filters-btn" onclick="openFilters()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="4" y1="6" x2="20" y2="6"/>
+        <line x1="4" y1="12" x2="20" y2="12"/>
+        <line x1="4" y1="18" x2="20" y2="18"/>
+      </svg>
+      Filters
+    </button>
+    <div class="seg-group">
+      <button class="view-btn active" data-view="cards"
+              onclick="showTab('nb-cards','mode-newbuild',this)">Cards</button>
+      <button class="view-btn" data-view="table"
+              onclick="showTab('nb-table','mode-newbuild',this)">Table</button>
     </div>
-  </section>
-  {% endfor %}
-</div>
-<div id="tab-nb-table" class="tab-panel">
-  <div class="tbl-wrap">
-    <table id="nb-table">
-      <thead>{{ tablem.headers("nb-table", "uusimaa") }}</thead>
-      <tbody>{% for row in nb_table_rows %}{{ tablem.row(row) }}{% endfor %}</tbody>
-    </table>
+    <span class="result-count">{{ newbuild_count }} listings</span>
   </div>
-</div>
+  <div id="tab-nb-cards" class="tab-panel active">
+    {% set ns = namespace(cid=0) %}
+    {% for sec in nb_sections %}
+    <section class="sec {{ sec.cls }}">
+      <h2 class="sec-title">{{ sec.title }} <span class="sec-count">({{ sec.count }})</span></h2>
+      {% if sec.note %}<p class="sec-note">{{ sec.note }}</p>{% endif %}
+      <div class="grid">
+        {%- if sec.cards %}{% for l in sec.cards %}{% set ns.cid = ns.cid + 1 %}{{ cardm.card(l, "nc" ~ ns.cid) }}{% endfor %}{% else %}<p class="empty">None this run.</p>{% endif -%}
+      </div>
+    </section>
+    {% endfor %}
+  </div>
+  <div id="tab-nb-table" class="tab-panel">
+    <div class="tbl-wrap">
+      <table id="nb-table">
+        <thead>{{ tablem.headers("nb-table", "uusimaa") }}</thead>
+        <tbody>{% for row in nb_table_rows %}{{ tablem.row(row) }}{% endfor %}</tbody>
+      </table>
+    </div>
+  </div>
 </div><!-- /mode-newbuild -->
 
 <script src="report.js"></script>
