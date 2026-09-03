@@ -22,7 +22,7 @@ Julkisivuremontti
 Putkiremontti
 1992
 Tulevat remontit
-Taloyhtiöllä on hallituksen vahvistama viiden vuoden korjaussuunnitelma 2026-2030, jossa mainitaan lämmitysverkoston tasapainot",True,1050.38,297.0,,61,31,,,60.194718,24.93779,pipe_reno_2009,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23835479
+Taloyhtiöllä on hallituksen vahvistama viiden vuoden korjaussuunnitelma 2026-2030, jossa mainitaan lämmitysverkoston tasapainot",True,1050.38,297.0,,61,30,,,60.194718,24.93779,pipe_reno_2009,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23835479
 "Loviisankatu 3 A, Alppila, Helsinki",Alppila,helsinki,195000.0,195000.0,,1,39.0,4/4,1928,kerrostalo,True,2001,"t ja ovet
 2001 tuuletusparvekkeiden ikkunat ja ovet
 1996 katujulkisivun kunnostus
@@ -40,7 +40,7 @@ Osakehuoneisto
 Postitoimipaikka
 Helsinki
 Hinta
-Velaton h",True,1126.78,292.5,,58,51,,,60.191781,24.940852,pipe_reno_2001,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24424454
+Velaton h",True,1126.78,292.5,,58,52,,,60.191781,24.940852,pipe_reno_2001,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24424454
 "Viipurinkatu 16 A, Alppila, Helsinki",Alppila,helsinki,149000.0,149000.0,,2,42.0,2/4,1927,kerrostalo,True,2026,": Kaakeli.
 LATTIAT: Laatta.
 Tulevat remontit
@@ -49,150 +49,172 @@ Tulevat remontit
 2026-2027: Porraskäytävien kunnostus
 2026-2027: Kellari- ja vinttitilojen kunnostus
 2028: Ikkunoiden kunnostustarpeen selvitys
-2029: Sisäänkäyntiovie",True,870.49,268.8,,58,54,,,60.192722,24.935349,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24434407
+2029: Sisäänkäyntiovie",True,870.49,268.8,,58,55,,,60.192722,24.935349,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24434407
+"Priki Johannan kuja 3 A, Sompasaari, Helsinki",Sompasaari,helsinki,108295.86,189900.0,81604.14,1,22.0,6/12,2019,kerrostalo,False,,,True,1077.77,136.4,132.88,57,58,,,60.180484,24.977722,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24671509
+"Veräjäkallionkatu 3, Vallikallio, Espoo",Vallikallio,espoo,198000.0,198000.0,,2,58.5,3/4,2001,kerrostalo,False,,,True,1124.4,274.95,,57,59,,,60.226884,24.812316,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24665292
 "Klaavuntie 3 E, Puotila, Helsinki",Puotila,helsinki,106979.76,128000.0,21020.24,2,47.5,2/3,1961,kerrostalo,True,2023,"liittymän riittävyydestä
 2023 salaoja- ja sadevesiviemäröinnin saneeraus (Kantava Oy)
 2021 peltikatto uusittu, lämmityksen tasapainotus (kuului osana putkisaneerausta), vesimittareihin perustuva veden kulutuksen laskutus
 2019 käyttövesiputkien uusiminen, lämmitysverkoston venttiilien ja termostaattien uusiminen
-2",True,856.01,360.5,,57,59,,,60.210328,25.098709,pipe_reno_2023,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24549331
-"Pakkamestarinkatu 1 D, Itä-Pasila, Helsinki",Itä-Pasila,helsinki,71285.19,88000.0,16714.81,1,31.0,3/7,1975,kerrostalo,False,,,True,466.86,173.6,,52,122,,,60.198073,24.944412,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24280529
+2",True,856.01,360.5,,57,62,,,60.210328,25.098709,pipe_reno_2023,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24549331
+"Lastenkodinkatu 7, Kamppi, Helsinki",Kamppi,helsinki,171020.44,175000.0,3979.56,1,31.0,5/5,1997,kerrostalo,True,2026,"välinevarasto. Asunto on tällä hetkellä vuokrattu, joten se sopii erinomaisesti myös sijoituskohteeksi.
+
+Tällä hetkellä taloyhtiössä on suunnitteilla linjasaneeraus vuosille 2026–2027, mikä varmistaa kiinteistön kunnon pitkälle tulevaisuuteen. Asunnon osuus tästä remontista on arviolta noin 38 000 euroa.
+
+Ota yht",True,903.66,170.5,,54,93,,,60.166071,24.924689,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24672504
+"Pakkamestarinkatu 1 D, Itä-Pasila, Helsinki",Itä-Pasila,helsinki,71285.19,88000.0,16714.81,1,31.0,3/7,1975,kerrostalo,False,,,True,466.86,173.6,,52,128,,,60.198073,24.944412,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24280529
 "Orioninkatu 8 A, Hermanni, Helsinki",Hermanni,helsinki,138069.59,139500.0,1430.41,1,29.8,1/4,1957,kerrostalo,True,2015,"äynnin lisäksi tästä asunnosta on myös erillinen käynti takapihalle, jossa on maantasopiha!
 
 Hyvin hoidettu taloyhtiö. Siinä on tehty mm. perinteinen putkiremontti v. 2015 ja katto on uusittu v. 2010-2011. 
 
-Rauhallinen alue, jossa kaupat, palvelut, liikenneyhteydet sekä harrastusmahdollisuudet ovat pienen kävel",True,769.71,216.05,,50,152,,,60.19494,24.96539,pipe_reno_2015,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24519716
-"Mechelininkatu 15, Etu-Töölö, Helsinki",Etu-Töölö,helsinki,155400.46,185000.0,29599.54,1,24.2,5/7,1929,kerrostalo,False,,,True,880.52,96.8,,49,168,,,60.172364,24.920348,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24489965
-"Kauppakartanonkatu 8 B, Itäkeskus, Helsinki",Itäkeskus,helsinki,159000.0,159000.0,,2,60.5,5/5,1979,kerrostalo,False,,,True,1009.21,356.95,,49,171,,,60.208541,25.085015,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23714811
-"Rosalankuja 5, Kruunuvuorenranta, Helsinki",Kruunuvuorenranta,helsinki,140000.0,140000.0,,1,26.5,5/6,2018,kerrostalo,False,,,True,768.19,212.0,,46,198,,,60.174713,25.030371,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24654434
+Rauhallinen alue, jossa kaupat, palvelut, liikenneyhteydet sekä harrastusmahdollisuudet ovat pienen kävel",True,769.71,216.05,,50,162,,,60.19494,24.96539,pipe_reno_2015,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24519716
+"Mechelininkatu 15, Etu-Töölö, Helsinki",Etu-Töölö,helsinki,155400.46,185000.0,29599.54,1,24.2,5/7,1929,kerrostalo,False,,,True,880.52,96.8,,49,179,,,60.172364,24.920348,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24489965
+"Kauppakartanonkatu 8 B, Itäkeskus, Helsinki",Itäkeskus,helsinki,159000.0,159000.0,,2,60.5,5/5,1979,kerrostalo,False,,,True,1009.21,356.95,,49,182,,,60.208541,25.085015,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23714811
 "Klaavuntie 9 E, Puotila, Helsinki",Puotila,helsinki,156307.27,185000.0,28692.73,2,55.0,2/3,1961,kerrostalo,True,,"okonaisuuden kruunaa reilunkokoinen parveke, jonka toisen asuinkerroksen näkymät aukeavat laajalle ja vehreälle pihalle.
 
 1961 valmistuneessa talossa putkiremontti ja julkisivu-/kattoremontti ovat jo takanapäin. Tontin vuokrasopimus on jo uusittu, joten epävarmuutta korotuksen suuruudesta ei enää ole.
 
-Alue tunn",True,1193.22,409.5,,46,212,,,60.212379,25.097755,pipe_reno_done,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23649823
-"Viertolankuja 8 C, Viertola, Vantaa",Viertola,vantaa,198000.0,198000.0,,2,43.0,4/7,2012,kerrostalo,False,,,True,1047.25,197.8,,45,228,,,60.290249,25.017564,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24552566
+Alue tunn",True,1193.22,409.5,,46,222,,,60.212379,25.097755,pipe_reno_done,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23649823
+"Viertolankuja 8 C, Viertola, Vantaa",Viertola,vantaa,198000.0,198000.0,,2,43.0,4/7,2012,kerrostalo,False,,,True,1047.25,197.8,,45,238,,,60.290249,25.017564,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24552566
+"Anjankuja 2 C, Matinkylä, Espoo",Matinkylä,espoo,128165.43,179000.0,50834.57,2,56.5,2/3,1973,kerrostalo,False,,,True,1013.28,259.9,,43,265,,,60.157533,24.742758,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24671156
 "Lumikintie 4 D, Roihuvuori, Helsinki",Roihuvuori,helsinki,159000.0,159000.0,,2,45.0,3/4,1959,kerrostalo,True,2016,"umppaamolla. Ilmanvaihtokoneiden muutokset Vuorenpeikontie 3A 1 kpl ja 3B 1 kpl.
 2016 Soneran taloyhtiön laajakaistaliittymän käyttöönotto.
 2015-2016 linjasaneeraus 2. vaihe, sisältäen myös tele- ja sähköjärjestelmien uusimisen, tonttiliittymien
-uusinta, vesi-, sähkö-, kaasu ja viemäriliittymien uusinta, porrashu",True,887.32,137.54,97.52,43,277,,,60.203562,25.057248,pipe_reno_2016,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24423911
-"Käpyläntie 11, Koskela, Helsinki",Koskela,helsinki,80000.0,157000.0,,1,28.0,1/6,2021,kerrostalo,False,,,True,866.14,224.0,,43,278,,,60.216948,24.959999,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24394741
-"Haltiantie 16 B, Louhela, Vantaa",Louhela,vantaa,159000.0,159000.0,,1,27.0,1/8,2023,kerrostalo,False,,,True,846.66,99.9,94.5,43,279,,,60.269282,24.859018,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24346199
+uusinta, vesi-, sähkö-, kaasu ja viemäriliittymien uusinta, porrashu",True,887.32,137.54,97.52,43,288,,,60.203562,25.057248,pipe_reno_2016,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24423911
+"Käpyläntie 11, Koskela, Helsinki",Koskela,helsinki,80000.0,157000.0,,1,28.0,1/6,2021,kerrostalo,False,,,True,866.14,224.0,,43,289,,,60.216948,24.959999,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24394741
+"Haltiantie 16 B, Louhela, Vantaa",Louhela,vantaa,159000.0,159000.0,,1,27.0,1/8,2023,kerrostalo,False,,,True,846.66,99.9,94.5,43,290,,,60.269282,24.859018,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24346199
 "Ohrakuja 3 B, Satomäki, Vantaa",Satomäki,vantaa,99000.0,99000.0,,2,43.5,2/6,1960,kerrostalo,True,2016,"istys
 2016-2017 Ilmanvaihdon lämmön talteenoton asennus ja ilmanvaihdon koneiden uusinta
 2016-2017 Huoneistoihin tuotu cat 6 sekä valokuitu
 2016-2017 Putkiremontti: Sisältäen käyttövesi- ja sähkösaneerauksen huoneistokeskuksiin sekä 
-keittiöihin uudet sähkösyöttö liedelle ja astianpesukoneelle asti sekä yleiset",True,621.88,273.0,,43,287,Jokiniemi,863,60.296365,25.061953,pipe_reno_2016,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24220672
-"Antaksentie 13 A, Pakkalanrinne, Vantaa",Pakkalanrinne,vantaa,187000.0,187000.0,,2,45.5,4/6,2010,kerrostalo,False,,,True,998.58,204.75,,42,298,Backasbrinken/Pakkalanrinne,305,60.293417,24.947263,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24620266
-"Fleminginkatu 25 D, Harju, Helsinki",Harju,helsinki,149000.0,149000.0,,1,26.3,3/5,1911,kerrostalo,False,,,True,798.94,197.25,,42,299,,,60.183551,24.95316,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24643712
-"Merimiehenkatu 24 B, Punavuori, Helsinki",Punavuori,helsinki,188000.0,188000.0,,1,23.0,4/5,1960,kerrostalo,False,,,True,971.39,172.5,,42,300,,,60.160036,24.93755,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24641710
+keittiöihin uudet sähkösyöttö liedelle ja astianpesukoneelle asti sekä yleiset",True,621.88,273.0,,43,298,Jokiniemi,863,60.296365,25.061953,pipe_reno_2016,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24220672
+"Antaksentie 13 A, Pakkalanrinne, Vantaa",Pakkalanrinne,vantaa,187000.0,187000.0,,2,45.5,4/6,2010,kerrostalo,False,,,True,998.58,204.75,,42,311,Backasbrinken/Pakkalanrinne,305,60.293417,24.947263,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24620266
+"Fleminginkatu 25 D, Harju, Helsinki",Harju,helsinki,149000.0,149000.0,,1,26.3,3/5,1911,kerrostalo,False,,,True,798.94,197.25,,42,312,,,60.183551,24.95316,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24643712
+"Merimiehenkatu 24 B, Punavuori, Helsinki",Punavuori,helsinki,188000.0,188000.0,,1,23.0,4/5,1960,kerrostalo,False,,,True,971.39,172.5,,42,313,,,60.160036,24.93755,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24641710
 "Rehbinderintie 14, Eira, Helsinki",Eira,helsinki,178148.5,194000.0,15851.8,1,14.5,1/4,,,True,2022,"Parvi tuo tähän kotiin kätevää lisätilaa. Asunto on pintaremontoitu vuonna 2022, joten voit nauttia ajanmukaisesta sisustuksesta. Lisäksi taloyhtiön putkiremontti valmistui 2023 ja isoja remontteja ei ole suunnitteilla. Taloyhtiössä on lisäksi viihtyisä saunatila kellaritilassa.
 
-Tämä koti sijaitsee aivan Helsi",True,962.63,133.4,,42,308,,,60.156904,24.936211,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24543974
+Tämä koti sijaitsee aivan Helsi",True,962.63,133.4,,42,320,,,60.156904,24.936211,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24543974
 "Vaasankatu 20 a B, Kallio, Helsinki",Kallio,helsinki,111122.62,115000.0,3877.38,1,22.0,5/6,1936,kerrostalo,True,1984,"inen, vanhojen valaistusryhmäjohtojen uusiminen, varusteiden ja valaisimien uusimista ullakolla ja kellarissa, ovipuhelinkojeiden uusimista harkitaan linjasaneeraushankkeen seuraavan vaiheen yhteydessä.
 Tehdyt remontit
-1966 kaukolämpö, 1974 viemärit, käyttövesiputket, vesikalusteet, 1984 ikkunat, 1988 lämpökeskus",True,603.58,173.8,,42,327,,,60.188274,24.959666,pipe_reno_1984,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23714836
-"Luutnantintie 13 A, Malminkartano, Helsinki",Malminkartano,helsinki,200000.0,200000.0,,2,46.5,1/3,2017,kerrostalo,False,,,True,1138.56,279.0,,41,337,,,60.246582,24.865447,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24633819
-"Helatehtaankatu 6, Ala-Malmi, Helsinki",Ala-Malmi,helsinki,159500.0,159500.0,,2,56.0,1/2,2013,luhtitalo,False,,,True,1242.78,392.0,196.0,41,342,,,60.25463,25.019164,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24543440
+1966 kaukolämpö, 1974 viemärit, käyttövesiputket, vesikalusteet, 1984 ikkunat, 1988 lämpökeskus",True,603.58,173.8,,42,338,,,60.188274,24.959666,pipe_reno_1984,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23714836
+"Luutnantintie 13 A, Malminkartano, Helsinki",Malminkartano,helsinki,200000.0,200000.0,,2,46.5,1/3,2017,kerrostalo,False,,,True,1138.56,279.0,,41,349,,,60.246582,24.865447,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24633819
+"Helatehtaankatu 6, Ala-Malmi, Helsinki",Ala-Malmi,helsinki,159500.0,159500.0,,2,56.0,1/2,2013,luhtitalo,False,,,True,1242.78,392.0,196.0,41,354,,,60.25463,25.019164,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24543440
 "Lumikintie 6, Roihuvuori, Helsinki",Roihuvuori,helsinki,110000.0,110000.0,8468.81,1,24.0,1/4,1958,kerrostalo,True,2019,"aminen A-talon länsipäädystä.
 2019: Piha-alueen hulevesien poisjohtaminen.
 2017: Ovikoodit porrashuoneiden oviin putkiremontin yhteydessä.
 2016-2017: Linjasaneeraus, perinteinen menetelmä, sis. kylpyhuonekorjaukset. Ilmastointihormien nuohous putkiremontin yhteydessä.
-2015: Linjasaneerauksen kilpailutus ja päätös",True,549.5,145.0,,41,350,,,60.203078,25.055795,pipe_reno_2019,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24468142
-"Rubiinikehä 3, Kivistö, Vantaa",Kivistö,vantaa,154000.0,154000.0,,1,31.5,1/6,2017,kerrostalo,False,,,True,749.83,122.85,,41,352,,,60.321416,24.856885,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24393782
+2015: Linjasaneerauksen kilpailutus ja päätös",True,549.5,145.0,,41,362,,,60.203078,25.055795,pipe_reno_2019,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24468142
+"Rubiinikehä 3, Kivistö, Vantaa",Kivistö,vantaa,154000.0,154000.0,,1,31.5,1/6,2017,kerrostalo,False,,,True,749.83,122.85,,41,364,,,60.321416,24.856885,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24393782
 "Fleminginkatu 13 B, Torkkelinmäki, Helsinki",Torkkelinmäki,helsinki,102000.0,102000.0,,1,22.0,6/6,1937,kerrostalo,False,2027,"aatoitettu. Asunnossa kohtuullisesti säilytystilaa. Keskeinen sijainti, kaikki kallion palvelut ja liikenneyhteydet käden ulottuvilla. Yhtiössä alkaa linjasaneeraus alustavan aikataulun mukaan, kevät-kesä 2027.
 
-Huoneisto on vuokrattu 01.07.2026 alkaen toistaiseksi voimassa olevalla vuokrasopimuksella. Vuokra sop",True,535.65,171.6,,40,364,,,60.188346,24.95302,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24650128
-"Ullanmäentie 12 B, Ymmersta, Espoo",Ymmersta,espoo,168000.0,168000.0,,1,33.5,7/7,2018,kerrostalo,False,,,True,831.76,134.0,,40,398,,,60.205973,24.708326,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24484478
-"Safiirikuja 15, Kivistö, Vantaa",Kivistö,vantaa,128000.0,128000.0,,1,34.5,4/6,2018,kerrostalo,False,,,True,778.41,193.2,89.7,40,407,,,60.317012,24.850724,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24372893
-"Rubiinikehä 3 b, Kivistö, Vantaa",Kivistö,vantaa,135000.0,135000.0,,1,28.0,5/6,2017,kerrostalo,False,,,True,692.71,161.8,,40,414,,,60.321324,24.857388,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23798260
-"Tankomäenkatu 8 A, Vartioharju / Tankovainio, Helsinki",Vartioharju / Tankovainio,helsinki,179000.0,179000.0,,2,49.0,4/5,2018,kerrostalo,False,,,True,1164.98,274.4,137.2,39,467,,,60.22673,25.126131,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24513084
-"Franzéninkatu 22 A, Torkkelinmäki, Helsinki",Torkkelinmäki,helsinki,134572.74,168000.0,33427.26,1,34.0,4/7,1938,kerrostalo,False,,,True,952.76,255.0,,38,514,,,60.185463,24.95367,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24666727
+Huoneisto on vuokrattu 01.07.2026 alkaen toistaiseksi voimassa olevalla vuokrasopimuksella. Vuokra sop",True,535.65,171.6,,40,377,,,60.188346,24.95302,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24650128
+"Ullanmäentie 12 B, Ymmersta, Espoo",Ymmersta,espoo,168000.0,168000.0,,1,33.5,7/7,2018,kerrostalo,False,,,True,831.76,134.0,,40,409,,,60.205973,24.708326,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24484478
+"Safiirikuja 15, Kivistö, Vantaa",Kivistö,vantaa,128000.0,128000.0,,1,34.5,4/6,2018,kerrostalo,False,,,True,778.41,193.2,89.7,40,418,,,60.317012,24.850724,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24372893
+"Rubiinikehä 3 b, Kivistö, Vantaa",Kivistö,vantaa,135000.0,135000.0,,1,28.0,5/6,2017,kerrostalo,False,,,True,692.71,161.8,,40,425,,,60.321324,24.857388,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23798260
+"Tankomäenkatu 8 A, Vartioharju / Tankovainio, Helsinki",Vartioharju / Tankovainio,helsinki,179000.0,179000.0,,2,49.0,4/5,2018,kerrostalo,False,,,True,1164.98,274.4,137.2,39,479,,,60.22673,25.126131,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24513084
+"Konalantie 12 C, Pitäjänmäki, Helsinki",Pitäjänmäki,helsinki,78845.24,89000.0,10154.76,1,24.0,2/4,1957,kerrostalo,True,2014,"tie 12 on vuonna 1957 valmistunut taloyhtiö omalla tontilla. Lämmitysmuotona on kaukolämpö. Taloyhtiössä on tehty pitkäjänteisesti kunnossapitotöitä: linjasaneeraus valmistui vuonna 2014, julkisivupintojen injektointi ja pinnoitus sekä salaojien rakentaminen toteutettiin vuonna 2020, ja porrashuoneiden ovet uusit",True,454.32,156.0,,38,526,,,60.226804,24.851949,pipe_reno_2014,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24668859
+"Franzéninkatu 22 A, Torkkelinmäki, Helsinki",Torkkelinmäki,helsinki,134572.74,168000.0,33427.26,1,34.0,4/7,1938,kerrostalo,False,,,True,952.76,255.0,,38,527,,,60.185463,24.95367,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24666727
 "Aittatie 18, Konala, Helsinki",Konala,helsinki,168000.0,168637.0,636.75,2,46.0,2/3,1960,kerrostalo,True,2016,"huoneesta on käynti lasitetulle parvekkeelle, joka tarjoaa viihtyisän lisätilan pitkälle syksyyn.
 Taloyhtiö sijaitsee omalla tontilla, ja perinteinen putkiremontti on valmistunut vuonna 2016.
 Kylpyhuone on remontoitu putkiremontin yhteydessä. On kompakti, mutta siisti ja pikku perheelle toimiva. 
-Tämä koti tarjo",True,956.44,255.46,,38,515,,,60.235595,24.844487,pipe_reno_2016,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24666586
+Tämä koti tarjo",True,956.44,255.46,,38,528,,,60.235595,24.844487,pipe_reno_2016,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24666586
 "Mäkelänkatu 10 B, Vallila, Helsinki",Vallila,helsinki,99636.53,114000.0,14363.47,1,19.0,4/4,1940,kerrostalo,True,2014,"arastojen uusiminen, lukitus uusittu iLoq, portin kunnostusmaalaus, akustolevyjen asennus porrashuoneisiin.
 2014 porrashuoneiden kunnostus.
 2013-2014 putkisaneeraus, sähkösaneeraus, ilmanvaihdon muutos koneelliseksi, pesutupa ja kuivaushuone kunnostettu.
 2006 valvontakamerat porraskäytäviin ja pihalle.
-2005 anten",True,614.73,190.0,,38,542,,,60.21203,24.943649,pipe_reno_2014,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24539706
+2005 anten",True,614.73,190.0,,38,554,,,60.21203,24.943649,pipe_reno_2014,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24539706
 "Karistimentie 2 H, Myllypuro, Helsinki",Myllypuro,helsinki,133257.49,137000.0,3742.51,2,50.5,1/6,1964,kerrostalo,True,2005,"pputankojen kunnostus. Porraskäytävien peruspesu.
 2005 Hissien peruskorjaus Ka 2ABCDEFGH. EXEC-lukitus Ka1 ABCD, Ka2 CD. LVIS hankesuunniotelma.
 2006 Linjasaneeraus. Suunnitelmat valmiit. Urakkakilpailu pidetty EF- ja GH taloissa.
 2007-2009 linjasaneeraus KA2 EF-GH/Ka2 AB-CD/Ka1 AB-CD.
 2011 Julkisivuremontti
-2017",True,792.48,251.46,,38,544,,,60.227702,25.070284,pipe_reno_2005,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24534156
-"Säterinkatu 7 A, Säteri, Espoo",Säteri,espoo,166266.99,185000.0,18733.01,2,44.0,4/4,1999,kerrostalo,False,,,True,1021.32,237.6,,38,552,,,60.21425,24.803132,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24450968
+2017",True,792.48,251.46,,38,556,,,60.227702,25.070284,pipe_reno_2005,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24534156
+"Säterinkatu 7 A, Säteri, Espoo",Säteri,espoo,166266.99,185000.0,18733.01,2,44.0,4/4,1999,kerrostalo,False,,,True,1021.32,237.6,,38,564,,,60.21425,24.803132,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24450968
+"Mäkelänkatu 4a A, Vallila, Helsinki",Vallila,helsinki,173656.55,184000.0,10343.45,1,30.0,3/4,1946,kerrostalo,True,2005,"kone -yhdistelmä helpottamaan arkea. Asunto on pintaremontoitu muutamia vuosia sitten. Asunnolle kuuluu kellari- ja vinttikomerot.
+
+Yhtiössä on tehty putkisaneeraus perinteisellä menetelmällä 2005, jolloin myös kylpyhuoneet on uusittu. Kylpyhuoneeseen mahtuu hyvin etenkin päältätäytettävä pyykinpesukone. Julkisiv",True,973.66,195.0,,38,565,,,60.21203,24.943649,pipe_reno_2005,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24416976
 "Kallioruohonpolku 5 B, Simonkallio, Vantaa",Simonkallio,vantaa,108167.25,128000.0,19832.75,2,55.0,4/6,1970,kerrostalo,True,2016,"uotojen korjaaminen
 2016 Piha-alueiden kunnostus. Lämpökuvaus. Lukkojen uusiminen ILOQ-järjestelmään. Sokkelien maalaus. Julkisivujen huoltopesu
 2015 Linjasaneeraus Maxbuild Oy ja Picote Oy
 2014 Toteutussuunnittelu (Profil - Bau Consulting Oy)
 2013 Hankesuunnittelu/Suomen Talokeskus Oy)
-2012 LVV-putkistojen kunto",True,725.51,230.0,,38,553,,,60.305696,25.022753,pipe_reno_2016,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24416836
-"Kulorastaantie 3 A, Kulomäki (Korso), Vantaa",Kulomäki (Korso),vantaa,45413.65,129000.0,,2,41.5,2/2,2019,luhtitalo,False,,,True,778.62,278.05,,37,559,,,60.34586,25.057938,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24666809
-"Leikkikuja 3, Kontula, Helsinki",Kontula,helsinki,145000.0,145000.0,,2,55.0,4/8,1967,kerrostalo,True,2023,"a 1967 rakennettu, hyvin hoidettu ja taloudeltaan vakaa taloyhtiö. Lämmitysmuotona toimii energiatehokas kaukolämpö. Taloyhtiössä on toteutettu laaja linjasaneeraus vuonna 2023, jonka yhteydessä uusittiin sähköt, viemäröinti, vesijohdot, märkätilat sekä taloyhtiön viihtyisät saunatilat. Asukkaiden käytössä ovat l",True,856.69,275.22,,37,578,,,60.242742,25.085105,pipe_reno_2023,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24486056
-"Vilhonvuorenkuja 18 C, Vilhonvuori, Helsinki",Vilhonvuori,helsinki,159800.0,159800.0,,1,25.0,1/7,1927,kerrostalo,False,,,True,851.3,195.0,,37,584,,,60.187085,24.964369,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24408717
-"Tegelhagen 2 C, Kauklahti, Espoo",Kauklahti,espoo,76183.45,137900.0,61716.55,2,34.5,2/3,2015,kerrostalo,False,,,True,804.32,258.75,,36,630,,,60.193373,24.598674,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24514494
+2012 LVV-putkistojen kunto",True,725.51,230.0,,38,566,,,60.305696,25.022753,pipe_reno_2016,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24416836
+"Kulorastaantie 3 A, Kulomäki (Korso), Vantaa",Kulomäki (Korso),vantaa,45413.65,129000.0,,2,41.5,2/2,2019,luhtitalo,False,,,True,778.62,278.05,,37,574,,,60.34586,25.057938,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24666809
+"Leikkikuja 3, Kontula, Helsinki",Kontula,helsinki,145000.0,145000.0,,2,55.0,4/8,1967,kerrostalo,True,2023,"a 1967 rakennettu, hyvin hoidettu ja taloudeltaan vakaa taloyhtiö. Lämmitysmuotona toimii energiatehokas kaukolämpö. Taloyhtiössä on toteutettu laaja linjasaneeraus vuonna 2023, jonka yhteydessä uusittiin sähköt, viemäröinti, vesijohdot, märkätilat sekä taloyhtiön viihtyisät saunatilat. Asukkaiden käytössä ovat l",True,856.69,275.22,,37,594,,,60.242742,25.085105,pipe_reno_2023,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24486056
+"Vilhonvuorenkuja 18 C, Vilhonvuori, Helsinki",Vilhonvuori,helsinki,159800.0,159800.0,,1,25.0,1/7,1927,kerrostalo,False,,,True,851.3,195.0,,37,600,,,60.187085,24.964369,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24408717
+"Tegelhagen 2 C, Kauklahti, Espoo",Kauklahti,espoo,76183.45,137900.0,61716.55,2,34.5,2/3,2015,kerrostalo,False,,,True,804.32,258.75,,36,647,,,60.193373,24.598674,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24514494
 "Aallonhuippu 3, Kivenlahti, Espoo",Kivenlahti,espoo,43000.0,47000.0,,1,37.0,1/3,1972,kerrostalo,True,2025,"2025-29:
 
-Tuleva yhtiökokous 17.6.2026: Päätetään linjasaneerauksen toteutussuunnittelun käynnistämisestä, päätetään valtuuttaa hallitus valitsemaan linjasaneerausurakalle projektipäällikkö sekä valtuuttaa hallitus kilpailuttamaan tilaamaan linjasaneerauksen toteutussuunnitelma maksimissaan 100 000 eurolla, päät",True,265.44,179.48,,36,643,,,60.151147,24.638447,pipe_reno_2025,https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24345181
-"Ulappasaarentie 7, Vuosaari, Helsinki",Vuosaari,helsinki,76882.0,149990.0,73108.0,1,22.0,6/7,2017,kerrostalo,False,,,True,703.5,96.8,,36,651,,,60.211969,25.137944,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23886125
-"Kaskelantie 7, Hakunila, Vantaa",Hakunila,vantaa,70587.98,134990.0,64402.02,1,26.0,3/8,2018,kerrostalo,False,,,True,632.26,101.4,,36,652,Kaskela,136,60.281799,25.096128,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23831363
+Tuleva yhtiökokous 17.6.2026: Päätetään linjasaneerauksen toteutussuunnittelun käynnistämisestä, päätetään valtuuttaa hallitus valitsemaan linjasaneerausurakalle projektipäällikkö sekä valtuuttaa hallitus kilpailuttamaan tilaamaan linjasaneerauksen toteutussuunnitelma maksimissaan 100 000 eurolla, päät",True,265.44,179.48,,36,660,,,60.151147,24.638447,pipe_reno_2025,https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24345181
+"Ulappasaarentie 7, Vuosaari, Helsinki",Vuosaari,helsinki,76882.0,149990.0,73108.0,1,22.0,6/7,2017,kerrostalo,False,,,True,703.5,96.8,,36,668,,,60.211969,25.137944,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23886125
+"Kaskelantie 7, Hakunila, Vantaa",Hakunila,vantaa,70587.98,134990.0,64402.02,1,26.0,3/8,2018,kerrostalo,False,,,True,632.26,101.4,,36,669,Kaskela,136,60.281799,25.096128,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23831363
+"Ohrakuja 1, Satomäki, Vantaa",Satomäki,vantaa,78654.12,129000.0,,2,52.5,2/3,1964,kerrostalo,True,2013,"kattavasti kaikki merkittävät remontit, joten tulevalle omistajalle tai asukkaille on luvassa huolettomia vuosia. Suurimpina remontteina mainittakoon linjasaneeraus (2013), piha- ja salaojaurakka (2023) sekä ikkunoiden ja ovien uusiminen (2023). Kauniisti hoidettu pihaalue ja hyvin hoidettu yhtiö tuovat lisäarvoa",True,789.32,288.75,,35,699,,,60.296137,25.061856,pipe_reno_2013,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24674729
 "Ulvilantie 29-4 A -, Munkkivuori, Helsinki",Munkkivuori,helsinki,105692.12,138000.0,32307.88,1,26.0,2/3,1958,kerrostalo,True,2020,"on autopaikkoja, jotka palvelevat mukavasti autolla liikkuvia asukkaita. Asunto-osakeyhtiö Ulvilantie 29 on hyvin hoidettu yhtiö, jossa on tehty 2020 linjasaneeraus, jolloin kaikki kylpyhuoneet uusittiin, ikkunat on uusittu vuonna 2017.
 
-Asunto-osakeyhtiö Ulvilantie 29:n ovat perustaneet ja rakennuttaneet Helsing",True,711.98,165.9,,35,684,,,60.207145,24.873734,pipe_reno_2020,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24661269
-"Kaarikuja 4, Kontula, Helsinki",Kontula,helsinki,82460.49,119000.0,36539.51,2,59.5,3/7,1967,kerrostalo,True,2015,"en talojen lämmönsiirtimen uusiminen -2015. Autokatoksen aitojen ja metalliosien maalaus -2016. Rakennusten ulkovaipan kunnostus ja maalaustyö -2018. Linjasaneeraus 2020-2021, vuosikorjaukset, autokatoksen saumauskorjaukset, lukituksen uusiminen, aurinkopaneelit 2023 - autohallin oven uusiminen 2023. Ikkunoiden k",True,688.01,238.0,,35,722,,,60.24028,25.078187,pipe_reno_2015,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24461814
-"Hämeentie 156 a, Vanhakylä, Helsinki",Vanhakylä,helsinki,189000.0,189000.0,,2,37.2,1/4,1949,kerrostalo,False,,,True,1101.54,297.6,,34,759,,,60.188684,24.963639,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24499558
+Asunto-osakeyhtiö Ulvilantie 29:n ovat perustaneet ja rakennuttaneet Helsing",True,711.98,165.9,,35,703,,,60.207145,24.873734,pipe_reno_2020,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24661269
+"Kaarikuja 4, Kontula, Helsinki",Kontula,helsinki,82460.49,119000.0,36539.51,2,59.5,3/7,1967,kerrostalo,True,2015,"en talojen lämmönsiirtimen uusiminen -2015. Autokatoksen aitojen ja metalliosien maalaus -2016. Rakennusten ulkovaipan kunnostus ja maalaustyö -2018. Linjasaneeraus 2020-2021, vuosikorjaukset, autokatoksen saumauskorjaukset, lukituksen uusiminen, aurinkopaneelit 2023 - autohallin oven uusiminen 2023. Ikkunoiden k",True,688.01,238.0,,35,738,,,60.24028,25.078187,pipe_reno_2015,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24461814
+"Siilitie 2 C, Herttoniemi, Helsinki",Herttoniemi,helsinki,197877.05,199000.0,1122.95,1,57.0,1/3,1956,kerrostalo,True,2013,"dyn julkisivun kunnostustyöt
+2013: A-portaan sokkelin eristys ja salaojat
+2011: Kellaritilojen maalaus
+2011: Jätekatoksen uusiminen
+2010: Perinteinen linjasaneeraus
+2010: Porrashuoneiden maalaus
+2007: Akustolevyjen asennus sisääntuloauloihin ja huoneistotasanteiden kattoihin
+2007: Pihagrillin saneeraus
+2006: A-po",True,1365.51,511.0,,34,768,,,60.213209,25.039859,pipe_reno_2013,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24669374
+"Hämeentie 156 a, Vanhakylä, Helsinki",Vanhakylä,helsinki,189000.0,189000.0,,2,37.2,1/4,1949,kerrostalo,False,,,True,1101.54,297.6,,34,775,,,60.188684,24.963639,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24499558
 "Maasälväntie 14 C, Pihlajamäki, Helsinki",Pihlajamäki,helsinki,88463.35,120000.0,31536.65,2,55.5,5/8,1962,kerrostalo,True,2017,"nykseen, mikä tekee kesäpäivistä mukavampia.
 
-Asunto on osa hyvin hoidettua taloyhtiötä, jossa on tehty merkittäviä perusparannuksia, mm. perinteinen putkiremontti vuosina 2017–2018, aurinkosähkövoimalan asennus vesikatolle 2022, piha-ja päätyjulkisivujen korjaus ja maalaus 2023. Taloyhtiössä on myös saunat, pes",True,763.11,308.05,,34,772,,,60.236388,25.010018,pipe_reno_2017,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24525795
-"Viljatie 6 D, Malmi, Helsinki",Malmi,helsinki,121830.12,129000.0,7169.88,1,26.0,1/3,1962,kerrostalo,True,2015,"istyksen lisääminen, lämmitysjärjestelmän perussäätö ja patteriventtiilien uusinta 2015, lukituksen uusiminen 2012, sauna-, ja pesutilojen uusiminen, linjasaneeraus ja LVI järjestelmän uusiminen huoneistojen märkätiloissa, sähkönousujen ja yleiskaapeloinnin uusiminen 2011, saunatilat kunnostettu 2001, jätekatokse",True,643.57,143.0,,34,787,,,60.253719,25.012064,pipe_reno_2015,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23733041
+Asunto on osa hyvin hoidettua taloyhtiötä, jossa on tehty merkittäviä perusparannuksia, mm. perinteinen putkiremontti vuosina 2017–2018, aurinkosähkövoimalan asennus vesikatolle 2022, piha-ja päätyjulkisivujen korjaus ja maalaus 2023. Taloyhtiössä on myös saunat, pes",True,763.11,308.05,,34,788,,,60.236388,25.010018,pipe_reno_2017,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24525795
+"Viljatie 6 D, Malmi, Helsinki",Malmi,helsinki,121830.12,129000.0,7169.88,1,26.0,1/3,1962,kerrostalo,True,2015,"istyksen lisääminen, lämmitysjärjestelmän perussäätö ja patteriventtiilien uusinta 2015, lukituksen uusiminen 2012, sauna-, ja pesutilojen uusiminen, linjasaneeraus ja LVI järjestelmän uusiminen huoneistojen märkätiloissa, sähkönousujen ja yleiskaapeloinnin uusiminen 2011, saunatilat kunnostettu 2001, jätekatokse",True,643.57,143.0,,34,802,,,60.253719,25.012064,pipe_reno_2015,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23733041
 "Rapakivenkuja 5 U, Pihlajamäki, Helsinki",Pihlajamäki,helsinki,79458.19,89000.0,9541.81,2,55.5,3/3,1964,kerrostalo,True,2010,"ta. 
 
-Asunto Oy Rapakivenkuja 3-4-5 on suuri ja hyvin hoidettu taloyhtiö, jossa suuria peruskorjauksia on toteutettu vuosien varrella kattavasti, mm. putkiremontti vuosina 2010-2011. Asukkaiden käytössä ovat saunat, pesutupa sekä suuri määrä autopaikkoja ja -talleja. Aivan vierestä löytyy myös viljelypalstoja ha",True,642.42,344.1,,33,791,,,60.240444,25.003262,pipe_reno_2010,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24666291
-"Iiluodontie 7 A, Aurinkolahti, Helsinki",Aurinkolahti,helsinki,173888.56,185000.0,11111.44,2,47.5,7/8,2000,kerrostalo,False,,,True,983.22,199.5,,32,835,,,60.205476,25.146065,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24545887
-"Ratavallintie 4 B, Tuomarila, Espoo",Tuomarila,espoo,169000.0,169000.0,,2,48.0,3/4,2006,kerrostalo,False,,,True,928.42,225.6,,32,840,,,60.207528,24.678716,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24504109
+Asunto Oy Rapakivenkuja 3-4-5 on suuri ja hyvin hoidettu taloyhtiö, jossa suuria peruskorjauksia on toteutettu vuosien varrella kattavasti, mm. putkiremontti vuosina 2010-2011. Asukkaiden käytössä ovat saunat, pesutupa sekä suuri määrä autopaikkoja ja -talleja. Aivan vierestä löytyy myös viljelypalstoja ha",True,642.42,344.1,,33,807,,,60.240444,25.003262,pipe_reno_2010,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24666291
+"Iiluodontie 7 A, Aurinkolahti, Helsinki",Aurinkolahti,helsinki,173888.56,185000.0,11111.44,2,47.5,7/8,2000,kerrostalo,False,,,True,983.22,199.5,,32,849,,,60.205476,25.146065,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24545887
+"Ratavallintie 4 B, Tuomarila, Espoo",Tuomarila,espoo,169000.0,169000.0,,2,48.0,3/4,2006,kerrostalo,False,,,True,928.42,225.6,,32,853,,,60.207528,24.678716,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24504109
 "Lumikintie 3 A, Roihuvuori, Helsinki",Roihuvuori,helsinki,199000.0,199000.0,,2,51.1,3/4,1960,kerrostalo,True,,"kon suuntaan. Huoneisto on tehokkaasti vapaa uuden omistajan käyttöön.
 
-Taloyhtiö on hyvin hoidettu ja laajasti peruskorjattu. Suuret remontit, kuten linjasaneeraus, julkisivujen kunnostus, ikkunoiden ja parvekeovien uusiminen sekä siirtyminen maalämpöön on jo tehty. Yhtiössä on monipuoliset yhteiset tilat, kuten",True,1162.35,307.84,,32,847,,,60.203755,25.058214,pipe_reno_done,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24300353
-"Uotinmäentie 11 D 33, Mellunkylä, Helsinki",Mellunkylä,helsinki,126000.0,126000.0,,2,55.0,3/3,1968,kerrostalo,True,2024,"aapin lisäksi iso pakastin, sekä keraaminen liesi. Makuuhuoneen seinät maalattu 2024. Ikkunat, sekä parvekkeen ovi uusittu 2024. Pesutilat uusittu ja putkiremontti tehty 2015. Wc:ssä pyykinpesukone, joka ostettu uutena 7/2024. Asunnossa runsaasti säilytystilaa, lisäksi reilun kokoinen kellarikomero. Eteisessä ko",True,826.4,341.0,,32,857,Mellunmäki,413,60.236699,25.114868,pipe_reno_2024,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23669883
+Taloyhtiö on hyvin hoidettu ja laajasti peruskorjattu. Suuret remontit, kuten linjasaneeraus, julkisivujen kunnostus, ikkunoiden ja parvekeovien uusiminen sekä siirtyminen maalämpöön on jo tehty. Yhtiössä on monipuoliset yhteiset tilat, kuten",True,1162.35,307.84,,32,860,,,60.203755,25.058214,pipe_reno_done,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24300353
+"Uotinmäentie 11 D 33, Mellunkylä, Helsinki",Mellunkylä,helsinki,126000.0,126000.0,,2,55.0,3/3,1968,kerrostalo,True,2024,"aapin lisäksi iso pakastin, sekä keraaminen liesi. Makuuhuoneen seinät maalattu 2024. Ikkunat, sekä parvekkeen ovi uusittu 2024. Pesutilat uusittu ja putkiremontti tehty 2015. Wc:ssä pyykinpesukone, joka ostettu uutena 7/2024. Asunnossa runsaasti säilytystilaa, lisäksi reilun kokoinen kellarikomero. Eteisessä ko",True,826.4,341.0,,32,869,Mellunmäki,413,60.236699,25.114868,pipe_reno_2024,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23669883
+"Vuolukiventie 3, Pihlajamäki, Helsinki",Pihlajamäki,helsinki,160000.0,160000.0,,2,60.0,2/4,1964,kerrostalo,True,2009,"käyttövesisiirtimen uusinta, 2009 Viemäreiden pesu, kuvaus ja vesikaton pinnoitus, 2010 Ulko-ovien kunnostus, 2012 Hankesuunnittelun käynnistys, 2013 Linjasaneeraussuunnittelun käynnistys, 2014 Linjasaneerauksen suunnittelu,  2014-2015 Linjasaneeraus sis. putki-, sähkö-, telekaapelit, IV-työt ja lämmitysjärjestel",True,1002.91,345.6,,31,870,,,60.236933,25.001457,pipe_reno_2009,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24548847?src=listing_of_the_week_search
 "Keijukaistenpolku 11, Roihuvuori, Helsinki",Roihuvuori,helsinki,167193.18,187000.0,19806.82,2,55.0,2/3,1956,kerrostalo,True,,"uoneistolla on käytössään lisäksi kaksi kellarikomeroa.
 
-Sijainti rauhallisen Keijukaistenpolun varrella on idyllinen. Taloyhtiössä on toteutettu mm. putkisaneeraus ja parvekeremontti, sekä viimeisimpänä sähkö-, tele- ja antenniverkon saneeraus. Yhteisissä tiloissa asukkaita palvelevat mm. viihtyisä saunaosasto j",True,1192.58,398.75,,31,863,,,60.197468,25.057638,pipe_reno_done,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24659342
+Sijainti rauhallisen Keijukaistenpolun varrella on idyllinen. Taloyhtiössä on toteutettu mm. putkisaneeraus ja parvekeremontti, sekä viimeisimpänä sähkö-, tele- ja antenniverkon saneeraus. Yhteisissä tiloissa asukkaita palvelevat mm. viihtyisä saunaosasto j",True,1192.58,398.75,,31,876,,,60.197468,25.057638,pipe_reno_done,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24659342
 "Leinikkitie 19 B, Simonmetsä, Vantaa",Simonmetsä,vantaa,88170.3,112000.0,23829.7,2,42.5,1/2,1966,kerrostalo,True,2011,"imeistelevät kodin siistin ja ajattoman ilmeen.
 
-Asunto Oy Kielomäessä on tehty vuosien varrella runsaasti kunnossapito- ja korjaustöitä. Putkistojen linjasaneeraus valmistui vuonna 2011 ja vesikatto uusittiin vuonna 2024. Vuonna 2025 kunnostettiin muun muassa parvekkeiden kaiteita, yhteisiä saunatiloja, perusmuu",True,695.11,280.5,,31,866,,,60.309477,25.032193,pipe_reno_2011,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24651950
+Asunto Oy Kielomäessä on tehty vuosien varrella runsaasti kunnossapito- ja korjaustöitä. Putkistojen linjasaneeraus valmistui vuonna 2011 ja vesikatto uusittiin vuonna 2024. Vuonna 2025 kunnostettiin muun muassa parvekkeiden kaiteita, yhteisiä saunatiloja, perusmuu",True,695.11,280.5,,31,879,,,60.309477,25.032193,pipe_reno_2011,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24651950
 "Savelantie 8, Savela, Helsinki",Savela,helsinki,83354.08,85000.0,1645.92,1,34.5,2/4,1978,kerrostalo,True,,"isustusta tästä
  
 Lisää suosikiksi
 Jaa tämä kohde
-Tilava ja valoisa yksiö Helsingin Savelassa odottaa uutta omistajaa. Asunnossa on juuri valmistunut putkiremontti, jonka kustannus tämän huoneiston osalta on arviolta n. 33 000 €. Samalla kylpyhuone on saanut täysin upouuden ilmeen – moderni, raikas ja muuttovalm",True,466.09,188.0,,31,867,,,60.237395,24.991072,pipe_reno_done,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24651420
+Tilava ja valoisa yksiö Helsingin Savelassa odottaa uutta omistajaa. Asunnossa on juuri valmistunut putkiremontti, jonka kustannus tämän huoneiston osalta on arviolta n. 33 000 €. Samalla kylpyhuone on saanut täysin upouuden ilmeen – moderni, raikas ja muuttovalm",True,466.09,188.0,,31,880,,,60.237395,24.991072,pipe_reno_done,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24651420
 "Savelantie 8, Savela, Helsinki",Savela,helsinki,83354.08,85000.0,1645.92,1,34.5,2/4,1978,kerrostalo,True,,"isustusta tästä
  
 Lisää suosikiksi
 Jaa tämä kohde
-Tilava ja valoisa yksiö Helsingin Savelassa odottaa uutta omistajaa. Asunnossa on juuri valmistunut putkiremontti, jonka kustannus tämän huoneiston osalta on arviolta n. 33 000 €. Samalla kylpyhuone on saanut täysin upouuden ilmeen – moderni, raikas ja muuttovalm",True,466.09,188.0,,31,868,,,60.237395,24.991072,pipe_reno_done,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24651419
+Tilava ja valoisa yksiö Helsingin Savelassa odottaa uutta omistajaa. Asunnossa on juuri valmistunut putkiremontti, jonka kustannus tämän huoneiston osalta on arviolta n. 33 000 €. Samalla kylpyhuone on saanut täysin upouuden ilmeen – moderni, raikas ja muuttovalm",True,466.09,188.0,,31,881,,,60.237395,24.991072,pipe_reno_done,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24651419
 "Maininkitie 9 D, Kivenlahti, Espoo",Kivenlahti,espoo,94555.14,149000.0,54444.86,2,58.0,3/4,1974,kerrostalo,True,2024,"vausrumpu, ja kokonaisuus palvelee vaivattomasti myös kiireisessä arjessa.
 
-Asunto Oy Satoluiska tunnetaan erinomaisesti hoidettuna taloyhtiönä. LVIS-linjasaneeraus toteutettiin vuosina 2024-25 perinteisellä menetelmällä, eikä merkittäviä korjaushankkeita ole tiedossa lähivuosille. Asukkaiden käytössä ovat maksut",True,841.29,239.6,,31,872,,,60.151815,24.64851,pipe_reno_2024,https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24620263
-"Vuolukiventie 3, Pihlajamäki, Helsinki",Pihlajamäki,helsinki,160000.0,160000.0,,2,60.0,2/4,1964,kerrostalo,True,2009,"käyttövesisiirtimen uusinta, 2009 Viemäreiden pesu, kuvaus ja vesikaton pinnoitus, 2010 Ulko-ovien kunnostus, 2012 Hankesuunnittelun käynnistys, 2013 Linjasaneeraussuunnittelun käynnistys, 2014 Linjasaneerauksen suunnittelu,  2014-2015 Linjasaneeraus sis. putki-, sähkö-, telekaapelit, IV-työt ja lämmitysjärjestel",True,1002.91,345.6,,31,884,,,60.236933,25.001457,pipe_reno_2009,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24548847
+Asunto Oy Satoluiska tunnetaan erinomaisesti hoidettuna taloyhtiönä. LVIS-linjasaneeraus toteutettiin vuosina 2024-25 perinteisellä menetelmällä, eikä merkittäviä korjaushankkeita ole tiedossa lähivuosille. Asukkaiden käytössä ovat maksut",True,841.29,239.6,,31,885,,,60.151815,24.64851,pipe_reno_2024,https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24620263
+"Vuolukiventie 3, Pihlajamäki, Helsinki",Pihlajamäki,helsinki,160000.0,160000.0,,2,60.0,2/4,1964,kerrostalo,True,2009,"käyttövesisiirtimen uusinta, 2009 Viemäreiden pesu, kuvaus ja vesikaton pinnoitus, 2010 Ulko-ovien kunnostus, 2012 Hankesuunnittelun käynnistys, 2013 Linjasaneeraussuunnittelun käynnistys, 2014 Linjasaneerauksen suunnittelu,  2014-2015 Linjasaneeraus sis. putki-, sähkö-, telekaapelit, IV-työt ja lämmitysjärjestel",True,1002.91,345.6,,31,896,,,60.236933,25.001457,pipe_reno_2009,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24548847
 "Ahventie 3 B, Haukilahti, Espoo",Haukilahti,espoo,123189.24,170000.0,46810.76,2,56.5,1/3,1974,kerrostalo,True,,"rasopimusta. 
 Taloyhtiössä on toteutettu julkisivuremontti, jonka velkaosuus on juuri jyvitetty osakkaille. Lisäksi yhtiössä arvioidaan toteutettavan linjasaneeraus 2030-luvun alussa.
-Kohde sopii erityisesti pitkäjänteiselle sijoittajalle tai ostajalle, joka arvostaa Haukilahden sijaintia ja näkee asunnon potenti",True,1086.43,378.55,,30,927,,,60.166254,24.774257,pipe_reno_done,https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24530660
-"Kaskenkaatajantie 10, Tapiola, Espoo",Tapiola,espoo,135000.0,135000.0,,1,24.0,3/4,1958,kerrostalo,True,2011,"2011 Yyläpohjan lisäeristys, lumiesteet sisääntulopuolelle. 2009 julkisivujen puhdistus, vesikaton maalaus. 2007 Parvekekaiteiden kunnostaminen. 2006 Linjasaneeraus (käyttövesi- ja viemäriputket sekä sähköt uusittu), saunaosaston saneeraus, ulko-ovet uusittu, lukitus uusittu, porrashuoneiden maalaus ja ovien lakk",True,701.99,171.08,,28,971,,,60.180261,24.7932,pipe_reno_2011,https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24649419
-"Nuijamiestentie 30 A, Pohjois-Haaga, Helsinki",Pohjois-Haaga,helsinki,157699.43,179000.0,21300.57,2,52.0,2/4,1958,kerrostalo,True,2004,"esutilojen, talosaunan, talopesulan ja A-B varastotilojen tilasaneeraukset, patteriventtiilien vaihto ja lämmönsiirtimen automatiikan uusiminen, LVIS-linjasaneeraus. 2004: Lukituksen uusinta, Exec- järjestelmä. 2000-2001: Yhtiön omistaman asunnon kunnostus. 1999: Ulkoalueiden kunnostus, osittain salaojitusta C-D",True,1162.62,286.0,123.24,28,972,,,60.223655,24.905731,pipe_reno_2004,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24648898
-"Haahkatie 10, Lauttasaari, Helsinki",Lauttasaari,helsinki,140656.86,144800.0,4143.14,1,21.0,2/4,1939,kerrostalo,False,,,True,753.26,172.8,,28,984,,,60.156214,24.878975,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24437723
+Kohde sopii erityisesti pitkäjänteiselle sijoittajalle tai ostajalle, joka arvostaa Haukilahden sijaintia ja näkee asunnon potenti",True,1086.43,378.55,,30,939,,,60.166254,24.774257,pipe_reno_done,https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24530660
+"Haahkatie 10, Lauttasaari, Helsinki",Lauttasaari,helsinki,134256.86,138400.0,4143.14,1,21.0,2/4,1939,kerrostalo,False,,,True,720.9,172.8,,28,986,,,60.156214,24.878975,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24670217
+"Kaskenkaatajantie 10, Tapiola, Espoo",Tapiola,espoo,135000.0,135000.0,,1,24.0,3/4,1958,kerrostalo,True,2011,"2011 Yyläpohjan lisäeristys, lumiesteet sisääntulopuolelle. 2009 julkisivujen puhdistus, vesikaton maalaus. 2007 Parvekekaiteiden kunnostaminen. 2006 Linjasaneeraus (käyttövesi- ja viemäriputket sekä sähköt uusittu), saunaosaston saneeraus, ulko-ovet uusittu, lukitus uusittu, porrashuoneiden maalaus ja ovien lakk",True,701.99,171.08,,28,988,,,60.180261,24.7932,pipe_reno_2011,https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24649419
+"Nuijamiestentie 30 A, Pohjois-Haaga, Helsinki",Pohjois-Haaga,helsinki,157699.43,179000.0,21300.57,2,52.0,2/4,1958,kerrostalo,True,2004,"esutilojen, talosaunan, talopesulan ja A-B varastotilojen tilasaneeraukset, patteriventtiilien vaihto ja lämmönsiirtimen automatiikan uusiminen, LVIS-linjasaneeraus. 2004: Lukituksen uusinta, Exec- järjestelmä. 2000-2001: Yhtiön omistaman asunnon kunnostus. 1999: Ulkoalueiden kunnostus, osittain salaojitusta C-D",True,1162.62,286.0,123.24,28,989,,,60.223655,24.905731,pipe_reno_2004,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24648898
 "Aallonkohina 8 A, Espoonlahti, Espoo",Espoonlahti,espoo,110000.0,110000.0,,1,38.5,5/6,1973,kerrostalo,True,,"näkymät ilman suoraa naapuria edessä  ja puiden lomasta pilkottaa myös meri.
 
 Taloyhtiö sijaitsee omalla tontilla, ja merkittävä lisäarvo on jo tehty putkiremontti, joka tuo huoletonta asumista vuosiksi eteenpäin.
 
-Sijainti on erinomainen: päättyvän kadun rauha yhdistyy lyhyeen kävelymatkaan rannalle sekä kattav",True,620.26,215.76,,27,991,,,60.149372,24.64069,pipe_reno_done,https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24660897
-"Kettutie 4 C, Länsi-Herttoniemi, Helsinki",Länsi-Herttoniemi,helsinki,148000.0,148000.0,,1,27.5,2/7,1956,kerrostalo,False,,,True,757.36,160.72,,27,994,,,60.206841,25.038409,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24656848
+Sijainti on erinomainen: päättyvän kadun rauha yhdistyy lyhyeen kävelymatkaan rannalle sekä kattav",True,620.26,215.76,,27,1007,,,60.149372,24.64069,pipe_reno_done,https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24660897
+"Kettutie 4 C, Länsi-Herttoniemi, Helsinki",Länsi-Herttoniemi,helsinki,148000.0,148000.0,,1,27.5,2/7,1956,kerrostalo,False,,,True,757.36,160.72,,27,1010,,,60.206841,25.038409,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24656848
 "Lampuotilantie 34-36 A, Maunula, Helsinki",Maunula,helsinki,159996.14,164000.0,4003.86,2,51.0,1/4,1959,kerrostalo,True,2011,"falttipinnoitteiden uusiminen.
 - 2011: Vesikaton kuntotutkimus. Pihan valaistuksen parantaminen. Lukituksen uusinta. Porraskäytävien maalaus.
 - 2010: Putkiremontti (Uusittu käyttövesiputket ja viemärit).
 - 2010: Taloyhtiön laajakaista.
 - 2005: Saunan kunnostus.
-- 2004: Patteriverkoston säätö. Patteriventtiilien",True,1014.14,336.6,,27,996,,,60.232964,24.928263,pipe_reno_2011,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24424203
+- 2004: Patteriverkoston säätö. Patteriventtiilien",True,1014.14,336.6,,27,1012,,,60.232964,24.928263,pipe_reno_2011,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24424203
 "Kaskenkaatajantie 18 B, Tapiola, Espoo",Tapiola,espoo,163147.91,179000.0,15852.09,1,34.0,1/4,1965,kerrostalo,True,2012,"s. Seinät ja lattia laattaa.
 Säilytystilat
 Jäähdytetty kellari, kaapistot ja kellarikomero
@@ -202,22 +224,21 @@ Putkiremontti
 2012
 Tulevat remontit
 Kunnossapitotarve yhtiökokousta seuraavien viiden vuoden aikana:
-2026 Ilmakanavan säätöpeltien suunnittelu (B-porras) ja asennu",True,982.83,229.45,,26,1010,,,60.181665,24.793381,pipe_reno_2012,https://asunnot.oikotie.fi/myytavat-asunnot/espoo/23665585
+2026 Ilmakanavan säätöpeltien suunnittelu (B-porras) ja asennu",True,982.83,229.45,,26,1027,,,60.181665,24.793381,pipe_reno_2012,https://asunnot.oikotie.fi/myytavat-asunnot/espoo/23665585
 "Pyymosantie 3, Petikko, Vantaa",Petikko,vantaa,72105.04,75000.0,2894.96,2,51.0,1/3,1952,kerrostalo,True,1999,"tarkistus ja säätö. -27
 Tehdyt remontit
-1999 porrashuoneet ja sauna kunnostettu, 2000 julkisivu ja lämmönsiirrin uusittu, 2001 viemärit ja käyttövesiputkisto uusittu osittain, 2003 porrastaso-ovien uusinta, 2005 jätekatos ja vesikatteen uusiminen, 2007 kellaritiloissa uusittu putkieristykset, 2010 lukitus uusittu,",True,578.92,351.39,,26,1021,,,60.284135,24.816897,pipe_reno_1999,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24405661
+1999 porrashuoneet ja sauna kunnostettu, 2000 julkisivu ja lämmönsiirrin uusittu, 2001 viemärit ja käyttövesiputkisto uusittu osittain, 2003 porrastaso-ovien uusinta, 2005 jätekatos ja vesikatteen uusiminen, 2007 kellaritiloissa uusittu putkieristykset, 2010 lukitus uusittu,",True,578.92,351.39,,26,1038,,,60.284135,24.816897,pipe_reno_1999,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24405661
 "Kanneltie 13 A, Kannelmäki, Helsinki",Kannelmäki,helsinki,133772.95,140000.0,6227.05,1,30.0,1/4,1959,kerrostalo,True,,"oderniin keittiöön, kun taas sijoittajat arvostavat valmista vuokrasuhdetta ja hyvää vuokrattavuutta.
-Taloyhtiö on poikkeuksellisen hyvässä kunnossa: putkiremontti, sähköt, julkisivut, parvekkeet ja katto on jo tehty, ja viime vuosina yhtiöön on investoitu merkittävästi. Maalämpö ja aurinkovoimala tuovat energia",True,722.59,166.4,,25,1029,,,60.243905,24.879814,pipe_reno_done,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24393856
-"Poutamäentie 11, Pajamäki, Helsinki",Pajamäki,helsinki,150000.0,150000.0,18441.58,2,45.0,3/4,1959,kerrostalo,False,,,True,846.35,239.6,,25,1039,,,60.218688,24.853546,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24526766
-"Sulkapolku 4 B, Pitäjänmäki, Helsinki",Pitäjänmäki,helsinki,117986.46,118000.0,13.54,2,51.0,1/3,1963,kerrostalo,False,,,True,878.45,433.5,,23,1074,,,60.224738,24.857064,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24642917
-"Sulkapolku 5 A, Pitäjänmäki, Helsinki",Pitäjänmäki,helsinki,74000.0,99000.0,25000.0,1,28.0,1/2,1940,kerrostalo,False,,,True,572.88,224.0,,22,1102,,,60.224645,24.858057,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24534992
-"Ahjokuja 2 D, Haaga, Helsinki",Haaga,helsinki,130317.92,133000.0,2682.08,1,22.0,3/3,1961,kerrostalo,False,,,True,650.59,129.8,,22,1111,,,60.209378,24.892119,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23632295
-"Saanatunturintie 3 B, Mellunmäki, Helsinki",Mellunmäki,helsinki,70279.14,122000.0,51720.86,2,55.0,1/3,1971,kerrostalo,True,,"uoneisto, joten luonnonvaloa tulvii sisään koko päivän ajan.
-
-Yhtiö on hyvin hoidettu ja sijaitsee omalla tontilla. Suuri ja merkittävä peruskorjaus, putkiremontti, on jo tehty – samalla uusittiin myös taloyhtiön saunaosasto ja uima-allas, jotka tuovat arkeen ripauksen ylellisyyttä.
-
-Mellunmäki tarjoaa asukkaill",True,729.18,264.0,,21,1129,Mellunmäki,1032,60.234876,25.125757,pipe_reno_done,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24605198
-"Vuolukiventie 5 M, Pihlajamäki, Helsinki",Pihlajamäki,helsinki,96898.79,98000.0,1101.21,2,60.0,2/4,1964,kerrostalo,False,,"hlö
+Taloyhtiö on poikkeuksellisen hyvässä kunnossa: putkiremontti, sähköt, julkisivut, parvekkeet ja katto on jo tehty, ja viime vuosina yhtiöön on investoitu merkittävästi. Maalämpö ja aurinkovoimala tuovat energia",True,722.59,166.4,,25,1046,,,60.243905,24.879814,pipe_reno_done,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24393856
+"Poutamäentie 11, Pajamäki, Helsinki",Pajamäki,helsinki,150000.0,150000.0,18441.58,2,45.0,3/4,1959,kerrostalo,False,,,True,846.35,239.6,,25,1055,,,60.218688,24.853546,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24526766
+"Sokinvuorenrinne 4 B, Suvela, Espoo",Suvela,espoo,51571.05,99000.0,47428.95,2,50.5,6/9,1973,kerrostalo,True,,"lavat huoneet mahdollistavat monipuoliset sisustusratkaisut ja tekevät asunnosta miellyttävän kokonaisuuden.
+Taloyhtiöstä on pidetty hyvää huolta, ja putkiremontti on jo tehty, mikä tuo asumiseen pitkäjänteisyyttä ja helpottaa tulevaisuuden suunnittelua.
+Sokinvuorenrinne tarjoaa rauhallisen asuinympäristön Espoo",True,624.11,275.23,,24,1069,,,60.200425,24.66835,pipe_reno_done,https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24671702
+"Kumianpää 1 J, Laajasalo, Helsinki",Laajasalo,helsinki,116226.06,155000.0,38773.94,2,43.5,1/4,1967,kerrostalo,False,,,True,762.53,130.5,,23,1087,,,60.176757,25.037374,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24672927
+"Sulkapolku 4 B, Pitäjänmäki, Helsinki",Pitäjänmäki,helsinki,117986.46,118000.0,13.54,2,51.0,1/3,1963,kerrostalo,False,,,True,878.45,433.5,,23,1091,,,60.224738,24.857064,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24642917
+"Sulkapolku 5 A, Pitäjänmäki, Helsinki",Pitäjänmäki,helsinki,74000.0,99000.0,25000.0,1,28.0,1/2,1940,kerrostalo,False,,,True,572.88,224.0,,22,1119,,,60.224645,24.858057,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24534992
+"Ahjokuja 2 D, Haaga, Helsinki",Haaga,helsinki,130317.92,133000.0,2682.08,1,22.0,3/3,1961,kerrostalo,False,,,True,650.59,129.8,,22,1128,,,60.209378,24.892119,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23632295
+"Vuolukiventie 5 M, Pihlajamäki, Helsinki",Pihlajamäki,helsinki,96898.79,98000.0,1101.21,2,60.0,2/4,1964,kerrostalo,False,,"/ kk
 -Saunamaksu: 15,00 € / kk -> 18,00 € / kk
 Pääomavastikkeet
 -Pääomavastike 2 (piharemontti): 0,06 € / m²/os. -> 0,04 € / m²/os.
@@ -228,33 +249,38 @@ Veden hinnat
 Talon ja tontin tiedot
 Uudiskohde
 Ei
-Taloyhtiön",True,708.45,364.62,,21,1140,,,60.235681,25.000505,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24433533
-"Rapakiventie 2 I, Pihlajanmäki, Helsinki",Pihlajanmäki,helsinki,139000.0,139000.0,,2,60.5,5/7,1977,kerrostalo,False,,,True,823.38,272.25,,20,1172,,,60.235261,25.009454,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23714810
-"Huopalahdentie 12, Munkkiniemi, Helsinki",Munkkiniemi,helsinki,187958.86,193500.0,5541.14,1,34.5,5/6,1957,kerrostalo,False,,,True,1016.45,189.75,,19,1197,,,60.199177,24.883055,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24579470
-"Suunnistajankuja 10 B, Länsimäki, Vantaa",Länsimäki,vantaa,110000.0,110000.0,,2,48.0,2/4,1978,kerrostalo,False,,,True,644.5,240.0,,18,1245,Länsimäki,278,60.246295,25.113015,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24639776
-"Lehmihaka 2 D, Rautkallio, Vantaa",Rautkallio,vantaa,52600.0,52600.0,,2,59.5,3/6,1975,kerrostalo,False,,,True,441.24,326.97,,18,1271,,,60.321105,25.074037,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24394973
-"Saariselänkuja 6, Mellunkylä, Helsinki",Mellunkylä,helsinki,98000.0,99000.0,1000.0,1,34.0,1/3,1973,kerrostalo,False,,,True,529.08,180.2,,18,1300,Mellunmäki,583,60.238484,25.11952,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/17773495
-"Kirkkoherrantie 5 A, Helsinki",Helsinki,,198000.0,198000.0,,2,47.5,2/3,1962,kerrostalo,False,,,True,1253.2,403.75,,17,1326,,,60.224774,24.972336,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24519705
-"Vuolukiventie 12 A, Pihlajamäki, Helsinki",Pihlajamäki,helsinki,98545.0,134000.0,35455.0,2,66.0,4/8,1964,kerrostalo,False,,,True,878.65,352.8,,17,1336,,,60.236948,25.002966,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24400211
+Taloyhtiön",True,708.45,364.62,,21,1139,,,60.235681,25.000505,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24674413
+"Saanatunturintie 3 B, Mellunmäki, Helsinki",Mellunmäki,helsinki,70279.14,122000.0,51720.86,2,55.0,1/3,1971,kerrostalo,True,,"uoneisto, joten luonnonvaloa tulvii sisään koko päivän ajan.
+
+Yhtiö on hyvin hoidettu ja sijaitsee omalla tontilla. Suuri ja merkittävä peruskorjaus, putkiremontti, on jo tehty – samalla uusittiin myös taloyhtiön saunaosasto ja uima-allas, jotka tuovat arkeen ripauksen ylellisyyttä.
+
+Mellunmäki tarjoaa asukkaill",True,729.18,264.0,,21,1146,Mellunmäki,1032,60.234876,25.125757,pipe_reno_done,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24605198
+"Rapakiventie 2 I, Pihlajanmäki, Helsinki",Pihlajanmäki,helsinki,139000.0,139000.0,,2,60.5,5/7,1977,kerrostalo,False,,,True,823.38,272.25,,20,1186,,,60.235261,25.009454,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23714810
+"Huopalahdentie 12, Munkkiniemi, Helsinki",Munkkiniemi,helsinki,187958.86,193500.0,5541.14,1,34.5,5/6,1957,kerrostalo,False,,,True,1016.45,189.75,,19,1212,,,60.199177,24.883055,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24579470
+"Suunnistajankuja 10 B, Länsimäki, Vantaa",Länsimäki,vantaa,110000.0,110000.0,,2,48.0,2/4,1978,kerrostalo,False,,,True,644.5,240.0,,18,1260,Länsimäki,278,60.246295,25.113015,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24639776
+"Lehmihaka 2 D, Rautkallio, Vantaa",Rautkallio,vantaa,52600.0,52600.0,,2,59.5,3/6,1975,kerrostalo,False,,,True,441.24,326.97,,18,1286,,,60.321105,25.074037,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24394973
+"Saariselänkuja 6, Mellunkylä, Helsinki",Mellunkylä,helsinki,98000.0,99000.0,1000.0,1,34.0,1/3,1973,kerrostalo,False,,,True,529.08,180.2,,18,1315,Mellunmäki,583,60.238484,25.11952,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/17773495
+"Kirkkoherrantie 5 A, Helsinki",Helsinki,,198000.0,198000.0,,2,47.5,2/3,1962,kerrostalo,False,,,True,1253.2,403.75,,17,1340,,,60.224774,24.972336,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24519705
+"Vuolukiventie 12 A, Pihlajamäki, Helsinki",Pihlajamäki,helsinki,98545.0,134000.0,35455.0,2,66.0,4/8,1964,kerrostalo,False,,,True,878.65,352.8,,17,1350,,,60.236948,25.002966,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24400211
 "Koivukyläntie 37-39 F, Simonkylä, Vantaa",Simonkylä,vantaa,143110.7,154000.0,10889.3,2,58.0,4/6,1969,kerrostalo,True,,"sää asumismukavuutta pitkälle syksyyn.
 
-Hyvin hoidettu taloyhtiö sijaitsee omalla tontilla, ja kaikki suuret remontit on jo tehty: mm. kattoremontti, linjasaneeraus sekä julkisivuremontti. Seuraavana isompana hankkeena suunnitteilla on piha- ja parkkialueen saneeraus, jonka yhteydessä taloyhtiöön on alustavasti k",True,873.38,246.4,,17,1338,,,60.31527,25.035886,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24237502
+Hyvin hoidettu taloyhtiö sijaitsee omalla tontilla, ja kaikki suuret remontit on jo tehty: mm. kattoremontti, linjasaneeraus sekä julkisivuremontti. Seuraavana isompana hankkeena suunnitteilla on piha- ja parkkialueen saneeraus, jonka yhteydessä taloyhtiöön on alustavasti k",True,873.38,246.4,,17,1352,,,60.31527,25.035886,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24237502
 "Kanneltie 15 B, Kannelmäki, Helsinki",Kannelmäki,helsinki,98000.0,98000.0,,1,24.0,1/3,1959,kerrostalo,True,,"ja helposti sisustettava yksiö, valmiiksi vuokrattu! Vuokra 605 €/kk + vesimaksu. Tässä yhtiössä on vuosien saatossa tehty mm. salaojat, perinteinen linjasaneeraus. katot ja ikkunat, eikä isoja remontteja ole enää suunnitteilla yhtiössä. Helppoa asumista vuosiksi eteenpäin.
 
-Kaikki palvelut löytyvät kävelyetäisy",True,510.5,166.67,,17,1339,,,60.246691,24.884666,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24345711
-"Suursuontie 6 B, Maunula, Helsinki",Maunula,helsinki,133000.0,133000.0,,1,26.0,2/4,1962,kerrostalo,False,,,True,697.11,176.32,,16,1345,,,60.233128,24.937992,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24654590
+Kaikki palvelut löytyvät kävelyetäisy",True,510.5,166.67,,17,1353,,,60.246691,24.884666,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24345711
+"Suursuontie 6 B, Maunula, Helsinki",Maunula,helsinki,133000.0,133000.0,,1,26.0,2/4,1962,kerrostalo,False,,,True,697.11,176.32,,16,1359,,,60.233128,24.937992,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24654590
 "Adolf Lindforsin tie 7 A, Pohjois-Haaga, Helsinki",Pohjois-Haaga,helsinki,115136.0,123000.0,7864.0,1,23.5,9/10,1956,kerrostalo,False,2027,"unto sijaitsee 9. kerroksessa ja omaa mahtavan näköalan, aina Pasilaan asti. Tämä on nähtävä !! Vastaavia on harvoin tarjolla. 
 
 Taloyhtiössä tehdään putkiremontti 2027 ja siinä yhteydessä taloyhtiö uusii kylpyhuoneet. Kustannus tämän asunnon osalta on n. 20 000 euroa.
 
-Huoneisto on vuokrattu määräaikaisella vuo",True,610.23,140.0,,16,1371,,,60.229879,24.890875,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24488607
-"Mustankivenaukio 5 A, Vuosaari, Helsinki",Vuosaari,helsinki,157338.36,159000.0,1661.64,2,51.5,5/7,1999,kerrostalo,False,,,True,992.16,257.5,82.4,15,1399,,,60.206104,25.142087,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24483113
+Huoneisto on vuokrattu määräaikaisella vuo",True,610.23,140.0,,16,1385,,,60.229879,24.890875,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24488607
+"Mustankivenaukio 5 A, Vuosaari, Helsinki",Vuosaari,helsinki,157338.36,159000.0,1661.64,2,51.5,5/7,1999,kerrostalo,False,,,True,992.16,257.5,82.4,15,1414,,,60.206104,25.142087,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24483113
 "Kanneltie 6 A, Kannelmäki, Helsinki",Kannelmäki,helsinki,122712.68,129000.0,6287.32,1,29.0,2/3,1960,kerrostalo,False,,"unakorjaus 0,1609 €/os/kk 1.7.26 alkaen 0,1511 €/os/kk
 Pääomavastike 2, iv-hormien sukitus 0,04 €/os/kk 1.7.26 alkaen 0,0384 €/os/kk
 Pääomavastike 3, putkisaneeraus, huoneistokohtainen lainaosuus on maksettu pois.
 Pääomavastike 4, FG salaojaurakka 0,0291 €/os/kk 1.7.26 alkaen 0,0239 €/os/kk
 Muut maksut
-Vesimaksu",True,733.67,233.1,,11,1476,,,60.291604,25.119225,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24551197
+Vesimaksu",True,733.67,233.1,,11,1486,,,60.291604,25.119225,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24551197
 "Mestarinkatu 5 A, Vallikallio, Espoo",Vallikallio,espoo,149000.0,,,1,27.0,3/8,2021,kerrostalo,False,,,False,601.69,,,74,1,,,60.221346,24.815917,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/espoo/24583838
 "Mestarinkatu 5, Espoo, Leppävaara, Espoo",Leppävaara,espoo,197000.0,,,1,27.0,3/8,2021,kerrostalo,False,,,False,844.39,,,74,3,,,60.221346,24.815917,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/espoo/17322853
 "Aleksis Kiven katu 38 A, Kallio, Helsinki",Kallio,helsinki,165000.0,165000.0,,1,25.0,4/7,1928,kerrostalo,True,2019,"ukituksen parantaminen
