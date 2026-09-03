@@ -2,6 +2,13 @@ name: Redeploy (no scrape)
 
 on:
   workflow_dispatch:
+  # Auto-redeploy on static-asset-only changes (css/js/manifest/icons) — this
+  # job never re-renders index.html, so it can't pick up template/Python
+  # changes; those need a real scrape (workflow_dispatch on scrape.yml).
+  push:
+    branches: [main]
+    paths:
+      - 'static/**'
 
 jobs:
   deploy:
