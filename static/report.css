@@ -302,9 +302,11 @@ tr.row-rented { background: var(--nv-t); }
 tr.row-rented:hover { background: color-mix(in srgb, var(--nv-t) 70%, var(--surface)); }
 
 /* ── Mobile ────────────────────────────────────────────────────────────── */
+.topbar { overflow-x: auto; } /* allow scroll when buttons overflow at any width */
+
 @media (max-width: 600px) {
   .grid { grid-template-columns: 1fr; }
-  .topbar { overflow-x: auto; gap: 8px; padding: 0 10px; }
+  .topbar { gap: 8px; padding: 0 10px; }
   .seg-btn { padding: 5px 10px; font-size: 12px; }
   .topbar-wordmark { display: none; }
 }

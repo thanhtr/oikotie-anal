@@ -207,8 +207,10 @@ def generate_html_report(confirmed: list[dict], candidates: list[dict],
 
     tram_table_rows = (
         [_table_row_context(l, "tram", "row-rented") for l in rented_out] +
-        [_table_row_context(l, "tram", "row-confirmed") for l in confirmed] +
-        [_table_row_context(l, "tram", "row-cand") for l in candidates]
+        [_table_row_context(l, "tram", "row-confirmed") for l in confirmed
+         if not l.get("is_rented_out")] +
+        [_table_row_context(l, "tram", "row-cand") for l in candidates
+         if not l.get("is_rented_out")]
     )
 
     uu_sections = [s for s in [
