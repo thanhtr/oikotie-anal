@@ -5,6 +5,10 @@ on:
     - cron: '0 5 * * 1'   # Mondays 5am UTC = 8am Helsinki (UTC+3)
   workflow_dispatch:           # manual trigger from GitHub UI
 
+concurrency:
+  group: gh-pages-deploy
+  cancel-in-progress: false
+
 jobs:
   scrape:
     runs-on: ubuntu-latest
