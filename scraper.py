@@ -1048,6 +1048,15 @@ def generate_html_report(confirmed: list[dict], candidates: list[dict],
         except Exception:
             return str(v)
 
+    def details_toggle(cid: str, details_body: str) -> str:
+        return (
+            f'<button class="card-details-btn" onclick="toggleDetails(\'{cid}\')" id="btn-{cid}">'
+            f'<span class="details-label">Details</span>'
+            f'<svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>'
+            f'</button>'
+            f'<div id="{cid}" class="card-details-body" hidden>{details_body}</div>'
+        )
+
     def make_cards(lst: list[dict]) -> str:
         if not lst:
             return "<p class='empty'>None this run.</p>"
@@ -1111,9 +1120,6 @@ def generate_html_report(confirmed: list[dict], candidates: list[dict],
             rent_b = '<span class="badge rent">rented out</span>' if l.get("is_rented_out") else ""
             badges_html = status_badge + tram_b + rent_b
 
-            distance_html = (f'<div class="card-hub">🚋 {esc(stop)} {round(dist_m) if dist_m is not None else "?"}m</div>'
-                             if stop else "")
-
             # Details content (collapsed by default)
             stop_note  = _STOP_NOTE.get(stop, "")
             stop_links = _STOP_LINKS.get(stop, [])
@@ -1145,13 +1151,7 @@ def generate_html_report(confirmed: list[dict], candidates: list[dict],
             details_html = ""
             if has_details:
                 details_body = note_html + flags_html + reno_html + yield_html
-                details_html = (
-                    f'<button class="card-details-btn" onclick="toggleDetails(\'{cid}\')" id="btn-{cid}">'
-                    f'<span class="details-label">Details</span>'
-                    f'<svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>'
-                    f'</button>'
-                    f'<div id="{cid}" class="card-details-body" hidden>{details_body}</div>'
-                )
+                details_html = details_toggle(cid, details_body)
 
             view_svg = '<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg>'
             view_link = (f'<a href="{esc(url)}" class="card-view-link" target="_blank" rel="noopener">View {view_svg}</a>'
@@ -1169,7 +1169,6 @@ def generate_html_report(confirmed: list[dict], candidates: list[dict],
   <div class="card-loan">{esc(loan_s)}</div>
   <div class="card-meta">{meta_s}</div>
   <div class="card-address">{addr_link}</div>
-  {distance_html}
   <div class="card-divider"></div>
   <div class="card-badges">{badges_html}</div>
   {details_html}
@@ -1272,13 +1271,7 @@ def generate_html_report(confirmed: list[dict], candidates: list[dict],
             details_html = ""
             if has_details:
                 details_body = flags_html + reno_html + yield_html
-                details_html = (
-                    f'<button class="card-details-btn" onclick="toggleDetails(\'{cid}\')" id="btn-{cid}">'
-                    f'<span class="details-label">Details</span>'
-                    f'<svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>'
-                    f'</button>'
-                    f'<div id="{cid}" class="card-details-body" hidden>{details_body}</div>'
-                )
+                details_html = details_toggle(cid, details_body)
 
             view_svg = '<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg>'
             view_link = (f'<a href="{esc(url)}" class="card-view-link" target="_blank" rel="noopener">View {view_svg}</a>'
@@ -1898,8 +1891,8 @@ function sortTable(tableId, col) {{
   tbl.querySelectorAll('th').forEach(h => h.classList.remove('sort-asc','sort-desc'));
   tbl.querySelectorAll('th')[col].classList.add(st.d === 1 ? 'sort-asc' : 'sort-desc');
   rows.sort(function(a, b) {{
-    var av = a.cells[col].innerText.replace(/[€  \t\n,%]/g,'');
-    var bv = b.cells[col].innerText.replace(/[€  \t\n,%]/g,'');
+    var av = a.cells[col].innerText.replace(/[€ #\t\n,%]/g,'');
+    var bv = b.cells[col].innerText.replace(/[€ #\t\n,%]/g,'');
     var an = parseFloat(av), bn = parseFloat(bv);
     if (!isNaN(an) && !isNaN(bn)) return (an - bn) * st.d;
     return av.localeCompare(bv, 'fi') * st.d;
