@@ -296,8 +296,15 @@ tr.row-cand:hover { background: var(--or-t2); }
   font-size: 13px; color: var(--m60); line-height: 1.8;
 }
 
+.details-label { font-weight: 700; }
+
+tr.row-rented { background: var(--nv-t); }
+tr.row-rented:hover { background: color-mix(in srgb, var(--nv-t) 70%, var(--surface)); }
+
 /* ── Mobile ────────────────────────────────────────────────────────────── */
 @media (max-width: 600px) {
   .grid { grid-template-columns: 1fr; }
-  .topbar-modes { display: none; }
+  .topbar { overflow-x: auto; gap: 8px; padding: 0 10px; }
+  .seg-btn { padding: 5px 10px; font-size: 12px; }
+  .topbar-wordmark { display: none; }
 }

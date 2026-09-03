@@ -113,11 +113,11 @@ def _card_context(l: dict, mode: str) -> dict:
     else:
         hub, hdist = l.get("nearest_hub") or "?", l.get("hub_distance_m")
         hc_km = l.get("helsinki_central_km")
-        hub_line = f"🚉 {hub} · {round(hdist) if hdist else '?'}m"
+        hub_line = f"🚉 {hub} · {round(hdist) if hdist is not None else '?'}m"
         if hc_km:
             hub_line += f"  ·  🏙 {hc_km:.1f} km centre"
         mall, mdist = l.get("nearest_mall") or "?", l.get("mall_distance_m")
-        if mdist:
+        if mdist is not None:
             mall_line = f"🛍 {mall} · {round(mdist)}m"
         flags = listing_red_flags_uusimaa(l)
 
@@ -155,7 +155,7 @@ def _table_row_context(l: dict, mode: str, row_class: str = "") -> dict:
                          else "pipe reno ✓")
     else:
         hub, hdist = l.get("nearest_hub") or "—", l.get("hub_distance_m")
-        ctx["hub_str"] = f"{hub} {round(hdist)}m" if hdist else hub
+        ctx["hub_str"] = f"{hub} {round(hdist)}m" if hdist is not None else hub
         ctx["score"] = l.get("score", "—")
     return ctx
 
@@ -206,6 +206,7 @@ def generate_html_report(confirmed: list[dict], candidates: list[dict],
     ] if s]
 
     tram_table_rows = (
+        [_table_row_context(l, "tram", "row-rented") for l in rented_out] +
         [_table_row_context(l, "tram", "row-confirmed") for l in confirmed] +
         [_table_row_context(l, "tram", "row-cand") for l in candidates]
     )
@@ -232,7 +233,7 @@ def generate_html_report(confirmed: list[dict], candidates: list[dict],
                  "Deduplicated to one listing per building, then top scored by hub proximity.",
                  newbuild_pks, "sec-new", "uusimaa"),
     ] if s]
-    nb_table_rows = [_table_row_context(l, "uusimaa") for l in newbuild_pks]
+    nb_table_rows = [_table_row_context(l, "uusimaa", "row-confirmed") for l in newbuild_pks]
 
     ctx = {
         "run_time": datetime.now().strftime("%Y-%m-%d %H:%M"),
