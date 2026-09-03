@@ -84,10 +84,10 @@ def _geocode_pks_listing(listing: dict, cache: dict, geo_cache: dict) -> tuple[b
         return True, False
     was_cached = f"{addr}, {city}, Finland" in geo_cache
     coords = geocode_address(addr, city, geo_cache)
-    if coords is None:
-        return False, not was_cached
     if not was_cached:
         time.sleep(1.5)
+    if coords is None:
+        return False, not was_cached
     lat, lon = coords
     hub_name,  hub_dist  = nearest_hub(lat, lon)
     mall_name, mall_dist = nearest_mall(lat, lon)
