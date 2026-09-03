@@ -1,0 +1,39 @@
+{% macro row(l) -%}
+<tr class="{{ l.row_class }}">
+  <td>{%- if l.url %}<a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.addr }}</a>{% else %}{{ l.addr }}{% endif -%}</td>
+  <td>{{ l.district }}</td>
+  <td>{{ l.city }}</td>
+  <td class="num">{{ l.price_s }}</td>
+  <td class="num">{{ l.dfp_s }}</td>
+  <td class="num">{{ l.loan_s }}</td>
+  <td>{{ l.rooms }}h</td>
+  <td>{{ l.sqm }}</td>
+  <td>{{ l.year }}</td>
+  {%- if l.status is defined %}
+  <td>{{ l.status }}</td>
+  {%- else %}
+  <td>{{ l.hub_str }}</td>
+  <td class="num">{{ l.score }}</td>
+  {%- endif %}
+</tr>
+{%- endmacro %}
+
+{% macro headers(table_id, mode) -%}
+<tr>
+  <th onclick="sortTable('{{ table_id }}',0)">Address</th>
+  <th onclick="sortTable('{{ table_id }}',1)">District</th>
+  <th onclick="sortTable('{{ table_id }}',2)">City</th>
+  <th onclick="sortTable('{{ table_id }}',3)">Price</th>
+  <th onclick="sortTable('{{ table_id }}',4)">Velaton</th>
+  <th onclick="sortTable('{{ table_id }}',5)">Loan</th>
+  <th onclick="sortTable('{{ table_id }}',6)">Rooms</th>
+  <th onclick="sortTable('{{ table_id }}',7)">m²</th>
+  <th onclick="sortTable('{{ table_id }}',8)">Year</th>
+  {%- if mode == 'tram' %}
+  <th onclick="sortTable('{{ table_id }}',9)">Status</th>
+  {%- else %}
+  <th onclick="sortTable('{{ table_id }}',9)">Nearest Hub</th>
+  <th onclick="sortTable('{{ table_id }}',10)">Score</th>
+  {%- endif %}
+</tr>
+{%- endmacro %}
