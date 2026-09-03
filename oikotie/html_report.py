@@ -113,11 +113,11 @@ def _card_context(l: dict, mode: str) -> dict:
     else:
         hub, hdist = l.get("nearest_hub") or "?", l.get("hub_distance_m")
         hc_km = l.get("helsinki_central_km")
-        hub_line = f"🚉 {hub} · {round(hdist) if hdist else '?'}m"
+        hub_line = f"🚉 {hub} · {round(hdist) if hdist is not None else '?'}m"
         if hc_km:
             hub_line += f"  ·  🏙 {hc_km:.1f} km centre"
         mall, mdist = l.get("nearest_mall") or "?", l.get("mall_distance_m")
-        if mdist:
+        if mdist is not None:
             mall_line = f"🛍 {mall} · {round(mdist)}m"
         flags = listing_red_flags_uusimaa(l)
 
@@ -133,13 +133,15 @@ def _card_context(l: dict, mode: str) -> dict:
 
 def _table_row_context(l: dict, mode: str, row_class: str = "") -> dict:
     dfp = l.get("debt_free_price_eur") or l.get("price_eur") or 0
+    rank = l.get("rank", "")
+    sc   = l.get("score", "")
+    rank_s = f"#{rank} · {sc}" if (rank is not None and rank != "") else "—"
     ctx = {
         "row_class": row_class,
+        "rank_s": rank_s,
         "url": l.get("listing_url") or "",
         "addr": l.get("address", "—"),
         "district": l.get("district") or "—",
-        "city": l.get("city") or "—",
-        "price_s": fmt_eur(l.get("price_eur")),
         "dfp_s": fmt_eur(dfp),
         "loan_s": _loan_ratio_str(l),
         "rooms": l.get("room_count", "—"),
@@ -153,7 +155,7 @@ def _table_row_context(l: dict, mode: str, row_class: str = "") -> dict:
                          else "pipe reno ✓")
     else:
         hub, hdist = l.get("nearest_hub") or "—", l.get("hub_distance_m")
-        ctx["hub_str"] = f"{hub} {round(hdist)}m" if hdist else hub
+        ctx["hub_str"] = f"{hub} {round(hdist)}m" if hdist is not None else hub
         ctx["score"] = l.get("score", "—")
     return ctx
 
@@ -204,8 +206,11 @@ def generate_html_report(confirmed: list[dict], candidates: list[dict],
     ] if s]
 
     tram_table_rows = (
-        [_table_row_context(l, "tram", "row-confirmed") for l in confirmed] +
-        [_table_row_context(l, "tram", "row-cand") for l in candidates]
+        [_table_row_context(l, "tram", "row-rented") for l in rented_out] +
+        [_table_row_context(l, "tram", "row-confirmed") for l in confirmed
+         if not l.get("is_rented_out")] +
+        [_table_row_context(l, "tram", "row-cand") for l in candidates
+         if not l.get("is_rented_out")]
     )
 
     uu_sections = [s for s in [
@@ -230,7 +235,7 @@ def generate_html_report(confirmed: list[dict], candidates: list[dict],
                  "Deduplicated to one listing per building, then top scored by hub proximity.",
                  newbuild_pks, "sec-new", "uusimaa"),
     ] if s]
-    nb_table_rows = [_table_row_context(l, "uusimaa") for l in newbuild_pks]
+    nb_table_rows = [_table_row_context(l, "uusimaa", "row-confirmed") for l in newbuild_pks]
 
     ctx = {
         "run_time": datetime.now().strftime("%Y-%m-%d %H:%M"),

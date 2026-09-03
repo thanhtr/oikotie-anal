@@ -1,10 +1,11 @@
-{% macro card(l) -%}
+{% macro card(l, cid) -%}
+{%- set has_details = l.note or l.flags or l.reno -%}
 <article class="card">
   <div class="card-top">
     <span class="card-rank">{{ l.rank_s }}</span>
     {%- if l.url %}<a href="{{ l.url }}" class="card-view-link" target="_blank" rel="noopener">View →</a>{% endif %}
   </div>
-  <div class="card-price">{{ l.price_s }} <span class="card-price-sub">velaton</span></div>
+  <div class="card-price">{{ l.price_s }}<span class="card-price-sub">velaton</span></div>
   {%- if l.monthly_str %}
   <div class="card-monthly">{{ l.monthly_str }}</div>
   {%- endif %}
@@ -26,20 +27,31 @@
   <div class="card-badges">
     {%- for b in l.badges %}<span class="badge {{ b.cls }}">{{ b.text }}</span>{% endfor -%}
   </div>
-  {%- if l.note %}
-  <p class="stop-note">{{ l.note.text }}
-    {%- for link in l.note.links %} <a href="{{ link.url }}" class="stop-link" target="_blank" rel="noopener">{{ link.label }}</a>{% endfor -%}
-  </p>
-  {%- endif %}
-  {%- if l.flags %}
-  <ul class="risk-flags">
-    {%- for f in l.flags %}
-    <li><span class="rf-text">{{ f.text }}</span><a href="{{ f.url }}" class="rf-link" target="_blank" rel="noopener">{{ f.label }}</a></li>
-    {%- endfor %}
-  </ul>
-  {%- endif %}
-  {%- if l.reno %}
-  <p class="reno-note">{{ l.reno }}</p>
+  {%- if has_details %}
+  <button class="card-details-btn" onclick="toggleDetails('{{ cid }}')" id="btn-{{ cid }}">
+    <span class="details-label">Details</span>
+    <svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none"
+         stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="6 9 12 15 18 9"/>
+    </svg>
+  </button>
+  <div id="{{ cid }}" class="card-details-body" hidden>
+    {%- if l.note %}
+    <p class="stop-note">{{ l.note.text }}
+      {%- for link in l.note.links %} <a href="{{ link.url }}" class="stop-link" target="_blank" rel="noopener">{{ link.label }}</a>{% endfor -%}
+    </p>
+    {%- endif %}
+    {%- if l.flags %}
+    <ul class="risk-flags">
+      {%- for f in l.flags %}
+      <li><span class="rf-text">{{ f.text }}</span><a href="{{ f.url }}" class="rf-link" target="_blank" rel="noopener">{{ f.label }}</a></li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+    {%- if l.reno %}
+    <p class="reno-note">{{ l.reno }}</p>
+    {%- endif %}
+  </div>
   {%- endif %}
 </article>
 {%- endmacro %}
