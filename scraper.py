@@ -1327,7 +1327,7 @@ def generate_html_report(confirmed: list[dict], candidates: list[dict],
                 f'<td class="num">{fmt_eur(dfp)}</td>'
                 f'<td class="num">{loan_s}</td>'
                 f"<td>{l.get('room_count','—')}h</td>"
-                f'<td class="num">{l.get("size_sqm","—")}</td>"'
+                f'<td class="num">{l.get("size_sqm","—")}</td>'
                 f'<td class="num">{l.get("year_built","—")}</td>'
                 f"<td>{status}</td>"
                 f"</tr>\n"
@@ -1869,8 +1869,11 @@ function showTab(tabId, modeId, btn) {{
   btn.classList.add('active');
 }}
 function openFilters() {{
-  document.getElementById('filters-scrim').style.display = '';
-  document.getElementById('filters-sheet').style.display = '';
+  document.getElementById('filters-scrim').style.display = 'block';
+  document.getElementById('filters-sheet').style.display = 'block';
+  document.querySelectorAll('.crit-panel').forEach(d => d.style.display = 'none');
+  var cp = document.getElementById('crit-' + _activeMode);
+  if (cp) cp.style.display = 'block';
 }}
 function closeFilters() {{
   document.getElementById('filters-scrim').style.display = 'none';
