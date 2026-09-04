@@ -128,7 +128,7 @@ a { color: inherit; }
   font-family: 'Public Sans', sans-serif;
 }
 .seg-btn.active { background: #0074bc; color: #ffffff; }
-.seg-btn:not(.active):hover { background: rgba(20,22,28,0.06); }
+.seg-btn:not(.active):hover { background: var(--border-s); }
 
 /* View buttons (cards/table) — same style as seg-btn */
 .view-btn {
@@ -138,7 +138,7 @@ a { color: inherit; }
   font-family: 'Public Sans', sans-serif;
 }
 .view-btn.active { background: #0074bc; color: #ffffff; }
-.view-btn:not(.active):hover { background: rgba(20,22,28,0.06); }
+.view-btn:not(.active):hover { background: var(--border-s); }
 
 /* Dark mode toggle */
 .dark-toggle {
@@ -203,6 +203,7 @@ header p { font-size: 13px; color: var(--m60); margin: 0 0 16px; }
 }
 .mr-high .mr-sev { background: var(--bl-tint-b); color: var(--bl-tint-text); }
 .mr-med  .mr-sev { background: var(--sl-tint);   color: var(--sl-tint-text); }
+.mr-opp  .mr-sev { background: var(--n200);      color: var(--n700); }
 .mr-text { flex: 1; font-size: 12.5px; color: var(--m70); line-height: 1.5; }
 .mr-link {
   font-size: 11px; color: var(--bl-tint-text); border: 1px solid var(--bl-tint-b);
@@ -324,11 +325,11 @@ td { padding: 8px 12px; border-bottom: 1px solid var(--border-s); vertical-align
 td a { color: var(--bl-text); text-decoration: none; font-weight: 700; }
 td a:hover { text-decoration: underline; }
 .num { text-align: right; white-space: nowrap; }
-tr.row-rented   { background: var(--bl-tint); }
-tr.row-rented:hover { background: var(--bl-tint); opacity: 0.85; }
+tr.row-rented        { background: var(--sl-tint); }
+tr.row-rented:hover  { background: var(--sl-tint-b); }
 tr.row-confirmed:hover { background: var(--n100); }
-tr.row-cand     { background: var(--bl-tint); }
-tr.row-cand:hover { background: var(--bl-tint); opacity: 0.85; }
+tr.row-cand          { background: var(--bl-tint); }
+tr.row-cand:hover    { background: var(--bl-tint-b); }
 .sort-asc::after  { content: " ▲"; }
 .sort-desc::after { content: " ▼"; }
 
@@ -355,9 +356,9 @@ tr.row-cand:hover { background: var(--bl-tint); opacity: 0.85; }
   display: flex; align-items: center; justify-content: center; cursor: pointer;
 }
 .filters-close:hover { opacity: 0.8; }
-.filters-body { padding: 4px 20px 28px; display: flex; flex-direction: column; gap: 10px; }
+.filters-body { padding: 4px 20px 28px; }
 .crit-panel { display: none; }
-.crit-panel.active { display: contents; }
+.crit-panel.active { display: flex; flex-direction: column; gap: 10px; }
 .crit-item {
   display: flex; gap: 10px; align-items: baseline;
   background: var(--surface); border-radius: 12px; padding: 10px 14px;
