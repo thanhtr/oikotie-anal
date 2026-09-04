@@ -226,7 +226,7 @@ header p { font-size: 13px; color: var(--m60); margin: 0 0 16px; }
 .sec-note  { font-size: 12.5px; color: var(--m55); margin: 0 auto 12px; max-width: 1080px; padding: 0 16px; }
 .sec-count { font-family: 'Public Sans', sans-serif; font-weight: 400; font-size: 13px; color: var(--m40); }
 .sec-rented .sec-title { color: var(--sl-strong); }
-.sec-new    .sec-title { color: var(--sl); }
+.sec-new    .sec-title { color: var(--sl-strong); }
 .sec-reno   .sec-title { color: var(--bl-text); }
 .sec-cand   .sec-title { color: #0074bc; }
 .empty { text-align: center; color: var(--m45); padding: 2rem; }
@@ -268,7 +268,7 @@ header p { font-size: 13px; color: var(--m60); margin: 0 0 16px; }
 .badge.reno { background: var(--sl-tint); color: var(--sl-tint-text); }
 .badge.cand { background: var(--bl-tint); color: var(--bl-tint-text); }
 .badge.rent { background: var(--sl);      color: #ffffff; }
-.badge.tram { background: var(--n100);    color: var(--n600); }
+.badge.tram { background: var(--n100);    color: var(--n600); max-width: 160px; overflow: hidden; text-overflow: ellipsis; }
 
 /* Per-card Details toggle */
 .card-details-btn {
@@ -327,7 +327,8 @@ td a:hover { text-decoration: underline; }
 .num { text-align: right; white-space: nowrap; }
 tr.row-rented        { background: var(--sl-tint); }
 tr.row-rented:hover  { background: var(--sl-tint-b); }
-tr.row-confirmed:hover { background: var(--n100); }
+tr.row-confirmed       { background: var(--n100); }
+tr.row-confirmed:hover { background: var(--n200); }
 tr.row-cand          { background: var(--bl-tint); }
 tr.row-cand:hover    { background: var(--bl-tint-b); }
 .sort-asc::after  { content: " ▲"; }
