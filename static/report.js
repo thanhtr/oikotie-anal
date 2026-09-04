@@ -1,3 +1,10 @@
+// Dark mode — apply theme before first paint (anti-flash)
+(function () {
+  var saved = localStorage.getItem('oikotie-theme');
+  var prefer = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  document.documentElement.setAttribute('data-theme', saved || prefer);
+})();
+
 var _activeMode = 'tram';
 
 function showMode(name, btn) {
@@ -30,6 +37,21 @@ function openFilters() {
 function closeFilters() {
   document.getElementById('filters-scrim').style.display = 'none';
   document.getElementById('filters-sheet').style.display = 'none';
+}
+
+function toggleDark() {
+  var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('oikotie-theme', next);
+}
+
+function toggleRisks(mode) {
+  var btn = document.getElementById('risks-btn-' + mode);
+  var body = document.getElementById('risks-body-' + mode);
+  if (!btn || !body) return;
+  var opening = body.hidden;
+  body.hidden = !opening;
+  if (opening) btn.classList.add('open'); else btn.classList.remove('open');
 }
 
 function toggleDetails(id) {

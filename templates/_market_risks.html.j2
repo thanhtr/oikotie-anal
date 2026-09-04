@@ -1,8 +1,14 @@
-{% macro risks(summary_text, items) -%}
+{% macro risks(summary_text, items, mode_id) -%}
 <div class="market-risks">
-  <details>
-    <summary>{{ summary_text }}</summary>
-    <div class="mr-grid">
+  <div class="risks-panel">
+    <button class="risks-toggle" id="risks-btn-{{ mode_id }}" onclick="toggleRisks('{{ mode_id }}')" type="button">
+      <span>{{ summary_text }}</span>
+      <svg class="risks-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M6 9l6 6 6-6"/>
+      </svg>
+    </button>
+    <div class="mr-grid" id="risks-body-{{ mode_id }}" hidden>
       {%- for r in items %}
       <div class="mr-item mr-{{ r.severity }}">
         <span class="mr-sev">{{ r.sev_label }}</span>
@@ -11,6 +17,6 @@
       </div>
       {%- endfor %}
     </div>
-  </details>
+  </div>
 </div>
 {%- endmacro %}
