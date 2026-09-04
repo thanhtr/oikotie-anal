@@ -224,7 +224,7 @@ def generate_html_report(confirmed: list[dict], candidates: list[dict],
     ] if s]
 
     uu_table_rows = (
-        [_table_row_context(l, "uusimaa", "row-confirmed") for l in uusimaa_rented] +
+        [_table_row_context(l, "uusimaa", "row-rented") for l in uusimaa_rented] +
         [_table_row_context(l, "uusimaa", "row-cand") for l in uusimaa_top5]
     )
 
