@@ -32,6 +32,22 @@ function closeFilters() {
   document.getElementById('filters-sheet').style.display = 'none';
 }
 
+function toggleDark() {
+  var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('oikotie-theme', next);
+}
+
+function toggleRisks(mode) {
+  var btn = document.getElementById('risks-btn-' + mode);
+  var body = document.getElementById('risks-body-' + mode);
+  if (!btn || !body) return;
+  var opening = body.hidden;
+  body.hidden = !opening;
+  if (opening) btn.classList.add('open'); else btn.classList.remove('open');
+  btn.setAttribute('aria-expanded', opening ? 'true' : 'false');
+}
+
 function toggleDetails(id) {
   var body = document.getElementById(id);
   var btn  = document.getElementById('btn-' + id);
