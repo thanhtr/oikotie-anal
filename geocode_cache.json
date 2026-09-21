@@ -9979,5 +9979,390 @@
   "Laurinmäenkuja 3 C 101, Pohjois-Haaga, Helsinki, helsinki, Finland": [
     60.2336018,
     24.8841344
+  ],
+  "Talvikkitie 18 A, Viertola, Vantaa, vantaa, Finland": [
+    60.2913929,
+    25.0313024
+  ],
+  "Kaunispääntie 2 O, Mellunmäki, Helsinki, helsinki, Finland": [
+    60.2320403,
+    25.1273946
+  ],
+  "Talvikkitie 7, Tikkurila, Vantaa, vantaa, Finland": [
+    60.2877881,
+    25.0321561
+  ],
+  "Ounasvaarankuja 3 B, Mellunmäki, Helsinki, helsinki, Finland": [
+    60.2383782,
+    25.1152961
+  ],
+  "Retiisikuja 1 A 10, Hiekkaharju, Vantaa, vantaa, Finland": [
+    60.3089713,
+    25.0492337
+  ],
+  "Retiisikuja 1 A 24, Hiekkaharju, Vantaa, vantaa, Finland": [
+    60.3089713,
+    25.0492337
+  ],
+  "Retiisikuja 1 A 2, Hiekkaharju, Vantaa, vantaa, Finland": [
+    60.3089713,
+    25.0492337
+  ],
+  "Retiisikuja 1 A 25, Hiekkaharju, Vantaa, vantaa, Finland": [
+    60.3089713,
+    25.0492337
+  ],
+  "Retiisikuja 1 A 20, Hiekkaharju, Vantaa, vantaa, Finland": [
+    60.3089713,
+    25.0492337
+  ],
+  "Retiisikuja 1 A 4, Hiekkaharju, Vantaa, vantaa, Finland": [
+    60.3089713,
+    25.0492337
+  ],
+  "Retiisikuja 1 A 8, Hiekkaharju, Vantaa, vantaa, Finland": [
+    60.3089713,
+    25.0492337
+  ],
+  "Retiisikuja 1 A 9, Hiekkaharju, Vantaa, vantaa, Finland": [
+    60.3089713,
+    25.0492337
+  ],
+  "Retiisikuja 1 A 6, Hiekkaharju, Vantaa, vantaa, Finland": [
+    60.3089713,
+    25.0492337
+  ],
+  "Retiisikuja 1 A 3, Hiekkaharju, Vantaa, vantaa, Finland": [
+    60.3089713,
+    25.0492337
+  ],
+  "Retiisikuja 1 A 5, Hiekkaharju, Vantaa, vantaa, Finland": [
+    60.3089713,
+    25.0492337
+  ],
+  "Retiisikuja 1 A 14, Hiekkaharju, Vantaa, vantaa, Finland": [
+    60.3089713,
+    25.0492337
+  ],
+  "Retiisikuja 1 A 15, Hiekkaharju, Vantaa, vantaa, Finland": [
+    60.3089713,
+    25.0492337
+  ],
+  "Retiisikuja 1 A 19, Hiekkaharju, Vantaa, vantaa, Finland": [
+    60.3089713,
+    25.0492337
+  ],
+  "Retiisikuja 1 A 1, Hiekkaharju, Vantaa, vantaa, Finland": [
+    60.3089713,
+    25.0492337
+  ],
+  "Tankomäenkatu 5 B, Vartioharju, Helsinki, helsinki, Finland": [
+    60.2248261,
+    25.1250801
+  ],
+  "Tammistonkatu 13 A, Tammisto, Vantaa, vantaa, Finland": [
+    60.2710812,
+    24.9633499
+  ],
+  "Maitikkakuja 3 C, Simonkylä, Vantaa, vantaa, Finland": [
+    60.3053101,
+    25.0226886
+  ],
+  "Orvokkikuja 3 B, Tikkurila, Vantaa, vantaa, Finland": [
+    60.2901789,
+    25.0332497
+  ],
+  "Vartiotie 6 A, Länsimäki, Vantaa, vantaa, Finland": [
+    60.2507884,
+    25.1139145
+  ],
+  "Hiekkaharjuntie 23 C, Hiekkaharju, Vantaa, vantaa, Finland": [
+    60.301772,
+    25.0428484
+  ],
+  "Talvikkitie 18 B, Tikkurila, Vantaa, vantaa, Finland": [
+    60.2913929,
+    25.0313024
+  ],
+  "Valpurintie 2 A, Meilahti, Helsinki, helsinki, Finland": [
+    60.1916395,
+    24.9018018
+  ],
+  "Juhana-herttuan tie 4 A, Koskela, Helsinki, helsinki, Finland": [
+    60.2179759,
+    24.9688915
+  ],
+  "Helminkatu 8 B, Hermanni, Helsinki, helsinki, Finland": [
+    60.1980136,
+    24.9621369
+  ],
+  "Malminkatu 22, Kamppi, Helsinki, helsinki, Finland": [
+    60.1670563,
+    24.9294159
+  ],
+  "Myyrmäentie 6, Myyrmäki, Vantaa, vantaa, Finland": [
+    60.2673607,
+    24.8522144
+  ],
+  "Harjukatu 8 B, Harju, Helsinki, helsinki, Finland": [
+    60.1879271,
+    24.9579599
+  ],
+  "Kulmavuorenkatu 7 B, Sörnäinen, Helsinki, helsinki, Finland": [
+    60.1881043,
+    24.9659323
+  ],
+  "Myllypadontie 1, Myllypuro, Helsinki, helsinki, Finland": [
+    60.2202333,
+    25.0582092
+  ],
+  "Papinkuja 2, Kallio, Helsinki, helsinki, Finland": [
+    60.1853546,
+    24.9490716
+  ],
+  "Maasälväntie 2 A, Pihlajamäki, Helsinki, helsinki, Finland": [
+    60.2363885,
+    25.0100183
+  ],
+  "Näyttelijäntie 8, Pohjois-Haaga, Helsinki, helsinki, Finland": [
+    60.2274608,
+    24.8963401
+  ],
+  "Aino Acktén tie 7, Pohjois-Haaga, Helsinki, helsinki, Finland": [
+    60.2246954,
+    24.8921109
+  ],
+  "Lumikintie 4 C, Roihuvuori, Helsinki, helsinki, Finland": [
+    60.2035623,
+    25.0572483
+  ],
+  "Hämeentie 101, Hermanni, Helsinki, helsinki, Finland": [
+    60.1982499,
+    24.9626055
+  ],
+  "Venuksentie 6 Ä, Maarukanmetsä, Vantaa, vantaa, Finland": [
+    60.3422142,
+    25.0973734
+  ],
+  "Riistavuorenkuja 8, Etelä-Haaga, Helsinki, helsinki, Finland": [
+    60.2194189,
+    24.8857932
+  ],
+  "Merikorttitie 7 as, Vuosaari, Helsinki, helsinki, Finland": [
+    60.2189048,
+    25.1292575
+  ],
+  "Sahatie 12 B, Rajatorppa, Vantaa, vantaa, Finland": [
+    60.2593435,
+    24.8305889
+  ],
+  "Pajamäentie 2 B, Pitäjänmäki, Helsinki, helsinki, Finland": [
+    60.220158,
+    24.8620202
+  ],
+  "Neulapadontie 7 B, Myllypuro, Helsinki, helsinki, Finland": [
+    60.222476,
+    25.0647696
+  ],
+  "Kalevankatu 51, Kamppi, Helsinki, helsinki, Finland": [
+    60.1642276,
+    24.9281894
+  ],
+  "Rantakartanontie 6 D, Puotila, Helsinki, helsinki, Finland": [
+    60.2149811,
+    25.0988289
+  ],
+  "Elmontie 9, Asola, Vantaa, vantaa, Finland": [
+    60.3366696,
+    25.0654208
+  ],
+  "Luutnantinpolku 6 B, Malminkartano, Helsinki, helsinki, Finland": [
+    60.2462386,
+    24.8669058
+  ],
+  "Soukankuja 16 A, Soukka, Espoo, espoo, Finland": [
+    60.1375412,
+    24.6696647
+  ],
+  "Tiirismaantie 6 B, Pihlajisto, Helsinki, helsinki, Finland": [
+    60.2316202,
+    25.0005025
+  ],
+  "Matinkatu 16, Matinkylä, Espoo, espoo, Finland": [
+    60.1581349,
+    24.7420936
+  ],
+  "Kivihaantie 8, Haaga, Helsinki, helsinki, Finland": [
+    60.2104551,
+    24.9031757
+  ],
+  "Malmin raitti 12 A, Ylä-Malmi, Helsinki, helsinki, Finland": [
+    60.2566434,
+    25.0115376
+  ],
+  "Väinämöisenkatu 31, Etu-Töölö, Helsinki, helsinki, Finland": [
+    60.1747819,
+    24.9179232
+  ],
+  "Harjukatu 5 D, Harju, Helsinki, helsinki, Finland": [
+    60.1888497,
+    24.9584972
+  ],
+  "Koskelantie 7, Käpylä, Helsinki, helsinki, Finland": [
+    60.2084937,
+    24.9480258
+  ],
+  "Porthaninkatu 9, Kallio, Helsinki, helsinki, Finland": [
+    60.182834,
+    24.9527112
+  ],
+  "Prinssintie 4, Roihuvuori, Helsinki, helsinki, Finland": [
+    60.3084557,
+    25.1116886
+  ],
+  "Salpausseläntie 5 F, Pihlajisto, Helsinki, helsinki, Finland": [
+    60.2309202,
+    25.0000184
+  ],
+  "Nelikkokuja 6, Matinkylä, Espoo, espoo, Finland": [
+    60.161311,
+    24.7425331
+  ],
+  "Törmäniityntie 11 B, Viherlaakso, Espoo, espoo, Finland": [
+    60.2266126,
+    24.7380916
+  ],
+  "Käpyläntie 2 B, Käpylä, Helsinki, helsinki, Finland": [
+    60.2139309,
+    24.958424
+  ],
+  "Lehdokkipolku 5 C, Itäkeskus, Helsinki, helsinki, Finland": [
+    60.2083101,
+    25.0902289
+  ],
+  "Pihlajatie 43 A, Meilahti, Helsinki, helsinki, Finland": [
+    60.1961421,
+    24.8999415
+  ],
+  "Karakalliontie 3 A, Karakallio, Espoo, espoo, Finland": [
+    60.227728,
+    24.7628122
+  ],
+  "Kulovalkeantie 10 B, Tuomarila, Espoo, espoo, Finland": [
+    60.2081017,
+    24.680341
+  ],
+  "Jönsaksenkuja 3 B, Myyrmäki, Vantaa, vantaa, Finland": [
+    60.2600759,
+    24.857107
+  ],
+  "Vilhonvuorenkuja 20 C, Sörnäinen, Helsinki, helsinki, Finland": [
+    60.1875255,
+    24.9630007
+  ],
+  "Teljäntie 3 C, Munkkivuori, Helsinki, helsinki, Finland": [
+    60.2097402,
+    24.8719431
+  ],
+  "Korsontie 18 E, Korso, Vantaa, vantaa, Finland": [
+    60.3518445,
+    25.0725376
+  ],
+  "Riihipellontie 5 C, Konala, Helsinki, helsinki, Finland": [
+    60.2376931,
+    24.8437835
+  ],
+  "Ruorimiehenkatu 6 D, Espoonlahti, Espoo, espoo, Finland": [
+    60.1477593,
+    24.6510512
+  ],
+  "Rosalankuja 2 B, Kruunuvuorenranta, Helsinki, helsinki, Finland": [
+    60.1738734,
+    25.0311029
+  ],
+  "Maininkitie 16 E, Kivenlahti, Espoo, espoo, Finland": [
+    60.1530116,
+    24.6456394
+  ],
+  "Peuraniitty 1 C 67, Sepänkylä, Espoo, espoo, Finland": [
+    60.2045864,
+    24.7371403
+  ],
+  "Lukionahde 5 B, Viherkallio, Espoo, espoo, Finland": [
+    60.2285332,
+    24.7369157
+  ],
+  "Miekka 2, Perkkaa, Espoo, espoo, Finland": [
+    60.2132015,
+    24.8237309
+  ],
+  "Nallitie 8, Kivikko, Helsinki, helsinki, Finland": [
+    60.2351052,
+    25.0590127
+  ],
+  "Mäkitorpantie 33 A, Oulunkylä, Helsinki, helsinki, Finland": [
+    60.2282669,
+    24.9603331
+  ],
+  "Klaavuntie 4 D, Puotila, Helsinki, helsinki, Finland": [
+    60.2096764,
+    25.0984438
+  ],
+  "Punahilkantie 14 I, Roihuvuori, Helsinki, helsinki, Finland": [
+    60.2047358,
+    25.0629179
+  ],
+  "Kivivuorenkuja 4 E, Kivimäki, Vantaa, vantaa, Finland": [
+    60.2790239,
+    24.856133
+  ],
+  "Kalliolähteentie 5 E, Olari, Espoo, espoo, Finland": [
+    60.1781452,
+    24.715698
+  ],
+  "Topeliuksenkatu 10 A, Taka-Töölö, Helsinki, helsinki, Finland": [
+    60.1843191,
+    24.917175
+  ],
+  "Kauppalantie 26, Etelä-Haaga, Helsinki, helsinki, Finland": [
+    60.2128413,
+    24.8980368
+  ],
+  "Punahilkantie 14 F, Roihuvuori, Helsinki, helsinki, Finland": [
+    60.2034396,
+    25.0606205
+  ],
+  "Ulappasaarentie 10, Vuosaari, Helsinki, helsinki, Finland": [
+    60.2116541,
+    25.136908
+  ],
+  "Priki Johannan kuja 3 A, Sompasaari, Helsinki, helsinki, Finland": [
+    60.1804836,
+    24.9777219
+  ],
+  "Vegankatu 12 A, Hermanninmäki, Helsinki, helsinki, Finland": [
+    60.1953775,
+    24.9675499
+  ],
+  "Kivijatatie 7 A 10, Kivikko, Helsinki, helsinki, Finland": [
+    60.232165,
+    25.0580792
+  ],
+  "Kannistontie 23 C5, Kannisto, Vantaa, vantaa, Finland": [
+    60.3231382,
+    24.8450461
+  ],
+  "Koukkupojankatu 2 A 2, Nihti, Helsinki, helsinki, Finland": null,
+  "Maapallonkuja 1 A 20, Olari, Espoo, espoo, Finland": [
+    60.1718148,
+    24.7253714
+  ],
+  "Piikkirinne 3 A 12, Vapaala, Vantaa, vantaa, Finland": [
+    60.257914,
+    24.8291872
+  ],
+  "Laurinmäenkuja 3 C 117, Lassila, Helsinki, helsinki, Finland": [
+    60.2336018,
+    24.8841344
   ]
 }
