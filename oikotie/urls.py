@@ -39,7 +39,6 @@ def build_newbuild_search_url(page_num: int = 1) -> str:
         f"{BASE_URL}/myytavat-asunnot"
         f"?pagination={page_num}"
         f"&cardType=100"
-        f"&secondarySearchType=1"
         f"&newDevelopment=1"
         f"&locations={loc}"
         f"&habitationType[]=1"
