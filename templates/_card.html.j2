@@ -1,18 +1,20 @@
 {% macro card(l, cid) -%}
-{%- set has_details = l.note or l.flags or l.reno -%}
+{%- set has_details = l.note or l.flags or l.reno or l.ll_rows or l.booking_info or l.grace_info -%}
 <article class="card">
   <div class="card-top">
     <span class="card-rank">{{ l.rank_s }}</span>
     {%- if l.url %}<a href="{{ l.url }}" class="card-view-link" target="_blank" rel="noopener">View →</a>{% endif %}
   </div>
-  <div class="card-price">{{ l.price_s }}<span class="card-price-sub">velaton</span></div>
+  <div class="card-price">{{ l.price_s }}<span class="card-price-sub">{{ l.price_sub }}</span></div>
   {%- if l.monthly_str %}
   <div class="card-monthly">{{ l.monthly_str }}</div>
   {%- endif %}
   {%- if l.yield_str %}
   <div class="card-yield">📈 {{ l.yield_str }}</div>
   {%- endif %}
+  {%- if l.loan_s %}
   <div class="card-loan">{{ l.loan_s }}</div>
+  {%- endif %}
   <div class="card-meta">{{ l.meta_s }}</div>
   <div class="card-address">
     {%- if l.url %}<a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.full_addr }}</a>{% else %}{{ l.full_addr }}{% endif -%}
@@ -36,6 +38,12 @@
     </svg>
   </button>
   <div id="{{ cid }}" class="card-details-body" hidden>
+    {%- if l.ll_rows %}
+    <dl class="ll-metrics">
+      {%- for r in l.ll_rows %}<dt>{{ r.k }}</dt><dd>{{ r.v }}</dd>{% endfor -%}
+    </dl>
+    {%- if l.score_parts %}<p class="ll-score-parts">Score: {{ l.score_parts }}</p>{% endif %}
+    {%- endif %}
     {%- if l.note %}
     <p class="stop-note">{{ l.note.text }}
       {%- for link in l.note.links %} <a href="{{ link.url }}" class="stop-link" target="_blank" rel="noopener">{{ link.label }}</a>{% endfor -%}
@@ -50,6 +58,12 @@
     {%- endif %}
     {%- if l.reno %}
     <p class="reno-note">{{ l.reno }}</p>
+    {%- endif %}
+    {%- if l.grace_info %}
+    <p class="reno-note">{{ l.grace_info }}</p>
+    {%- endif %}
+    {%- if l.booking_info %}
+    <p class="reno-note">{{ l.booking_info }}</p>
     {%- endif %}
   </div>
   {%- endif %}

@@ -1,8 +1,10 @@
 """Investment scoring, mortgage/monthly-cost math, and loan-ratio helpers."""
 
 from oikotie.config import (
-    DOWN_PAYMENT_EUR, EURIBOR_12M, HELSINKI_CENTRAL_COORDS, LOAN_MARGIN,
-    LOAN_YEARS, STOP_TRANSFORMATION,
+    DOWN_PAYMENT_EUR, EURIBOR_12M, HELSINKI_CENTRAL_COORDS, LL_YIELD_FULL_PTS,
+    LL_YIELD_ZERO_PTS,
+    LOAN_MARGIN, LOAN_YEARS, PLANNED_TRANSIT, STOP_NOTE, STOP_TRANSFORMATION,
+    TRAM_STOP_PLANNED_MULT, TRAM_STOPS,
 )
 from oikotie.geo import haversine_m, nearest_hub, nearest_mall
 from oikotie.parsing import _eval_pipe_done
@@ -93,6 +95,104 @@ def score_listing(listing: dict) -> int:
     return score
 
 
+def _hub_pts(listing: dict, fresh: bool = False) -> int:
+    """Transport hub proximity (0–25 pts) — rail/metro drives tenant demand.
+    `fresh` recomputes from lat/lon instead of trusting cached geo fields."""
+    lat, lon = listing.get("lat"), listing.get("lon")
+    hub_dist = None if fresh else listing.get("hub_distance_m")
+    if hub_dist is None and lat is not None:
+        _, hub_dist = nearest_hub(lat, lon)
+    if hub_dist is None:  return 0
+    if hub_dist < 300:    return 25
+    if hub_dist < 600:    return 20
+    if hub_dist < 1000:   return 15
+    if hub_dist < 1500:   return 10
+    if hub_dist < 2500:   return 5
+    return 0
+
+
+def _centre_pts(listing: dict) -> int:
+    """Helsinki Central proximity (0–15 pts) — distance-to-center is the #1 price driver."""
+    lat, lon = listing.get("lat"), listing.get("lon")
+    hc_km = listing.get("helsinki_central_km")
+    if hc_km is None and lat is not None:
+        hc_km = haversine_m(lat, lon, HELSINKI_CENTRAL_COORDS[0], HELSINKI_CENTRAL_COORDS[1]) / 1000
+    if hc_km is None: return 0
+    if hc_km < 2:     return 15
+    if hc_km < 4:     return 12
+    if hc_km < 7:     return 8
+    if hc_km < 12:    return 4
+    return 0
+
+
+def _mall_pts(listing: dict, fresh: bool = False) -> int:
+    """Nearest major mall / POI (0–10 pts) — services & walkability signal."""
+    lat, lon = listing.get("lat"), listing.get("lon")
+    mall_dist = None if fresh else listing.get("mall_distance_m")
+    if mall_dist is None and lat is not None:
+        _, mall_dist = nearest_mall(lat, lon)
+    if mall_dist is None:  return 0
+    if mall_dist < 500:    return 10
+    if mall_dist < 1000:   return 8
+    if mall_dist < 1500:   return 5
+    if mall_dist < 2500:   return 2
+    return 0
+
+
+def _ppsqm_pts(listing: dict) -> int:
+    """Debt-free price per m² (0–10 pts) — lower is better, PKS-scaled bands."""
+    dfp = float(listing.get("debt_free_price_eur") or listing.get("price_eur") or 0)
+    sqm = float(listing.get("size_sqm") or 0)
+    if dfp <= 0 or sqm <= 0: return 0
+    ppsqm = dfp / sqm
+    if ppsqm < 2000: return 10
+    if ppsqm < 3000: return 7
+    if ppsqm < 4000: return 4
+    if ppsqm < 5000: return 1
+    return 0
+
+
+def planned_transit(listing: dict) -> tuple[int, dict | None]:
+    """Planned-transit uplift (0–15 pts): best of PLANNED_TRANSIT and the Vantaan
+    ratikka stops. Full points ≤ 500 m, half ≤ 1 km. Returns (pts, match)."""
+    lat, lon = listing.get("lat"), listing.get("lon")
+    if lat is None:
+        return 0, None
+    options = [(n, a, o, p, note, url) for n, a, o, p, note, url in PLANNED_TRANSIT]
+    for name, slon, slat in TRAM_STOPS:
+        options.append((f"Ratikka: {name}", slat, slon,
+                        STOP_TRANSFORMATION.get(name, 5) * TRAM_STOP_PLANNED_MULT,
+                        STOP_NOTE.get(name, "Vantaan ratikka stop, ops ~2029"),
+                        "https://ratikka.vantaa.fi/en"))
+    best_pts, best = 0, None
+    for name, plat, plon, pts, note, url in options:
+        d = haversine_m(lat, lon, plat, plon)
+        got = pts if d <= 500 else pts // 2 if d <= 1000 else 0
+        if got > best_pts:
+            best_pts, best = got, {"name": name, "dist": round(d), "note": note, "url": url}
+    return best_pts, best
+
+
+def score_largeloan_listing(listing: dict) -> tuple[int, dict]:
+    """Score 0–100 for large-loan new builds: appreciation/location potential
+    plus after-tax cash yield. No building-quality or loan-ratio terms — all
+    listings are new, and a high loan ratio is the point here.
+    Returns (score, breakdown)."""
+    transit_pts, transit = planned_transit(listing)
+    cy = listing.get("cash_yield")
+    span = LL_YIELD_FULL_PTS - LL_YIELD_ZERO_PTS
+    yield_pts = 0 if cy is None else round(25 * min(max((cy - LL_YIELD_ZERO_PTS) / span, 0.0), 1.0))
+    parts = {
+        "hub":     _hub_pts(listing, fresh=True),
+        "centre":  _centre_pts(listing),
+        "mall":    _mall_pts(listing, fresh=True),
+        "transit": transit_pts,
+        "yield":   yield_pts,
+        "ppsqm":   _ppsqm_pts(listing),
+    }
+    return sum(parts.values()), {"parts": parts, "transit": transit}
+
+
 def score_uusimaa_listing(listing: dict) -> int:
     """Score 0–100 for Uusimaa non-tram listings. Higher = better investment candidate.
 
@@ -102,39 +202,7 @@ def score_uusimaa_listing(listing: dict) -> int:
     """
     score = 0
 
-    lat = listing.get("lat")
-    lon = listing.get("lon")
-
-    # Transport hub proximity (0–25 pts) — rail/metro drives tenant demand
-    hub_dist = listing.get("hub_distance_m")
-    if hub_dist is None and lat is not None:
-        _, hub_dist = nearest_hub(lat, lon)
-    if hub_dist is not None:
-        if hub_dist < 300:    score += 25
-        elif hub_dist < 600:  score += 20
-        elif hub_dist < 1000: score += 15
-        elif hub_dist < 1500: score += 10
-        elif hub_dist < 2500: score += 5
-
-    # Helsinki Central proximity (0–15 pts) — distance-to-center is the #1 price driver
-    hc_km = listing.get("helsinki_central_km")
-    if hc_km is None and lat is not None:
-        hc_km = haversine_m(lat, lon, HELSINKI_CENTRAL_COORDS[0], HELSINKI_CENTRAL_COORDS[1]) / 1000
-    if hc_km is not None:
-        if hc_km < 2:    score += 15
-        elif hc_km < 4:  score += 12
-        elif hc_km < 7:  score += 8
-        elif hc_km < 12: score += 4
-
-    # Nearest major mall (0–10 pts) — services & walkability signal
-    mall_dist = listing.get("mall_distance_m")
-    if mall_dist is None and lat is not None:
-        _, mall_dist = nearest_mall(lat, lon)
-    if mall_dist is not None:
-        if mall_dist < 500:    score += 10
-        elif mall_dist < 1000: score += 8
-        elif mall_dist < 1500: score += 5
-        elif mall_dist < 2500: score += 2
+    score += _hub_pts(listing) + _centre_pts(listing) + _mall_pts(listing)
 
     # Building quality (0–30 pts)
     year      = listing.get("year_built") or 0
@@ -151,14 +219,8 @@ def score_uusimaa_listing(listing: dict) -> int:
     else:                  score += 3
 
     # Price per m² (0–10 pts) — Helsinki prices are higher; scale adjusted
+    score += _ppsqm_pts(listing)
     dfp = float(listing.get("debt_free_price_eur") or listing.get("price_eur") or 0)
-    sqm = float(listing.get("size_sqm") or 0)
-    if dfp > 0 and sqm > 0:
-        ppsqm = dfp / sqm
-        if ppsqm < 2000:    score += 10
-        elif ppsqm < 3000:  score += 7
-        elif ppsqm < 4000:  score += 4
-        elif ppsqm < 5000:  score += 1
 
     # Loan ratio (0–5 pts)
     loan = listing.get("housing_company_loan_eur")

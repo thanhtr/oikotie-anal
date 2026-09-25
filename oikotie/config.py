@@ -84,7 +84,6 @@ UUSIMAA_LOCATIONS: list[list] = [
 UUSIMAA_PRICE_MAX      = 200_000
 UUSIMAA_LOAN_RATIO_MAX = 0.50
 UUSIMAA_TOP_UNRENTED   = 5    # max non-rented listings shown in Uusimaa watch list
-NEWBUILD_TOP_N         = 50   # top N after per-building dedup; use --force to refresh
 
 # Major train/metro stations — (name, lat, lon)
 TRANSPORT_HUBS: list[tuple[str, float, float]] = [
@@ -97,6 +96,8 @@ TRANSPORT_HUBS: list[tuple[str, float, float]] = [
     ("Itäkeskus metro",   60.2111, 25.0815),
     ("Matinkylä metro",   60.1621, 24.7373),
     ("Ruoholahti metro",  60.1639, 24.9151),
+    ("Malmi",             60.2508, 25.0112),
+    ("Myyrmäki",          60.2612, 24.8545),
 ]
 
 # Major malls — (name, lat, lon)
@@ -108,9 +109,62 @@ MAJOR_MALLS: list[tuple[str, float, float]] = [
     ("Iso Omena", 60.1621, 24.7373),
     ("Itis",      60.2111, 25.0815),
     ("REDI",      60.1869, 24.9792),
+    ("Malmi",     60.2510, 25.0100),
+    ("Myyrmanni", 60.2610, 24.8540),
 ]
 
 HELSINKI_CENTRAL_COORDS: tuple[float, float] = (60.1698, 24.9382)
+
+# ---------------------------------------------------------------------------
+# Large-loan new build (replaces the old "PKS Uutuudet" view)
+# Flats where a big housing-company loan + tuloutus booking lets the landlord
+# deduct the whole rahoitusvastike (principal included) from rental income.
+# ---------------------------------------------------------------------------
+LL_SEARCH_VELATON_MAX = 600_000  # price[max] on the search URL (bounds scrape size); None = no cap
+LL_MYYNTI_MAX         = 200_000  # cash price (myyntihinta) cap — the real filter
+LL_MIN_LOAN_RATIO     = 0.50     # lainaosuus / velaton hinta
+LL_MAX_AGE_YEARS      = 5        # year_built >= now − 5 (future completion years pass)
+LL_MIN_PRINCIPAL_PCT  = 0.015    # principal_est / loan_share per year to count as real amortisation
+LL_HOLD_YEARS         = 10       # holding horizon: grace-period gate + lifetime estimate
+LL_TOP_N              = 50
+# After-tax cash yield → 0–25 pts, linear between these. Big-loan flats are often
+# cash-negative (rent pays the principal too), so the floor sits below zero.
+LL_YIELD_ZERO_PTS     = -0.05
+LL_YIELD_FULL_PTS     = 0.05
+
+TAX_RATE          = 0.30   # capital income tax; 0.34 above 30 000 €/yr
+CO_LOAN_RATE      = 0.04   # assumed housing-company loan interest rate
+APPRECIATION_RATE = 0.01   # yearly price growth, lifetime estimate only
+LL_REINVEST_RATE  = 0.04   # return on tax saved early (timing value of the deduction)
+DEDUCTION_ENABLED = True   # principal deduction via tuloutus — flip off if legislated away
+
+# Free-market rent €/m²/mo for new tenancies, by city and room count (1, 2, 3+).
+# Statistics Finland table asvu/15fa, 2026Q2 (published 2026-07-16). Update quarterly.
+RENT_EUR_SQM_CITY: dict[str, dict[int, float]] = {
+    "helsinki": {1: 26.71, 2: 21.19, 3: 20.26},
+    "espoo":    {1: 23.53, 2: 18.73, 3: 17.67},
+    "vantaa":   {1: 22.61, 2: 16.96, 3: 15.40},
+}
+RENT_DISTRICT_MIN_SAMPLES = 3   # listed rents needed before a district median overrides the city table
+
+# Planned (not yet operating) rail/tram lines that should lift nearby prices.
+# (name, lat, lon, pts 0–15, note, source_url). Full pts ≤ 500 m, half ≤ 1 km.
+# Vantaan ratikka stops are added from TRAM_STOPS × STOP_TRANSFORMATION in scoring.
+PLANNED_TRANSIT: list[tuple[str, float, float, int, str, str]] = [
+    ("Viima: Malmi",          60.2508, 25.0112, 12, "Viikki–Malmi light rail, ops early 2030s",
+     "https://infraohjelmahelsinki.fi/en/viikki-malmi-light-rail/"),
+    ("Viima: Malmi airfield", 60.2540, 25.0420, 15, "Viikki–Malmi light rail + new Malmi airfield district",
+     "https://infraohjelmahelsinki.fi/en/viikki-malmi-light-rail/"),
+    ("Viima: Latokartano",    60.2325, 25.0390, 12, "Viikki–Malmi light rail, ops early 2030s",
+     "https://infraohjelmahelsinki.fi/en/viikki-malmi-light-rail/"),
+    ("Viima: Viikki",         60.2260, 25.0150, 10, "Viikki–Malmi light rail, ops early 2030s",
+     "https://infraohjelmahelsinki.fi/en/viikki-malmi-light-rail/"),
+    ("Kruunusillat: Kruunuvuorenranta", 60.1760, 25.0040, 12, "Crown Bridges tram to centre, opens ~2027",
+     "https://www.kruunusillat.fi/en"),
+    ("Kruunusillat: Yliskylä",          60.1725, 25.0520, 12, "Crown Bridges tram to centre, opens ~2027",
+     "https://www.kruunusillat.fi/en"),
+]
+TRAM_STOP_PLANNED_MULT = 3    # Vantaan ratikka: STOP_TRANSFORMATION (0–5) × 3 → 0–15 pts
 
 MAX_DETAIL_CHECKS = 9999    # effectively unlimited
 

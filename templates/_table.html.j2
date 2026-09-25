@@ -1,4 +1,21 @@
 {% macro row(l) -%}
+{%- if l.booking is defined %}
+<tr class="{{ l.row_class }}">
+  <td>{{ l.rank_s }}</td>
+  <td>{%- if l.url %}<a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.addr }}</a>{% else %}{{ l.addr }}{% endif -%}</td>
+  <td>{{ l.district }}</td>
+  <td class="num">{{ l.dfp_s }}</td>
+  <td class="num">{{ l.loan_s }}</td>
+  <td>{{ l.rooms }}h</td>
+  <td class="num">{{ l.sqm }}</td>
+  <td class="num">{{ l.year }}</td>
+  <td class="num">{{ l.fin_s }}</td>
+  <td>{{ l.booking }}</td>
+  <td class="num">{{ l.tax_s }}</td>
+  <td class="num">{{ l.yield_s }}</td>
+  <td class="num">{{ l.score }}</td>
+</tr>
+{%- else %}
 <tr class="{{ l.row_class }}">
   <td>{{ l.rank_s }}</td>
   <td>{%- if l.url %}<a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.addr }}</a>{% else %}{{ l.addr }}{% endif -%}</td>
@@ -15,6 +32,7 @@
   <td class="num">{{ l.score }}</td>
   {%- endif %}
 </tr>
+{%- endif %}
 {%- endmacro %}
 
 {% macro headers(table_id, mode) -%}
@@ -22,12 +40,18 @@
   <th onclick="sortTable('{{ table_id }}',0)">Rank</th>
   <th onclick="sortTable('{{ table_id }}',1)">Address</th>
   <th onclick="sortTable('{{ table_id }}',2)">District</th>
-  <th onclick="sortTable('{{ table_id }}',3)" class="num">Price</th>
-  <th onclick="sortTable('{{ table_id }}',4)" class="num">Loan</th>
+  <th onclick="sortTable('{{ table_id }}',3)" class="num">{{ "Myynti" if mode == 'largeloan' else "Price" }}</th>
+  <th onclick="sortTable('{{ table_id }}',4)" class="num">{{ "Loan %" if mode == 'largeloan' else "Loan" }}</th>
   <th onclick="sortTable('{{ table_id }}',5)">Rooms</th>
   <th onclick="sortTable('{{ table_id }}',6)" class="num">m²</th>
   <th onclick="sortTable('{{ table_id }}',7)" class="num">Year</th>
-  {%- if mode == 'tram' %}
+  {%- if mode == 'largeloan' %}
+  <th onclick="sortTable('{{ table_id }}',8)" class="num">Rahoitusv.</th>
+  <th onclick="sortTable('{{ table_id }}',9)">Tuloutus</th>
+  <th onclick="sortTable('{{ table_id }}',10)" class="num">Tax €/yr</th>
+  <th onclick="sortTable('{{ table_id }}',11)" class="num">Yield</th>
+  <th onclick="sortTable('{{ table_id }}',12)" class="num">Score</th>
+  {%- elif mode == 'tram' %}
   <th onclick="sortTable('{{ table_id }}',8)">Status</th>
   {%- else %}
   <th onclick="sortTable('{{ table_id }}',8)">Nearest Hub</th>

@@ -10,14 +10,14 @@ function.
 import re
 import time
 
-from oikotie.config import (
-    HELSINKI_CENTRAL_COORDS, MAX_STOP_DIST_M, NEWBUILD_TOP_N,
-)
+from oikotie.config import HELSINKI_CENTRAL_COORDS, LL_TOP_N, MAX_STOP_DIST_M
 from oikotie.geo import geocode_address, haversine_m, nearest_hub, nearest_mall, nearest_tram_stop
+from oikotie.largeloan import compute_largeloan_metrics, qualifies
 from oikotie.parsing import _eval_pipe_done
+from oikotie.rent import estimate_rent
 from oikotie.scoring import (
-    _effective_price, _loan_acceptable, monthly_cost_eur, score_listing,
-    score_uusimaa_listing,
+    _effective_price, _loan_acceptable, monthly_cost_eur, score_largeloan_listing,
+    score_listing, score_uusimaa_listing,
 )
 
 _PKS_GEO_FIELDS = ("lat", "lon", "nearest_hub", "hub_distance_m",
@@ -220,49 +220,67 @@ def score_and_rank_uusimaa(geocoded: list[dict], top_unrented: int) -> tuple[lis
 
 
 # ---------------------------------------------------------------------------
-# New-build pipeline: geocode + loan filter + score + dedupe + rank
+# Large-loan new-build pipeline: gate + geocode + metrics + score + dedupe
 # ---------------------------------------------------------------------------
 
-def geocode_and_score_newbuild(listings: list[dict], cache: dict, geo_cache: dict, loan_ratio_max: float) -> list[dict]:
-    scored: list[dict] = []
+def score_largeloan(listings: list[dict], rent_model: dict) -> None:
+    """(Re)compute metrics + composite score in place. Network-free, so the
+    results-cache path can re-run it after TAX/RATE/DEDUCTION_ENABLED changes."""
+    for l in listings:
+        if l.get("lat") is not None:   # fresh, so hubs/POIs added to config show up
+            l["nearest_hub"], hd = nearest_hub(l["lat"], l["lon"])
+            l["nearest_mall"], md = nearest_mall(l["lat"], l["lon"])
+            l["hub_distance_m"], l["mall_distance_m"] = round(hd), round(md)
+        rent, source = estimate_rent(l, rent_model)
+        l.update(compute_largeloan_metrics(l, rent))
+        l["rent_source"] = source
+        l["score"], l["score_breakdown"] = score_largeloan_listing(l)
+        l["monthly_cost_eur"] = round(monthly_cost_eur(l), 2)
+
+
+def rank_largeloan(listings: list[dict]) -> list[dict]:
+    """Booking gate first (tuloutus found → top), then composite score."""
+    listings.sort(key=lambda l: (l.get("booking_method") != "yes", -l["score"]))
+    for rank, l in enumerate(listings, 1):
+        l["rank"] = rank
+    return listings
+
+
+def geocode_and_rank_largeloan(pool: list[dict], cache: dict, geo_cache: dict,
+                               rent_model: dict, top_n: int = LL_TOP_N) -> list[dict]:
+    # Gate on detail fields first so geocoding only runs on survivors; the
+    # yield-dependent gate needs metrics, which need no geo.
+    gated: list[dict] = []
+    for l in pool:
+        rent, _ = estimate_rent(l, rent_model)
+        l.update(compute_largeloan_metrics(l, rent))
+        if qualifies(l):
+            gated.append(l)
+    print(f"\n  Large-loan gate: {len(pool)} → {len(gated)} (myynti/loan ratio/age/principal/booking)")
+
     fresh = 0
-    print(f"\n  Geocoding {len(listings)} new build listings …")
-    for listing in listings:
-        ok, was_fresh = _geocode_pks_listing(listing, cache, geo_cache)
-        if was_fresh:
-            fresh += 1
-        if not ok:
-            continue
-        loan = listing.get("housing_company_loan_eur")
-        if loan is not None:
-            dfp = float(listing.get("debt_free_price_eur") or listing.get("price_eur") or 0)
-            if dfp > 0 and float(loan) / dfp > loan_ratio_max:
-                continue
-        listing["_search_pass"] = "new_build"
-        listing["monthly_cost_eur"] = round(monthly_cost_eur(listing), 2)
-        listing["score"] = score_uusimaa_listing(listing)
-        scored.append(listing)
-    print(f"  {fresh} fresh geocodes")
-    return scored
+    geocoded: list[dict] = []
+    for l in gated:
+        ok, was_fresh = _geocode_pks_listing(l, cache, geo_cache)
+        fresh += was_fresh
+        if ok:
+            l["_search_pass"] = "new-build-large-loan"
+            geocoded.append(l)
+    print(f"  {fresh} fresh geocodes, {len(geocoded)} geocoded")
 
-
-def dedupe_and_rank_newbuild(scored: list[dict], top_n: int = NEWBUILD_TOP_N) -> list[dict]:
-    """Keep only the highest-scoring listing per street (same street = same
-    development project), then cap at top_n for a focused shortlist."""
-    scored.sort(key=lambda l: -l["score"])
+    score_largeloan(geocoded, rent_model)
+    geocoded.sort(key=lambda l: -l["score"])
     seen_bldg: set[str] = set()
     deduped: list[dict] = []
-    for l in scored:
+    for l in geocoded:   # one per street ≈ one per development project
         addr = l.get("address", "")
         street = re.sub(r"\s+\d+.*$", "", addr.split(",")[0]).strip()
         key = f"{street}|{l.get('city', '')}".lower()
         if key not in seen_bldg:
             seen_bldg.add(key)
             deduped.append(l)
-    top = deduped[:top_n]
-    for rank, l in enumerate(top, 1):
-        l["rank"] = rank
-    print(f"  New build passing: {len(deduped)} unique buildings → top {len(top)}")
+    top = rank_largeloan(deduped)[:top_n]
+    print(f"  Large-loan passing: {len(deduped)} unique buildings → top {len(top)}")
     return top
 
 
@@ -308,6 +326,25 @@ def listing_red_flags(l: dict) -> list[tuple[str, str, str]]:
         flags.append((f"Hoitovastike {hoito/sqm:.1f} €/m²/mo vs 4.74 € Vantaa avg — investigate cause",
                        "https://www.kiinteistoliitto.fi/uutiset/nayta/?id=16859&title=hoitovastikekysely2025", "kiinteistöliitto"))
 
+    return flags
+
+
+def listing_red_flags_largeloan(l: dict) -> list[tuple[str, str, str]]:
+    """Warnings for large-loan new builds — the high loan share is intended, so
+    the generic loan-ratio flag is replaced by grace-period / booking checks."""
+    flags = []
+    src = ("https://www.vero.fi/en/individuals/property/rental_income/deductions/maintenance-charges-and-capital-charges/", "vero.fi")
+    grace = l.get("grace_end_year")
+    if l.get("rahoitusvastike_grace_eur_month") is not None or grace:
+        flags.append((f"Interest-only grace period{f' until ~{grace}' if grace else ''} — "
+                      "no principal deduction until repayments start", *src))
+    if l.get("booking_method") != "yes":
+        flags.append(("Tuloutus not stated — confirm in myyntiesite / isännöitsijäntodistus", *src))
+    else:
+        flags.append(("Tuloutus can be changed by the shareholders' meeting — current policy, not a guarantee", *src))
+    if l.get("rent_source", "").startswith("city avg"):
+        flags.append(("Rent is a city-level average (Statistics Finland) — check local asking rents",
+                      "https://pxdata.stat.fi/PXWeb/pxweb/fi/StatFin/StatFin__asvu/", "stat.fi"))
     return flags
 
 

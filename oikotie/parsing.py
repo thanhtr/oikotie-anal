@@ -21,6 +21,13 @@ _IN_PROGRESS_TERM = re.compile(
     r"|tulossa|aloitetaan)",
     re.IGNORECASE,
 )
+_BOOK_YES_TERM = re.compile(r"(tuloute\w*|tuloutus\w*|tulouttaa|tuloutettu\w*)", re.IGNORECASE)
+_BOOK_NO_TERM  = re.compile(r"(rahastoi\w*|rahastointi\w*)", re.IGNORECASE)
+_GRACE_TERM    = re.compile(r"(lyhennysvapaa\w*|lyhennykset\s+alka\w*|lyhentäminen\s+alkaa)", re.IGNORECASE)
+_FIN_NUMWORDS  = {"ensimmäinen": 1, "yksi": 1, "yhden": 1, "kaksi": 2, "kahden": 2, "kolme": 3,
+                  "kolmen": 3, "neljä": 4, "neljän": 4, "viisi": 5, "viiden": 5}
+_EUR_KK = r"([\d\xa0\s]+(?:[,.]\d+)?)\s*[\xa0\s]*€\s*/\s*kk"
+
 _RENTED_TERM = re.compile(
     r"(vuokralainen|asunto\s+on\s+vuokrattu|on\s+vuokrattu"
     r"|myydään\s+vuokrattuna|vuokrattuna\s+myytävä"
@@ -59,6 +66,79 @@ def _parse_fin_num(s: str) -> Optional[float]:
         return float(s)
     except ValueError:
         return None
+
+
+def _snippet(text: str, m: re.Match, pad: int = 150) -> str:
+    return text[max(0, m.start() - pad):min(len(text), m.end() + pad)].strip()
+
+
+def parse_largeloan_fields(text: str) -> dict:
+    """Financing-charge, grace-period and booking-method fields for the
+    large-loan category. Oikotie shows two charge blocks for new builds:
+    "Vastikkeet lyhennysvapaakaudella" (interest only) and
+    "Vastikkeet lyhennysvapaan jälkeen" (interest + principal)."""
+    result: dict = {}
+
+    def charge(label: str, chunk: str):
+        m = re.search(label + r"\s*\n+" + _EUR_KK, chunk)
+        return _parse_fin_num(m.group(1)) if m else None
+
+    after_i = text.find("Vastikkeet lyhennysvapaan jälkeen")
+    during_i = text.find("Vastikkeet lyhennysvapaakaudella")
+    if after_i >= 0:
+        after = text[after_i:after_i + 400]
+        during = text[during_i:after_i] if 0 <= during_i < after_i else ""
+        fin_after = charge("(?:Pääomavastike|Rahoitusvastike)", after)
+        fin_during = charge("(?:Pääomavastike|Rahoitusvastike)", during) if during else None
+    else:
+        # Single block: "Rahoitusvastike\n123 € / kk" — the label must end the line so
+        # "Rahoitusvastike, putkiremontti …" breakdown lines don't match.
+        fin_after = charge("(?:Pääomavastike|Rahoitusvastike)", text)
+        fin_during = None
+        if fin_after is None:
+            total = charge("Yhtiövastike yhteensä", text)
+            hoito = charge("Hoitovastike", text)
+            if total is not None and hoito is not None and total > hoito:
+                fin_after = round(total - hoito, 2)
+    result["rahoitusvastike_eur_month"] = fin_after if fin_after is not None else 0.0
+    result["rahoitusvastike_grace_eur_month"] = fin_during
+
+    # Completion estimate: "Lisätietoa vapautumisesta\nArviolta 12/2027"
+    m = re.search(r"vapautumisesta\s*\n+[^\n]*?(?:(\d{1,2})\s*/\s*)?(20\d\d)", text)
+    result["completion_year"] = int(m.group(2)) if m else None
+
+    # Grace period: explicit year, else "N (asumis)vuotta/vuosi" from completion
+    grace_end = None
+    grace_info = None
+    gm = _GRACE_TERM.search(text)
+    if gm:
+        grace_info = _snippet(text, gm)
+        ym = re.search(r"\b(20[2-4]\d)\b", grace_info)
+        if ym:
+            grace_end = int(ym.group(1))
+        else:
+            nm = re.search(r"\b(\d|" + "|".join(_FIN_NUMWORDS) + r")\s+(?:ensimmäistä\s+)?(?:asumis)?vuo(?:tta|si|den)",
+                           grace_info, re.IGNORECASE)
+            base = result["completion_year"] or datetime.now().year
+            if nm:
+                w = nm.group(1).lower()
+                grace_end = base + (int(w) if w.isdigit() else _FIN_NUMWORDS[w])
+    result["grace_period_info"] = grace_info
+    result["grace_end_year"] = grace_end
+
+    # Booking method (tuloutus vs rahastointi) — text hint only
+    yes_m, no_m = _BOOK_YES_TERM.search(text), _BOOK_NO_TERM.search(text)
+    if yes_m and not no_m:
+        result["booking_method"], result["booking_info"] = "yes", _snippet(text, yes_m)
+    elif no_m and not yes_m:
+        result["booking_method"], result["booking_info"] = "no", _snippet(text, no_m)
+    else:
+        result["booking_method"] = "unknown"
+        result["booking_info"] = " … ".join(_snippet(text, m) for m in (yes_m, no_m) if m) or None
+
+    m = re.search(r"Uudiskohde\s*\n+\s*Kyllä", text)
+    result["is_new_development"] = bool(m)
+    return result
 
 
 def parse_card_text(text: str, url: str) -> Optional[dict]:
@@ -123,9 +203,12 @@ def parse_card_text(text: str, url: str) -> Optional[dict]:
     return result if len(result) > 3 else None
 
 
-def fetch_listing_details(page, url: str, cache: dict) -> dict:
-    """Load individual listing page; return loan + pipe reno + rental details."""
-    if url in cache and "hoitovastike_eur_month" in cache[url]:
+def fetch_listing_details(page, url: str, cache: dict, require_key: str = "hoitovastike_eur_month") -> dict:
+    """Load individual listing page; return loan + pipe reno + rental details.
+
+    `require_key` decides cache freshness: an entry missing that key is
+    re-fetched (the large-loan pool passes "rahoitusvastike_eur_month")."""
+    if url in cache and "hoitovastike_eur_month" in cache[url] and require_key in cache[url]:
         return cache[url]
 
     try:
@@ -216,5 +299,11 @@ def fetch_listing_details(page, url: str, cache: dict) -> dict:
         if m:
             result["rental_income_eur_month"] = _parse_fin_num(m.group(1))
 
+    result.update(parse_largeloan_fields(text))
+
+    # Keep geo fields from an older entry so re-fetches don't force a re-geocode
+    old = cache.get(url) or {}
+    for k, v in old.items():
+        result.setdefault(k, v)
     cache[url] = result
     return result

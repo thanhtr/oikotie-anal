@@ -12,11 +12,15 @@ from pathlib import Path
 from jinja2 import Environment, FileSystemLoader
 
 from oikotie.config import (
-    DATA_DIR, DOWN_PAYMENT_EUR, LOAN_RATIO_MAX, MAX_STOP_DIST_M, PRICE_MAX,
-    STOP_LINKS, STOP_NOTE, TRAM_MARKET_RISKS, UUSIMAA_LOAN_RATIO_MAX,
-    UUSIMAA_MARKET_RISKS, UUSIMAA_PRICE_MAX, UUSIMAA_TOP_UNRENTED,
+    CO_LOAN_RATE, DATA_DIR, DEDUCTION_ENABLED, DOWN_PAYMENT_EUR, LL_HOLD_YEARS,
+    LL_MAX_AGE_YEARS, LL_MIN_LOAN_RATIO, LL_MYYNTI_MAX, LOAN_RATIO_MAX,
+    MAX_STOP_DIST_M, PRICE_MAX, STOP_LINKS, STOP_NOTE, TAX_RATE,
+    TRAM_MARKET_RISKS, UUSIMAA_LOAN_RATIO_MAX, UUSIMAA_MARKET_RISKS,
+    UUSIMAA_PRICE_MAX, UUSIMAA_TOP_UNRENTED,
 )
-from oikotie.pipelines import listing_red_flags, listing_red_flags_uusimaa
+from oikotie.pipelines import (
+    listing_red_flags, listing_red_flags_largeloan, listing_red_flags_uusimaa,
+)
 from oikotie.scoring import _loan_ratio_str, monthly_mortgage
 
 TEMPLATES_DIR = Path(__file__).resolve().parent.parent / "templates"
@@ -35,8 +39,57 @@ def _get_env() -> Environment:
     return Environment(loader=FileSystemLoader(str(TEMPLATES_DIR)), autoescape=True)
 
 
+def _pct(v, digits: int = 1) -> str:
+    return "—" if v is None else f"{v*100:.{digits}f}%"
+
+
+_BOOKING_BADGE = {
+    "yes":     {"cls": "new",  "text": "tuloutus ✓"},
+    "unknown": {"cls": "cand", "text": "tuloutus ?"},
+    "no":      {"cls": "rent", "text": "rahastointi"},
+}
+
+
+def _largeloan_context(l: dict) -> dict:
+    """Extra card fields for the large-loan view (merged into _card_context)."""
+    yes = l.get("booking_method") == "yes"
+    benefit = l.get("tax_benefit_yr") if yes else l.get("tax_benefit_if_yes")
+    lifetime = l.get("lifetime_net_benefit") if yes else l.get("lifetime_net_benefit_if_yes")
+    timing = l.get("timing_value") if yes else l.get("timing_value_if_yes")
+    suffix = "" if yes else " if tuloutus"
+    rows = [
+        ("Loan share", f"{fmt_eur(l.get('loan_share_eur'))} ({_pct(l.get('loan_ratio'), 0)} of velaton)"),
+        ("Rahoitusvastike", f"{fmt_eur(l.get('rahoitusvastike_eur_month'))}/kk"
+         + (f" (grace {fmt_eur(l.get('rahoitusvastike_grace_eur_month'))}/kk"
+            + (f" → {l['grace_end_year']}" if l.get("grace_end_year") else "") + ")"
+            if l.get("rahoitusvastike_grace_eur_month") is not None else "")),
+        ("Principal est.", f"{fmt_eur(l.get('principal_est_yr'))}/yr ({_pct(l.get('principal_pct'))} of loan)"),
+        ("Tax benefit", f"{fmt_eur(benefit)}/yr{suffix}"),
+        ("Rent est.", f"{fmt_eur(l.get('est_rent_month'))}/mo · {l.get('rent_source', '')}"),
+        ("After-tax CF", f"{fmt_eur(l.get('after_tax_cf_yr'))}/yr"),
+        (f"Net {LL_HOLD_YEARS}-yr benefit", f"{fmt_eur(lifetime)} after sale-gain recapture"
+                                            f" + {fmt_eur(timing)} timing value{suffix}"),
+    ]
+    bd = l.get("score_breakdown") or {}
+    parts = bd.get("parts") or {}
+    transit = bd.get("transit")
+    return {
+        "headline_price_s": fmt_eur(l.get("price_eur")),
+        "headline_sub": f"myyntihinta · velaton {fmt_eur(l.get('debt_free_price_eur'))}",
+        "yield_str": f"{_pct(l.get('cash_yield'))} after-tax cash yield",
+        "ll_rows": [{"k": k, "v": v} for k, v in rows],
+        "score_parts": " · ".join(f"{k} {v}" for k, v in parts.items()),
+        "note": ({"text": f"🚧 {transit['name']} {transit['dist']} m — {transit['note']}",
+                  "links": [{"url": transit["url"], "label": "source"}]} if transit else None),
+        "booking_info": l.get("booking_info") or "",
+        "grace_info": l.get("grace_period_info") or "",
+    }
+
+
 def _status_badge(l: dict) -> dict:
     tag = l.get("_search_pass", "")
+    if tag == "new-build-large-loan":
+        return _BOOKING_BADGE.get(l.get("booking_method") or "unknown", _BOOKING_BADGE["unknown"])
     if tag == "new_house_2000plus":
         return {"cls": "new", "text": f"built {l.get('year_built', '')}"}
     if tag == "candidate_check_pipe_reno":
@@ -47,8 +100,8 @@ def _status_badge(l: dict) -> dict:
 
 
 def _card_context(l: dict, mode: str) -> dict:
-    """Build the render context for one listing card. `mode` is "tram" or
-    "uusimaa" — it only decides which optional fields get populated."""
+    """Build the render context for one listing card. `mode` is "tram",
+    "uusimaa" or "largeloan" — it only decides which optional fields get populated."""
     url = l.get("listing_url") or ""
     parts = [p for p in [l.get("address", "N/A"), l.get("district") or "", l.get("city") or ""] if p]
     full_addr = ", ".join(parts)
@@ -119,16 +172,27 @@ def _card_context(l: dict, mode: str) -> dict:
         mall, mdist = l.get("nearest_mall") or "?", l.get("mall_distance_m")
         if mdist is not None:
             mall_line = f"🛍 {mall} · {round(mdist)}m"
-        flags = listing_red_flags_uusimaa(l)
+        flags = listing_red_flags_largeloan(l) if mode == "largeloan" else listing_red_flags_uusimaa(l)
 
-    return {
+    ctx = {
         "url": url, "full_addr": full_addr, "rank_s": rank_s, "price_s": price_s,
+        "price_sub": "velaton",
         "loan_s": loan_s, "monthly_str": monthly_str, "yield_str": yield_str,
         "meta_s": meta_s, "badges": badges, "note": note,
         "hub_line": hub_line, "mall_line": mall_line,
         "flags": [{"text": t, "url": u, "label": lb} for t, u, lb in flags],
         "reno": l.get("pipe_renovation_info") or "",
     }
+    if mode == "largeloan":
+        ll = _largeloan_context(l)
+        ctx.update({
+            "price_s": ll["headline_price_s"], "price_sub": ll["headline_sub"],
+            "loan_s": None, "monthly_str": None, "yield_str": ll["yield_str"],
+            "ll_rows": ll["ll_rows"], "score_parts": ll["score_parts"],
+            "note": ll["note"], "reno": "",
+            "booking_info": ll["booking_info"], "grace_info": ll["grace_info"],
+        })
+    return ctx
 
 
 def _table_row_context(l: dict, mode: str, row_class: str = "") -> dict:
@@ -148,6 +212,18 @@ def _table_row_context(l: dict, mode: str, row_class: str = "") -> dict:
         "sqm": l.get("size_sqm", "—"),
         "year": l.get("year_built", "—"),
     }
+    if mode == "largeloan":
+        ctx.update({
+            "dfp_s": fmt_eur(l.get("price_eur")),
+            "loan_s": _pct(l.get("loan_ratio"), 0),
+            "fin_s": fmt_eur(l.get("rahoitusvastike_eur_month")),
+            "booking": l.get("booking_method") or "unknown",
+            "tax_s": fmt_eur(l.get("tax_benefit_yr") if l.get("booking_method") == "yes"
+                             else l.get("tax_benefit_if_yes")),
+            "yield_s": _pct(l.get("cash_yield")),
+            "score": l.get("score", "—"),
+        })
+        return ctx
     if mode == "tram":
         tag = l.get("_search_pass", "")
         ctx["status"] = ("new ≥2000" if tag == "new_house_2000plus"
@@ -173,14 +249,14 @@ def generate_html_report(confirmed: list[dict], candidates: list[dict],
                          rented_out: list[dict] = None,
                          uusimaa_rented: list[dict] = None,
                          uusimaa_top5: list[dict] = None,
-                         newbuild_pks: list[dict] = None,
+                         largeloan: list[dict] = None,
                          path=None) -> None:
     if path is None:
         path = DATA_DIR / "index.html"
     rented_out     = rented_out     or []
     uusimaa_rented = uusimaa_rented or []
     uusimaa_top5   = uusimaa_top5   or []
-    newbuild_pks   = newbuild_pks   or []
+    largeloan      = largeloan      or []
 
     # ── Tram display tiers — rented excluded from other sections to avoid duplication
     new_cards  = [l for l in confirmed  if l.get("_search_pass") == "new_house_2000plus"
@@ -228,14 +304,24 @@ def generate_html_report(confirmed: list[dict], candidates: list[dict],
         [_table_row_context(l, "uusimaa", "row-cand") for l in uusimaa_top5]
     )
 
+    ll_yes     = [l for l in largeloan if l.get("booking_method") == "yes"]
+    ll_unknown = [l for l in largeloan if l.get("booking_method") != "yes"]
+    caveat = ("Screening aid, not tax advice. The interest/principal split is estimated "
+              f"at {CO_LOAN_RATE*100:.1f}% company-loan rate; booking method is a text hint only.")
     nb_sections = [s for s in [
-        _section(f"PKS New Construction — Top {len(newbuild_pks)} (1 per building)",
-                 f"Newly built / under-construction apartments in Helsinki, Espoo, Vantaa. "
-                 f"Price ≤ {UUSIMAA_PRICE_MAX:,} €, loan ≤ {int(UUSIMAA_LOAN_RATIO_MAX*100)}%. "
-                 "Deduplicated to one listing per building, then top scored by hub proximity.",
-                 newbuild_pks, "sec-new", "uusimaa"),
+        _section("Full match — tuloutus stated in listing",
+                 "Financing charge is booked as income, so the whole rahoitusvastike "
+                 "(principal included) is deductible from rental income. " + caveat,
+                 ll_yes, "sec-new", "largeloan"),
+        _section("Booking method unverified",
+                 "Tuloutus vs rahastointi not stated. Confirm in the myyntiesite or "
+                 "isännöitsijäntodistus before treating as a match — figures shown "
+                 "'if tuloutus' are the upside. " + caveat,
+                 ll_unknown, "sec-cand", "largeloan"),
     ] if s]
-    nb_table_rows = [_table_row_context(l, "uusimaa", "row-confirmed") for l in newbuild_pks]
+    nb_table_rows = [_table_row_context(l, "largeloan",
+                                        "row-confirmed" if l.get("booking_method") == "yes" else "row-cand")
+                     for l in largeloan]
 
     ctx = {
         "run_time": datetime.now().strftime("%Y-%m-%d %H:%M"),
@@ -251,7 +337,15 @@ def generate_html_report(confirmed: list[dict], candidates: list[dict],
         "cand_count": len(cand_cards),
         "uusimaa_rented_count": len(uusimaa_rented),
         "uusimaa_top5_count": len(uusimaa_top5),
-        "newbuild_count": len(newbuild_pks),
+        "newbuild_count": len(largeloan),
+        "ll_yes_count": len(ll_yes),
+        "ll_myynti_max": LL_MYYNTI_MAX,
+        "ll_min_loan_pct": int(LL_MIN_LOAN_RATIO * 100),
+        "ll_max_age": LL_MAX_AGE_YEARS,
+        "ll_hold_years": LL_HOLD_YEARS,
+        "ll_tax_pct": int(round(TAX_RATE * 100)),
+        "ll_rate_pct": f"{CO_LOAN_RATE*100:.1f}",
+        "ll_deduction_enabled": DEDUCTION_ENABLED,
         "tram_sections": tram_sections, "tram_table_rows": tram_table_rows,
         "uu_sections": uu_sections, "uu_table_rows": uu_table_rows,
         "nb_sections": nb_sections, "nb_table_rows": nb_table_rows,

@@ -3,7 +3,10 @@
 import json
 import urllib.parse
 
-from oikotie.config import BASE_URL, TRAMLINE_LOCATIONS, UUSIMAA_LOCATIONS, UUSIMAA_PRICE_MAX, PRICE_MAX
+from oikotie.config import (
+    BASE_URL, LL_SEARCH_VELATON_MAX, PRICE_MAX, TRAMLINE_LOCATIONS,
+    UUSIMAA_LOCATIONS, UUSIMAA_PRICE_MAX,
+)
 
 
 def build_search_url(page_num: int = 1) -> str:
@@ -34,7 +37,11 @@ def build_uusimaa_search_url(page_num: int = 1) -> str:
 
 
 def build_newbuild_search_url(page_num: int = 1) -> str:
+    """PKS new developments, all room counts. Oikotie's price filter is not
+    myyntihinta, so the cap here only bounds scrape size — the real
+    myyntihinta filter runs after detail fetch (largeloan.qualifies)."""
     loc = urllib.parse.quote(json.dumps(UUSIMAA_LOCATIONS))
+    price = f"&price[max]={LL_SEARCH_VELATON_MAX}" if LL_SEARCH_VELATON_MAX else ""
     return (
         f"{BASE_URL}/myytavat-asunnot"
         f"?pagination={page_num}"
@@ -42,8 +49,7 @@ def build_newbuild_search_url(page_num: int = 1) -> str:
         f"&newDevelopment=1"
         f"&locations={loc}"
         f"&habitationType[]=1"
-        f"&price[max]={UUSIMAA_PRICE_MAX}"
-        f"&roomCount[]=1&roomCount[]=2"
+        f"{price}"
     )
 
 
