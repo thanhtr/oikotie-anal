@@ -238,9 +238,15 @@ def score_largeloan(listings: list[dict], rent_model: dict) -> None:
         l["monthly_cost_eur"] = round(monthly_cost_eur(l), 2)
 
 
+def _largeloan_tier(l: dict) -> int:
+    if l.get("is_rented_out"):            return 0
+    if l.get("booking_method") == "yes":  return 1
+    return 2
+
+
 def rank_largeloan(listings: list[dict]) -> list[dict]:
-    """Booking gate first (tuloutus found → top), then composite score."""
-    listings.sort(key=lambda l: (l.get("booking_method") != "yes", -l["score"]))
+    """Rented-out first (confirmed income), then booking gate, then score."""
+    listings.sort(key=lambda l: (_largeloan_tier(l), -l["score"]))
     for rank, l in enumerate(listings, 1):
         l["rank"] = rank
     return listings

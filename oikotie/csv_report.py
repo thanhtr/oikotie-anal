@@ -17,7 +17,7 @@ CSV_FIELDS = [
 
 
 LL_CSV_FIELDS = [
-    "rank", "score", "address", "district", "city",
+    "rank", "score", "is_rented_out", "rental_income_eur_month", "address", "district", "city",
     "price_eur", "debt_free_price_eur", "loan_share_eur", "loan_ratio",
     "room_count", "size_sqm", "year_built", "completion_year",
     "hoitovastike_eur_month", "rahoitusvastike_eur_month", "rahoitusvastike_grace_eur_month",
