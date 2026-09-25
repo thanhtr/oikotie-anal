@@ -10,7 +10,7 @@ function.
 import re
 import time
 
-from oikotie.config import HELSINKI_CENTRAL_COORDS, LL_TOP_N, MAX_STOP_DIST_M
+from oikotie.config import HELSINKI_CENTRAL_COORDS, LL_TOP_N, MAX_STOP_DIST_M, RAIL_STATIONS
 from oikotie.geo import geocode_address, haversine_m, nearest_hub, nearest_mall, nearest_tram_stop
 from oikotie.largeloan import compute_largeloan_metrics, qualifies
 from oikotie.parsing import _eval_pipe_done
@@ -228,7 +228,7 @@ def score_largeloan(listings: list[dict], rent_model: dict) -> None:
     results-cache path can re-run it after TAX/RATE/DEDUCTION_ENABLED changes."""
     for l in listings:
         if l.get("lat") is not None:   # fresh, so hubs/POIs added to config show up
-            l["nearest_hub"], hd = nearest_hub(l["lat"], l["lon"])
+            l["nearest_hub"], hd = nearest_hub(l["lat"], l["lon"], RAIL_STATIONS)
             l["nearest_mall"], md = nearest_mall(l["lat"], l["lon"])
             l["hub_distance_m"], l["mall_distance_m"] = round(hd), round(md)
         rent, source = estimate_rent(l, rent_model)

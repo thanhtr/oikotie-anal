@@ -295,7 +295,10 @@ def fetch_listing_details(page, url: str, cache: dict, require_key: str = "hoito
     # Rental income — parse €/kk from rented_out_info snippet
     result["rental_income_eur_month"] = None
     if result.get("rented_out_info"):
-        m = re.search(r"([\d\xa0\s]+)\s*€\s*/\s*kk", result["rented_out_info"])
+        # Anchor on "vuokra" so other €/kk lines in the snippet (e.g. "Muu vastike: 14 € / kk")
+        # aren't read as rent
+        m = re.search(r"vuokra\w*[^\n€]{0,40}?([\d][\d\xa0 ]*(?:[,.]\d+)?)\s*€\s*/\s*kk",
+                      result["rented_out_info"], re.IGNORECASE)
         if m:
             result["rental_income_eur_month"] = _parse_fin_num(m.group(1))
 

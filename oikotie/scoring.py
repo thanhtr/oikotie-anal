@@ -4,7 +4,7 @@ from oikotie.config import (
     DOWN_PAYMENT_EUR, EURIBOR_12M, HELSINKI_CENTRAL_COORDS, LL_YIELD_FULL_PTS,
     LL_YIELD_ZERO_PTS,
     LOAN_MARGIN, LOAN_YEARS, PLANNED_TRANSIT, STOP_NOTE, STOP_TRANSFORMATION,
-    TRAM_STOP_PLANNED_MULT, TRAM_STOPS,
+    RAIL_STATIONS, TRAM_STOP_PLANNED_MULT, TRAM_STOPS, TRANSPORT_HUBS,
 )
 from oikotie.geo import haversine_m, nearest_hub, nearest_mall
 from oikotie.parsing import _eval_pipe_done
@@ -95,13 +95,14 @@ def score_listing(listing: dict) -> int:
     return score
 
 
-def _hub_pts(listing: dict, fresh: bool = False) -> int:
+def _hub_pts(listing: dict, hubs=None) -> int:
     """Transport hub proximity (0–25 pts) — rail/metro drives tenant demand.
-    `fresh` recomputes from lat/lon instead of trusting cached geo fields."""
+    Passing `hubs` recomputes from lat/lon against that list instead of
+    trusting cached geo fields."""
     lat, lon = listing.get("lat"), listing.get("lon")
-    hub_dist = None if fresh else listing.get("hub_distance_m")
+    hub_dist = None if hubs else listing.get("hub_distance_m")
     if hub_dist is None and lat is not None:
-        _, hub_dist = nearest_hub(lat, lon)
+        _, hub_dist = nearest_hub(lat, lon, hubs or TRANSPORT_HUBS)
     if hub_dist is None:  return 0
     if hub_dist < 300:    return 25
     if hub_dist < 600:    return 20
@@ -152,6 +153,21 @@ def _ppsqm_pts(listing: dict) -> int:
     return 0
 
 
+def _ppsqm_pts_newbuild(listing: dict) -> int:
+    """Debt-free €/m² for new builds (0–10 pts). New PKS stock sits at
+    5 000–10 000 €/m², where the resale bands in _ppsqm_pts all score 0."""
+    dfp = float(listing.get("debt_free_price_eur") or 0)
+    sqm = float(listing.get("size_sqm") or 0)
+    if dfp <= 0 or sqm <= 0: return 0
+    ppsqm = dfp / sqm
+    if ppsqm < 5000: return 10
+    if ppsqm < 6000: return 8
+    if ppsqm < 7000: return 6
+    if ppsqm < 8000: return 4
+    if ppsqm < 9000: return 2
+    return 0
+
+
 def planned_transit(listing: dict) -> tuple[int, dict | None]:
     """Planned-transit uplift (0–15 pts): best of PLANNED_TRANSIT and the Vantaan
     ratikka stops. Full points ≤ 500 m, half ≤ 1 km. Returns (pts, match)."""
@@ -183,12 +199,12 @@ def score_largeloan_listing(listing: dict) -> tuple[int, dict]:
     span = LL_YIELD_FULL_PTS - LL_YIELD_ZERO_PTS
     yield_pts = 0 if cy is None else round(25 * min(max((cy - LL_YIELD_ZERO_PTS) / span, 0.0), 1.0))
     parts = {
-        "hub":     _hub_pts(listing, fresh=True),
+        "hub":     _hub_pts(listing, hubs=RAIL_STATIONS),
         "centre":  _centre_pts(listing),
         "mall":    _mall_pts(listing, fresh=True),
         "transit": transit_pts,
         "yield":   yield_pts,
-        "ppsqm":   _ppsqm_pts(listing),
+        "ppsqm":   _ppsqm_pts_newbuild(listing),
     }
     return sum(parts.values()), {"parts": parts, "transit": transit}
 

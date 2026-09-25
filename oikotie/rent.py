@@ -32,8 +32,9 @@ def build_rent_model(listings: list[dict]) -> dict[str, list[float]]:
 def estimate_rent(l: dict, model: dict[str, list[float]]) -> tuple[float | None, str]:
     """Return (rent €/month, source label)."""
     sqm = float(l.get("size_sqm") or 0)
-    if l.get("rental_income_eur_month"):
-        return float(l["rental_income_eur_month"]), "listed"
+    listed = l.get("rental_income_eur_month")
+    if listed and (sqm <= 0 or _SANE_EUR_SQM[0] <= float(listed) / sqm <= _SANE_EUR_SQM[1]):
+        return float(listed), "listed"
     if sqm <= 0:
         return None, "no size"
     samples = model.get(_district_key(l), [])
