@@ -4,7 +4,7 @@
 Searches all 15 Vantaan ratikka corridor districts in one query,
 paginates through every result page, then verifies loan & pipe
 renovation on individual listing pages with a disk cache. Also runs
-the Uusimaa (PKS-wide) and PKS-newbuild pipelines.
+the Uusimaa (PKS-wide) and large-loan new-build pipelines.
 
 Criteria:
   - Kerrostalo only (buildingType=1)

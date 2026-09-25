@@ -30,9 +30,9 @@ def nearest_tram_stop(lat: float, lon: float) -> tuple[str, float]:
     return best_name, best_dist
 
 
-def nearest_hub(lat: float, lon: float) -> tuple[str, float]:
+def nearest_hub(lat: float, lon: float, hubs=TRANSPORT_HUBS) -> tuple[str, float]:
     best_name, best_dist = "", float("inf")
-    for name, hlat, hlon in TRANSPORT_HUBS:
+    for name, hlat, hlon in hubs:
         d = haversine_m(lat, lon, hlat, hlon)
         if d < best_dist:
             best_dist, best_name = d, name

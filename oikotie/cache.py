@@ -34,7 +34,7 @@ def load_results_cache() -> dict | None:
 
 def save_results_cache(confirmed: list, candidates: list, tram_rented_out: list,
                        uusimaa_rented: list, uusimaa_top5: list,
-                       uusimaa_passing: list, newbuild_pks: list) -> None:
+                       uusimaa_passing: list, largeloan: list, rent_model: dict) -> None:
     data = {
         "timestamp":       datetime.now().isoformat(),
         "confirmed":       confirmed,
@@ -43,7 +43,8 @@ def save_results_cache(confirmed: list, candidates: list, tram_rented_out: list,
         "uusimaa_rented":  uusimaa_rented,
         "uusimaa_top5":    uusimaa_top5,
         "uusimaa_passing": uusimaa_passing,
-        "newbuild_pks":    newbuild_pks,
+        "largeloan":       largeloan,
+        "rent_model":      rent_model,
     }
     with open(RESULTS_CACHE_FILE, "w", encoding="utf-8") as fh:
         json.dump(data, fh, ensure_ascii=False, indent=2)

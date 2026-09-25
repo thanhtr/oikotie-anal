@@ -36,7 +36,7 @@
     <div class="seg-group topbar-modes">
       <button class="seg-btn active" onclick="showMode('tram',this)">🚋 Vantaan Ratikka</button>
       <button class="seg-btn" onclick="showMode('uusimaa',this)">🏘 PKS Vuokratut</button>
-      <button class="seg-btn" onclick="showMode('newbuild',this)">🏗 PKS Uutuudet</button>
+      <button class="seg-btn" onclick="showMode('newbuild',this)">🏗 Yhtiölaina-uudiskohteet</button>
     </div>
     <button class="dark-toggle" onclick="toggleDark()" aria-label="Toggle dark mode">
       <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -81,11 +81,14 @@
       <div class="crit-item"><span class="crit-dot"></span><span class="crit-text">🚋 tram badge if ≤ {{ max_stop_dist_m }} m from Vantaan ratikka stop</span></div>
     </div>
     <div id="crit-newbuild" class="crit-panel">
-      <div class="crit-item"><span class="crit-dot"></span><span class="crit-text">PKS new construction &amp; under-construction</span></div>
-      <div class="crit-item"><span class="crit-dot"></span><span class="crit-text">Velaton hinta ≤ {{ "{:,}".format(uusimaa_price_max)|replace(",", " ") }} €</span></div>
-      <div class="crit-item"><span class="crit-dot"></span><span class="crit-text">Loan ≤ {{ uusimaa_loan_ratio_max_pct }}%</span></div>
-      <div class="crit-item"><span class="crit-dot"></span><span class="crit-text">Deduplicated to one listing per building</span></div>
-      <div class="crit-item"><span class="crit-dot"></span><span class="crit-text">Sorted by hub-proximity score</span></div>
+      <div class="crit-item"><span class="crit-dot"></span><span class="crit-text">PKS new developments (all sizes) + builds ≤ {{ ll_max_age }} yrs old</span></div>
+      <div class="crit-item"><span class="crit-dot"></span><span class="crit-text">Myyntihinta ≤ {{ "{:,}".format(ll_myynti_max)|replace(",", " ") }} €</span></div>
+      <div class="crit-item"><span class="crit-dot"></span><span class="crit-text">Yhtiölaina ≥ {{ ll_min_loan_pct }}% of velaton hinta</span></div>
+      <div class="crit-item"><span class="crit-dot"></span><span class="crit-text">Real principal in rahoitusvastike, or grace period ends within {{ ll_hold_years }} yrs</span></div>
+      <div class="crit-item"><span class="crit-dot"></span><span class="crit-text">Rahastointi excluded; tuloutus-stated listings ranked first</span></div>
+      <div class="crit-item"><span class="crit-dot"></span><span class="crit-text">Score: hub · centre · mall/POI · planned transit · after-tax yield · €/m²</span></div>
+      <div class="crit-item"><span class="crit-dot"></span><span class="crit-text">Tax {{ ll_tax_pct }}% · co. loan rate {{ ll_rate_pct }}% · principal deduction {{ "on" if ll_deduction_enabled else "OFF" }}</span></div>
+      <div class="crit-item"><span class="crit-dot"></span><span class="crit-text">One listing per building</span></div>
     </div>
   </div>
 </div>
@@ -197,11 +200,11 @@
 <!-- ════════════════════════════════════════════ NEW BUILD VIEW ══ -->
 <div id="mode-newbuild" style="display:none">
   <header>
-    <h1>Uudisasunnot PKS (Helsinki · Espoo · Vantaa)</h1>
-    <p>{{ newbuild_count }} listings &nbsp;·&nbsp;
-       Velaton hinta ≤ {{ "{:,}".format(uusimaa_price_max)|replace(",", " ") }} € &nbsp;·&nbsp;
-       Loan ≤ {{ uusimaa_loan_ratio_max_pct }}% &nbsp;·&nbsp;
-       Sorted by hub-proximity score</p>
+    <h1>Large-loan new builds PKS (Helsinki · Espoo · Vantaa)</h1>
+    <p>{{ newbuild_count }} listings ({{ ll_yes_count }} tuloutus stated) &nbsp;·&nbsp;
+       Myyntihinta ≤ {{ "{:,}".format(ll_myynti_max)|replace(",", " ") }} € &nbsp;·&nbsp;
+       Loan ≥ {{ ll_min_loan_pct }}% &nbsp;·&nbsp;
+       Sorted by location + after-tax yield score</p>
   </header>
   <div class="controls-row">
     <button class="filters-btn" onclick="openFilters()">
@@ -236,7 +239,7 @@
   <div id="tab-nb-table" class="tab-panel">
     <div class="tbl-wrap">
       <table id="nb-table">
-        <thead>{{ tablem.headers("nb-table", "uusimaa") }}</thead>
+        <thead>{{ tablem.headers("nb-table", "largeloan") }}</thead>
         <tbody>{% for row in nb_table_rows %}{{ tablem.row(row) }}{% endfor %}</tbody>
       </table>
     </div>

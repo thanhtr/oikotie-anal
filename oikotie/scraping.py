@@ -3,7 +3,8 @@ fetches, plus the three pipeline-specific scrape runners."""
 
 import re
 
-from oikotie.config import BASE_URL, MAX_DETAIL_CHECKS
+from oikotie.config import BASE_URL, LL_MIN_LOAN_RATIO, LL_MYYNTI_MAX, MAX_DETAIL_CHECKS
+from oikotie.largeloan import is_recent_build, loan_share, prequalifies
 from oikotie.parsing import fetch_listing_details, parse_card_text
 from oikotie.urls import (
     NEWBUILD_LINK_SELECTOR, TRAM_LINK_SELECTOR, UUSIMAA_LINK_SELECTOR,
@@ -76,7 +77,8 @@ def _scrape_all_pages(page, url_builder, link_selector, label: str) -> list[dict
     return raw
 
 
-def _fetch_details_for(page, listings: list[dict], cache: dict, label: str) -> None:
+def _fetch_details_for(page, listings: list[dict], cache: dict, label: str,
+                       require_key: str = "hoitovastike_eur_month") -> None:
     """Fetch and merge individual-listing details in place."""
     if not listings:
         return
@@ -84,10 +86,10 @@ def _fetch_details_for(page, listings: list[dict], cache: dict, label: str) -> N
     newly = 0
     for idx, listing in enumerate(listings, 1):
         url = listing["listing_url"]
-        cached = url in cache
+        cached = url in cache and require_key in cache[url]
         name = listing.get("address") or url.split("/")[-1]
         print(f"  [{idx:2d}/{len(listings)}] {'(cache) ' if cached else ''}{name}")
-        details = fetch_listing_details(page, url, cache)
+        details = fetch_listing_details(page, url, cache, require_key)
         listing.update({k: v for k, v in details.items() if v is not None})
         if not cached:
             newly += 1
@@ -114,8 +116,11 @@ def run_uusimaa_scrape(page, cache: dict, price_max: float) -> list[dict]:
     return to_check
 
 
-def run_newbuild_scrape(page, cache: dict, price_max: float) -> list[dict]:
-    print(f"\nNEWBUILD PIPELINE: PKS new construction, price ≤ {price_max:,.0f} €")
+def run_newbuild_scrape(page, cache: dict, extra: list[dict] = ()) -> list[dict]:
+    """Large-loan pool: PKS new developments (all sizes) + recent builds from
+    `extra` (the PKS scrape). Details are (re-)fetched so the financing-charge
+    fields exist; the myyntihinta / loan-ratio gate runs later."""
+    print(f"\nLARGE-LOAN PIPELINE: PKS new construction, myyntihinta ≤ {LL_MYYNTI_MAX:,.0f} €")
     raw: list[dict] = []
     seen: set[str] = set()
     total_pages = None
@@ -133,8 +138,21 @@ def run_newbuild_scrape(page, cache: dict, price_max: float) -> list[dict]:
             break
         p += 1
 
-    initial = [l for l in raw if (l.get("price_eur") or 999_999) <= price_max]
-    print(f"New build raw: {len(raw)}  |  after price filter: {len(initial)}")
-    to_check = [l for l in initial if l.get("listing_url")]
-    _fetch_details_for(page, to_check, cache, "new build")
-    return to_check
+    # Copies: these dicts are shared with the Uusimaa pipeline, which sets its own score/rank
+    extra_recent = [dict(l) for l in extra if l.get("listing_url") not in seen and is_recent_build(l)]
+    pool = [l for l in raw + extra_recent if l.get("listing_url") and prequalifies(l)]
+    print(f"New-dev raw: {len(raw)}  |  + recent PKS builds: {len(extra_recent)}  |  pool: {len(pool)}")
+    # Pre-screen with cached details so only plausible large-loan flats get re-fetched
+    to_fetch = []
+    for l in pool:
+        c = cache.get(l["listing_url"], {})
+        if "rahoitusvastike_eur_month" in c or "hoitovastike_eur_month" not in c:
+            to_fetch.append(l)
+            continue
+        merged = {**l, **{k: v for k, v in c.items() if v is not None}}
+        share, dfp = loan_share(merged), merged.get("debt_free_price_eur")
+        if share is None or not dfp or share / float(dfp) >= LL_MIN_LOAN_RATIO:
+            to_fetch.append(l)
+    print(f"  After cached loan-ratio pre-screen: {len(to_fetch)}")
+    _fetch_details_for(page, to_fetch, cache, "large-loan", require_key="rahoitusvastike_eur_month")
+    return to_fetch

@@ -84,7 +84,6 @@ UUSIMAA_LOCATIONS: list[list] = [
 UUSIMAA_PRICE_MAX      = 200_000
 UUSIMAA_LOAN_RATIO_MAX = 0.50
 UUSIMAA_TOP_UNRENTED   = 5    # max non-rented listings shown in Uusimaa watch list
-NEWBUILD_TOP_N         = 50   # top N after per-building dedup; use --force to refresh
 
 # Major train/metro stations — (name, lat, lon)
 TRANSPORT_HUBS: list[tuple[str, float, float]] = [
@@ -97,6 +96,83 @@ TRANSPORT_HUBS: list[tuple[str, float, float]] = [
     ("Itäkeskus metro",   60.2111, 25.0815),
     ("Matinkylä metro",   60.1621, 24.7373),
     ("Ruoholahti metro",  60.1639, 24.9151),
+    ("Malmi",             60.2508, 25.0112),
+    ("Myyrmäki",          60.2612, 24.8545),
+]
+
+# Metro + commuter-rail stations in Helsinki/Espoo/Vantaa/Kauniainen — OpenStreetMap
+# railway=station (light-rail stops excluded), fetched 2026-09-25. (name, lat, lon).
+# Used by the large-loan score; the Uusimaa score keeps TRANSPORT_HUBS so its
+# cached hub distances stay comparable.
+RAIL_STATIONS: list[tuple[str, float, float]] = [
+    ("Aalto-yliopisto metro", 60.1845, 24.8236),
+    ("Aviapolis", 60.3045, 24.9567),
+    ("Espoo", 60.2051, 24.6561),
+    ("Espoonlahti metro", 60.1494, 24.6547),
+    ("Finnoo metro", 60.153, 24.7119),
+    ("Hakaniemi metro", 60.1805, 24.9502),
+    ("Helsingin yliopisto metro", 60.1728, 24.9486),
+    ("Helsinki", 60.1721, 24.9412),
+    ("Herttoniemi metro", 60.1946, 25.0302),
+    ("Hiekkaharju", 60.3035, 25.0496),
+    ("Huopalahti", 60.2183, 24.8935),
+    ("Ilmala", 60.2077, 24.9213),
+    ("Itäkeskus metro", 60.21, 25.0774),
+    ("Kaitaa metro", 60.1496, 24.6908),
+    ("Kalasatama metro", 60.1875, 24.9769),
+    ("Kamppi metro", 60.169, 24.9317),
+    ("Kannelmäki", 60.2397, 24.8766),
+    ("Kauklahti", 60.1894, 24.6004),
+    ("Kauniainen", 60.2118, 24.7296),
+    ("Keilaniemi metro", 60.1756, 24.8295),
+    ("Kera", 60.2166, 24.7557),
+    ("Kilo", 60.2179, 24.7824),
+    ("Kivenlahti metro", 60.1555, 24.6363),
+    ("Kivistö", 60.3147, 24.8473),
+    ("Koivuhovi", 60.207, 24.7023),
+    ("Koivukylä", 60.3236, 25.0604),
+    ("Koivusaari metro", 60.1636, 24.8538),
+    ("Kontula metro", 60.236, 25.0836),
+    ("Korso", 60.3515, 25.0788),
+    ("Kulosaari metro", 60.1888, 25.0081),
+    ("Käpylä", 60.2202, 24.9461),
+    ("Lauttasaari metro", 60.1595, 24.8787),
+    ("Leinelä", 60.3225, 25.04),
+    ("Lentoasema", 60.3158, 24.9686),
+    ("Leppävaara", 60.2194, 24.8135),
+    ("Louhela", 60.2709, 24.8534),
+    ("Malmi", 60.2509, 25.0108),
+    ("Malminkartano", 60.2494, 24.8612),
+    ("Martinlaakso", 60.2781, 24.8528),
+    ("Matinkylä metro", 60.1597, 24.7391),
+    ("Mellunmäki metro", 60.2392, 25.1112),
+    ("Myllypuro metro", 60.225, 25.0757),
+    ("Myyrmäki", 60.2612, 24.8548),
+    ("Mäkkylä", 60.2212, 24.8431),
+    ("Niittykumpu metro", 60.1704, 24.763),
+    ("Oulunkylä", 60.2281, 24.9665),
+    ("Pasila", 60.1987, 24.9334),
+    ("Pitäjänmäki", 60.2234, 24.8596),
+    ("Pohjois-Haaga", 60.2304, 24.8835),
+    ("Puistola", 60.2756, 25.0366),
+    ("Pukinmäki", 60.2422, 24.9938),
+    ("Puotila metro", 60.2147, 25.0931),
+    ("Rastila metro", 60.2054, 25.1216),
+    ("Rautatientori metro", 60.1704, 24.9398),
+    ("Rekola", 60.3323, 25.0683),
+    ("Ruoholahti metro", 60.1632, 24.9156),
+    ("Siilitie metro", 60.2053, 25.044),
+    ("Soukka metro", 60.1415, 24.6699),
+    ("Sörnäinen metro", 60.1866, 24.9591),
+    ("Tapanila", 60.2625, 25.0286),
+    ("Tapiola metro", 60.175, 24.8038),
+    ("Tikkurila", 60.2928, 25.0446),
+    ("Tuomarila", 60.206, 24.6818),
+    ("Urheilupuisto metro", 60.1746, 24.7811),
+    ("Valimo", 60.222, 24.8758),
+    ("Vantaankoski", 60.2859, 24.8481),
+    ("Vehkala", 60.2953, 24.8438),
+    ("Vuosaari metro", 60.2072, 25.1425),
 ]
 
 # Major malls — (name, lat, lon)
@@ -108,9 +184,62 @@ MAJOR_MALLS: list[tuple[str, float, float]] = [
     ("Iso Omena", 60.1621, 24.7373),
     ("Itis",      60.2111, 25.0815),
     ("REDI",      60.1869, 24.9792),
+    ("Malmi",     60.2510, 25.0100),
+    ("Myyrmanni", 60.2610, 24.8540),
 ]
 
 HELSINKI_CENTRAL_COORDS: tuple[float, float] = (60.1698, 24.9382)
+
+# ---------------------------------------------------------------------------
+# Large-loan new build (replaces the old "PKS Uutuudet" view)
+# Flats where a big housing-company loan + tuloutus booking lets the landlord
+# deduct the whole rahoitusvastike (principal included) from rental income.
+# ---------------------------------------------------------------------------
+LL_SEARCH_VELATON_MAX = 600_000  # price[max] on the search URL (bounds scrape size); None = no cap
+LL_MYYNTI_MAX         = 200_000  # cash price (myyntihinta) cap — the real filter
+LL_MIN_LOAN_RATIO     = 0.50     # lainaosuus / velaton hinta
+LL_MAX_AGE_YEARS      = 5        # year_built >= now − 5 (future completion years pass)
+LL_MIN_PRINCIPAL_PCT  = 0.015    # principal_est / loan_share per year to count as real amortisation
+LL_HOLD_YEARS         = 10       # holding horizon: grace-period gate + lifetime estimate
+LL_TOP_N              = 50
+# After-tax cash yield → 0–25 pts, linear between these. Big-loan flats are often
+# cash-negative (rent pays the principal too), so the floor sits below zero.
+LL_YIELD_ZERO_PTS     = -0.05
+LL_YIELD_FULL_PTS     = 0.05
+
+TAX_RATE          = 0.30   # capital income tax; 0.34 above 30 000 €/yr
+CO_LOAN_RATE      = 0.04   # assumed housing-company loan interest rate
+APPRECIATION_RATE = 0.01   # yearly price growth, lifetime estimate only
+LL_REINVEST_RATE  = 0.04   # return on tax saved early (timing value of the deduction)
+DEDUCTION_ENABLED = True   # principal deduction via tuloutus — flip off if legislated away
+
+# Free-market rent €/m²/mo for new tenancies, by city and room count (1, 2, 3+).
+# Statistics Finland table asvu/15fa, 2026Q2 (published 2026-07-16). Update quarterly.
+RENT_EUR_SQM_CITY: dict[str, dict[int, float]] = {
+    "helsinki": {1: 26.71, 2: 21.19, 3: 20.26},
+    "espoo":    {1: 23.53, 2: 18.73, 3: 17.67},
+    "vantaa":   {1: 22.61, 2: 16.96, 3: 15.40},
+}
+RENT_DISTRICT_MIN_SAMPLES = 3   # listed rents needed before a district median overrides the city table
+
+# Planned (not yet operating) rail/tram lines that should lift nearby prices.
+# (name, lat, lon, pts 0–15, note, source_url). Full pts ≤ 500 m, half ≤ 1 km.
+# Vantaan ratikka stops are added from TRAM_STOPS × STOP_TRANSFORMATION in scoring.
+PLANNED_TRANSIT: list[tuple[str, float, float, int, str, str]] = [
+    ("Viima: Malmi",          60.2508, 25.0112, 12, "Viikki–Malmi light rail, ops early 2030s",
+     "https://infraohjelmahelsinki.fi/en/viikki-malmi-light-rail/"),
+    ("Viima: Malmi airfield", 60.2540, 25.0420, 15, "Viikki–Malmi light rail + new Malmi airfield district",
+     "https://infraohjelmahelsinki.fi/en/viikki-malmi-light-rail/"),
+    ("Viima: Latokartano",    60.2325, 25.0390, 12, "Viikki–Malmi light rail, ops early 2030s",
+     "https://infraohjelmahelsinki.fi/en/viikki-malmi-light-rail/"),
+    ("Viima: Viikki",         60.2260, 25.0150, 10, "Viikki–Malmi light rail, ops early 2030s",
+     "https://infraohjelmahelsinki.fi/en/viikki-malmi-light-rail/"),
+    ("Kruunusillat: Kruunuvuorenranta", 60.1760, 25.0040, 12, "Crown Bridges tram to centre, opens ~2027",
+     "https://www.kruunusillat.fi/en"),
+    ("Kruunusillat: Yliskylä",          60.1725, 25.0520, 12, "Crown Bridges tram to centre, opens ~2027",
+     "https://www.kruunusillat.fi/en"),
+]
+TRAM_STOP_PLANNED_MULT = 3    # Vantaan ratikka: STOP_TRANSFORMATION (0–5) × 3 → 0–15 pts
 
 MAX_DETAIL_CHECKS = 9999    # effectively unlimited
 

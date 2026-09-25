@@ -8,17 +8,18 @@ from oikotie.cache import (
     load_json, load_results_cache, save_json, save_results_cache,
 )
 from oikotie.config import (
-    CACHE_FILE, DATA_DIR, DOWN_PAYMENT_EUR, GEO_CACHE_FILE, LOAN_RATIO_MAX,
-    NEWBUILD_TOP_N, PRICE_MAX, UUSIMAA_LOAN_RATIO_MAX, UUSIMAA_PRICE_MAX,
+    CACHE_FILE, DATA_DIR, DOWN_PAYMENT_EUR, GEO_CACHE_FILE, LL_TOP_N,
+    LOAN_RATIO_MAX, PRICE_MAX, UUSIMAA_LOAN_RATIO_MAX, UUSIMAA_PRICE_MAX,
     UUSIMAA_TOP_UNRENTED,
 )
-from oikotie.csv_report import generate_csv_report
+from oikotie.csv_report import LL_CSV_FIELDS, generate_csv_report
 from oikotie.html_report import generate_html_report
 from oikotie.pipelines import (
-    classify_tram, dedupe_and_rank_newbuild, geocode_and_score_newbuild,
-    geocode_tram_listings, geocode_uusimaa_listings, prefilter_uusimaa,
-    score_and_rank_tram, score_and_rank_uusimaa,
+    classify_tram, geocode_and_rank_largeloan, geocode_tram_listings,
+    geocode_uusimaa_listings, prefilter_uusimaa, rank_largeloan,
+    score_and_rank_tram, score_and_rank_uusimaa, score_largeloan,
 )
+from oikotie.rent import build_rent_model
 from oikotie.scoring import _loan_ratio_str, monthly_mortgage
 from oikotie.scraping import run_newbuild_scrape, run_tram_scrape, run_uusimaa_scrape
 
@@ -41,19 +42,23 @@ def _serve_from_results_cache(cached: dict) -> None:
     uusimaa_rented  = cached["uusimaa_rented"]
     uusimaa_top5    = cached["uusimaa_top5"]
     uusimaa_passing = cached["uusimaa_passing"]
-    newbuild_pks    = cached.get("newbuild_pks", [])
+    largeloan       = cached.get("largeloan", [])
+    # Metrics are network-free: re-run so TAX/RATE/DEDUCTION_ENABLED edits apply
+    score_largeloan(largeloan, cached.get("rent_model", {}))
+    rank_largeloan(largeloan)
 
     with open(DATA_DIR / "results_tram.json", "w", encoding="utf-8") as fh:
         json.dump(confirmed + candidates, fh, ensure_ascii=False, indent=2)
     with open(DATA_DIR / "results_uusimaa.json", "w", encoding="utf-8") as fh:
         json.dump(uusimaa_passing, fh, ensure_ascii=False, indent=2)
-    with open(DATA_DIR / "results_newbuild.json", "w", encoding="utf-8") as fh:
-        json.dump(newbuild_pks, fh, ensure_ascii=False, indent=2)
+    with open(DATA_DIR / "results_largeloan.json", "w", encoding="utf-8") as fh:
+        json.dump(largeloan, fh, ensure_ascii=False, indent=2)
 
     generate_csv_report(confirmed, candidates, path=str(DATA_DIR / "results_tram.csv"))
     generate_csv_report(uusimaa_rented, uusimaa_top5, path=str(DATA_DIR / "results_uusimaa.csv"))
+    generate_csv_report(largeloan, [], path=str(DATA_DIR / "results_largeloan.csv"), fields=LL_CSV_FIELDS)
     generate_html_report(confirmed, candidates, tram_rented_out,
-                         uusimaa_rented, uusimaa_top5, newbuild_pks)
+                         uusimaa_rented, uusimaa_top5, largeloan)
 
 
 def _run_full_pipeline() -> None:
@@ -72,7 +77,7 @@ def _run_full_pipeline() -> None:
         uu_to_check = run_uusimaa_scrape(page, cache, UUSIMAA_PRICE_MAX)
         save_json(CACHE_FILE, cache)
 
-        nb_to_check = run_newbuild_scrape(page, cache, UUSIMAA_PRICE_MAX)
+        ll_pool = run_newbuild_scrape(page, cache, extra=uu_to_check)
         save_json(CACHE_FILE, cache)
 
         browser.close()
@@ -98,15 +103,17 @@ def _run_full_pipeline() -> None:
     print(f"Uusimaa — Passing: {len(uu_passing)}  |  "
           f"Rented out: {len(uusimaa_rented)}  |  Watch list: {len(uusimaa_top5)}")
 
-    # ── New build: geocode + score + dedupe ──────────────────────────────
-    newbuild_scored = geocode_and_score_newbuild(nb_to_check, cache, geo_cache, UUSIMAA_LOAN_RATIO_MAX)
+    # ── Large-loan new build: gate + geocode + score + dedupe ────────────
+    rent_model = build_rent_model(tram_to_check + uu_to_check + ll_pool)
+    print(f"Rent model: {sum(len(v) for v in rent_model.values())} listed rents "
+          f"across {len(rent_model)} districts")
+    largeloan = geocode_and_rank_largeloan(ll_pool, cache, geo_cache, rent_model, LL_TOP_N)
     save_json(GEO_CACHE_FILE, geo_cache)
     save_json(CACHE_FILE, cache)
-    newbuild_pks = dedupe_and_rank_newbuild(newbuild_scored, NEWBUILD_TOP_N)
 
     # ── Results cache ─────────────────────────────────────────────────────
     save_results_cache(confirmed, candidates, tram_rented_out,
-                       uusimaa_rented, uusimaa_top5, uu_passing, newbuild_pks)
+                       uusimaa_rented, uusimaa_top5, uu_passing, largeloan, rent_model)
 
     # ── Outputs ───────────────────────────────────────────────────────────
     all_tram_out = confirmed + candidates
@@ -118,14 +125,15 @@ def _run_full_pipeline() -> None:
         json.dump(uu_passing, fh, ensure_ascii=False, indent=2)
     print(f"Saved → {DATA_DIR / 'results_uusimaa.json'}  ({len(uu_passing)} listings)")
 
-    with open(DATA_DIR / "results_newbuild.json", "w", encoding="utf-8") as fh:
-        json.dump(newbuild_pks, fh, ensure_ascii=False, indent=2)
-    print(f"Saved → {DATA_DIR / 'results_newbuild.json'}  ({len(newbuild_pks)} listings)")
+    with open(DATA_DIR / "results_largeloan.json", "w", encoding="utf-8") as fh:
+        json.dump(largeloan, fh, ensure_ascii=False, indent=2)
+    print(f"Saved → {DATA_DIR / 'results_largeloan.json'}  ({len(largeloan)} listings)")
 
     generate_csv_report(confirmed, candidates, path=str(DATA_DIR / "results_tram.csv"))
     generate_csv_report(uusimaa_rented, uusimaa_top5, path=str(DATA_DIR / "results_uusimaa.csv"))
+    generate_csv_report(largeloan, [], path=str(DATA_DIR / "results_largeloan.csv"), fields=LL_CSV_FIELDS)
     generate_html_report(confirmed, candidates, tram_rented_out,
-                         uusimaa_rented, uusimaa_top5, newbuild_pks)
+                         uusimaa_rented, uusimaa_top5, largeloan)
 
     _print_console_summary(confirmed, candidates, tram_rented_out, uusimaa_rented, uusimaa_top5)
 
