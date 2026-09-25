@@ -28,12 +28,26 @@ _FIN_NUMWORDS  = {"ensimmäinen": 1, "yksi": 1, "yhden": 1, "kaksi": 2, "kahden"
                   "kolmen": 3, "neljä": 4, "neljän": 4, "viisi": 5, "viiden": 5}
 _EUR_KK = r"([\d\xa0\s]+(?:[,.]\d+)?)\s*[\xa0\s]*€\s*/\s*kk"
 
+# Unambiguous — these phrasings only ever describe an actual apartment tenancy,
+# never a land lease or a parking/EV-charging fee, so they skip the exclude check.
+_RENTED_TERM_STRONG = re.compile(
+    r"(asunto\s+on\s+vuokrattu|huoneisto\s+on\s+vuokrattu"
+    r"|myydään\s+vuokrattuna|vuokrattuna\s+myytävä|nykyinen\s+vuokralainen"
+    r"|valmis\s+vuokralainen|vuokralainen\s+(?:muuttaa|toistaiseksi)|vuokralaiselta)",
+    re.IGNORECASE,
+)
+# Ambiguous on their own — a bare "vuokralainen"/"on vuokrattu"/"vuokrasopimus on"/
+# "vuokra … €" also match land-lease (tonttivuokra), parking and EV-charging fees
+# ("Autopaikan vuokra …", "Leppävaaran Pysäköinti Oy (vuokralainen)"), none of which
+# mean the apartment itself has a tenant, so these go through the exclude check below.
 _RENTED_TERM = re.compile(
-    r"(vuokralainen|asunto\s+on\s+vuokrattu|on\s+vuokrattu"
-    r"|myydään\s+vuokrattuna|vuokrattuna\s+myytävä"
-    r"|kuukausivuokra|nykyinen\s+vuokralainen|vuokrasopimus\s+on"
-    r"|vuokra\s+on\s+[\d\s]+\s*€|vuokra\s+[\d\s]+\s*€\s*/\s*kk"
-    r"|vuokratuottoa\s+heti|nauti\s+hyvää\s+vuokratuottoa)",
+    r"(vuokralainen|on\s+vuokrattu|kuukausivuokra|vuokrasopimus\s+on"
+    r"|\bvuokra\s+on\s+[\d\s]+\s*€|\bvuokra\s+[\d\s]+\s*€\s*/\s*kk)",
+    re.IGNORECASE,
+)
+_RENTED_EXCLUDE_CONTEXT = re.compile(
+    r"(tontti\w*|tontin\b|maanvuokra\w*|maapohja\w*|määräosa\w*"
+    r"|autopaik\w*|lataus\w*|pysäköin\w*|varasto\w*)",
     re.IGNORECASE,
 )
 
@@ -281,23 +295,34 @@ def fetch_listing_details(page, url: str, cache: dict, require_key: str = "hoito
          re.search(r"Tontinvuokravastike[\xa0\s]+([\d\xa0]+(?:[,.]\d+)?)\s*€\s*/\s*kk", text))
     result["tonttivuokra_eur_month"] = _parse_fin_num(m.group(1)) if m else None
 
-    # Rental / investment status
-    rent_m = _RENTED_TERM.search(text)
-    if rent_m:
-        s = max(0, rent_m.start() - 120)
-        e = min(len(text), rent_m.end() + 120)
+    # Rental / investment status. Unambiguous phrasings (_RENTED_TERM_STRONG) win
+    # outright; ambiguous ones skip matches whose context is land-lease/parking/EV
+    # charging, not a tenant in the apartment (see _RENTED_EXCLUDE_CONTEXT above).
+    result["is_rented_out"]  = False
+    result["rented_out_info"] = None
+    strong_m = _RENTED_TERM_STRONG.search(text)
+    if strong_m:
+        s = max(0, strong_m.start() - 120)
+        e = min(len(text), strong_m.end() + 120)
         result["is_rented_out"]  = True
         result["rented_out_info"] = text[s:e].strip()
     else:
-        result["is_rented_out"]  = False
-        result["rented_out_info"] = None
+        for rent_m in _RENTED_TERM.finditer(text):
+            ctx_before = text[max(0, rent_m.start() - 60):rent_m.start()]
+            if _RENTED_EXCLUDE_CONTEXT.search(ctx_before):
+                continue
+            s = max(0, rent_m.start() - 120)
+            e = min(len(text), rent_m.end() + 120)
+            result["is_rented_out"]  = True
+            result["rented_out_info"] = text[s:e].strip()
+            break
 
-    # Rental income — parse €/kk from rented_out_info snippet
+    # Rental income — parse €/kk (or spelled-out "euroa/kk") from rented_out_info snippet
     result["rental_income_eur_month"] = None
     if result.get("rented_out_info"):
         # Anchor on "vuokra" so other €/kk lines in the snippet (e.g. "Muu vastike: 14 € / kk")
         # aren't read as rent
-        m = re.search(r"vuokra\w*[^\n€]{0,40}?([\d][\d\xa0 ]*(?:[,.]\d+)?)\s*€\s*/\s*kk",
+        m = re.search(r"vuokra\w*[^\n€]{0,60}?([\d][\d\xa0 ]*(?:[,.]\d+)?)\s*(?:€|euroa)\s*/\s*kk",
                       result["rented_out_info"], re.IGNORECASE)
         if m:
             result["rental_income_eur_month"] = _parse_fin_num(m.group(1))

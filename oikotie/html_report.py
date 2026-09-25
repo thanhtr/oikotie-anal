@@ -65,7 +65,9 @@ def _largeloan_context(l: dict) -> dict:
             if l.get("rahoitusvastike_grace_eur_month") is not None else "")),
         ("Principal est.", f"{fmt_eur(l.get('principal_est_yr'))}/yr ({_pct(l.get('principal_pct'))} of loan)"),
         ("Tax benefit", f"{fmt_eur(benefit)}/yr{suffix}"),
-        ("Rent est.", f"{fmt_eur(l.get('est_rent_month'))}/mo · {l.get('rent_source', '')}"),
+        (("Rent (confirmed)", f"{fmt_eur(l.get('est_rent_month'))}/mo — tenant in place")
+         if l.get("is_rented_out") and l.get("rent_source") == "listed"
+         else ("Rent (est.)", f"{fmt_eur(l.get('est_rent_month'))}/mo · {l.get('rent_source', '')}")),
         ("After-tax CF", f"{fmt_eur(l.get('after_tax_cf_yr'))}/yr"),
         (f"Net {LL_HOLD_YEARS}-yr benefit", f"{fmt_eur(lifetime)} after sale-gain recapture"
                                             f" + {fmt_eur(timing)} timing value{suffix}"),
@@ -304,11 +306,16 @@ def generate_html_report(confirmed: list[dict], candidates: list[dict],
         [_table_row_context(l, "uusimaa", "row-cand") for l in uusimaa_top5]
     )
 
-    ll_yes     = [l for l in largeloan if l.get("booking_method") == "yes"]
-    ll_unknown = [l for l in largeloan if l.get("booking_method") != "yes"]
+    ll_rented  = [l for l in largeloan if l.get("is_rented_out")]
+    ll_yes     = [l for l in largeloan if not l.get("is_rented_out") and l.get("booking_method") == "yes"]
+    ll_unknown = [l for l in largeloan if not l.get("is_rented_out") and l.get("booking_method") != "yes"]
     caveat = ("Screening aid, not tax advice. The interest/principal split is estimated "
               f"at {CO_LOAN_RATE*100:.1f}% company-loan rate; booking method is a text hint only.")
     nb_sections = [s for s in [
+        _section("Rented Out — confirmed income",
+                 "Currently tenanted. Rent shown is the actual amount, not an estimate. "
+                 "The tuloutus badge still applies — check it for the deduction to hold. " + caveat,
+                 ll_rented, "sec-rented", "largeloan"),
         _section("Full match — tuloutus stated in listing",
                  "Financing charge is booked as income, so the whole rahoitusvastike "
                  "(principal included) is deductible from rental income. " + caveat,
@@ -319,9 +326,11 @@ def generate_html_report(confirmed: list[dict], candidates: list[dict],
                  "'if tuloutus' are the upside. " + caveat,
                  ll_unknown, "sec-cand", "largeloan"),
     ] if s]
-    nb_table_rows = [_table_row_context(l, "largeloan",
-                                        "row-confirmed" if l.get("booking_method") == "yes" else "row-cand")
-                     for l in largeloan]
+    nb_table_rows = (
+        [_table_row_context(l, "largeloan", "row-rented") for l in ll_rented] +
+        [_table_row_context(l, "largeloan", "row-confirmed") for l in ll_yes] +
+        [_table_row_context(l, "largeloan", "row-cand") for l in ll_unknown]
+    )
 
     ctx = {
         "run_time": datetime.now().strftime("%Y-%m-%d %H:%M"),
@@ -339,6 +348,7 @@ def generate_html_report(confirmed: list[dict], candidates: list[dict],
         "uusimaa_top5_count": len(uusimaa_top5),
         "newbuild_count": len(largeloan),
         "ll_yes_count": len(ll_yes),
+        "ll_rented_count": len(ll_rented),
         "ll_myynti_max": LL_MYYNTI_MAX,
         "ll_min_loan_pct": int(LL_MIN_LOAN_RATIO * 100),
         "ll_max_age": LL_MAX_AGE_YEARS,
