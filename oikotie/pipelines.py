@@ -275,7 +275,9 @@ def geocode_and_rank_largeloan(pool: list[dict], cache: dict, geo_cache: dict,
     print(f"  {fresh} fresh geocodes, {len(geocoded)} geocoded")
 
     score_largeloan(geocoded, rent_model)
-    geocoded.sort(key=lambda l: -l["score"])
+    # Same priority as rank_largeloan, so per-street dedup doesn't drop a
+    # rented/tuloutus listing in favor of a higher-score vacant one on the same street.
+    geocoded.sort(key=lambda l: (_largeloan_tier(l), -l["score"]))
     seen_bldg: set[str] = set()
     deduped: list[dict] = []
     for l in geocoded:   # one per street ≈ one per development project
