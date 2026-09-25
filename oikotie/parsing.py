@@ -6,6 +6,11 @@ import sys
 from datetime import datetime
 from typing import Optional
 
+# Bump whenever a change to this module's extraction logic should invalidate
+# already-cached entries (fetch_listing_details re-fetches anything whose
+# cached _parse_version doesn't match, regardless of which keys are present).
+PARSE_VERSION = 2
+
 _RENO_TERM = re.compile(
     r"(putkiremontti|linjasaneeraus|putkisto\s*uusittu|putkisto\s*saneerattu"
     r"|putkisaneeraus|linjasaneerattu|putkikorjaus)",
@@ -221,8 +226,12 @@ def fetch_listing_details(page, url: str, cache: dict, require_key: str = "hoito
     """Load individual listing page; return loan + pipe reno + rental details.
 
     `require_key` decides cache freshness: an entry missing that key is
-    re-fetched (the large-loan pool passes "rahoitusvastike_eur_month")."""
-    if url in cache and "hoitovastike_eur_month" in cache[url] and require_key in cache[url]:
+    re-fetched (the large-loan pool passes "rahoitusvastike_eur_month").
+    An entry whose cached PARSE_VERSION doesn't match the current one is
+    always re-fetched, so a logic change (e.g. the rental-status regex)
+    doesn't get silently served stale results forever."""
+    if (url in cache and cache[url].get("_parse_version") == PARSE_VERSION
+            and "hoitovastike_eur_month" in cache[url] and require_key in cache[url]):
         return cache[url]
 
     try:
@@ -328,6 +337,7 @@ def fetch_listing_details(page, url: str, cache: dict, require_key: str = "hoito
             result["rental_income_eur_month"] = _parse_fin_num(m.group(1))
 
     result.update(parse_largeloan_fields(text))
+    result["_parse_version"] = PARSE_VERSION
 
     # Keep geo fields from an older entry so re-fetches don't force a re-geocode
     old = cache.get(url) or {}
