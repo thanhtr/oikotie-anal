@@ -243,6 +243,17 @@ TRAM_STOP_PLANNED_MULT = 3    # Vantaan ratikka: STOP_TRANSFORMATION (0–5) × 
 
 MAX_DETAIL_CHECKS = 9999    # effectively unlimited
 
+# ---------------------------------------------------------------------------
+# Scrape sanity floors — a raw listing count below these means a search
+# request almost certainly got rate-limited/blocked and returned an empty
+# results page, not that the market genuinely has that few listings. Set
+# well below normal volume (typically 300+/2000+/1800+) purely to catch a
+# total-failure case; see cli.py::_check_scrape_sanity.
+# ---------------------------------------------------------------------------
+MIN_TRAM_RAW      = 50
+MIN_UUSIMAA_RAW   = 200
+MIN_LARGELOAN_RAW = 200
+
 # Tram transformation score per stop (0–5 pts).
 # 0 = already a major transit hub — tram adds negligible marginal value, prices priced-in.
 # 2 = within an existing hub's catchment — already benefiting from existing transit.

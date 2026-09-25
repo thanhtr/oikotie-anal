@@ -9,8 +9,8 @@ from oikotie.cache import (
 )
 from oikotie.config import (
     CACHE_FILE, DATA_DIR, DOWN_PAYMENT_EUR, GEO_CACHE_FILE, LL_TOP_N,
-    LOAN_RATIO_MAX, PRICE_MAX, UUSIMAA_LOAN_RATIO_MAX, UUSIMAA_PRICE_MAX,
-    UUSIMAA_TOP_UNRENTED,
+    LOAN_RATIO_MAX, MIN_LARGELOAN_RAW, MIN_TRAM_RAW, MIN_UUSIMAA_RAW,
+    PRICE_MAX, UUSIMAA_LOAN_RATIO_MAX, UUSIMAA_PRICE_MAX, UUSIMAA_TOP_UNRENTED,
 )
 from oikotie.csv_report import LL_CSV_FIELDS, generate_csv_report
 from oikotie.html_report import generate_html_report
@@ -61,6 +61,30 @@ def _serve_from_results_cache(cached: dict) -> None:
                          uusimaa_rented, uusimaa_top5, largeloan)
 
 
+class ScrapeSanityError(RuntimeError):
+    """Raised when a search came back suspiciously empty — almost always
+    Oikotie rate-limiting/blocking the scraper mid-run, not a real zero-listing
+    market. Left uncaught so the process exits non-zero and retry_scraper.py's
+    cooldown-and-retry kicks in, instead of silently caching/deploying empty
+    results as if they were legitimate (this happened once, on 2026-09-25)."""
+
+
+def _check_scrape_sanity(tram_to_check: list, uu_to_check: list, ll_pool: list) -> None:
+    problems = []
+    if len(tram_to_check) < MIN_TRAM_RAW:
+        problems.append(f"tram: {len(tram_to_check)} raw (expected ≥ {MIN_TRAM_RAW})")
+    if len(uu_to_check) < MIN_UUSIMAA_RAW:
+        problems.append(f"uusimaa: {len(uu_to_check)} raw (expected ≥ {MIN_UUSIMAA_RAW})")
+    if len(ll_pool) < MIN_LARGELOAN_RAW:
+        problems.append(f"large-loan: {len(ll_pool)} raw (expected ≥ {MIN_LARGELOAN_RAW})")
+    if problems:
+        raise ScrapeSanityError(
+            "Scrape sanity check failed — a search almost certainly got "
+            "rate-limited or blocked instead of returning real results: "
+            + "; ".join(problems)
+        )
+
+
 def _run_full_pipeline() -> None:
     from playwright.sync_api import sync_playwright
 
@@ -81,6 +105,11 @@ def _run_full_pipeline() -> None:
         save_json(CACHE_FILE, cache)
 
         browser.close()
+
+    # Fail fast (before spending time on geocoding/scoring) if a search came
+    # back suspiciously empty, so the caller's --force/exit-code retry logic
+    # can kick in instead of this getting cached and deployed as legitimate.
+    _check_scrape_sanity(tram_to_check, uu_to_check, ll_pool)
 
     geo_cache = load_json(GEO_CACHE_FILE)
 
