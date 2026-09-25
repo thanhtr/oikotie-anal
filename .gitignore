@@ -2,3 +2,10 @@
 __pycache__/
 *.pyc
 data/
+
+# Local-run caches (CI keeps its own under data/)
+/listing_cache.json
+/geocode_cache.json
+/results_*.json
+/results_*.csv
+/index.html
