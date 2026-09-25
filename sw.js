@@ -1,6 +1,6 @@
 // Oikotie report — app-shell service worker.
 // Bump CACHE_VERSION whenever report.css/report.js/manifest/icons change.
-const CACHE_VERSION = 'a9d6d65';
+const CACHE_VERSION = 'c57a1c8';
 const CACHE_NAME = `oikotie-shell-${CACHE_VERSION}`;
 
 const SHELL_ASSETS = [

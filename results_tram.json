@@ -48,6 +48,33 @@
     "rank": 11
   },
   {
+    "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24710016",
+    "price_eur": 149000.0,
+    "size_sqm": 50.0,
+    "room_count": 3,
+    "floor": "7/7",
+    "property_type": "kerrostalo",
+    "year_built": 2019,
+    "address": "Kaskelantie 5, Kaskela, Vantaa",
+    "district": "Kaskela",
+    "city": "vantaa",
+    "debt_free_price_eur": 149000.0,
+    "pipe_renovation_done": false,
+    "hoitovastike_eur_month": 240.0,
+    "is_rented_out": false,
+    "rahoitusvastike_eur_month": 0.0,
+    "booking_method": "unknown",
+    "is_new_development": false,
+    "lat": 60.282215,
+    "lon": 25.096341,
+    "nearest_stop": "Kaskela",
+    "distance_m": 163,
+    "_search_pass": "new_house_2000plus",
+    "monthly_cost_eur": 841.69,
+    "score": 96,
+    "rank": 12
+  },
+  {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23831363",
     "price_eur": 70587.98,
     "size_sqm": 26.0,
@@ -72,31 +99,6 @@
     "monthly_cost_eur": 632.26,
     "score": 91,
     "rank": 1
-  },
-  {
-    "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/22257758",
-    "price_eur": 165000.0,
-    "size_sqm": 38.5,
-    "room_count": 2,
-    "floor": "4/7",
-    "property_type": "kerrostalo",
-    "year_built": 2022,
-    "address": "Heporinne 2 a, Hakunila, Vantaa",
-    "district": "Hakunila",
-    "city": "vantaa",
-    "debt_free_price_eur": 165000.0,
-    "pipe_renovation_done": false,
-    "hoitovastike_eur_month": 144.38,
-    "tonttivuokra_eur_month": 92.4,
-    "is_rented_out": false,
-    "lat": 60.273355,
-    "lon": 25.10368,
-    "nearest_stop": "Hevoshaanpolku",
-    "distance_m": 74,
-    "_search_pass": "new_house_2000plus",
-    "monthly_cost_eur": 919.37,
-    "score": 89,
-    "rank": 12
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23437301",
@@ -173,31 +175,6 @@
     "rank": 15
   },
   {
-    "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24399247",
-    "price_eur": 145000.0,
-    "size_sqm": 38.5,
-    "room_count": 2,
-    "floor": "5/7",
-    "property_type": "kerrostalo",
-    "year_built": 2022,
-    "address": "Heporinne 2, Hakunila, Vantaa",
-    "district": "Hakunila",
-    "city": "vantaa",
-    "debt_free_price_eur": 145000.0,
-    "pipe_renovation_done": false,
-    "hoitovastike_eur_month": 173.25,
-    "tonttivuokra_eur_month": 104.34,
-    "is_rented_out": false,
-    "lat": 60.273265,
-    "lon": 25.102881,
-    "nearest_stop": "Hevoshaanpolku",
-    "distance_m": 102,
-    "_search_pass": "new_house_2000plus",
-    "monthly_cost_eur": 859.06,
-    "score": 83,
-    "rank": 16
-  },
-  {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23547707",
     "price_eur": 159000.0,
     "size_sqm": 39.0,
@@ -219,7 +196,7 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 831.66,
     "score": 80,
-    "rank": 17
+    "rank": 16
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23291062",
@@ -243,7 +220,7 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 1011.08,
     "score": 80,
-    "rank": 18
+    "rank": 17
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24673815",
@@ -267,7 +244,7 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 936.02,
     "score": 79,
-    "rank": 19
+    "rank": 18
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24593655",
@@ -293,31 +270,36 @@
     "_search_pass": "pipe_reno_2025",
     "monthly_cost_eur": 745.84,
     "score": 79,
-    "rank": 48
+    "rank": 72
   },
   {
-    "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24618605",
-    "price_eur": 156900.0,
-    "size_sqm": 32.5,
-    "room_count": 2,
-    "floor": "2/4",
+    "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24709446",
+    "price_eur": 38555.07,
+    "size_sqm": 35.5,
+    "room_count": 1,
+    "floor": "1/9",
     "property_type": "kerrostalo",
-    "year_built": 2024,
-    "address": "Peltolantie 44, Koivuhaka, Vantaa",
-    "district": "Koivuhaka",
+    "year_built": 1974,
+    "address": "Lumikero 4 B, Länsimäki, Vantaa",
+    "district": "Länsimäki",
     "city": "vantaa",
-    "debt_free_price_eur": 156900.0,
-    "pipe_renovation_done": false,
-    "hoitovastike_eur_month": 276.25,
+    "debt_free_price_eur": 39000.0,
+    "housing_company_loan_eur": 444.93,
+    "pipe_renovation_done": true,
+    "pipe_renovation_info": "avaramman tuntuisen. Lisäksi asunnossa on erillinen vaatehuone, joka tarjoaa runsaasti säilytystilaa ja auttaa pitämään asuintilat selkeinä.\n\nAsunnon putkiremontti on tehty ja kylpyhuone on remontoitu, joten märkätilat ovat jo päivitetyt. Lattioissa on vielä muovimatto, mikä antaa uudelle omistajalle mahdollisuu",
+    "hoitovastike_eur_month": 177.8,
     "is_rented_out": false,
-    "lat": 60.293433,
-    "lon": 25.00578,
-    "nearest_stop": "Koivuhaka",
-    "distance_m": 160,
-    "_search_pass": "new_house_2000plus",
-    "monthly_cost_eur": 917.89,
-    "score": 78,
-    "rank": 20
+    "rahoitusvastike_eur_month": 12.57,
+    "booking_method": "unknown",
+    "is_new_development": false,
+    "lat": 60.244915,
+    "lon": 25.116358,
+    "nearest_stop": "Länsimäki",
+    "distance_m": 313,
+    "_search_pass": "pipe_reno_done",
+    "monthly_cost_eur": 223.31,
+    "score": 77,
+    "rank": 73
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24626283",
@@ -342,7 +324,33 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 843.59,
     "score": 77,
-    "rank": 21
+    "rank": 19
+  },
+  {
+    "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24399247",
+    "price_eur": 145000.0,
+    "size_sqm": 38.5,
+    "room_count": 2,
+    "floor": "5/7",
+    "property_type": "kerrostalo",
+    "year_built": 2022,
+    "address": "Heporinne 2, Hakunila, Vantaa",
+    "district": "Hakunila",
+    "city": "vantaa",
+    "pipe_renovation_done": false,
+    "is_rented_out": false,
+    "rahoitusvastike_eur_month": 0.0,
+    "booking_method": "unknown",
+    "is_new_development": false,
+    "debt_free_price_eur": 145000.0,
+    "lat": 60.273265,
+    "lon": 25.102881,
+    "nearest_stop": "Hevoshaanpolku",
+    "distance_m": 102,
+    "_search_pass": "new_house_2000plus",
+    "monthly_cost_eur": 581.47,
+    "score": 77,
+    "rank": 20
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24300130",
@@ -367,7 +375,7 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 1249.61,
     "score": 77,
-    "rank": 22
+    "rank": 21
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23437318",
@@ -391,6 +399,32 @@
     "distance_m": 187,
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 999.28,
+    "score": 77,
+    "rank": 22
+  },
+  {
+    "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/22257758",
+    "price_eur": 165000.0,
+    "size_sqm": 38.5,
+    "room_count": 2,
+    "floor": "4/7",
+    "property_type": "kerrostalo",
+    "year_built": 2022,
+    "address": "Heporinne 2 a, Hakunila, Vantaa",
+    "district": "Hakunila",
+    "city": "vantaa",
+    "pipe_renovation_done": false,
+    "is_rented_out": false,
+    "rahoitusvastike_eur_month": 0.0,
+    "booking_method": "unknown",
+    "is_new_development": false,
+    "debt_free_price_eur": 165000.0,
+    "lat": 60.273355,
+    "lon": 25.10368,
+    "nearest_stop": "Hevoshaanpolku",
+    "distance_m": 74,
+    "_search_pass": "new_house_2000plus",
+    "monthly_cost_eur": 682.59,
     "score": 77,
     "rank": 23
   },
@@ -445,7 +479,85 @@
     "_search_pass": "pipe_reno_done",
     "monthly_cost_eur": 461.14,
     "score": 75,
-    "rank": 49
+    "rank": 74
+  },
+  {
+    "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/22551822",
+    "price_eur": 21103.26,
+    "size_sqm": 30.5,
+    "room_count": 1,
+    "floor": "5/7",
+    "property_type": "kerrostalo",
+    "year_built": 2022,
+    "address": "Heporinne 2 C, Hakunila, Vantaa",
+    "district": "Hakunila",
+    "city": "vantaa",
+    "pipe_renovation_done": false,
+    "is_rented_out": false,
+    "rahoitusvastike_eur_month": 0.0,
+    "booking_method": "unknown",
+    "is_new_development": false,
+    "debt_free_price_eur": 101000.0,
+    "lat": 60.273342,
+    "lon": 25.102689,
+    "nearest_stop": "Hevoshaanpolku",
+    "distance_m": 103,
+    "_search_pass": "new_house_2000plus",
+    "monthly_cost_eur": 358.99,
+    "score": 75,
+    "rank": 25
+  },
+  {
+    "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/21616823",
+    "price_eur": 23961.88,
+    "size_sqm": 30.5,
+    "room_count": 1,
+    "floor": "6/7",
+    "property_type": "kerrostalo",
+    "year_built": 2022,
+    "address": "Heporinne 2 C, Hakunila, Vantaa",
+    "district": "Hakunila",
+    "city": "vantaa",
+    "pipe_renovation_done": false,
+    "is_rented_out": false,
+    "rahoitusvastike_eur_month": 0.0,
+    "booking_method": "unknown",
+    "is_new_development": false,
+    "debt_free_price_eur": 105000.0,
+    "lat": 60.273342,
+    "lon": 25.102689,
+    "nearest_stop": "Hevoshaanpolku",
+    "distance_m": 103,
+    "_search_pass": "new_house_2000plus",
+    "monthly_cost_eur": 379.22,
+    "score": 75,
+    "rank": 26
+  },
+  {
+    "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/21613257",
+    "price_eur": 23961.88,
+    "size_sqm": 30.5,
+    "room_count": 1,
+    "floor": "6/7",
+    "property_type": "kerrostalo",
+    "year_built": 2022,
+    "address": "Heporinne 2 C, Hakunila, Vantaa",
+    "district": "Hakunila",
+    "city": "vantaa",
+    "pipe_renovation_done": false,
+    "is_rented_out": false,
+    "rahoitusvastike_eur_month": 0.0,
+    "booking_method": "unknown",
+    "is_new_development": false,
+    "debt_free_price_eur": 105000.0,
+    "lat": 60.273342,
+    "lon": 25.102689,
+    "nearest_stop": "Hevoshaanpolku",
+    "distance_m": 103,
+    "_search_pass": "new_house_2000plus",
+    "monthly_cost_eur": 379.22,
+    "score": 75,
+    "rank": 27
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24620266",
@@ -494,7 +606,7 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 1005.05,
     "score": 74,
-    "rank": 25
+    "rank": 28
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24380208",
@@ -518,7 +630,7 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 816.97,
     "score": 74,
-    "rank": 26
+    "rank": 29
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/16978203",
@@ -543,7 +655,33 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 1024.44,
     "score": 74,
-    "rank": 27
+    "rank": 30
+  },
+  {
+    "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23955188",
+    "price_eur": 40997.83,
+    "size_sqm": 34.5,
+    "room_count": 2,
+    "floor": "2/9",
+    "property_type": "kerrostalo",
+    "year_built": 2022,
+    "address": "Raudikkokuja 1 A, Kaskela, Vantaa",
+    "district": "Kaskela",
+    "city": "vantaa",
+    "pipe_renovation_done": false,
+    "is_rented_out": false,
+    "rahoitusvastike_eur_month": 0.0,
+    "booking_method": "unknown",
+    "is_new_development": false,
+    "debt_free_price_eur": 138900.0,
+    "lat": 60.277173,
+    "lon": 25.106645,
+    "nearest_stop": "Hakunila",
+    "distance_m": 99,
+    "_search_pass": "new_house_2000plus",
+    "monthly_cost_eur": 550.63,
+    "score": 72,
+    "rank": 31
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24690081",
@@ -567,7 +705,7 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 1002.66,
     "score": 72,
-    "rank": 28
+    "rank": 32
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24650871",
@@ -591,7 +729,33 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 911.39,
     "score": 72,
-    "rank": 29
+    "rank": 33
+  },
+  {
+    "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24618605",
+    "price_eur": 156900.0,
+    "size_sqm": 32.5,
+    "room_count": 2,
+    "floor": "2/4",
+    "property_type": "kerrostalo",
+    "year_built": 2024,
+    "address": "Peltolantie 44, Koivuhaka, Vantaa",
+    "district": "Koivuhaka",
+    "city": "vantaa",
+    "pipe_renovation_done": false,
+    "is_rented_out": false,
+    "rahoitusvastike_eur_month": 0.0,
+    "booking_method": "unknown",
+    "is_new_development": false,
+    "debt_free_price_eur": 156900.0,
+    "lat": 60.293433,
+    "lon": 25.00578,
+    "nearest_stop": "Koivuhaka",
+    "distance_m": 160,
+    "_search_pass": "new_house_2000plus",
+    "monthly_cost_eur": 641.64,
+    "score": 72,
+    "rank": 34
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23309842",
@@ -615,7 +779,7 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 948.28,
     "score": 72,
-    "rank": 30
+    "rank": 35
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23303762",
@@ -639,7 +803,33 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 1059.82,
     "score": 72,
-    "rank": 31
+    "rank": 36
+  },
+  {
+    "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/22735855",
+    "price_eur": 28042.4,
+    "size_sqm": 30.0,
+    "room_count": 2,
+    "floor": "5/9",
+    "property_type": "kerrostalo",
+    "year_built": 2022,
+    "address": "Raudikkokuja 1, Hakunila, Vantaa",
+    "district": "Hakunila",
+    "city": "vantaa",
+    "pipe_renovation_done": false,
+    "is_rented_out": false,
+    "rahoitusvastike_eur_month": 0.0,
+    "booking_method": "unknown",
+    "is_new_development": false,
+    "debt_free_price_eur": 128000.0,
+    "lat": 60.2771,
+    "lon": 25.105449,
+    "nearest_stop": "Hakunila",
+    "distance_m": 105,
+    "_search_pass": "new_house_2000plus",
+    "monthly_cost_eur": 495.51,
+    "score": 72,
+    "rank": 37
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24428359",
@@ -663,7 +853,7 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 925.34,
     "score": 71,
-    "rank": 32
+    "rank": 38
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24427675",
@@ -690,7 +880,7 @@
     "_search_pass": "pipe_reno_2013",
     "monthly_cost_eur": 810.91,
     "score": 70,
-    "rank": 50
+    "rank": 75
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24566019",
@@ -715,7 +905,33 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 896.32,
     "score": 70,
-    "rank": 33
+    "rank": 39
+  },
+  {
+    "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24455960",
+    "price_eur": 56171.74,
+    "size_sqm": 32.0,
+    "room_count": 2,
+    "floor": "3/9",
+    "property_type": "kerrostalo",
+    "year_built": 2022,
+    "address": "Raudikkokuja 1 A, Hakunila, Vantaa",
+    "district": "Hakunila",
+    "city": "vantaa",
+    "pipe_renovation_done": false,
+    "is_rented_out": false,
+    "rahoitusvastike_eur_month": 0.0,
+    "booking_method": "unknown",
+    "is_new_development": false,
+    "debt_free_price_eur": 159000.0,
+    "lat": 60.277173,
+    "lon": 25.106645,
+    "nearest_stop": "Hakunila",
+    "distance_m": 99,
+    "_search_pass": "new_house_2000plus",
+    "monthly_cost_eur": 652.26,
+    "score": 70,
+    "rank": 40
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24403039",
@@ -740,7 +956,33 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 1151.21,
     "score": 70,
-    "rank": 34
+    "rank": 41
+  },
+  {
+    "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/17214365",
+    "price_eur": 42770.93,
+    "size_sqm": 23.0,
+    "room_count": 1,
+    "floor": "5/9",
+    "property_type": "kerrostalo",
+    "year_built": 2022,
+    "address": "Raudikkokuja 1, Hakunila, Vantaa",
+    "district": "Hakunila",
+    "city": "vantaa",
+    "pipe_renovation_done": false,
+    "is_rented_out": false,
+    "rahoitusvastike_eur_month": 0.0,
+    "booking_method": "unknown",
+    "is_new_development": false,
+    "debt_free_price_eur": 124900.0,
+    "lat": 60.2771,
+    "lon": 25.105449,
+    "nearest_stop": "Hakunila",
+    "distance_m": 105,
+    "_search_pass": "new_house_2000plus",
+    "monthly_cost_eur": 479.84,
+    "score": 70,
+    "rank": 42
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24465126",
@@ -765,7 +1007,7 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 1204.51,
     "score": 69,
-    "rank": 35
+    "rank": 43
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24356402",
@@ -792,7 +1034,7 @@
     "_search_pass": "pipe_reno_2020",
     "monthly_cost_eur": 942.64,
     "score": 68,
-    "rank": 51
+    "rank": 76
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24341914",
@@ -816,7 +1058,33 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 1029.31,
     "score": 67,
-    "rank": 36
+    "rank": 44
+  },
+  {
+    "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24487874",
+    "price_eur": 15242.33,
+    "size_sqm": 23.0,
+    "room_count": 1,
+    "floor": "1/5",
+    "property_type": "kerrostalo",
+    "year_built": 2023,
+    "address": "Peltolantie 44, Koivuhaka, Vantaa",
+    "district": "Koivuhaka",
+    "city": "vantaa",
+    "pipe_renovation_done": false,
+    "is_rented_out": false,
+    "rahoitusvastike_eur_month": 0.0,
+    "booking_method": "unknown",
+    "is_new_development": false,
+    "debt_free_price_eur": 109000.0,
+    "lat": 60.293433,
+    "lon": 25.00578,
+    "nearest_stop": "Koivuhaka",
+    "distance_m": 160,
+    "_search_pass": "new_house_2000plus",
+    "monthly_cost_eur": 399.44,
+    "score": 67,
+    "rank": 45
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24432353",
@@ -837,7 +1105,59 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 854.51,
     "score": 67,
-    "rank": 37
+    "rank": 46
+  },
+  {
+    "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24405150",
+    "price_eur": 27186.4,
+    "size_sqm": 30.0,
+    "room_count": 1,
+    "floor": "2/6",
+    "property_type": "kerrostalo",
+    "year_built": 2023,
+    "address": "Kielotie 34 C, Tikkurila, Vantaa",
+    "district": "Tikkurila",
+    "city": "vantaa",
+    "pipe_renovation_done": false,
+    "is_rented_out": false,
+    "rahoitusvastike_eur_month": 0.0,
+    "booking_method": "unknown",
+    "is_new_development": false,
+    "debt_free_price_eur": 140000.0,
+    "lat": 60.291671,
+    "lon": 25.036765,
+    "nearest_stop": "Tikkuraitti",
+    "distance_m": 148,
+    "_search_pass": "new_house_2000plus",
+    "monthly_cost_eur": 556.19,
+    "score": 67,
+    "rank": 47
+  },
+  {
+    "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24403451",
+    "price_eur": 34821.42,
+    "size_sqm": 41.0,
+    "room_count": 2,
+    "floor": "6/6",
+    "property_type": "kerrostalo",
+    "year_built": 2023,
+    "address": "Kielotie 34 C, Tikkurila, Vantaa",
+    "district": "Tikkurila",
+    "city": "vantaa",
+    "pipe_renovation_done": false,
+    "is_rented_out": false,
+    "rahoitusvastike_eur_month": 0.0,
+    "booking_method": "unknown",
+    "is_new_development": false,
+    "debt_free_price_eur": 189000.0,
+    "lat": 60.291671,
+    "lon": 25.036765,
+    "nearest_stop": "Tikkuraitti",
+    "distance_m": 148,
+    "_search_pass": "new_house_2000plus",
+    "monthly_cost_eur": 803.94,
+    "score": 67,
+    "rank": 48
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24550427",
@@ -862,7 +1182,7 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 1006.89,
     "score": 66,
-    "rank": 38
+    "rank": 49
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23873740",
@@ -889,7 +1209,7 @@
     "_search_pass": "pipe_reno_2020",
     "monthly_cost_eur": 661.21,
     "score": 66,
-    "rank": 52
+    "rank": 77
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23637251",
@@ -916,7 +1236,7 @@
     "_search_pass": "pipe_reno_2019",
     "monthly_cost_eur": 641.51,
     "score": 66,
-    "rank": 53
+    "rank": 78
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24630066",
@@ -942,7 +1262,7 @@
     "_search_pass": "pipe_reno_2018",
     "monthly_cost_eur": 534.47,
     "score": 65,
-    "rank": 54
+    "rank": 79
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24669986",
@@ -968,7 +1288,7 @@
     "_search_pass": "pipe_reno_done",
     "monthly_cost_eur": 638.83,
     "score": 64,
-    "rank": 55
+    "rank": 80
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23307800",
@@ -1018,7 +1338,7 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 821.87,
     "score": 64,
-    "rank": 39
+    "rank": 50
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24335654",
@@ -1044,7 +1364,7 @@
     "_search_pass": "pipe_reno_done",
     "monthly_cost_eur": 694.44,
     "score": 64,
-    "rank": 56
+    "rank": 81
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24537372",
@@ -1095,7 +1415,7 @@
     "_search_pass": "pipe_reno_done",
     "monthly_cost_eur": 593.52,
     "score": 61,
-    "rank": 57
+    "rank": 82
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24541245",
@@ -1119,7 +1439,7 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 824.75,
     "score": 61,
-    "rank": 40
+    "rank": 51
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24514833",
@@ -1143,7 +1463,7 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 1065.19,
     "score": 61,
-    "rank": 41
+    "rank": 52
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24305603",
@@ -1169,7 +1489,7 @@
     "_search_pass": "pipe_reno_done",
     "monthly_cost_eur": 858.77,
     "score": 60,
-    "rank": 58
+    "rank": 83
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24320160",
@@ -1196,7 +1516,33 @@
     "_search_pass": "pipe_reno_2025",
     "monthly_cost_eur": 750.86,
     "score": 60,
-    "rank": 59
+    "rank": 84
+  },
+  {
+    "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24483001",
+    "price_eur": 67635.39,
+    "size_sqm": 39.0,
+    "room_count": 2,
+    "floor": "2/2",
+    "property_type": "luhtitalo",
+    "year_built": 2022,
+    "address": "Kuriiritie 28 A, Koivuhaka, Vantaa",
+    "district": "Koivuhaka",
+    "city": "vantaa",
+    "pipe_renovation_done": false,
+    "is_rented_out": false,
+    "rahoitusvastike_eur_month": 0.0,
+    "booking_method": "unknown",
+    "is_new_development": false,
+    "debt_free_price_eur": 159500.0,
+    "lat": 60.28901,
+    "lon": 25.000634,
+    "nearest_stop": "Koivuhaka",
+    "distance_m": 445,
+    "_search_pass": "new_house_2000plus",
+    "monthly_cost_eur": 654.78,
+    "score": 59,
+    "rank": 53
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24671724",
@@ -1223,7 +1569,7 @@
     "_search_pass": "pipe_reno_2025",
     "monthly_cost_eur": 694.08,
     "score": 58,
-    "rank": 60
+    "rank": 85
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24359151",
@@ -1250,7 +1596,7 @@
     "_search_pass": "pipe_reno_2023",
     "monthly_cost_eur": 924.69,
     "score": 58,
-    "rank": 61
+    "rank": 86
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23669883",
@@ -1280,6 +1626,58 @@
     "rank": 5
   },
   {
+    "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24689327",
+    "price_eur": 44945.78,
+    "size_sqm": 38.0,
+    "room_count": 2,
+    "floor": "2/6",
+    "property_type": "kerrostalo",
+    "year_built": 2026,
+    "address": "Ounasvaarantie 18 A 4, Mellunmäki, Helsinki",
+    "district": "Mellunmäki",
+    "city": "helsinki",
+    "pipe_renovation_done": false,
+    "is_rented_out": false,
+    "rahoitusvastike_eur_month": 0.0,
+    "booking_method": "unknown",
+    "is_new_development": false,
+    "debt_free_price_eur": 149900.0,
+    "lat": 60.238621,
+    "lon": 25.112898,
+    "nearest_stop": "Mellunmäki",
+    "distance_m": 219,
+    "_search_pass": "new_house_2000plus",
+    "monthly_cost_eur": 606.24,
+    "score": 57,
+    "rank": 54
+  },
+  {
+    "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24416487",
+    "price_eur": 36397.15,
+    "size_sqm": 25.0,
+    "room_count": 1,
+    "floor": "5/5",
+    "property_type": "kerrostalo",
+    "year_built": 2021,
+    "address": "Maanviljelijänkuja 9 A, Jokiniemi, Vantaa",
+    "district": "Jokiniemi",
+    "city": "vantaa",
+    "pipe_renovation_done": false,
+    "is_rented_out": false,
+    "rahoitusvastike_eur_month": 0.0,
+    "booking_method": "unknown",
+    "is_new_development": false,
+    "debt_free_price_eur": 130000.0,
+    "lat": 60.293197,
+    "lon": 25.057063,
+    "nearest_stop": "Jokiniemi",
+    "distance_m": 420,
+    "_search_pass": "new_house_2000plus",
+    "monthly_cost_eur": 505.63,
+    "score": 57,
+    "rank": 55
+  },
+  {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23015854",
     "price_eur": 98000.0,
     "size_sqm": 58.5,
@@ -1300,7 +1698,33 @@
     "_search_pass": "pipe_reno_done",
     "monthly_cost_eur": 343.83,
     "score": 57,
-    "rank": 62
+    "rank": 87
+  },
+  {
+    "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/17539763",
+    "price_eur": 61565.86,
+    "size_sqm": 31.0,
+    "room_count": 1,
+    "floor": "2/2",
+    "property_type": "kerrostalo",
+    "year_built": 2021,
+    "address": "Neilikkatie 20, Tikkurila, Vantaa",
+    "district": "Tikkurila",
+    "city": "vantaa",
+    "pipe_renovation_done": false,
+    "is_rented_out": false,
+    "rahoitusvastike_eur_month": 0.0,
+    "booking_method": "unknown",
+    "is_new_development": false,
+    "debt_free_price_eur": 169000.0,
+    "lat": 60.290721,
+    "lon": 25.02744,
+    "nearest_stop": "Silkkitehdas",
+    "distance_m": 361,
+    "_search_pass": "new_house_2000plus",
+    "monthly_cost_eur": 702.82,
+    "score": 57,
+    "rank": 56
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24551102",
@@ -1323,7 +1747,85 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 364.3,
     "score": 56,
-    "rank": 42
+    "rank": 57
+  },
+  {
+    "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24670912?src=listing_of_the_week_search",
+    "price_eur": 52518.04,
+    "size_sqm": 31.0,
+    "room_count": 2,
+    "floor": "4/6",
+    "property_type": "kerrostalo",
+    "year_built": 2026,
+    "address": "Ounasvaarantie 18 A 18, Mellunmäki, Helsinki",
+    "district": "Mellunmäki",
+    "city": "helsinki",
+    "pipe_renovation_done": false,
+    "is_rented_out": false,
+    "rahoitusvastike_eur_month": 0.0,
+    "booking_method": "unknown",
+    "is_new_development": false,
+    "debt_free_price_eur": 162900.0,
+    "lat": 60.23769,
+    "lon": 25.114668,
+    "nearest_stop": "Mellunmäki",
+    "distance_m": 345,
+    "_search_pass": "new_house_2000plus",
+    "monthly_cost_eur": 671.98,
+    "score": 55,
+    "rank": 58
+  },
+  {
+    "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24675927",
+    "price_eur": 55917.46,
+    "size_sqm": 33.0,
+    "room_count": 2,
+    "floor": "6/6",
+    "property_type": "kerrostalo",
+    "year_built": 2026,
+    "address": "Ounasvaarantie 18 A 26, Mellunmäki, Helsinki",
+    "district": "Mellunmäki",
+    "city": "helsinki",
+    "pipe_renovation_done": false,
+    "is_rented_out": false,
+    "rahoitusvastike_eur_month": 0.0,
+    "booking_method": "unknown",
+    "is_new_development": false,
+    "debt_free_price_eur": 169900.0,
+    "lat": 60.23769,
+    "lon": 25.114668,
+    "nearest_stop": "Mellunmäki",
+    "distance_m": 345,
+    "_search_pass": "new_house_2000plus",
+    "monthly_cost_eur": 707.37,
+    "score": 55,
+    "rank": 59
+  },
+  {
+    "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24670912",
+    "price_eur": 52518.04,
+    "size_sqm": 31.0,
+    "room_count": 2,
+    "floor": "4/6",
+    "property_type": "kerrostalo",
+    "year_built": 2026,
+    "address": "Ounasvaarantie 18 A 18, Mellunmäki, Helsinki",
+    "district": "Mellunmäki",
+    "city": "helsinki",
+    "pipe_renovation_done": false,
+    "is_rented_out": false,
+    "rahoitusvastike_eur_month": 0.0,
+    "booking_method": "unknown",
+    "is_new_development": false,
+    "debt_free_price_eur": 162900.0,
+    "lat": 60.23769,
+    "lon": 25.114668,
+    "nearest_stop": "Mellunmäki",
+    "distance_m": 345,
+    "_search_pass": "new_house_2000plus",
+    "monthly_cost_eur": 671.98,
+    "score": 55,
+    "rank": 60
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/17739438",
@@ -1346,7 +1848,7 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 581.47,
     "score": 55,
-    "rank": 43
+    "rank": 61
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24338163",
@@ -1369,7 +1871,7 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 465.43,
     "score": 54,
-    "rank": 44
+    "rank": 62
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24467300",
@@ -1396,7 +1898,136 @@
     "_search_pass": "pipe_reno_2020",
     "monthly_cost_eur": 1154.56,
     "score": 53,
+    "rank": 88
+  },
+  {
+    "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23324597",
+    "price_eur": 58145.0,
+    "size_sqm": 42.0,
+    "room_count": 2,
+    "floor": "1/5",
+    "property_type": "kerrostalo",
+    "year_built": 2021,
+    "address": "Maanviljelijänkuja 9, Tikkurila, Vantaa",
+    "district": "Tikkurila",
+    "city": "vantaa",
+    "pipe_renovation_done": false,
+    "is_rented_out": false,
+    "rahoitusvastike_eur_month": 0.0,
+    "booking_method": "unknown",
+    "is_new_development": false,
+    "debt_free_price_eur": 164000.0,
+    "lat": null,
+    "lon": null,
+    "nearest_stop": null,
+    "distance_m": null,
+    "_search_pass": "new_house_2000plus",
+    "monthly_cost_eur": 677.54,
+    "score": 52,
     "rank": 63
+  },
+  {
+    "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24403658",
+    "price_eur": 46693.76,
+    "size_sqm": 25.5,
+    "room_count": 1,
+    "floor": "4/12",
+    "property_type": "kerrostalo",
+    "year_built": 2022,
+    "address": "Kielotie 15E A, Tikkurila, Vantaa",
+    "district": "Tikkurila",
+    "city": "vantaa",
+    "pipe_renovation_done": false,
+    "is_rented_out": false,
+    "rahoitusvastike_eur_month": 0.0,
+    "booking_method": "unknown",
+    "is_new_development": false,
+    "debt_free_price_eur": 155000.0,
+    "lat": null,
+    "lon": null,
+    "nearest_stop": null,
+    "distance_m": null,
+    "_search_pass": "new_house_2000plus",
+    "monthly_cost_eur": 632.03,
+    "score": 50,
+    "rank": 64
+  },
+  {
+    "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23673487",
+    "price_eur": 55261.0,
+    "size_sqm": 30.0,
+    "room_count": 1,
+    "property_type": "kerrostalo",
+    "year_built": 2023,
+    "address": "Kielotie 34 C C81, Tikkurila, Vantaa",
+    "district": "Tikkurila",
+    "city": "vantaa",
+    "pipe_renovation_done": false,
+    "is_rented_out": false,
+    "rahoitusvastike_eur_month": 0.0,
+    "booking_method": "unknown",
+    "is_new_development": false,
+    "debt_free_price_eur": 174397.0,
+    "lat": null,
+    "lon": null,
+    "nearest_stop": null,
+    "distance_m": null,
+    "_search_pass": "new_house_2000plus",
+    "monthly_cost_eur": 730.11,
+    "score": 50,
+    "rank": 65
+  },
+  {
+    "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/17174443",
+    "price_eur": 53729.0,
+    "size_sqm": 24.5,
+    "room_count": 1,
+    "floor": "1/4",
+    "property_type": "kerrostalo",
+    "year_built": 2023,
+    "address": "Pyhtäänkorventie 15e A02, Aviapolis, Vantaa",
+    "district": "Aviapolis",
+    "city": "vantaa",
+    "pipe_renovation_done": false,
+    "is_rented_out": false,
+    "rahoitusvastike_eur_month": 0.0,
+    "booking_method": "unknown",
+    "is_new_development": false,
+    "debt_free_price_eur": 134285.0,
+    "lat": null,
+    "lon": null,
+    "nearest_stop": null,
+    "distance_m": null,
+    "_search_pass": "new_house_2000plus",
+    "monthly_cost_eur": 527.29,
+    "score": 50,
+    "rank": 66
+  },
+  {
+    "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23318143",
+    "price_eur": 54839.0,
+    "size_sqm": 24.5,
+    "room_count": 1,
+    "floor": "2/4",
+    "property_type": "kerrostalo",
+    "year_built": 2023,
+    "address": "Pyhtäänkorventie 15e A09, Aviapolis, Vantaa",
+    "district": "Aviapolis",
+    "city": "vantaa",
+    "pipe_renovation_done": false,
+    "is_rented_out": false,
+    "rahoitusvastike_eur_month": 0.0,
+    "booking_method": "unknown",
+    "is_new_development": false,
+    "debt_free_price_eur": 137014.0,
+    "lat": null,
+    "lon": null,
+    "nearest_stop": null,
+    "distance_m": null,
+    "_search_pass": "new_house_2000plus",
+    "monthly_cost_eur": 541.09,
+    "score": 50,
+    "rank": 67
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23252040",
@@ -1421,6 +2052,32 @@
     "rank": 7
   },
   {
+    "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/17174459",
+    "price_eur": 57503.0,
+    "size_sqm": 24.5,
+    "room_count": 1,
+    "floor": "4/4",
+    "property_type": "kerrostalo",
+    "year_built": 2023,
+    "address": "Pyhtäänkorventie 15e A20, Aviapolis, Vantaa",
+    "district": "Aviapolis",
+    "city": "vantaa",
+    "pipe_renovation_done": false,
+    "is_rented_out": false,
+    "rahoitusvastike_eur_month": 0.0,
+    "booking_method": "unknown",
+    "is_new_development": false,
+    "debt_free_price_eur": 143771.0,
+    "lat": null,
+    "lon": null,
+    "nearest_stop": null,
+    "distance_m": null,
+    "_search_pass": "new_house_2000plus",
+    "monthly_cost_eur": 575.25,
+    "score": 50,
+    "rank": 68
+  },
+  {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24522983",
     "price_eur": 71381.09,
     "size_sqm": 44.0,
@@ -1441,7 +2098,7 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 562.86,
     "score": 49,
-    "rank": 45
+    "rank": 69
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24602268",
@@ -1467,7 +2124,7 @@
     "_search_pass": "pipe_reno_done",
     "monthly_cost_eur": 958.97,
     "score": 48,
-    "rank": 64
+    "rank": 89
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24674404",
@@ -1493,7 +2150,7 @@
     "_search_pass": "pipe_reno_done",
     "monthly_cost_eur": 955.91,
     "score": 46,
-    "rank": 65
+    "rank": 90
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24645455",
@@ -1520,7 +2177,7 @@
     "_search_pass": "pipe_reno_2025",
     "monthly_cost_eur": 1083.53,
     "score": 46,
-    "rank": 66
+    "rank": 91
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/17773543",
@@ -1546,7 +2203,7 @@
     "_search_pass": "pipe_reno_done",
     "monthly_cost_eur": 1112.58,
     "score": 37,
-    "rank": 67
+    "rank": 92
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24643215",
@@ -1573,7 +2230,7 @@
     "_search_pass": "pipe_reno_2025",
     "monthly_cost_eur": 875.13,
     "score": 36,
-    "rank": 68
+    "rank": 93
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/17024712",
@@ -1595,7 +2252,7 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 867.91,
     "score": 35,
-    "rank": 46
+    "rank": 70
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24565190",
@@ -1618,7 +2275,7 @@
     "_search_pass": "new_house_2000plus",
     "monthly_cost_eur": 1185.48,
     "score": 33,
-    "rank": 47
+    "rank": 71
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24490311",
@@ -1643,7 +2300,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 176.91,
     "score": 89,
-    "rank": 69
+    "rank": 94
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24689993",
@@ -1669,7 +2326,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 394.13,
     "score": 72,
-    "rank": 70
+    "rank": 95
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/16953238",
@@ -1694,7 +2351,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 403.96,
     "score": 71,
-    "rank": 71
+    "rank": 96
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24560644",
@@ -1718,7 +2375,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 516.76,
     "score": 70,
-    "rank": 72
+    "rank": 97
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24021458",
@@ -1743,7 +2400,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 467.7,
     "score": 66,
-    "rank": 73
+    "rank": 98
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23407179",
@@ -1768,7 +2425,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 470.2,
     "score": 66,
-    "rank": 74
+    "rank": 99
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23668264",
@@ -1793,7 +2450,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 490.71,
     "score": 64,
-    "rank": 75
+    "rank": 100
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24705769",
@@ -1821,7 +2478,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 718.23,
     "score": 59,
-    "rank": 76
+    "rank": 101
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24441515",
@@ -1846,7 +2503,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 731.3,
     "score": 57,
-    "rank": 77
+    "rank": 102
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/21231683",
@@ -1870,7 +2527,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 462.07,
     "score": 57,
-    "rank": 78
+    "rank": 103
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23757429",
@@ -1896,7 +2553,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 423.66,
     "score": 56,
-    "rank": 79
+    "rank": 104
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24639776",
@@ -1945,7 +2602,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 512.09,
     "score": 54,
-    "rank": 80
+    "rank": 105
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24683162",
@@ -1998,7 +2655,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 1135.22,
     "score": 50,
-    "rank": 81
+    "rank": 106
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24656626",
@@ -2023,7 +2680,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 1165.69,
     "score": 50,
-    "rank": 82
+    "rank": 107
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24390111",
@@ -2047,7 +2704,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 667.72,
     "score": 50,
-    "rank": 83
+    "rank": 108
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24630065",
@@ -2071,7 +2728,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 574.92,
     "score": 50,
-    "rank": 84
+    "rank": 109
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24580856",
@@ -2095,7 +2752,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 524.67,
     "score": 50,
-    "rank": 85
+    "rank": 110
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24545661",
@@ -2119,7 +2776,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 814.81,
     "score": 50,
-    "rank": 86
+    "rank": 111
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24413388",
@@ -2144,7 +2801,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 544.89,
     "score": 50,
-    "rank": 87
+    "rank": 112
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24347714",
@@ -2165,7 +2822,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 854.51,
     "score": 50,
-    "rank": 88
+    "rank": 113
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23993501",
@@ -2192,7 +2849,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 578.32,
     "score": 50,
-    "rank": 89
+    "rank": 114
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24408830",
@@ -2219,7 +2876,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 755.82,
     "score": 49,
-    "rank": 90
+    "rank": 115
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24679162",
@@ -2243,7 +2900,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 854.9,
     "score": 47,
-    "rank": 91
+    "rank": 116
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24654511",
@@ -2268,7 +2925,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 766.9,
     "score": 47,
-    "rank": 92
+    "rank": 117
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24596489",
@@ -2291,7 +2948,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 1333.72,
     "score": 47,
-    "rank": 93
+    "rank": 118
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24394248",
@@ -2315,7 +2972,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 856.64,
     "score": 47,
-    "rank": 94
+    "rank": 119
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24463536",
@@ -2342,7 +2999,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 448.51,
     "score": 47,
-    "rank": 95
+    "rank": 120
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23288681",
@@ -2365,7 +3022,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 1242.51,
     "score": 47,
-    "rank": 96
+    "rank": 121
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24660330",
@@ -2391,7 +3048,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 866.78,
     "score": 46,
-    "rank": 97
+    "rank": 122
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24579809",
@@ -2415,7 +3072,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 1353.94,
     "score": 46,
-    "rank": 98
+    "rank": 123
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24641801",
@@ -2439,7 +3096,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 1298.33,
     "score": 46,
-    "rank": 99
+    "rank": 124
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24531612",
@@ -2463,7 +3120,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 1379.23,
     "score": 46,
-    "rank": 100
+    "rank": 125
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24424263",
@@ -2487,7 +3144,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 776.55,
     "score": 46,
-    "rank": 101
+    "rank": 126
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24671044",
@@ -2514,7 +3171,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 527.27,
     "score": 45,
-    "rank": 102
+    "rank": 127
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24609440",
@@ -2541,7 +3198,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 1079.75,
     "score": 45,
-    "rank": 103
+    "rank": 128
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24546063",
@@ -2564,7 +3221,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 758.44,
     "score": 44,
-    "rank": 104
+    "rank": 129
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24704444",
@@ -2590,7 +3247,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 805.51,
     "score": 43,
-    "rank": 105
+    "rank": 130
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24688691",
@@ -2640,7 +3297,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 946.75,
     "score": 42,
-    "rank": 106
+    "rank": 131
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24619918",
@@ -2665,7 +3322,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 826.81,
     "score": 42,
-    "rank": 107
+    "rank": 132
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23830560",
@@ -2689,7 +3346,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 1161.61,
     "score": 42,
-    "rank": 108
+    "rank": 133
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24237812",
@@ -2714,7 +3371,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 900.2,
     "score": 41,
-    "rank": 109
+    "rank": 134
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24661923",
@@ -2739,7 +3396,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 854.69,
     "score": 41,
-    "rank": 110
+    "rank": 135
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/17414459",
@@ -2764,7 +3421,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 828.13,
     "score": 40,
-    "rank": 111
+    "rank": 136
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24674412",
@@ -2788,7 +3445,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 949.39,
     "score": 35,
-    "rank": 112
+    "rank": 137
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24346304",
@@ -2813,7 +3470,7 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 1054.29,
     "score": 35,
-    "rank": 113
+    "rank": 138
   },
   {
     "listing_url": "https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24083443",
@@ -2837,6 +3494,6 @@
     "_search_pass": "candidate_check_pipe_reno",
     "monthly_cost_eur": 1157.4,
     "score": 28,
-    "rank": 114
+    "rank": 139
   }
 ]

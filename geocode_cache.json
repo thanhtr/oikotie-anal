@@ -10812,5 +10812,41 @@
   "Osmankäämintie 58 D, Tikkurila, Vantaa, vantaa, Finland": [
     60.2900159,
     25.0154282
+  ],
+  "Lummetie 13, Tikkurila, Vantaa, vantaa, Finland": [
+    60.2974808,
+    25.0353125
+  ],
+  "Silmukuja 5, Hiekkaharju, Vantaa, vantaa, Finland": [
+    60.3097481,
+    25.0448264
+  ],
+  "Aallonhuippu 12 A 6, Kivenlahti, Espoo, espoo, Finland": [
+    60.1526533,
+    24.6393629
+  ],
+  "Safiirikuja 6 A, Kivistö, Vantaa, vantaa, Finland": [
+    60.3174884,
+    24.8508411
+  ],
+  "Hämeentie 153 B, Vanhakaupunki, Helsinki, helsinki, Finland": [
+    60.2117768,
+    24.9782668
+  ],
+  "Kappelinpiha 6 B, Koskela, Helsinki, helsinki, Finland": [
+    60.2154572,
+    24.9641086
+  ],
+  "Kahvipavunkuja 10 A, Aurinkolahti, Helsinki, helsinki, Finland": [
+    60.2056879,
+    25.1511329
+  ],
+  "Mäkelänkatu 93 A, Käpylä, Helsinki, helsinki, Finland": [
+    60.2110768,
+    24.9449948
+  ],
+  "Papinpöydänkuja 1, Lehtisaari, Helsinki, helsinki, Finland": [
+    60.1807077,
+    24.8511985
   ]
 }
