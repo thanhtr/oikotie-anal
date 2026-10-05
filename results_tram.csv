@@ -1,52 +1,70 @@
 address,district,city,price_eur,debt_free_price_eur,housing_company_loan_eur,room_count,size_sqm,floor,year_built,property_type,pipe_renovation_done,pipe_renovation_year,pipe_renovation_info,is_rented_out,monthly_cost_eur,hoitovastike_eur_month,tonttivuokra_eur_month,score,rank,nearest_stop,distance_m,lat,lon,_search_pass,listing_url
 "Kaskelantie 5, Kaskela, Vantaa",Kaskela,vantaa,149000.0,149000.0,,3,50.0,7/7,2019,kerrostalo,False,,,False,841.69,240.0,,96,5,Kaskela,163,60.282215,25.096341,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24710016
+"Lähdepuistontie 17 A, Vaarala, Vantaa",Vaarala,vantaa,50669.29,63000.0,12330.71,1,26.5,4/4,1957,kerrostalo,True,2012,"uusia parkkipaikkoja
+2012
+IV-kanavien nuohous
+Ulkovalaistuksen uusiminen
+Lämpötolppien uusiminen
+Pihan asfaltointi
+Sähkönousujen uusiminen
+2011-2012
+Linjasaneeraus
+2011
+Ikkunoiden uusiminen
+2009-2010
+Hankesuunnittelu
+2008
+Putkiston kuntotutkimus
+2002
+Tuuletusparvekkeet
+2001
+Antennijärjestelmä ja lämmitysjärjeste",False,307.31,140.45,,88,71,Vaarala,56,60.266842,25.099039,pipe_reno_2012,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24721059
 "Viertolankuja 6, Viertola, Vantaa",Viertola,vantaa,142965.94,184000.0,41034.06,2,42.5,5/7,2013,kerrostalo,False,,,False,969.91,191.25,,85,6,Viertola,72,60.290923,25.020294,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24697963
-"Perintötie 1, Aviapolis, Vantaa",Aviapolis,vantaa,169000.0,169000.0,,2,44.0,3/5,2019,kerrostalo,False,,,False,936.02,233.2,,79,7,Annefred,241,60.294911,24.969224,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24673815
-"Kuulakuja 4 B, Länsimäki, Vantaa",Länsimäki,vantaa,119000.0,119000.0,,2,59.0,2/5,1971,kerrostalo,True,2025,"taan Kuulakuja 4 – Keihästie 3 sijaitsee omalla tontilla, ja taloyhtiötä on hoidettu suunnitelmallisesti vuosikymmenten ajan. Vuonna 2025 valmistunut linjasaneeraus on taloyhtiön merkittävin peruskorjaus, jonka yhteydessä kunnostettiin myös porrashuoneet. Lisäksi yhtiössä on vuosien varrella toteutettu laajasti m",False,715.51,265.5,,79,75,Länsimäki,84,60.244718,25.110505,pipe_reno_2025,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24593655
+"Puutarhatie 13 B, Tikkurila, Vantaa",Tikkurila,vantaa,197000.0,197000.0,,2,40.0,4/4,2023,kerrostalo,False,,,False,1071.89,227.5,,84,7,Koivuhaka,15,60.291958,25.00575,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24634837
+"Perintötie 1, Aviapolis, Vantaa",Aviapolis,vantaa,169000.0,169000.0,,2,44.0,3/5,2019,kerrostalo,False,,,False,936.02,233.2,,79,8,Annefred,241,60.294911,24.969224,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24673815
+"Kuulakuja 4 B, Länsimäki, Vantaa",Länsimäki,vantaa,119000.0,119000.0,,2,59.0,2/5,1971,kerrostalo,True,2025,"taan Kuulakuja 4 – Keihästie 3 sijaitsee omalla tontilla, ja taloyhtiötä on hoidettu suunnitelmallisesti vuosikymmenten ajan. Vuonna 2025 valmistunut linjasaneeraus on taloyhtiön merkittävin peruskorjaus, jonka yhteydessä kunnostettiin myös porrashuoneet. Lisäksi yhtiössä on vuosien varrella toteutettu laajasti m",False,715.51,265.5,,79,72,Länsimäki,84,60.244718,25.110505,pipe_reno_2025,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24593655
 "Lumikero 4 B, Länsimäki, Vantaa",Länsimäki,vantaa,38555.07,39000.0,444.93,1,35.5,1/9,1974,kerrostalo,True,,"avaramman tuntuisen. Lisäksi asunnossa on erillinen vaatehuone, joka tarjoaa runsaasti säilytystilaa ja auttaa pitämään asuintilat selkeinä.
 
-Asunnon putkiremontti on tehty ja kylpyhuone on remontoitu, joten märkätilat ovat jo päivitetyt. Lattioissa on vielä muovimatto, mikä antaa uudelle omistajalle mahdollisuu",False,223.31,177.8,,77,76,Länsimäki,313,60.244915,25.116358,pipe_reno_done,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24709446
-"Orvokkikuja 6 A, Tikkurila, Vantaa",Tikkurila,vantaa,163490.69,165000.0,1509.31,1,35.0,4/5,2000,kerrostalo,False,,,False,843.59,161.0,,77,8,Silkkitehdas,132,60.290179,25.03325,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24626283
-"Heporinne 2, Hakunila, Vantaa",Hakunila,vantaa,145000.0,145000.0,,2,38.5,5/7,2022,kerrostalo,False,,,False,581.47,,,77,9,Hevoshaanpolku,102,60.273265,25.102881,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24399247
-"Heporinne 2a C, Hakunila, Vantaa",Hakunila,vantaa,198000.0,198000.0,,4,55.5,6/7,2022,kerrostalo,False,,,False,849.45,,,77,10,Hevoshaanpolku,52,60.273541,25.103782,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24300130
-"Heporinne 2 a, Hakunila, Vantaa",Hakunila,vantaa,165000.0,165000.0,,2,38.5,4/7,2022,kerrostalo,False,,,False,682.59,,,77,11,Hevoshaanpolku,74,60.273355,25.10368,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/22257758
-"Horsmakuja 6 A, Tikkurila, Vantaa",Tikkurila,vantaa,117837.23,185000.0,,2,45.5,1/6,2015,kerrostalo,False,,,False,1043.07,259.35,,75,12,Silkkitehdas,52,60.288709,25.032266,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24703989
-"Kaskelantie 5, Kaskela, Vantaa",Kaskela,vantaa,159000.0,159000.0,,2,35.0,4/7,2019,kerrostalo,False,,,False,652.26,,,75,13,Kaskela,163,60.282215,25.096341,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/22985238
-"Heporinne 2 C, Hakunila, Vantaa",Hakunila,vantaa,21103.26,101000.0,,1,30.5,5/7,2022,kerrostalo,False,,,False,358.99,,,75,14,Hevoshaanpolku,103,60.273342,25.102689,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/22551822
-"Heporinne 2 C, Hakunila, Vantaa",Hakunila,vantaa,23961.88,105000.0,,1,30.5,6/7,2022,kerrostalo,False,,,False,379.22,,,75,15,Hevoshaanpolku,103,60.273342,25.102689,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/21616823
-"Heporinne 2 C, Hakunila, Vantaa",Hakunila,vantaa,23961.88,105000.0,,1,30.5,6/7,2022,kerrostalo,False,,,False,379.22,,,75,16,Hevoshaanpolku,103,60.273342,25.102689,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/21613257
+Asunnon putkiremontti on tehty ja kylpyhuone on remontoitu, joten märkätilat ovat jo päivitetyt. Lattioissa on vielä muovimatto, mikä antaa uudelle omistajalle mahdollisuu",False,223.31,177.8,,77,73,Länsimäki,313,60.244915,25.116358,pipe_reno_done,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24709446
+"Orvokkikuja 6 A, Tikkurila, Vantaa",Tikkurila,vantaa,163490.69,165000.0,1509.31,1,35.0,4/5,2000,kerrostalo,False,,,False,843.59,161.0,,77,9,Silkkitehdas,132,60.290179,25.03325,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24626283
+"Heporinne 2, Hakunila, Vantaa",Hakunila,vantaa,145000.0,145000.0,,2,38.5,5/7,2022,kerrostalo,False,,,False,581.47,,,77,10,Hevoshaanpolku,102,60.273265,25.102881,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24399247
+"Heporinne 2a C, Hakunila, Vantaa",Hakunila,vantaa,198000.0,198000.0,,4,55.5,6/7,2022,kerrostalo,False,,,False,849.45,,,77,11,Hevoshaanpolku,52,60.273541,25.103782,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24300130
+"Heporinne 2 a, Hakunila, Vantaa",Hakunila,vantaa,165000.0,165000.0,,2,38.5,4/7,2022,kerrostalo,False,,,False,682.59,,,77,12,Hevoshaanpolku,74,60.273355,25.10368,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/22257758
+"Horsmakuja 6 A, Tikkurila, Vantaa",Tikkurila,vantaa,117837.23,185000.0,,2,45.5,1/6,2015,kerrostalo,False,,,False,1043.07,259.35,,75,13,Silkkitehdas,52,60.288709,25.032266,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24703989
+"Kaskelantie 5, Kaskela, Vantaa",Kaskela,vantaa,159000.0,159000.0,,2,35.0,4/7,2019,kerrostalo,False,,,False,652.26,,,75,14,Kaskela,163,60.282215,25.096341,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/22985238
+"Heporinne 2 C, Hakunila, Vantaa",Hakunila,vantaa,21103.26,101000.0,,1,30.5,5/7,2022,kerrostalo,False,,,False,358.99,,,75,15,Hevoshaanpolku,103,60.273342,25.102689,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/22551822
+"Heporinne 2 C, Hakunila, Vantaa",Hakunila,vantaa,23961.88,105000.0,,1,30.5,6/7,2022,kerrostalo,False,,,False,379.22,,,75,16,Hevoshaanpolku,103,60.273342,25.102689,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/21616823
+"Heporinne 2 C, Hakunila, Vantaa",Hakunila,vantaa,23961.88,105000.0,,1,30.5,6/7,2022,kerrostalo,False,,,False,379.22,,,75,17,Hevoshaanpolku,103,60.273342,25.102689,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/21613257
 "Antaksentie 13 A, Pakkalanrinne, Vantaa",Pakkalanrinne,vantaa,187000.0,187000.0,,2,45.5,4/6,2010,kerrostalo,False,,,True,998.58,204.75,,74,1,Backasbrinken/Pakkalanrinne,305,60.293417,24.947263,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24620266
-"Jokiniemenkuja 5 A, Jokiniemi, Vantaa",Jokiniemi,vantaa,129900.0,129900.0,,2,31.5,3/5,2020,kerrostalo,False,,,False,505.12,,,74,17,Jokiniemi,158,60.291331,25.054013,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24380208
-"Kaskelantie 7 A, Hakunila, Vantaa",Hakunila,vantaa,164000.0,164000.0,,3,58.0,4/8,2018,kerrostalo,False,,,False,677.54,,,74,18,Kaskela,218,60.281974,25.094558,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/16978203
-"Antaksentie 9 A, Pakkalanrinne, Vantaa",Pakkalanrinne,vantaa,184000.0,184000.0,,2,40.0,3/5,2011,kerrostalo,False,,,False,1002.66,224.0,,72,19,Backasbrinken/Pakkalanrinne,305,60.293417,24.947263,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24690081
-"Osuustie 4, Pakkala, Vantaa",Pakkala,vantaa,164185.16,165000.0,,2,44.0,4/5,2007,kerrostalo,False,,,False,911.39,228.8,,72,20,Backasbrinken/Pakkalanrinne,179,60.290394,24.951737,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24650871
-"Peltolantie 44, Koivuhaka, Vantaa",Koivuhaka,vantaa,156900.0,156900.0,,2,32.5,2/4,2024,kerrostalo,False,,,False,641.64,,,72,21,Koivuhaka,160,60.293433,25.00578,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24618605
-"Orvokkitie 20 A, Tikkurila, Vantaa",Tikkurila,vantaa,157000.0,157000.0,,2,30.0,5/5,2017,kerrostalo,False,,,False,642.14,,,72,22,Tikkuraitti,110,60.293062,25.035015,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24592910
-"Jokiniemenkuja 5 A, Jokiniemi, Vantaa",Jokiniemi,vantaa,154000.0,154000.0,,2,31.5,5/5,2020,kerrostalo,False,,,False,626.98,,,72,23,Jokiniemi,158,60.291331,25.054013,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23309842
-"Jokiniemenkuja 5 A 9, Jokiniemi, Vantaa",Jokiniemi,vantaa,169000.0,169000.0,,2,35.0,2/5,2020,kerrostalo,False,,,False,702.82,,,72,24,Jokiniemi,158,60.291331,25.054013,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23303762
-"Raudikkokuja 1, Hakunila, Vantaa",Hakunila,vantaa,28042.4,128000.0,,2,30.0,5/9,2022,kerrostalo,False,,,False,495.51,,,72,25,Hakunila,105,60.2771,25.105449,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/22735855
+"Jokiniemenkuja 5 A, Jokiniemi, Vantaa",Jokiniemi,vantaa,129900.0,129900.0,,2,31.5,3/5,2020,kerrostalo,False,,,False,505.12,,,74,18,Jokiniemi,158,60.291331,25.054013,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24380208
+"Kaskelantie 7 A, Hakunila, Vantaa",Hakunila,vantaa,164000.0,164000.0,,3,58.0,4/8,2018,kerrostalo,False,,,False,677.54,,,74,19,Kaskela,218,60.281974,25.094558,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/16978203
+"Antaksentie 9 A, Pakkalanrinne, Vantaa",Pakkalanrinne,vantaa,184000.0,184000.0,,2,40.0,3/5,2011,kerrostalo,False,,,False,1002.66,224.0,,72,20,Backasbrinken/Pakkalanrinne,305,60.293417,24.947263,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24690081
+"Osuustie 4, Pakkala, Vantaa",Pakkala,vantaa,164185.16,165000.0,,2,44.0,4/5,2007,kerrostalo,False,,,False,911.39,228.8,,72,21,Backasbrinken/Pakkalanrinne,179,60.290394,24.951737,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24650871
+"Peltolantie 44, Koivuhaka, Vantaa",Koivuhaka,vantaa,156900.0,156900.0,,2,32.5,2/4,2024,kerrostalo,False,,,False,641.64,,,72,22,Koivuhaka,160,60.293433,25.00578,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24618605
+"Orvokkitie 20 A, Tikkurila, Vantaa",Tikkurila,vantaa,157000.0,157000.0,,2,30.0,5/5,2017,kerrostalo,False,,,False,642.14,,,72,23,Tikkuraitti,110,60.293062,25.035015,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24592910
+"Jokiniemenkuja 5 A, Jokiniemi, Vantaa",Jokiniemi,vantaa,154000.0,154000.0,,2,31.5,5/5,2020,kerrostalo,False,,,False,626.98,,,72,24,Jokiniemi,158,60.291331,25.054013,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23309842
+"Jokiniemenkuja 5 A 9, Jokiniemi, Vantaa",Jokiniemi,vantaa,169000.0,169000.0,,2,35.0,2/5,2020,kerrostalo,False,,,False,702.82,,,72,25,Jokiniemi,158,60.291331,25.054013,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23303762
+"Raudikkokuja 1, Hakunila, Vantaa",Hakunila,vantaa,28042.4,128000.0,,2,30.0,5/9,2022,kerrostalo,False,,,False,495.51,,,72,26,Hakunila,105,60.2771,25.105449,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/22735855
 "Hiirakkokuja 6 A, Hakunila, Vantaa",Hakunila,vantaa,84998.2,104000.0,19001.8,3,79.0,4/5,1971,kerrostalo,True,2013,"e korjattiin Valmis/2013
 Sokkelit maalattiin ja entisen kylmäkellarin eristeet uusittiin Valmis/2013
 Saatettiin valmiiksi edellisenä vuonna aloitettu linjasaneeraus Valmis/2013
 Käyttövesiputkisto uusittiin, Sähköjärjestelmä uusittiin, Telejärjestelmät uusittiin Valmis/2012
-Putkiston linjasaneerauksen suunnitelmat",False,790.68,416.52,,70,77,Hevoshaanpolku,161,60.275303,25.105275,pipe_reno_2013,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24427675
-"Raudikkokuja 1 A, Hakunila, Vantaa",Hakunila,vantaa,56171.74,159000.0,,2,32.0,3/9,2022,kerrostalo,False,,,False,652.26,,,70,26,Hakunila,99,60.277173,25.106645,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24455960
-"Kaskelantie 7, Hakunila, Vantaa",Hakunila,vantaa,70587.98,134990.0,,1,26.0,3/8,2018,kerrostalo,False,,,False,530.86,,,70,27,Kaskela,136,60.281799,25.096128,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23831363
-"Raudikkokuja 1, Hakunila, Vantaa",Hakunila,vantaa,42770.93,124900.0,,1,23.0,5/9,2022,kerrostalo,False,,,False,479.84,,,70,28,Hakunila,105,60.2771,25.105449,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/17214365
-"Puutarhatie 13 B, Koivuhaka, Vantaa",Koivuhaka,vantaa,158577.53,199000.0,40422.47,3,50.0,1/5,2023,kerrostalo,False,,,False,1204.51,350.0,,69,29,Koivuhaka,137,60.290776,25.006224,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24465126
-"Kaskelantie 7 A, Kaskela, Vantaa",Kaskela,vantaa,60809.0,167900.0,,3,58.0,3/8,2018,kerrostalo,False,,,False,697.26,,,69,30,Kaskela,218,60.281974,25.094558,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23545342
-"Nukenkaulus 2 A, Koivuhaka, Vantaa",Koivuhaka,vantaa,84750.59,170900.0,,2,42.5,2/8,2015,kerrostalo,False,,,False,712.43,,,69,31,Koivuhaka,117,60.292715,25.007569,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23438025
-"Kukonharja 3 B, Koivuhaka, Vantaa",Koivuhaka,vantaa,94361.2,178900.0,,2,44.0,3/4,2019,kerrostalo,False,,,False,752.88,,,69,32,Koivuhaka,187,60.293205,25.008364,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23437318
-"Horsmakuja 4 B, Tikkurila, Vantaa",Tikkurila,vantaa,189000.0,189000.0,,2,39.5,2/6,2013,kerrostalo,False,,,False,803.94,,,67,33,Silkkitehdas,80,60.28901,25.031544,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24585567
-"Peltolantie 44, Koivuhaka, Vantaa",Koivuhaka,vantaa,15242.33,109000.0,,1,23.0,1/5,2023,kerrostalo,False,,,False,399.44,,,67,34,Koivuhaka,160,60.293433,25.00578,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24487874
-"Kielotie 34 C, Tikkurila, Vantaa",Tikkurila,vantaa,27186.4,140000.0,,1,30.0,2/6,2023,kerrostalo,False,,,False,556.19,,,67,35,Tikkuraitti,148,60.291671,25.036765,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24405150
-"Kielotie 34 C, Tikkurila, Vantaa",Tikkurila,vantaa,34821.42,189000.0,,2,41.0,6/6,2023,kerrostalo,False,,,False,803.94,,,67,36,Tikkuraitti,148,60.291671,25.036765,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24403451
-"Unikkotie 11, Tikkurila, Vantaa",Tikkurila,vantaa,47367.31,168500.0,,1,30.0,2/8,2020,kerrostalo,False,,,False,700.29,,,67,37,Tikkuraitti,72,60.292671,25.035867,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24036003
-"Talvikkitie 7 F, Viertola, Vantaa",Viertola,vantaa,62745.03,165000.0,,1,28.0,11/16,2018,kerrostalo,False,,,False,682.59,,,67,38,Silkkitehdas,86,60.288241,25.032664,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24339174
-"Unikkotie 11 B, Tikkurila, Vantaa",Tikkurila,vantaa,42503.31,174000.0,,1,25.5,8/8,2020,kerrostalo,False,,,False,728.1,,,67,39,Tikkuraitti,128,60.292727,25.034743,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24337175
-"Kukonharja 3 B, Koivuhaka, Vantaa",Koivuhaka,vantaa,70248.0,116900.0,,1,23.5,3/4,2019,kerrostalo,False,,,False,439.39,,,67,40,Koivuhaka,187,60.293205,25.008364,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23437301
-"Väinö Tannerin tie 17 C, Pakkala, Vantaa",Pakkala,vantaa,183661.63,184000.0,338.37,2,49.5,1/4,2008,kerrostalo,False,,,False,981.61,202.95,,66,41,Backasbrinken/Pakkalanrinne,335,60.290286,24.946995,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24550427
-"Hiirakkotie 2 D, Hakunila, Vantaa",Hakunila,vantaa,67579.85,109000.0,41420.15,2,54.0,2/9,1971,kerrostalo,True,2020,"inen. A-portaan hissin valoverho. C-portaan hissin kannatinköydet. 2020 Yleisten tilojen lukitus iLOQ-järjestelmään. Seinävalaisimien uusiminen. 2019 Linjasaneeraus: Kaikki vesi- ja viemäriputket (ei sadevesipystyviemärit). Sähkö-, tele-, antenni- ja puhelinkaapelit, kuituverkko. Kaikki saunat ja pukuhuoneet. Kai",False,646.04,246.6,,66,78,Hevoshaanpolku,242,60.275414,25.100669,pipe_reno_2020,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23873740
+Putkiston linjasaneerauksen suunnitelmat",False,790.68,416.52,,70,74,Hevoshaanpolku,161,60.275303,25.105275,pipe_reno_2013,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24427675
+"Raudikkokuja 1 A, Hakunila, Vantaa",Hakunila,vantaa,56171.74,159000.0,,2,32.0,3/9,2022,kerrostalo,False,,,False,652.26,,,70,27,Hakunila,99,60.277173,25.106645,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24455960
+"Puutarhatie 13 B, Koivuhaka, Vantaa",Koivuhaka,vantaa,158577.53,199000.0,40422.47,3,50.0,1/5,2023,kerrostalo,False,,,False,1204.51,350.0,,69,28,Koivuhaka,137,60.290776,25.006224,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24465126
+"Kaskelantie 7 A, Kaskela, Vantaa",Kaskela,vantaa,60809.0,167900.0,,3,58.0,3/8,2018,kerrostalo,False,,,False,697.26,,,69,29,Kaskela,218,60.281974,25.094558,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23545342
+"Nukenkaulus 2 A, Koivuhaka, Vantaa",Koivuhaka,vantaa,84750.59,170900.0,,2,42.5,2/8,2015,kerrostalo,False,,,False,712.43,,,69,30,Koivuhaka,117,60.292715,25.007569,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23438025
+"Kukonharja 3 B, Koivuhaka, Vantaa",Koivuhaka,vantaa,94361.2,178900.0,,2,44.0,3/4,2019,kerrostalo,False,,,False,752.88,,,69,31,Koivuhaka,187,60.293205,25.008364,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23437318
+"Horsmakuja 4 B, Tikkurila, Vantaa",Tikkurila,vantaa,189000.0,189000.0,,2,39.5,2/6,2013,kerrostalo,False,,,False,803.94,,,67,32,Silkkitehdas,80,60.28901,25.031544,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24585567
+"Peltolantie 44, Koivuhaka, Vantaa",Koivuhaka,vantaa,15242.33,109000.0,,1,23.0,1/5,2023,kerrostalo,False,,,False,399.44,,,67,33,Koivuhaka,160,60.293433,25.00578,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24487874
+"Kielotie 34 C, Tikkurila, Vantaa",Tikkurila,vantaa,27186.4,140000.0,,1,30.0,2/6,2023,kerrostalo,False,,,False,556.19,,,67,34,Tikkuraitti,148,60.291671,25.036765,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24405150
+"Kielotie 34 C, Tikkurila, Vantaa",Tikkurila,vantaa,34821.42,189000.0,,2,41.0,6/6,2023,kerrostalo,False,,,False,803.94,,,67,35,Tikkuraitti,148,60.291671,25.036765,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24403451
+"Unikkotie 11, Tikkurila, Vantaa",Tikkurila,vantaa,47367.31,168500.0,,1,30.0,2/8,2020,kerrostalo,False,,,False,700.29,,,67,36,Tikkuraitti,72,60.292671,25.035867,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24036003
+"Talvikkitie 7 F, Viertola, Vantaa",Viertola,vantaa,62745.03,165000.0,,1,28.0,11/16,2018,kerrostalo,False,,,False,682.59,,,67,37,Silkkitehdas,86,60.288241,25.032664,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24339174
+"Unikkotie 11 B, Tikkurila, Vantaa",Tikkurila,vantaa,42503.31,174000.0,,1,25.5,8/8,2020,kerrostalo,False,,,False,728.1,,,67,38,Tikkuraitti,128,60.292727,25.034743,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24337175
+"Kukonharja 3 B, Koivuhaka, Vantaa",Koivuhaka,vantaa,70248.0,116900.0,,1,23.5,3/4,2019,kerrostalo,False,,,False,439.39,,,67,39,Koivuhaka,187,60.293205,25.008364,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23437301
+"Väinö Tannerin tie 17 C, Pakkala, Vantaa",Pakkala,vantaa,183661.63,184000.0,338.37,2,49.5,1/4,2008,kerrostalo,False,,,False,981.61,202.95,,66,40,Backasbrinken/Pakkalanrinne,335,60.290286,24.946995,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24550427
+"Hiirakkotie 2 D, Hakunila, Vantaa",Hakunila,vantaa,67579.85,109000.0,41420.15,2,54.0,2/9,1971,kerrostalo,True,2020,"inen. A-portaan hissin valoverho. C-portaan hissin kannatinköydet. 2020 Yleisten tilojen lukitus iLOQ-järjestelmään. Seinävalaisimien uusiminen. 2019 Linjasaneeraus: Kaikki vesi- ja viemäriputket (ei sadevesipystyviemärit). Sähkö-, tele-, antenni- ja puhelinkaapelit, kuituverkko. Kaikki saunat ja pukuhuoneet. Kai",False,646.04,246.6,,66,75,Hevoshaanpolku,242,60.275414,25.100669,pipe_reno_2020,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23873740
 "Harmokuja 4, Hakunila, Vantaa",Hakunila,vantaa,55545.33,59000.0,,2,55.0,3/7,1977,kerrostalo,True,2018,"sisuihku, Kaapisto, Allas, WC-istuin, Peilikaappi
 Säilytystilat
 Kaapisto
@@ -59,9 +77,9 @@ Kattoremontti
 Putkiremontti
 2025
 Tehdyt remontit
-2026 Korjaussuunnitelma, 2025 Lämmitys - Lämmön alakeskuksen uusiminen (Putkiteho Oy), 2025 Linjasaneeraus - putkiurakan hankesu",False,504.13,357.5,,65,79,Hakunila,287,60.277694,25.100828,pipe_reno_2018,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24630066
-"Satulakuja 2 A, Hakunila, Vantaa",Hakunila,vantaa,157000.0,157000.0,,2,48.0,2/9,2014,kerrostalo,False,,,False,642.14,,,65,42,Hakunila,276,60.280183,25.10839,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24428359
-"Kaskelantie 7 A, Hakunila, Vantaa",Hakunila,vantaa,56277.0,159900.0,,2,50.0,5/8,2018,kerrostalo,False,,,False,656.81,,,65,43,Kaskela,218,60.281974,25.094558,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23450940
+2026 Korjaussuunnitelma, 2025 Lämmitys - Lämmön alakeskuksen uusiminen (Putkiteho Oy), 2025 Linjasaneeraus - putkiurakan hankesu",False,504.13,357.5,,65,76,Hakunila,287,60.277694,25.100828,pipe_reno_2018,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24630066
+"Satulakuja 2 A, Hakunila, Vantaa",Hakunila,vantaa,157000.0,157000.0,,2,48.0,2/9,2014,kerrostalo,False,,,False,642.14,,,65,41,Hakunila,276,60.280183,25.10839,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24428359
+"Kaskelantie 7 A, Hakunila, Vantaa",Hakunila,vantaa,56277.0,159900.0,,2,50.0,5/8,2018,kerrostalo,False,,,False,656.81,,,65,42,Kaskela,218,60.281974,25.094558,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23450940
 "Kuulakuja 3, Länsimäki, Vantaa",Länsimäki,vantaa,51717.0,98000.0,46283.0,2,59.0,4/5,1972,kerrostalo,True,,"yppi
 Kerrostalo
 Kaupunginosa
@@ -79,42 +97,63 @@ Seuraavat esittelyt
 
 Ei sovittuja esittelyitä. Ota yhteyttä kohteen ilmoittajaan sopiaksesi esittelystä.
 
-Va",False,638.83,295.0,,64,80,Länsimäki,130,60.245069,25.110048,pipe_reno_done,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24669986
-"Jokiniemenkuja 7, Jokiniemi, Vantaa",Jokiniemi,vantaa,129000.0,129000.0,,2,31.5,1/6,2020,kerrostalo,False,,,False,500.57,,,64,44,Jokiniemi,305,60.292224,25.056225,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23822944
+Va",False,638.83,295.0,,64,77,Länsimäki,130,60.245069,25.110048,pipe_reno_done,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24669986
+"Jokiniemenkuja 7, Jokiniemi, Vantaa",Jokiniemi,vantaa,129000.0,129000.0,,2,31.5,1/6,2020,kerrostalo,False,,,False,500.57,,,64,43,Jokiniemi,305,60.292224,25.056225,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23822944
+"Orvokkikuja 8, Tikkurila, Vantaa",Tikkurila,vantaa,182000.0,182000.0,,2,43.0,1/5,2000,kerrostalo,False,,,False,768.55,,,62,44,Silkkitehdas,155,60.290332,25.032189,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/16969286
 "Kaskelantie 5 A, Kaskela, Vantaa",Kaskela,vantaa,28834.45,110000.0,,1,28.5,4/7,2019,kerrostalo,False,,,False,404.5,,,62,45,Kaskela,218,60.281974,25.094558,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24606652
-"Orvokkikuja 8, Tikkurila, Vantaa",Tikkurila,vantaa,182000.0,182000.0,,2,43.0,1/5,2000,kerrostalo,False,,,False,768.55,,,62,46,Silkkitehdas,155,60.290332,25.032189,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/16969286
-"Orvokkikuja 6, Tikkurila, Vantaa",Tikkurila,vantaa,159000.0,159000.0,,2,39.0,1/6,2000,kerrostalo,False,,,False,652.26,,,62,47,Silkkitehdas,177,60.290359,25.03132,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23547707
-"Tikkurilantie 33 B, Tikkurila, Vantaa",Tikkurila,vantaa,199500.0,199500.0,,2,39.5,4/5,2019,kerrostalo,False,,,False,857.03,,,62,48,Tikkuraitti,392,60.290026,25.040807,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23291062
+"Orvokkikuja 6, Tikkurila, Vantaa",Tikkurila,vantaa,159000.0,159000.0,,2,39.0,1/6,2000,kerrostalo,False,,,False,652.26,,,62,46,Silkkitehdas,177,60.290359,25.03132,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23547707
+"Tikkurilantie 33 B, Tikkurila, Vantaa",Tikkurila,vantaa,199500.0,199500.0,,2,39.5,4/5,2019,kerrostalo,False,,,False,857.03,,,62,47,Tikkuraitti,392,60.290026,25.040807,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23291062
 "Hiirakkotie 10, Hakunila, Vantaa",Hakunila,vantaa,52193.28,79000.0,,2,61.0,2/3,1973,kerrostalo,True,,"ä kohde
 2h, k, kph
 
-Valoisa 2/3 kerroksen läpitalon huoneisto, jolla lasitettu eteläparveke. Hyvin hoidettu taloyhtiö, johon on tehty julkisivu- sekä putkiremontti, jonka yhteydessä uusittu kylpyhuone. Hyvässä kunnossa oleva kaksio rauhallisella alueella. Kävelymatkan päässä Hakunilan palvelut. Julkinen liikenne",False,542.96,295.2,,61,81,Hevoshaanpolku,279,60.274629,25.099093,pipe_reno_done,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24653471
-"Tädyketie 6 D, Tikkurila, Vantaa",Tikkurila,vantaa,162000.0,162000.0,,1,36.0,4/6,2003,kerrostalo,False,,,False,824.75,157.32,,61,49,,,,,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24541245
-"Orvokkikuja 6, Tikkurila, Vantaa",Tikkurila,vantaa,195916.32,199000.0,,2,64.5,2/6,2000,kerrostalo,False,,,False,854.51,,,60,50,Silkkitehdas,177,60.290359,25.03132,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24403039
-"Kuriiritie 28 A, Koivuhaka, Vantaa",Koivuhaka,vantaa,67635.39,159500.0,,2,39.0,2/2,2022,luhtitalo,False,,,False,654.78,,,59,51,Koivuhaka,445,60.28901,25.000634,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24483001
-"Peltolantie 38 A, Koivuhaka, Vantaa",Koivuhaka,vantaa,41804.14,172000.0,,2,43.0,1/4,2019,kerrostalo,False,,,False,717.99,,,59,52,Koivuhaka,245,60.29392,25.008192,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24416485
+Valoisa 2/3 kerroksen läpitalon huoneisto, jolla lasitettu eteläparveke. Hyvin hoidettu taloyhtiö, johon on tehty julkisivu- sekä putkiremontti, jonka yhteydessä uusittu kylpyhuone. Hyvässä kunnossa oleva kaksio rauhallisella alueella. Kävelymatkan päässä Hakunilan palvelut. Julkinen liikenne",False,542.96,295.2,,61,78,Hevoshaanpolku,279,60.274629,25.099093,pipe_reno_done,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24653471
+"Tädyketie 6 D, Tikkurila, Vantaa",Tikkurila,vantaa,162000.0,162000.0,,1,36.0,4/6,2003,kerrostalo,False,,,False,824.75,157.32,,61,48,,,,,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24541245
+"Orvokkikuja 6, Tikkurila, Vantaa",Tikkurila,vantaa,195916.32,199000.0,,2,64.5,2/6,2000,kerrostalo,False,,,False,854.51,,,60,49,Silkkitehdas,177,60.290359,25.03132,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24403039
+"Kuriiritie 28 A, Koivuhaka, Vantaa",Koivuhaka,vantaa,67635.39,159500.0,,2,39.0,2/2,2022,luhtitalo,False,,,False,654.78,,,59,50,Koivuhaka,445,60.28901,25.000634,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24483001
+"Kuulakuja 3 B, Länsimäki, Vantaa",Länsimäki,vantaa,85619.8,145000.0,59380.2,3,76.0,1/5,1972,kerrostalo,True,,"6 m²
+Huoneita
+3
+Kerros
+1 / 5
+Rakennusvuosi
+1972
+Rakennuksen tyyppi
+Kerrostalo
+Kaupunginosa
+Länsimäki
+Kaupunki
+Vantaa
+
+Lisää suosikiksi
+Jaa tämä kohde
+Linjasaneerattu tyylikäs ja viihtyisä kolmio Länsimäessä - ensimmäinen asuinkerros
+
+Tervetuloa tutustumaan tähän tyylikkääseen ja viihtyisään kolmioon Länsimäessä! 7",False,961.47,380.0,,58,79,Länsimäki,84,60.244718,25.110505,pipe_reno_done,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24718680
 "Rajakentäntie 4 B, Länsimäki, Vantaa",Länsimäki,vantaa,59466.21,107000.0,47533.79,2,60.0,8/9,1971,kerrostalo,True,2025,"ti remontoitu linjasaneerauksen yhteydessä. 
 
 Taloyhtiöllä on oma tontti ja sitä on hoidettu kattavasti vuosien saatossa. Viimeisimpänä on toteutettu linjasaneeraus joka valmistui 2025 vuoden aikana. 
 
-Rajakylä on erityisesti lapsiperheiden suosima alue aivan Vantaan ja Helsingin rajalla. Mellunmäen metrolle on n",False,694.08,304.75,,58,82,Länsimäki,302,60.246687,25.111798,pipe_reno_2025,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24671724
-"Neilikkatie 20, Tikkurila, Vantaa",Tikkurila,vantaa,61565.86,169000.0,,1,31.0,2/2,2021,kerrostalo,False,,,False,702.82,,,57,53,Silkkitehdas,361,60.290721,25.02744,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/17539763
-"Peltolantie 30, Koivuhaka, Vantaa",Koivuhaka,vantaa,47199.33,109000.0,,1,21.0,1/5,2018,kerrostalo,False,,,False,399.44,,,57,54,Koivuhaka,326,60.293877,25.010536,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24457910
-"Maanviljelijänkuja 9 A, Jokiniemi, Vantaa",Jokiniemi,vantaa,36397.15,130000.0,,1,25.0,5/5,2021,kerrostalo,False,,,False,505.63,,,57,55,Jokiniemi,420,60.293197,25.057063,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24416487
-"Junkkarinkaari 3, Pakkala, Vantaa",Pakkala,vantaa,189000.0,189000.0,,2,47.5,2/4,2004,kerrostalo,False,,,False,803.94,,,55,56,Pakkala,284,60.287558,24.961534,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24514833
-"Väinö Tannerin tie 17, Pakkala, Vantaa",Pakkala,vantaa,191000.0,191000.0,,2,52.5,1/4,2008,kerrostalo,False,,,False,814.06,,,55,57,Backasbrinken/Pakkalanrinne,335,60.290286,24.946995,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24341914
-"Jokiniemenkuja 3, Tikkurila, Vantaa",Tikkurila,vantaa,145000.0,145000.0,,1,28.5,4/5,2019,kerrostalo,False,,,False,581.47,,,55,58,,,,,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/17739438
-"Tankomäenkatu 5 A, Vartioharju/Mellunkylä, Helsinki",Vartioharju/Mellunkylä,helsinki,142486.51,169000.0,,2,43.0,3/4,2016,kerrostalo,False,,,False,702.82,,,52,59,,,,,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24566019
-"Kuunlilja 1 C, Tikkurila, Vantaa",Tikkurila,vantaa,144557.59,198000.0,,2,44.5,2/2,2020,kerrostalo,False,,,False,849.45,,,52,60,,,,,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24537372
-"Maanviljelijänkuja 9, Tikkurila, Vantaa",Tikkurila,vantaa,58145.0,164000.0,,2,42.0,1/5,2021,kerrostalo,False,,,False,677.54,,,52,61,,,,,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23324597
-"Rajakyläntie 2B A3, Rajakylä, Vantaa",Rajakylä,vantaa,62677.32,124000.0,,1,21.0,1/2,2016,luhtitalo,False,,,False,475.29,,,50,62,,,,,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23307800
-"Kielotie 15E A, Tikkurila, Vantaa",Tikkurila,vantaa,46693.76,155000.0,,1,25.5,4/12,2022,kerrostalo,False,,,False,632.03,,,50,63,,,,,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24403658
-"Kielotie 34 C C81, Tikkurila, Vantaa",Tikkurila,vantaa,55261.0,174397.0,,1,30.0,,2023,kerrostalo,False,,,False,730.11,,,50,64,,,,,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23673487
-"Pyhtäänkorventie 15e A02, Aviapolis, Vantaa",Aviapolis,vantaa,53729.0,134285.0,,1,24.5,1/4,2023,kerrostalo,False,,,False,527.29,,,50,65,,,,,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/17174443
-"Pyhtäänkorventie 15e A09, Aviapolis, Vantaa",Aviapolis,vantaa,54839.0,137014.0,,1,24.5,2/4,2023,kerrostalo,False,,,False,541.09,,,50,66,,,,,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23318143
-"Neilikkatie 14, Tikkurila, Vantaa",Tikkurila,vantaa,182000.0,182000.0,,3,74.5,,,,False,,,False,768.55,,,50,67,Silkkitehdas,197,60.290734,25.032257,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23252040
-"Pyhtäänkorventie 15e A20, Aviapolis, Vantaa",Aviapolis,vantaa,57503.0,143771.0,,1,24.5,4/4,2023,kerrostalo,False,,,False,575.25,,,50,68,,,,,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/17174459
-"Kukantie 10, Koivuhaka, Vantaa",Koivuhaka,vantaa,199000.0,,,4,150.0,,,,False,,,False,854.51,,,47,69,Koivuhaka,457,60.29591,25.008574,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24432353
+Rajakylä on erityisesti lapsiperheiden suosima alue aivan Vantaan ja Helsingin rajalla. Mellunmäen metrolle on n",False,694.08,304.75,,58,80,Länsimäki,302,60.246687,25.111798,pipe_reno_2025,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24671724
+"Neilikkatie 20, Tikkurila, Vantaa",Tikkurila,vantaa,61565.86,169000.0,,1,31.0,2/2,2021,kerrostalo,False,,,False,702.82,,,57,51,Silkkitehdas,361,60.290721,25.02744,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/17539763
+"Peltolantie 30, Koivuhaka, Vantaa",Koivuhaka,vantaa,47199.33,109000.0,,1,21.0,1/5,2018,kerrostalo,False,,,False,399.44,,,57,52,Koivuhaka,326,60.293877,25.010536,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24457910
+"Maanviljelijänkuja 9 A, Jokiniemi, Vantaa",Jokiniemi,vantaa,36397.15,130000.0,,1,25.0,5/5,2021,kerrostalo,False,,,False,505.63,,,57,53,Jokiniemi,420,60.293197,25.057063,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24416487
+"Hevoshaantie 5 F, Hakunila, Vantaa",Hakunila,vantaa,145402.61,199000.0,53597.39,3,84.5,,1971,rivitalo,True,2021,"022 Hevoshaantie 10 pihan kunnostustyö, sähköautojen latausratkaisusopimus (eTolppa)
+2021 ovien ja sisäänkäyntien paneeliosuuksien huoltomaalaus
+2020 putkiremontti: viemärit ja käyttövesijohdot uusittu, asuntojen märkätilat uusittu, sähköt uusittu ryhmäkeskukselle, sähköautojen latausvalmius 3,6 kW
+2017 alueputk",False,1260.51,406.0,,56,81,Hevoshaanpolku,263,60.273571,25.108696,pipe_reno_2021,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24723943
+"Väinö Tannerin tie 17, Pakkala, Vantaa",Pakkala,vantaa,191000.0,191000.0,,2,52.5,1/4,2008,kerrostalo,False,,,False,814.06,,,55,54,Backasbrinken/Pakkalanrinne,335,60.290286,24.946995,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24341914
+"Jokiniemenkuja 3, Tikkurila, Vantaa",Tikkurila,vantaa,145000.0,145000.0,,1,28.5,4/5,2019,kerrostalo,False,,,False,581.47,,,55,55,,,,,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/17739438
+"Tankomäenkatu 5 A, Vartioharju/Mellunkylä, Helsinki",Vartioharju/Mellunkylä,helsinki,142486.51,169000.0,,2,43.0,3/4,2016,kerrostalo,False,,,False,702.82,,,52,56,,,,,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24566019
+"Kuunlilja 1 C, Tikkurila, Vantaa",Tikkurila,vantaa,144557.59,198000.0,,2,44.5,2/2,2020,kerrostalo,False,,,False,849.45,,,52,57,,,,,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24537372
+"Maanviljelijänkuja 9, Tikkurila, Vantaa",Tikkurila,vantaa,58145.0,164000.0,,2,42.0,1/5,2021,kerrostalo,False,,,False,677.54,,,52,58,,,,,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23324597
+"Rajakyläntie 2B A3, Rajakylä, Vantaa",Rajakylä,vantaa,62677.32,124000.0,,1,21.0,1/2,2016,luhtitalo,False,,,False,475.29,,,50,59,,,,,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23307800
+"Kielotie 15E A, Tikkurila, Vantaa",Tikkurila,vantaa,46693.76,155000.0,,1,25.5,4/12,2022,kerrostalo,False,,,False,632.03,,,50,60,,,,,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24403658
+"Kielotie 34 C C81, Tikkurila, Vantaa",Tikkurila,vantaa,55261.0,174397.0,,1,30.0,,2023,kerrostalo,False,,,False,730.11,,,50,61,,,,,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23673487
+"Pyhtäänkorventie 15e A02, Aviapolis, Vantaa",Aviapolis,vantaa,53729.0,134285.0,,1,24.5,1/4,2023,kerrostalo,False,,,False,527.29,,,50,62,,,,,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/17174443
+"Pyhtäänkorventie 15e A09, Aviapolis, Vantaa",Aviapolis,vantaa,54839.0,137014.0,,1,24.5,2/4,2023,kerrostalo,False,,,False,541.09,,,50,63,,,,,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23318143
+"Neilikkatie 14, Tikkurila, Vantaa",Tikkurila,vantaa,182000.0,182000.0,,3,74.5,,,,False,,,False,768.55,,,50,64,Silkkitehdas,197,60.290734,25.032257,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23252040
+"Pyhtäänkorventie 15e A20, Aviapolis, Vantaa",Aviapolis,vantaa,57503.0,143771.0,,1,24.5,4/4,2023,kerrostalo,False,,,False,575.25,,,50,65,,,,,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/17174459
+"Kukantie 10, Koivuhaka, Vantaa",Koivuhaka,vantaa,199000.0,,,4,150.0,,,,False,,,False,854.51,,,47,66,Koivuhaka,457,60.29591,25.008574,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24432353
 "Peltolantie 9 D, Tikkurila, Vantaa",Tikkurila,vantaa,145378.01,175000.0,29621.99,2,49.5,3/4,1975,kerrostalo,True,,"²
 Huoneita
 2
@@ -137,7 +176,7 @@ Jaa tämä kohde
 + Oma tontti
 + Viilentävä ilmalämpöpumppu
 
-Valoisa ja lämminhenkinen kaksio Tikkurilan parhaalla paikalla. Muuttovalmis koti sinulle, j",False,955.91,222.75,,46,83,Koivuhaka,329,60.294107,25.010188,pipe_reno_done,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24674404
+Valoisa ja lämminhenkinen kaksio Tikkurilan parhaalla paikalla. Muuttovalmis koti sinulle, j",False,955.91,222.75,,46,82,Koivuhaka,329,60.294107,25.010188,pipe_reno_done,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24674404
 "Hiekkaharjuntie 9 A, Hiekkaharju, Vantaa",Hiekkaharju,vantaa,111153.41,186000.0,74846.59,3,65.5,1/3,1969,kerrostalo,True,2025,"pöjohtoverkoston kuntotutkimus, pihaviemärien kuntotutkimus
 2033 Kaukolämmön alajakokeskuksen uusiminen
 Tehdyt remontit
@@ -146,9 +185,9 @@ Tehdyt remontit
 2022 Linjasaneerauksen hankesuunnittelu
 2022 Linjasaneerauksen suunnittelu
 2020 Kevyt julkisivun huoltokorjaus
-2020 Ikkunoiden",False,1083.53,294.75,,46,84,,,,,pipe_reno_2025,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24645455
-"Lähdepuistontie 5 A, Kuussilta, Vantaa",Kuussilta,vantaa,57127.7,62000.0,,2,40.5,5/6,,,False,,,False,161.8,,,42,70,Vaarala,244,60.265198,25.102541,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24551102
-"Lähdepuistontie 13 C, Vaarala, Vantaa",Vaarala,vantaa,81776.32,82000.0,,2,40.5,6/6,,,False,,,False,262.93,,,38,71,Vaarala,244,60.265198,25.102541,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24338163
+2020 Ikkunoiden",False,1083.53,294.75,,46,83,,,,,pipe_reno_2025,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24645455
+"Lähdepuistontie 5 A, Kuussilta, Vantaa",Kuussilta,vantaa,57127.7,62000.0,,2,40.5,5/6,,,False,,,False,161.8,,,42,67,Vaarala,244,60.265198,25.102541,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24551102
+"Lähdepuistontie 13 C, Vaarala, Vantaa",Vaarala,vantaa,81776.32,82000.0,,2,40.5,6/6,,,False,,,False,262.93,,,38,68,Vaarala,244,60.265198,25.102541,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24338163
 "Yllästunturintie 2 C, Mellunmäki, Helsinki",Mellunmäki,helsinki,87778.19,139000.0,51221.81,2,45.0,3/3,1976,kerrostalo,True,2025,"kokouksessa erikseen.
 Tehdyt remontit
 Palovaroittimet joka huoneistoon 2025
@@ -157,24 +196,27 @@ Linjasaneeraus 2023
 Autojen latauslaitteet 6 autopaikalle 2023
 Aurinkoenergiahanke 2023
 ML-/LTO-hanke 2023
-Autotallien ovien uusinta linjasaneerauksen yhteydessä 20",False,875.13,324.0,,36,85,,,,,pipe_reno_2025,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24643215
-"Albert Petreliuksen katu 4b B, Jokiniemi, Vantaa",Jokiniemi,vantaa,193727.23,194000.0,,3,75.0,2/5,,,False,,,False,829.23,,,29,72,Tikkurilan asema,349,60.296148,25.049612,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24565190
-"Uotinmäentie 11 D 31, Mellunkylä, Helsinki",Mellunkylä,helsinki,155000.0,144000.0,,2,55.0,3/3,,,False,,,False,576.41,,,29,73,Mellunmäki,413,60.236699,25.114868,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/17024712
-"Jokiniemenkuja 3, Tikkurila, Vantaa",Tikkurila,vantaa,59163.02,159900.0,,1,29.0,4/5,,,False,,,False,656.81,,,15,74,,,,,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/16047291
-"Maalinauhantie 3 A, Länsimäki, Vantaa",Länsimäki,vantaa,59000.0,59000.0,,2,45.0,4/5,1972,kerrostalo,True,2026,". Asunto on hyvässä kunnossa, ja se on remontoitu hiljattain. Keittiö ja kylpyhuone on uusittu vuonna 2026, joten ne ovat modernit ja käytännölliset. Putkiremontti on juuri valmistunut.
+Autotallien ovien uusinta linjasaneerauksen yhteydessä 20",False,875.13,324.0,,36,84,,,,,pipe_reno_2025,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24643215
+"Uotinmäentie 11 D 31, Mellunkylä, Helsinki",Mellunkylä,helsinki,155000.0,144000.0,,2,55.0,3/3,,,False,,,False,576.41,,,29,69,Mellunmäki,413,60.236699,25.114868,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/17024712
+"Jokiniemenkuja 3, Tikkurila, Vantaa",Tikkurila,vantaa,59163.02,159900.0,,1,29.0,4/5,,,False,,,False,656.81,,,15,70,,,,,new_house_2000plus,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/16047291
+"Lumikero 6 C, Länsimäki, Vantaa",Länsimäki,vantaa,68988.2,69000.0,11.8,1,33.5,3/3,1974,kerrostalo,True,,"un kokoinen keittiö.
 
-Asunnossa on  parveke, joka avautuu etelään, tarjoten mukavan paikan nauttia auringosta ja rauhallisista hetkistä. Taloyhtiöss",False,394.13,247.5,,72,86,Länsimäki,158,60.244799,25.108635,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24689993
-"Kuulakuja 4, Länsimäki, Vantaa",Länsimäki,vantaa,69990.0,69990.0,,2,59.0,4/5,1971,kerrostalo,False,,,False,202.2,,,60,87,Länsimäki,95,60.244035,25.109282,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24021458
-"Maalinauhantie 1 B, Länsimäki, Vantaa",Länsimäki,vantaa,95682.86,99900.0,4217.14,3,76.0,2/5,1972,kerrostalo,False,,,False,718.23,364.8,,59,88,Länsimäki,158,60.244799,25.108635,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24705769
+Kylpyhuone on juuri valmistunut putkisaneerauksen yhteydessä ja se on vielä korkkaamaton. Pääset nauttimaan tästä.
+
+Yhtiössä on linjasaneeraus loppuvaiheessa. Urakan valmistuttua jyvitetään kustannukset huoneistoille.
+
+Hyvin hoidettu yhtiö, myös julkisivut ja katto sekä ikkunat/ovet uusittu.",False,389.82,192.63,,60,85,Länsimäki,313,60.244915,25.116358,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24714176
+"Kuulakuja 4, Länsimäki, Vantaa",Länsimäki,vantaa,69990.0,69990.0,,2,59.0,4/5,1971,kerrostalo,False,,,False,202.2,,,60,86,Länsimäki,95,60.244035,25.109282,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24021458
+"Maalinauhantie 1 B, Länsimäki, Vantaa",Länsimäki,vantaa,95682.86,99900.0,4217.14,3,76.0,2/5,1972,kerrostalo,False,,,False,718.23,364.8,,59,87,Länsimäki,158,60.244799,25.108635,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24705769
 "Suunnistajankuja 10 B, Länsimäki, Vantaa",Länsimäki,vantaa,99000.0,99000.0,,2,48.0,2/4,1978,kerrostalo,False,,,True,588.88,240.0,,55,2,Länsimäki,278,60.246295,25.113015,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24639776
-"Lähdepuistontie 5 A, Vaarala, Vantaa",Vaarala,vantaa,63736.05,64000.0,,2,45.5,1/6,1972,kerrostalo,False,,,False,171.91,,,55,89,Vaarala,46,60.266716,25.099396,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24490311
-"Keihästie 5 D, Länsimäki, Vantaa",Länsimäki,vantaa,103570.46,110000.0,,3,76.0,1/5,1972,kerrostalo,False,,,False,404.5,,,55,90,Länsimäki,172,60.242811,25.109003,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24441515
-"Lähdepuistontie 5, Vaarala, Vantaa",Vaarala,vantaa,7200.0,64900.0,,2,45.5,6/6,1972,kerrostalo,False,,,False,176.46,,,55,91,Vaarala,137,60.265778,25.100331,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/16953238
-"Ounasvaarankuja 3 B, Mellunmäki, Helsinki",Mellunmäki,helsinki,85000.0,85000.0,,2,52.0,1/6,1978,kerrostalo,False,,,False,512.09,234.0,,54,92,Mellunmäki,354,60.238378,25.115296,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24698977
-"Raudikkokuja 6 B, Hakunila, Vantaa",Hakunila,vantaa,96420.85,134000.0,,3,72.5,5/8,1976,kerrostalo,False,,,False,525.85,,,52,93,Hakunila,99,60.277173,25.106645,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24305603
-"Hepokuja 7 A, Hakunila, Vantaa",Hakunila,vantaa,90981.56,148000.0,,4,86.5,8/10,1973,kerrostalo,False,,,False,596.64,,,52,94,Hevoshaanpolku,156,60.273431,25.106585,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24356402
-"Kuulakuja 3 A, Länsimäki, Vantaa",Länsimäki,vantaa,62179.18,109000.0,,2,59.0,3/5,1972,kerrostalo,False,,,False,399.44,,,52,95,Länsimäki,84,60.244718,25.110505,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24335654
-"Lähdepuistontie 5, Vaarala, Vantaa",Vaarala,vantaa,72307.21,78000.0,,2,45.5,2/6,1972,kerrostalo,False,,,False,242.7,,,52,96,Vaarala,137,60.265778,25.100331,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23407179
+"Lähdepuistontie 5 A, Vaarala, Vantaa",Vaarala,vantaa,63736.05,64000.0,,2,45.5,1/6,1972,kerrostalo,False,,,False,171.91,,,55,88,Vaarala,46,60.266716,25.099396,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24490311
+"Keihästie 5 D, Länsimäki, Vantaa",Länsimäki,vantaa,103570.46,110000.0,,3,76.0,1/5,1972,kerrostalo,False,,,False,404.5,,,55,89,Länsimäki,172,60.242811,25.109003,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24441515
+"Lähdepuistontie 5, Vaarala, Vantaa",Vaarala,vantaa,7200.0,64900.0,,2,45.5,6/6,1972,kerrostalo,False,,,False,176.46,,,55,90,Vaarala,137,60.265778,25.100331,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/16953238
+"Ounasvaarankuja 3 B, Mellunmäki, Helsinki",Mellunmäki,helsinki,85000.0,85000.0,,2,52.0,1/6,1978,kerrostalo,False,,,False,512.09,234.0,,54,91,Mellunmäki,354,60.238378,25.115296,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24698977
+"Raudikkokuja 6 B, Hakunila, Vantaa",Hakunila,vantaa,96420.85,134000.0,,3,72.5,5/8,1976,kerrostalo,False,,,False,525.85,,,52,92,Hakunila,99,60.277173,25.106645,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24305603
+"Hepokuja 7 A, Hakunila, Vantaa",Hakunila,vantaa,90981.56,148000.0,,4,86.5,8/10,1973,kerrostalo,False,,,False,596.64,,,52,93,Hevoshaanpolku,156,60.273431,25.106585,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24356402
+"Kuulakuja 3 A, Länsimäki, Vantaa",Länsimäki,vantaa,62179.18,109000.0,,2,59.0,3/5,1972,kerrostalo,False,,,False,399.44,,,52,94,Länsimäki,84,60.244718,25.110505,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24335654
+"Lähdepuistontie 5, Vaarala, Vantaa",Vaarala,vantaa,72307.21,78000.0,,2,45.5,2/6,1972,kerrostalo,False,,,False,242.7,,,52,95,Vaarala,137,60.265778,25.100331,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23407179
 "Oritie 2 D, Hakunila, Vantaa",Hakunila,vantaa,105000.0,105000.0,,4,97.0,1/5,1974,kerrostalo,False,2029,"usiminen
 2029 Putkistojen seurantatutkimus
 2029 Linjasaneerauksen hankesuunnittelu lisätutkimuksineen
@@ -185,7 +227,7 @@ Tehdyt remontit
 Viimeisimmät korjaukset/kunnostukset
 2025 Huoneistojen palovaroittimien uusinta
 2025 Ilmanvaihdon nuoh",True,932.12,552.9,,50,3,Hevoshaanpolku,251,60.271763,25.103355,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24683162
-"Hepokuja 6 C, Hakunila, Vantaa",Hakunila,vantaa,121760.6,169000.0,47239.4,4,94.0,4/6,1971,kerrostalo,False,,,False,1135.22,432.4,,50,97,Hevoshaanpolku,136,60.273921,25.106463,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23678381
+"Hepokuja 6 C, Hakunila, Vantaa",Hakunila,vantaa,121760.6,169000.0,47239.4,4,94.0,4/6,1971,kerrostalo,False,,,False,1135.22,432.4,,50,96,Hevoshaanpolku,136,60.273921,25.106463,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23678381
 "Lähdepuistontie 18 B, Vaarala, Vantaa",Vaarala,vantaa,149000.0,149000.0,,4,116.0,,1969,rivitalo,True,2026,"idee-suihku.
 Säilytystilat
 Kylmä ulkovarasto, lämmin ulkovarasto ja kaapistot
@@ -194,21 +236,19 @@ Tulevat remontit
 2029 Linjasaneeraus
 2026-2027 Huonokuntoisten piha-aitojen, kuistien ja portaiden korjauksia
 2026 Sähköautolatausten infran kartoitus ja suunnittelu
-2026 Huonokuntoisten",False,1165.69,564.0,,50,98,Vaarala,352,60.264373,25.103562,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24656626
-"Oritie 2 A, Hakunila, Vantaa",Hakunila,vantaa,69000.0,69000.0,,3,79.0,3/3,1974,kerrostalo,False,,,False,647.49,450.3,,50,99,Hevoshaanpolku,251,60.271763,25.103355,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24390111
-"Harmokuja 6, Hakunila, Vantaa",Hakunila,vantaa,78000.0,78000.0,,2,56.0,9/9,1976,kerrostalo,False,,,False,574.92,332.22,,50,100,Hakunila,264,60.277267,25.10145,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24630065
-"Oritie 2, Hakunila, Vantaa",Hakunila,vantaa,65000.0,65000.0,,2,61.0,1/5,1974,kerrostalo,False,,,False,176.97,,,50,101,Hevoshaanpolku,287,60.27148,25.102846,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24580856
-"Pallaskero 4, Länsimäki, Vantaa",Länsimäki,vantaa,119000.0,119000.0,,3,82.0,2/9,1975,kerrostalo,False,,,False,450.01,,,50,102,Länsimäki,342,60.245818,25.116,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24545661
-"Oritie 2 B, Hakunila, Vantaa",Hakunila,vantaa,69000.0,69000.0,,2,61.0,2/3,1974,kerrostalo,False,,,False,197.19,,,50,103,Hevoshaanpolku,251,60.271763,25.103355,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24413388
-"Estetie 19, Rajakylä, Vantaa",Rajakylä,vantaa,199000.0,,,4,139.0,,1951,omakotitalo,False,,,False,854.51,,,50,104,Rajakylä,360,60.249232,25.106538,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24347714
-"Lähdepuistontie 5 A, Vaarala, Vantaa",Vaarala,vantaa,85581.28,87000.0,,2,40.5,3/6,1972,kerrostalo,False,,,False,288.21,,,48,105,Vaarala,46,60.266716,25.099396,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23668264
-"Harmokuja 6, Hakunila, Vantaa",Hakunila,vantaa,120000.0,120000.0,,3,75.0,8/9,1976,kerrostalo,False,,,False,854.9,399.84,,47,106,Hakunila,264,60.277267,25.10145,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24679162
-"Satulakuja 4 B, Hakunila, Vantaa",Hakunila,vantaa,97717.95,110000.0,12282.05,3,75.5,1/5,1979,kerrostalo,False,,,False,766.9,362.4,,47,107,Hakunila,276,60.280183,25.10839,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24654511
-"Lähdepuistontie 12 G, Vaarala, Vantaa",Vaarala,vantaa,185000.0,185000.0,,4,99.5,,1969,rivitalo,False,,,False,783.72,,,47,108,Vaarala,298,60.265451,25.104417,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24596489
-"Ratsumiehenpolku 2 A, Hakunila, Vantaa",Hakunila,vantaa,124900.0,124900.0,,3,78.5,2/6,1979,kerrostalo,False,,,False,479.84,,,47,109,Hakunila,229,60.279828,25.104068,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24394248
-"Oritie 4, Hakunila, Vantaa",Hakunila,vantaa,79000.0,79000.0,,2,52.5,1/6,1975,kerrostalo,False,,,False,247.76,,,47,110,Hevoshaanpolku,282,60.271901,25.101125,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23637251
-"Kurukuja 4 A, Länsimäki, Vantaa",Länsimäki,vantaa,199000.0,199000.0,,3,110.0,,1979,rivitalo,False,,,False,854.51,,,47,111,Länsimäki,460,60.247061,25.116601,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23288681
-"Hepokuja 9, Hakunila, Vantaa",Hakunila,vantaa,98000.0,,,3,58.5,2/10,1974,kerrostalo,False,,,False,343.83,,,47,112,Hevoshaanpolku,213,60.272446,25.106246,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23015854
+2026 Huonokuntoisten",False,1165.69,564.0,,50,97,Vaarala,352,60.264373,25.103562,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24656626
+"Oritie 2 A, Hakunila, Vantaa",Hakunila,vantaa,69000.0,69000.0,,3,79.0,3/3,1974,kerrostalo,False,,,False,647.49,450.3,,50,98,Hevoshaanpolku,251,60.271763,25.103355,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24390111
+"Oritie 2, Hakunila, Vantaa",Hakunila,vantaa,65000.0,65000.0,,2,61.0,1/5,1974,kerrostalo,False,,,False,176.97,,,50,99,Hevoshaanpolku,287,60.27148,25.102846,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24580856
+"Oritie 2 B, Hakunila, Vantaa",Hakunila,vantaa,69000.0,69000.0,,2,61.0,2/3,1974,kerrostalo,False,,,False,197.19,,,50,100,Hevoshaanpolku,251,60.271763,25.103355,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24413388
+"Estetie 19, Rajakylä, Vantaa",Rajakylä,vantaa,199000.0,,,4,139.0,,1951,omakotitalo,False,,,False,854.51,,,50,101,Rajakylä,360,60.249232,25.106538,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24347714
+"Lähdepuistontie 5 A, Vaarala, Vantaa",Vaarala,vantaa,85581.28,87000.0,,2,40.5,3/6,1972,kerrostalo,False,,,False,288.21,,,48,102,Vaarala,46,60.266716,25.099396,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23668264
+"Harmokuja 6, Hakunila, Vantaa",Hakunila,vantaa,120000.0,120000.0,,3,75.0,8/9,1976,kerrostalo,False,,,False,854.9,399.84,,47,103,Hakunila,264,60.277267,25.10145,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24679162
+"Satulakuja 4 B, Hakunila, Vantaa",Hakunila,vantaa,97717.95,110000.0,12282.05,3,75.5,1/5,1979,kerrostalo,False,,,False,766.9,362.4,,47,104,Hakunila,276,60.280183,25.10839,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24654511
+"Lähdepuistontie 12 G, Vaarala, Vantaa",Vaarala,vantaa,185000.0,185000.0,,4,99.5,,1969,rivitalo,False,,,False,783.72,,,47,105,Vaarala,298,60.265451,25.104417,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24596489
+"Ratsumiehenpolku 2 A, Hakunila, Vantaa",Hakunila,vantaa,124900.0,124900.0,,3,78.5,2/6,1979,kerrostalo,False,,,False,479.84,,,47,106,Hakunila,229,60.279828,25.104068,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24394248
+"Oritie 4, Hakunila, Vantaa",Hakunila,vantaa,79000.0,79000.0,,2,52.5,1/6,1975,kerrostalo,False,,,False,247.76,,,47,107,Hevoshaanpolku,282,60.271901,25.101125,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23637251
+"Kurukuja 4 A, Länsimäki, Vantaa",Länsimäki,vantaa,199000.0,199000.0,,3,110.0,,1979,rivitalo,False,,,False,854.51,,,47,108,Länsimäki,460,60.247061,25.116601,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23288681
+"Hepokuja 9, Hakunila, Vantaa",Hakunila,vantaa,98000.0,,,3,58.5,2/10,1974,kerrostalo,False,,,False,343.83,,,47,109,Hevoshaanpolku,213,60.272446,25.106246,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23015854
 "Lumikero 6 A, Länsimäki, Vantaa",Länsimäki,vantaa,112433.04,115000.0,2566.96,3,76.0,2/3,1974,kerrostalo,False,,"ksen tyyppi
 Kerrostalo
 Kaupunginosa
@@ -220,41 +260,42 @@ Lisää suosikiksi
 Jaa tämä kohde
 Tilava ja toimivapohjainen koti puistomaisin näkymin – linjasaneeraus jo takana
 
-Tässä kodissa yhdistyvät toimiva pohjaratkaisu, väljät huoneet ja mahdollisuus tehdä asunnosta juuri oman näköinen. Taloyhtiössä on toteut",False,866.78,437.0,,46,113,Länsimäki,313,60.244915,25.116358,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24660330
-"Lähdepuistontie 12 B, Vaarala, Vantaa",Vaarala,vantaa,180492.68,189000.0,8507.32,4,99.5,,1969,rivitalo,False,,,False,1353.94,550.0,,46,114,Vaarala,258,60.266194,25.104386,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24579809
-"Lähdepuistontie 12 H, Vaarala, Vantaa",Vaarala,vantaa,169610.27,178000.0,8389.73,4,99.5,,1969,rivitalo,False,,,False,1298.33,550.0,,46,115,Vaarala,334,60.265177,25.104818,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24641801
+Tässä kodissa yhdistyvät toimiva pohjaratkaisu, väljät huoneet ja mahdollisuus tehdä asunnosta juuri oman näköinen. Taloyhtiössä on toteut",False,866.78,437.0,,46,110,Länsimäki,313,60.244915,25.116358,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24660330
+"Lähdepuistontie 12 B, Vaarala, Vantaa",Vaarala,vantaa,180492.68,189000.0,8507.32,4,99.5,,1969,rivitalo,False,,,False,1353.94,550.0,,46,111,Vaarala,258,60.266194,25.104386,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24579809
+"Lähdepuistontie 12 H, Vaarala, Vantaa",Vaarala,vantaa,169610.27,178000.0,8389.73,4,99.5,,1969,rivitalo,False,,,False,1298.33,550.0,,46,112,Vaarala,334,60.265177,25.104818,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24641801
 "Linnoituskuja 1 C, Länsimäki, Vantaa",Länsimäki,vantaa,41334.33,49000.0,7665.67,3,77.0,3/3,1978,kerrostalo,True,2026,"kkeista, kuten linjasaneerauksesta, saa lisätietoa välittäjältä.
 
 Ylimääräinen yhtiökokous pidetään 23.09.2026 jossa päätetään seuraavista asioista
 - Linjasaneerausurakan (LVIS) sekä päiväkodin saneerauksen toteuttamisesta
 - Hankkeen rahoituksesta 3.500.000€ 25v laina-ajalla
 
-Länsimäki on rauhallinen ja vehreä as",False,527.27,431.2,,45,116,Länsimäki,387,60.245038,25.117694,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24671044
-"Oritie 4 D 57, Hakunila, Vantaa",Hakunila,vantaa,56378.16,70000.0,,4,784.0,6/6,1975,kerrostalo,False,,,False,202.25,,,45,117,Hevoshaanpolku,251,60.271763,25.103355,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24609440
-"Hepokuja 6 E, Hakunila, Vantaa",Hakunila,vantaa,104000.0,104000.0,,1,31.0,6/7,1971,kerrostalo,False,,,False,374.16,,,45,118,Hevoshaanpolku,138,60.273924,25.10649,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24560644
-"Harmokuja 4, Hakunila, Vantaa",Hakunila,vantaa,43896.33,48000.0,,2,55.0,5/7,1977,kerrostalo,False,,,False,91.01,,,45,119,Hakunila,287,60.277694,25.100828,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24463536
-"Oritie 4 A, Hakunila, Vantaa",Hakunila,vantaa,86540.51,89000.0,,2,61.0,3/4,1975,kerrostalo,False,,,False,298.32,,,45,120,Hevoshaanpolku,251,60.271763,25.103355,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24408830
-"Relanderinpiha 5, Jokiniemi, Vantaa",Jokiniemi,vantaa,180000.0,180000.0,,2,97.0,86/97,1909,omakotitalo,False,,,False,758.44,,,44,121,Jokiniemi,417,60.293517,25.055612,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24546063
-"Jousitie 20 A, Rajakylä, Vantaa",Rajakylä,vantaa,128000.0,128000.0,,2,62.0,,1977,rivitalo,False,,,False,805.51,310.0,,43,122,Rajakylä,374,60.250922,25.10522,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24704444
+Länsimäki on rauhallinen ja vehreä as",False,527.27,431.2,,45,113,Länsimäki,387,60.245038,25.117694,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24671044
+"Oritie 4 D 57, Hakunila, Vantaa",Hakunila,vantaa,56378.16,70000.0,,4,97.5,6/6,1975,kerrostalo,False,,,False,202.25,,,45,114,Hevoshaanpolku,251,60.271763,25.103355,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24609440
+"Hepokuja 6 E, Hakunila, Vantaa",Hakunila,vantaa,104000.0,104000.0,,1,31.0,6/7,1971,kerrostalo,False,,,False,374.16,,,45,115,Hevoshaanpolku,138,60.273924,25.10649,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24560644
+"Pallaskero 4, Länsimäki, Vantaa",Länsimäki,vantaa,99000.0,119000.0,,3,82.0,2/9,1975,kerrostalo,False,,,False,450.01,,,45,116,Länsimäki,342,60.245818,25.116,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24545661
+"Harmokuja 4, Hakunila, Vantaa",Hakunila,vantaa,43896.33,48000.0,,2,55.0,5/7,1977,kerrostalo,False,,,False,91.01,,,45,117,Hakunila,287,60.277694,25.100828,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24463536
+"Oritie 4 A, Hakunila, Vantaa",Hakunila,vantaa,86540.51,89000.0,,2,61.0,3/4,1975,kerrostalo,False,,,False,298.32,,,45,118,Hevoshaanpolku,251,60.271763,25.103355,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24408830
+"Relanderinpiha 5, Jokiniemi, Vantaa",Jokiniemi,vantaa,180000.0,180000.0,,2,97.0,86/97,1909,omakotitalo,False,,,False,758.44,,,44,119,Jokiniemi,417,60.293517,25.055612,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24546063
+"Jousitie 20 A, Rajakylä, Vantaa",Rajakylä,vantaa,128000.0,128000.0,,2,62.0,,1977,rivitalo,False,,,False,805.51,310.0,,43,120,Rajakylä,374,60.250922,25.10522,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24704444
 "Orvokkitie 4 B, Tikkurila, Vantaa",Tikkurila,vantaa,149000.0,149000.0,,2,55.0,3/3,1974,kerrostalo,False,,,True,873.94,272.25,,42,4,Tikkuraitti,206,60.29467,25.035363,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24688691
-"Pallastunturintie 1, Länsimäki, Vantaa",Länsimäki,vantaa,148656.0,165000.0,16344.0,2,57.5,1/6,1998,kerrostalo,False,,,False,946.75,264.16,,42,123,Länsimäki,207,60.242177,25.110201,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24677363
-"Ratsumiehenpolku 2 A, Hakunila, Vantaa",Hakunila,vantaa,93466.69,119000.0,,3,78.5,3/6,1979,kerrostalo,False,,,False,450.01,,,42,124,Hakunila,229,60.279828,25.104068,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24619918
-"Hiirakkotie 2 D, Hakunila, Vantaa",Hakunila,vantaa,89564.41,149000.0,,4,93.0,7/9,1971,kerrostalo,False,,,False,601.69,,,42,125,Hevoshaanpolku,242,60.275414,25.100669,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24602268
-"Lähdepuistontie 12, Vaarala, Vantaa",Vaarala,vantaa,185402.83,194000.0,,4,99.5,,1969,rivitalo,False,,,False,829.23,,,42,126,Vaarala,233,60.26648,25.104095,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24531612
-"Hiirakkotie 8 A, Hakunila, Vantaa",Hakunila,vantaa,91412.4,149000.0,,3,79.5,1/3,1973,kerrostalo,False,,,False,601.69,,,42,127,Hevoshaanpolku,242,60.275414,25.100669,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24359151
-"Linnoituskuja 1, Länsimäki, Vantaa",Länsimäki,vantaa,82321.82,89000.0,,2,50.0,1/3,1978,kerrostalo,False,,,False,298.32,,,42,128,Länsimäki,335,60.244366,25.117018,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23993501
-"Peltolantie 21 B, Viertola, Vantaa",Viertola,vantaa,142032.95,149000.0,6967.05,2,55.0,1/3,1976,kerrostalo,False,,,False,854.69,253.0,,41,129,Koivuhaka,329,60.294107,25.010188,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24661923
-"Hepokuja 6 E, Hakunila, Vantaa",Hakunila,vantaa,77326.2,93000.0,,1,31.0,3/7,1971,kerrostalo,False,,,False,318.54,,,40,130,Hevoshaanpolku,138,60.273924,25.10649,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24547833
-"Peltolantie 21 A, Viertola, Vantaa",Viertola,vantaa,134000.0,134000.0,,2,54.5,3/3,1976,kerrostalo,False,,,False,525.85,,,40,131,Tikkuraitti,251,60.293616,25.032619,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24424263
-"Peltolantie 21 A, Viertola, Vantaa",Viertola,vantaa,141467.06,149000.0,7532.94,2,55.0,3/3,1976,kerrostalo,False,,,False,854.69,253.0,,39,132,Tikkuraitti,251,60.293616,25.032619,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24237812
-"Lumikero 4 B, Länsimäki, Vantaa",Länsimäki,vantaa,89000.0,89000.0,,1,35.0,4/9,1974,kerrostalo,False,,,False,298.32,,,39,133,Länsimäki,313,60.244915,25.116358,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/21231683
-"Rajakentänkuja 4 A, Länsimäki, Vantaa",Länsimäki,vantaa,73645.74,120000.0,,2,51.0,7/9,1971,kerrostalo,False,,,False,455.06,,,38,134,Länsimäki,272,60.246335,25.109531,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24320160
-"Lumikero 6, Länsimäki, Vantaa",Länsimäki,vantaa,78740.0,79999.0,,1,33.5,1/3,1974,kerrostalo,False,,,False,252.81,,,38,135,Länsimäki,235,60.244888,25.114872,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23757429
-"Kurukuja 4 E, Länsimäki, Vantaa",Länsimäki,vantaa,182139.26,183000.0,,3,80.0,,1979,rivitalo,False,,,False,773.61,,,38,136,Länsimäki,478,60.246774,25.117628,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23830560
-"Uotinmäentie 11 D 33, Mellunkylä, Helsinki",Mellunkylä,helsinki,126000.0,126000.0,,2,55.0,3/3,1968,kerrostalo,False,,,False,485.4,,,38,137,Mellunmäki,413,60.236699,25.114868,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23669883
-"Harmotie 6, Hakunila, Vantaa",Hakunila,vantaa,111000.0,130000.0,,2,64.5,2/2,1978,kerrostalo,False,,,False,505.63,,,38,138,Hakunila,364,60.277668,25.099433,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/17414459
-"Peltolantie 21 A, Tikkurila, Vantaa",Tikkurila,vantaa,155000.0,155000.0,,2,58.0,1/3,1976,kerrostalo,False,,,False,898.83,266.8,,35,139,,,,,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24674412
-"Uotinmäentie 11 H, Mellunmäki, Helsinki",Mellunmäki,helsinki,137235.59,149000.0,,3,73.0,2/3,1968,kerrostalo,False,,,False,601.69,,,33,140,Mellunmäki,413,60.236699,25.114868,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24346304
-"Maalinauhantie 4, Rajakylä, Vantaa",Rajakylä,vantaa,139074.38,174000.0,,3,79.5,,1979,rivitalo,False,,,False,728.1,,,28,141,,,,,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24083443
-"Neilikkatie 7 C, Tikkurila, Vantaa",Tikkurila,vantaa,153429.99,200000.0,,2,59.0,3/6,1970,kerrostalo,False,,,False,859.56,,,27,142,Tikkuraitti,234,60.290926,25.037682,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24467300
-"Ounasvaarantie 1, Mellunkylä, Helsinki",Mellunkylä,helsinki,125000.0,195000.0,,3,60.5,3/5,1974,kerrostalo,False,,,False,834.28,,,25,143,Mellunmäki,409,60.237235,25.115501,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/17773543
+"Pallastunturintie 1, Länsimäki, Vantaa",Länsimäki,vantaa,148656.0,165000.0,16344.0,2,57.5,1/6,1998,kerrostalo,False,,,False,946.75,264.16,,42,121,Länsimäki,207,60.242177,25.110201,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24677363
+"Ratsumiehenpolku 2 A, Hakunila, Vantaa",Hakunila,vantaa,93466.69,119000.0,,3,78.5,3/6,1979,kerrostalo,False,,,False,450.01,,,42,122,Hakunila,229,60.279828,25.104068,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24619918
+"Hiirakkotie 2 D, Hakunila, Vantaa",Hakunila,vantaa,89564.41,149000.0,,4,93.0,7/9,1971,kerrostalo,False,,,False,601.69,,,42,123,Hevoshaanpolku,242,60.275414,25.100669,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24602268
+"Lähdepuistontie 12, Vaarala, Vantaa",Vaarala,vantaa,185402.83,194000.0,,4,99.5,,1969,rivitalo,False,,,False,829.23,,,42,124,Vaarala,233,60.26648,25.104095,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24531612
+"Hiirakkotie 8 A, Hakunila, Vantaa",Hakunila,vantaa,91412.4,149000.0,,3,79.5,1/3,1973,kerrostalo,False,,,False,601.69,,,42,125,Hevoshaanpolku,242,60.275414,25.100669,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24359151
+"Linnoituskuja 1, Länsimäki, Vantaa",Länsimäki,vantaa,82321.82,89000.0,,2,50.0,1/3,1978,kerrostalo,False,,,False,298.32,,,42,126,Länsimäki,335,60.244366,25.117018,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23993501
+"Peltolantie 21 B, Viertola, Vantaa",Viertola,vantaa,142032.95,149000.0,6967.05,2,55.0,1/3,1976,kerrostalo,False,,,False,854.69,253.0,,41,127,Koivuhaka,329,60.294107,25.010188,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24661923
+"Hepokuja 6 E, Hakunila, Vantaa",Hakunila,vantaa,77326.2,93000.0,,1,31.0,3/7,1971,kerrostalo,False,,,False,318.54,,,40,128,Hevoshaanpolku,138,60.273924,25.10649,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24547833
+"Peltolantie 21 A, Viertola, Vantaa",Viertola,vantaa,134000.0,134000.0,,2,54.5,3/3,1976,kerrostalo,False,,,False,525.85,,,40,129,Tikkuraitti,251,60.293616,25.032619,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24424263
+"Peltolantie 21 A, Viertola, Vantaa",Viertola,vantaa,141467.06,149000.0,7532.94,2,55.0,3/3,1976,kerrostalo,False,,,False,854.69,253.0,,39,130,Tikkuraitti,251,60.293616,25.032619,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24237812
+"Lumikero 4 B, Länsimäki, Vantaa",Länsimäki,vantaa,89000.0,89000.0,,1,35.0,4/9,1974,kerrostalo,False,,,False,298.32,,,39,131,Länsimäki,313,60.244915,25.116358,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/21231683
+"Rajakentänkuja 4 A, Länsimäki, Vantaa",Länsimäki,vantaa,73645.74,120000.0,,2,51.0,7/9,1971,kerrostalo,False,,,False,455.06,,,38,132,Länsimäki,272,60.246335,25.109531,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24320160
+"Lumikero 6, Länsimäki, Vantaa",Länsimäki,vantaa,78740.0,79999.0,,1,33.5,1/3,1974,kerrostalo,False,,,False,252.81,,,38,133,Länsimäki,235,60.244888,25.114872,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23757429
+"Kurukuja 4 E, Länsimäki, Vantaa",Länsimäki,vantaa,182139.26,183000.0,,3,80.0,,1979,rivitalo,False,,,False,773.61,,,38,134,Länsimäki,478,60.246774,25.117628,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/23830560
+"Uotinmäentie 11 D 33, Mellunkylä, Helsinki",Mellunkylä,helsinki,126000.0,126000.0,,2,55.0,3/3,1968,kerrostalo,False,,,False,485.4,,,38,135,Mellunmäki,413,60.236699,25.114868,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/23669883
+"Harmotie 6, Hakunila, Vantaa",Hakunila,vantaa,111000.0,130000.0,,2,64.5,2/2,1978,kerrostalo,False,,,False,505.63,,,38,136,Hakunila,364,60.277668,25.099433,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/17414459
+"Peltolantie 21 A, Tikkurila, Vantaa",Tikkurila,vantaa,155000.0,155000.0,,2,58.0,1/3,1976,kerrostalo,False,,,False,898.83,266.8,,35,137,,,,,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24674412
+"Uotinmäentie 11 H, Mellunmäki, Helsinki",Mellunmäki,helsinki,137235.59,149000.0,,3,73.0,2/3,1968,kerrostalo,False,,,False,601.69,,,33,138,Mellunmäki,413,60.236699,25.114868,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/24346304
+"Maalinauhantie 4, Rajakylä, Vantaa",Rajakylä,vantaa,139074.38,174000.0,,3,79.5,,1979,rivitalo,False,,,False,728.1,,,28,139,,,,,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24083443
+"Neilikkatie 7 C, Tikkurila, Vantaa",Tikkurila,vantaa,153429.99,200000.0,,2,59.0,3/6,1970,kerrostalo,False,,,False,859.56,,,27,140,Tikkuraitti,234,60.290926,25.037682,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/vantaa/24467300
+"Ounasvaarantie 1, Mellunkylä, Helsinki",Mellunkylä,helsinki,125000.0,195000.0,,3,60.5,3/5,1974,kerrostalo,False,,,False,834.28,,,25,141,Mellunmäki,409,60.237235,25.115501,candidate_check_pipe_reno,https://asunnot.oikotie.fi/myytavat-asunnot/helsinki/17773543
