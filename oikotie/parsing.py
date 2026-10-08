@@ -248,6 +248,14 @@ def fetch_listing_details(page, url: str, cache: dict, require_key: str = "hoito
                   "debt_free_price_eur": None, "is_rented_out": False,
                   "rented_out_info": None, "hoitovastike_eur_month": None,
                   "tonttivuokra_eur_month": None}
+        # A transient failure (timeout, rate limit, network hiccup, …) shouldn't
+        # wipe out data from a prior successful fetch — overlay any of it we
+        # have. No _parse_version is set, so this URL is retried on the next
+        # run instead of being served as "done" with blanks.
+        old = cache.get(url) or {}
+        for k, v in old.items():
+            if v is not None and k != "_parse_version":
+                result[k] = v
         cache[url] = result
         return result
 
